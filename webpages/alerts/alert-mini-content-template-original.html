@@ -1,0 +1,11 @@
+<div class="templateRepeat">
+  <div id="alert_${itemID}" class="current-alert">
+    <h2 class="current-alert-date"><t:value id="date" format="EE, MMM d, yyyy">Fri, Dec 31, 1999</t:value><t:if test="!isNull(alert_times)"><br/>${alert_times}</t:if></h2>
+    <h3 class="current-alert-headline">${headline}</h3>
+    <t:if test="!isNull(body)"><div class="current-alert-body">${body}</div></t:if>
+    <ul class="current-alert-details">
+      <li class="current-alert-impacted">Park Area Impacted: ${park_area_impacted}</li>
+      <t:if test="!isNull(more_information)"><li class="current-alert-more-info">More Information: <a href="${more_information}" target="_blank">${more_information}</a></li></t:if>
+    </ul>
+  </div>
+</div>

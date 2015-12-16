@@ -1,0 +1,143 @@
+<style>
+.quadrant-map {
+  margin-top:20px;
+}
+.tilerow {
+  column-width:16em;
+  -moz-column-width:16em;
+  -webkit-column-width:16em;
+  column-gap:0.5em;
+  -moz-column-gap:0.5em;
+  -webkit-column-gap:0.5em;  
+}
+.panel {
+  display:inline-block;
+  margin:.5em;
+  padding:0; 
+  width:97%;
+}
+.font2em {
+  font-size:2em;
+}
+</style>
+<script type="text/javascript">
+function filterByHref( filterHash ) {
+	var filterHref = filterHash.match(/#[A-Za-z]+_[A-Za-z0-9_\-]+$/);
+	if (filterHref && filterHref.length == 1) {
+		jQuery('#attraction-tabs a.filter.'+filterHref[0].slice(1)).click();
+		return true;
+	} else {
+		console.log('filterByHref could not retrieve #filterType_filterName from: '+filterHash);
+		return false;
+	}
+}
+function filterAttractions( filterType, filterName ) {
+	if (filterType && filterName) {
+		jQuery('div.panel.attraction').hide();
+		jQuery('div.panel.attraction.'+filterType+'_'+filterName).show();
+		if (typeof filterFeature == 'function') {
+			if (filterType == 'feature') { filterFeature(filterName); }
+			else { filterFeature(); }
+		}
+		if (typeof filterWhat == 'function') {
+			if (filterType == 'what') { filterWhat(filterName); }
+			else { filterWhat(); }
+		}
+		if (typeof filterWhom == 'function') {
+			if (filterType == 'whom') { filterWhom(filterName); }
+			else { filterWhom(); }
+		}
+		if (typeof filterWhere == 'function') {
+			if (filterType == 'where') { filterWhere(filterName); }
+			else { filterWhere(); }
+		}
+		return true;
+	} else {
+		console.log('filterAttractions called with filterType="'+filterType+'", filterName="'+filterName+'".');
+		return false;
+	}
+}
+function filterWhere( filterName ) {
+	jQuery('img.quadrant-map').hide();
+	if (filterName && jQuery('img.quadrant-map.where_'+filterName).length > 0) {
+		jQuery('img.quadrant-map.where_'+filterName).show();
+	} else {
+		jQuery('img.quadrant-map.where_all').show();		
+	}
+}
+jQuery(function() {
+	jQuery('#attraction-panels a.filter').click(function() {
+		filterByHref(this.href);
+		var tParent = jQuery(this).parentsUntil('.modal').last()[0];
+		if (tParent.tagName != 'HTML') {
+			jQuery(tParent).parent('.modal').modal('hide');
+		}
+		return true;
+	});
+	if (window.location && window.location.hash) {
+		filterByHref(window.location.hash);
+	} else {
+		filterAttractions('feature','featured');
+	}
+});
+</script>
+	<div class="row">
+		<div class="col-lg-8 col-sm-6">
+			<h1>Things to See and Do</h1><br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo quam in purus luctus at laoreet lectus semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo quam in purus luctus at laoreet lectus semper.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo quam in purus luctus at laoreet lectus semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo quam in purus luctus at laoreet lectus semper.</p>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<img align="right" class="img-responsive quadrant-map where_all" src="http://placehold.it/400x300&text=quadrant%2Bmap">
+			<t:data name="park-quadrants" class="categories" parent="/park-quadrants" /> 
+			<t:list id="park-quadrants"><img align="right" class="img-responsive quadrant-map where_${name}" src="http://placehold.it/400x300&text=${name}" style="display:none;"></t:list>
+		</div>
+	</div>
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<!--tabs-->
+			<ul id="attraction-tabs" class="nav nav-tabs">
+				<li class="active dropdown">
+					<a data-toggle="dropdown" class="dropdown-toggle" id="featureDrop" href="#"><span class="hidden-xs font2em">Must See <b class="caret"></b></span><span class="visible-xs">HOT <b class="caret"></b></span></a>
+					<ul aria-labelledby="featureDrop" role="menu" class="dropdown-menu">
+						<li><a class="filter feature feature_featured" data-toggle="tab" tabindex="-1" href="#feature_featured" onclick="return filterAttractions('feature','featured');">Featured Attractions</a></li>
+						<li><a class="filter feature feature_all" data-toggle="tab" tabindex="-1" href="#feature_all" onclick="return filterAttractions('feature','all');">All Attractions</a></li>
+						<li><a class="filter feature feature_restroom" data-toggle="tab" tabindex="-1" href="#feature_restroom" onclick="return filterAttractions('feature','restroom');">Restrooms</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a data-toggle="dropdown" class="dropdown-toggle" id="whatDrop" href="#"><span class="hidden-xs font2em">What <b class="caret"></b></span><span class="visible-xs">What <b class="caret"></b></span></a>
+					<ul aria-labelledby="whatDrop" role="menu" class="dropdown-menu">
+						<t:data name="map-features" class="categories" parent="/map-features" /> 
+						<t:list id="map-features"><li><a class="filter what what_${name}" data-toggle="tab" tabindex="-1" href="#what_${name}" onclick="return filterAttractions('what','${name}');">${label}</a></li></t:list>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a data-toggle="dropdown" class="dropdown-toggle" id="whomDrop" href="#"><span class="hidden-xs font2em">For Whom <b class="caret"></b></span><span class="visible-xs">Who <b class="caret"></b></span></a>
+					<ul aria-labelledby="whomDrop" role="menu" class="dropdown-menu">
+						<t:data name="interest-type" class="categories" parent="/interest-type" /> 
+						<t:list id="interest-type"><li><a class="filter whom whom_${name}" data-toggle="tab" tabindex="-1" href="#whom_${name}" onclick="return filterAttractions('whom','${name}');">${label}</a></li></t:list>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a data-toggle="dropdown" class="dropdown-toggle" id="whereDrop" href="#"><span class="hidden-xs font2em">Where/Near <b class="caret"></b></span><span class="visible-xs">Where <b class="caret"></b></span></a>
+					<ul aria-labelledby="whereDrop" role="menu" class="dropdown-menu">
+						<t:data name="park-quadrants" class="categories" parent="/park-quadrants" /> 
+						<t:list id="park-quadrants"><li><a class="filter where where_${name}" data-toggle="tab" tabindex="-1" href="#where_${name}" onclick="return filterAttractions('where','${name}');">${label}</a></li></t:list>
+					</ul>
+				</li>
+			</ul>
+			<!--end tabs-->
+			<div class="row">&nbsp;</div>
+			<div class="tab-content">
+				<div class="tab-pane active">
+					<div id="attraction-panels" class="tilerow">
+						<div style="display: inline;" class="templateComponent" id="templatelist-524114399"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row">&nbsp;</div>
+			<hr>		
+		</div>
+	</div>

@@ -1,0 +1,419 @@
+	<!-- Homepage template - 2014 Redesign - v21 - 11 Sept 2014 -->
+	<!--script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script-->
+	<link href="http://cpc.convio.net/redesign/css/carousel.css" rel="stylesheet">
+	<style type="text/css">
+	/* internal styles - move to global.css */
+	#emailHomepage { margin-left: 35px; margin-right: 35px; }
+	#orangeDonate { display:block; }
+    .navbar-toggle { display:none; }
+
+	/* CAROUSEL Styles */
+	
+	.carousel-wrapper {
+		position: relative;
+		width: 100%;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+	}
+	.carousel-box {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	#myCarousel { 
+		position: relative;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	.carousel-inner {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	.carousel .item {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+	.carousel .item img, .carousel-inner > .item > img {
+		width: 100%;
+		height: auto;
+	}
+	
+	/*///////////////////////////////////////*/
+	/* Image Carrousel Main Banner*/
+	/*///////////////////////////////////////*/
+
+	.carousel {
+		height: 600px;
+		margin-bottom: 15px;
+	}
+	.carousel .item, .carousel .item img {
+		height: 600px;
+	}
+	.carousel-overlay {
+		width: 100%;
+		position: absolute;
+		top: 225px;
+	}
+	.carousel-indicators {
+		left: auto;
+		bottom: auto;
+		top: 270px;
+		margin-left: 15px;
+		width: 60px;
+		text-align: none;
+	}
+	
+	.carousel-caption {
+		background-color: transparent;
+		padding: 10px;
+		bottom: 80px;
+		right: 12%;
+		left: 66%;
+	}
+	.carousel-caption p {
+		margin: 0;
+	}
+		
+	.carousel-inner > .item {
+		-webkit-transition: 0.5s ease-out left;
+		transition: 0.5s ease-out left;
+	}
+	
+	/* other homepage styles */
+	
+	.centerGreen .iconDiv {
+		padding: 0;
+		margin: 18px 0;
+	}
+	
+	.greenMessage {
+		color: #FFFFFF;
+		font-family: 'Titling Gothic FB Cond',sans-serif;
+		font-weight: normal;
+		font-size: 1.8em;
+		text-align: center !important;
+	}
+		
+	@media(min-width:752px) {
+		.carousel-wrapper { height: 614px; height: 75vh; }
+	}
+		
+	@media(min-width:975px) {
+		.carousel-wrapper {
+			position: relative;
+			height: 600px; height: 85vh;
+			width: 100%;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+		}
+	}
+	
+	/* TABLET PORTRAIT fixes */
+	@media(min-width: 768px) 
+	and (max-width:1200px) {
+		.firstnav-li { width: 9%; }
+		.firstnav-li:nth-child(7) { width: 15%; }
+		.firstnav-wider-li { width: 20%; }
+		/*.centerGreen .iconDiv {
+			height: 80px;
+			padding: 20px 0 0 10px;
+		}*/
+		.greenTitle {
+			font-size: 0.75em;
+			margin-left: -25px;
+		}
+		.iconDiv:nth-child(1) .greenTitle {
+			margin-left: -5px;
+		}
+	}
+	
+	/* MOBILE styles */
+	@media(max-width:767px) {
+		.firstnav {
+			margin-top:54px;
+			position: absolute;
+			top: 246px; top: 60vw;
+			width: 100%;
+		}
+		.firstnav > .knockout > li {
+			font-size: 0.78em;
+		}
+		.carousel-wrapper { height: 300px; height: 80vw;}
+		/*.carousel { height: 300px; }
+		.carousel .item, .carousel .item img { height: 300px; }*/
+		.carousel-caption { bottom: 10px; }
+		.dropdown-menu-caption > li > a { width: 180px; white-space: normal; }
+		.centerGreen { display: none; }
+		.marketing {
+			position: absolute;
+			top: 560px;
+		}
+	}
+
+.carousel-overlay { display: none; }
+
+	</style>
+	
+	<!-- Carousel	================================================== -->
+	<div class="carousel-wrapper">
+		<div class="carousel-box">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<div class="carousel-overlay">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3 col-md-4 col-sm-5 knockout hidden-xs" style="z-index:16;">
+								<div class="navbar firstnavToday">
+									<ul class="nav navbar-nav knockout">
+										<li class="dropdown showsecond active" id="aboutTrigger" style="margin-top:5px;">Today in Central Park<span class="caret"></span><br/>
+											<!--a href="http://w1.weather.gov/xml/current_obs/KNYC.xml" target="_blank"-->
+											<span class="todayWeather">
+												<span style="position:relative; display: block !important; width: 150px; overflow:hidden; height:27px; margin: 0 0 10px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:10106.3.99999&amp;bannertypeclick=wu_simplegray" title="Central Park, New York Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_simplegray&amp;airportcode=KNYC&amp;ForcedCity=Central Park&amp;ForcedState=NY&amp;zip=10106&amp;language=EN" alt="Find more about Weather in Central Park, NY" style="top:-22px; left:-2px; position:absolute;" width="160"></a></span>
+											</span>
+											<!--/a-->
+											 <div class="navbar secondnavToday" id="about-nav">
+													<ul class="list-inline nav navbar-nav about-nav">
+														<li class="dropdown">
+															<a href="http://www.centralparknyc.org/about/park-information/">
+																<div class="todayEvents">
+																	<hr class="hrTB"/>
+																	<div style="display: inline;" class="templateComponent" id="templatelist-505946308"></div>
+																	<a href="http://www.centralparknyc.org/events/">
+																	<div class="btnMoreEvents">More Events</div></a>
+																</div>
+															</a>
+														</li>												
+												   </ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div> <!--col-md-3-->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-slide-to="0" class="active" onClick="ga('send', 'event', 'slides', 'click', 'slide1');"></li>
+								<li data-target="#myCarousel" data-slide-to="1" onClick="ga('send', 'event', 'slides', 'click', 'slide2');"></li>
+								<li data-target="#myCarousel" data-slide-to="2" onClick="ga('send', 'event', 'slides', 'click', 'slide3');"></li>
+								<li data-target="#myCarousel" data-slide-to="3" onClick="ga('send', 'event', 'slides', 'click', 'slide4');"></li>
+							</ol>
+						</div><!--row-->
+					</div><!--container-->
+				</div><!--carousel-overlay-->
+			<div class="carousel-inner">
+				<t:list id="slides">
+					<t:if test="index == 1"><div class="item active"></t:if>
+					<t:else><div class="item"></t:else>
+						<a href="${link_url}">
+							<img class="img-responsive" src="${url}" />
+						</a>
+						<div class="container">
+							<div class="carousel-caption">
+								<div class="btn-group dropup">
+									<button type="button" class="btnCaption btnCaption-default dropdown-toggle" data-toggle="dropdown">
+										<span style="width:26px; height:23px;">
+											<img src="http://cpc.convio.net/redesign/img/cpc/cameraIcon4.png" style="width:100%; height:100%"/>
+										</span>
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<ul class="dropdown-menu-caption" role="menu">
+										<li>
+											<a href="${link_url}">${description} <span class="glyphicon glyphicon-play white2"></a>
+										</li>
+									</ul>
+								</div>
+						   </div>
+						</div>
+					</div><!--END CARROUSEL IMAGE-->
+				</t:list>
+			</div> <!-- carousel inner -->
+				
+			<div class="centerGreen knockout">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 iconDiv">
+							<a href="https://secure2.convio.net/cpc/site/SPageServer?pagename=donate&s_src=website&s_subsrc=moments_green_strap">
+								<p class="greenMessage">Your moment made possible by Central Park Conservancy. &nbsp;&nbsp;&nbsp;&nbsp;<strong>DONATE NOW</strong> &nbsp;<span class="xs-icon glyphicon glyphicon-play"></span></p>
+							</a>
+						</div>
+					</div> <!-- row -->
+				</div><!-- container -->
+			</div> <!--centerGreen knockout -->
+
+			<a class="left carousel-control whiteArrow" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+			<a class="right carousel-control whiteArrow" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div><!-- /.carousel-box -->
+		</div>
+	</div><!-- /.carousel -->
+	
+
+	<!-- Marketing messaging and featurettes
+	================================================== -->
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+
+	<div class="container marketing">
+
+		<!-- Alert component --> <t:include id=templatelist-129907430 /> <!-- END Alert -->
+		<!-- Three columns of text below the carousel -->
+		<div class="row">
+			<div class="mainContent">
+				<div class="col-md-4">
+					<h2>Central Park Blog</h2>
+					<a href="http://centralparknyc.tumblr.com/"><img class="img-responsive" src="http://www.centralparknyc.org/assets/images/2014/blog_homepage_small.jpg" data-src="holder.js/140x140" alt="Central Park Blog" /></a>
+					<p>Daily stories and photos from the people who care for the Park.<br/>
+					<a class="mainLink" href="http://centralparknyc.tumblr.com/">READ MORE<span class="xs-icon glyphicon glyphicon-play"></span></a></p>
+				</div><!-- /.col-md-4 -->
+				<div class="col-md-4">
+					<h2>Support Us</h2>
+					<a href="http://www.centralparknyc.org/support/"><img class="img-responsive" src="http://www.centralparknyc.org/assets/images/2014/supportus_homepage_small.jpg" data-src="holder.js/140x140" alt="Support the Park"></a>
+					<p>Central Park Conservancy raises 75% of Central Park's annual budget.<br />
+					<a class="mainLink" href="http://www.centralparknyc.org/support/">DONATE NOW<span class="xs-icon glyphicon glyphicon-play"></span></a></p>
+				</div><!-- /.col-md-4 -->
+				<div class="col-md-4">
+					<h2>Sign Up for Email</h2>
+					<img class="img-responsive" src="http://www.centralparknyc.org/assets/images/2014/email_homepage_small.jpg" data-src="holder.js/140x140" alt="Sign Up for Email">
+					<p>Get advance notice of events in Central Park.</p>
+					<div id="emailHomepage">
+						<form action="http://support.centralparknyc.org/site/Survey" method="post" name="register" class="emailHomepage">
+							<input type="hidden" name="cons_info_component" value="t" />
+							<input type="hidden" name="cons_mail_opt_in" value="t" />
+							<input type="hidden" name="ACTION_SUBMIT_SURVEY_RESPONSE" value="Submit Survey" />
+							<span class="btnSignUp clickable submitButton">SIGN UP NOW</span>
+							<input class="primaryEmail formSignUp" maxlength="40" name="cons_email" type="text" placeholder="Your email"></input>
+							<input type="hidden" name="s_src" value="website" />
+							<input type="hidden" name="s_subsrc" value="2014_homepageEmailBox" />
+							<input type="hidden" name="denySubmit" value="" alt="This field is used to prevent form submission by scripts." />
+							<input type="hidden" name="SURVEY_ID" value="2621" />
+						</form>
+						<div class="noteBox">&nbsp;</div>
+					</div>
+				</div><!-- /.col-md-4 -->
+			</div><!-- /.mainContent -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+
+
+<t:value id="body"></t:value>
+
+<script type="text/javascript">// <![CDATA[
+(function($){
+	var winWidth = 1024; //resets onload
+	var slideWidth = 1024; //resets onload / only different in portait mode (typically tablets)
+	var winHeight = 768; //resets onload
+	var slideHeight = 600;
+	var slideLeftOffset = 0; //used in portrait mode otherwise 0
+	var slideTopMargin = 0; //reset on load and resize
+	var minSlideWidth = 788; //med viewport width + 10 on each side to show bleed and more image.
+	//ratios to set up slideshow for the optimal display
+	var imgRatio = 0.445; //height to width ratio of slide images 571/1282
+
+	function resizeSlides(type){
+		var winWidth =  $(window).width();
+		var winHeight = $(window).height();
+		var carouselheight;
+		
+		var slideHeight =  $('.carousel-wrapper').height();
+		var slideWidth = winWidth;
+		/*if(slideWidth < minSlideWidth) {
+			slideWidth = minSlideWidth;
+		}*/
+		//var slideAreaRatio = slideHeight / slideWidth;
+		var imgHeight = slideWidth * imgRatio;
+		console.log('winwidth: ',winWidth,' winheight: ',winHeight,' slideheight: ',slideHeight,' imgheight: ',imgHeight);
+		var imgOffset = 0;
+		if(slideHeight <= imgHeight){ //Landscape
+			var imgOffset = ((imgHeight - slideHeight) / 2) * -1;
+			var slideStyle = 'margin-top: ' +  imgOffset + 'px; margin-left: 0px; width: auto;'
+			$('.item').attr("style", slideStyle);
+			//alert('winwidth: '+winWidth+' winheight: '+winHeight+' slideheight: '+slideHeight);
+		} else if (slideHeight > imgHeight){ //portait
+			var divWidth = slideHeight / imgRatio;
+			var divMarginLeft = ((divWidth - slideWidth) / 2) * -1;
+			//var divMarginLeft = (type == 'i') ? -216 : ((divWidth - slideWidth) / 2) * -1;
+			var slideStyle = 'margin-top: 0px; margin-left: '+divMarginLeft + 'px; width: '+divWidth + 'px;';
+			$('.item').attr("style", slideStyle);
+			//alert('winwidth: '+winWidth+' winheight: '+winHeight+' slideheight: '+slideHeight);
+		}
+		/*var slideNavTop = slideHeight - 59; //position nav circles 40px above the footer
+		$('homeslidenavlinks').style.top = slideNavTop + 'px';
+		$('photoposition').style.top = slideHeight + 'px';
+		var arrowPos = (((slideHeight - headerHeight) / 2) - (navArrowHeight / 2)) + headerHeight;
+		$('navarrowleft').style.top = arrowPos + 'px';
+		$('navarrowright').style.top = arrowPos + 'px';*/
+	}
+	
+	function readDeviceOrientation() {
+		var winRatio, imgOffset;
+		var winHeight = $(window).height();
+		var winWidth =  $(window).width();
+		if (Math.abs(window.orientation) === 90) {
+			// Landscape - set css here
+			//alert('LANDSCAPE');
+			winRatio = (winWidth < 2000) ? 1 : 2;
+			imgOffset = (200 * winRatio) * -1;
+		} else {
+			// Portrait - set css here
+			//alert('PORTRAIT');
+			winRatio = (winWidth < 1000) ? 1 : 2;
+			imgOffset = (300 * winRatio) * -1;
+		}
+		var imgHeight = 571 * winRatio;
+		var carouselHeight = ''+imgHeight+'px';
+		var imgWidth = 1000 * winRatio * 1.33;
+		//var divWidth = ''+imgWidth+'px';
+		//var divOffset = ''+imgOffset+'px';
+		var slideStyle = 'margin-left: '+imgOffset+'px; width: '+imgWidth+'px;';
+		$('.item').attr("style", '');
+		$('.item').attr("style", slideStyle);
+		//$('.item').css("margin-left",divOffset);
+		//$('.item').css("width",divWidth);
+		$('.carousel-wrapper').css("height",carouselHeight);
+		//alert('carousel height: '+carouselHeight+' win height: '+winHeight+' win width: '+winWidth+' img ratio: '+winRatio+' img width: '+imgWidth+' offset: '+imgOffset);
+	}
+	
+	$('form.emailHomepage').attr('action', 'javascript:void(0);');
+
+	// initialize page
+	$(document).ready(function() {
+		$('form.emailHomepage .submitButton').click(function() {
+			submitEmail('emailHomepage');
+		});
+		$('form.emailHomepage .primaryEmail').keypress(function (e) {
+			if (e.which == 13) {
+				submitEmail('emailHomepage');
+				return false;
+			}
+		});
+		//displayWeather();
+		if ( navigator.userAgent.match(/iPad/g)) {
+			//alert('iPad detected');
+			//$('.carousel-control').hide();
+			readDeviceOrientation();
+			window.onorientationchange = readDeviceOrientation;
+		} else if ( navigator.userAgent.match(/(iPhone|iPod)/g)) {
+			//alert('iPhone detected');
+			resizeSlides('i');
+			window.onresize = function(){ resizeSlides('i');}
+		} else {
+			resizeSlides();
+			window.onresize = function(){ resizeSlides();}
+		}
+		
+		// always show expanded nav on mobile homepage
+		$('#primaryNav').removeClass('hidden-xs');
+	});
+})(jQuery);
+	// ]]></script>
+<!-- END email capture box -->  

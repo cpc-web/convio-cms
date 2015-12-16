@@ -1,0 +1,993 @@
+/*///////////////////////////////////////////////////////////////////*/
+/* This CSS style is general for all the templates*/
+/* Made with love in Central Park Conservancy!*/
+/* v2 - Sept 2014 */
+/*///////////////////////////////////////////////////////////////////*/
+
+
+	html {
+	 font-family: 'Titling Gothic FB Narr', sans-serif;
+	 -webkit-font-smoothing: antialiased;
+	}
+
+	body {
+	 font-family: 'Titling Gothic FB Narr', sans-serif;
+	 padding-bottom:0;
+	 -webkit-font-smoothing: antialiased;
+	 outline : none; 
+	}
+
+ 	h4, h5, h6, .h4, .h5, .h6 {
+	font-family: 'Titling Gothic FB Cond', sans-serif;
+	line-height: 1.1;
+	}
+
+	h1, h2, h3, .h1, .h2, .h3 {
+	font-family: 'Titling Gothic FB Cond', sans-serif;
+	line-height: 1.1;
+	margin-bottom: 2px;
+	}
+
+	h3 {
+	font-size: 20px;		
+	}
+
+	h1, h3, .h1, .h3 {
+	color: #68b247;	
+	}
+
+	.breadcrumb {
+	  padding-right: 2px;
+	  padding-left: 2px;
+	  margin-bottom: 20px;
+	  list-style: none outside none;
+	  background-color: transparent;
+	  border-radius: 4px;
+	  text-transform: uppercase;
+	}
+
+
+	  a, a:link, a:visited {
+ 	  text-decoration: none;
+	  color:#77BD42;  /*green*/
+	  outline :none !important;/*
+	  font-family: 'Titling Gothic FB Narr', sans-serif;*/
+	  padding-bottom:0;
+	  -webkit-font-smoothing: antialiased;
+	}
+
+	a:hover {
+	  text-decoration: none;
+	  color:#6C6D70; /*dark gray*/
+	  /*color:#44781d;  dark green*/
+	  -webkit-transition: 0.5s;
+	  -moz-transition: 0.5s;
+	  -o-transition: 0.5s;
+	  -ms-transition: 0.5s;
+	  transition: 0.5s;
+	}
+
+	a.titleLink {
+	  color:white;
+	  text-decoration:none;
+	}
+
+
+/*///////////////////////////////////////*/
+/*SearchBox*/
+/*///////////////////////////////////////*/
+	.noteBox { display: none; }
+	.clickable { cursor: pointer; }
+	#searchForm { position: relative; }
+	.searchIcon { position: absolute; top: 12px; left: 3px; }
+	.searchButton { position: absolute; top: 5px; right: -25px; }    
+	#searchForm input {
+		padding: 0 30px 0 3px;
+		margin:0 10px; 
+		font-size:12px;
+	}
+
+/*///////////////////////////////////////*/
+/* Glyphicones size for standar arrows */
+/*///////////////////////////////////////*/
+
+	
+	.xs-icon {font-size:11px;} /* Arrows in list, and on the 3 boxes area */
+	.plusIcon {font-size:12px; vertical-align:top;} /* Follow Us + */
+	
+	.whiteArrow:link{
+ 	  text-decoration: none;
+	  color:white; 
+	  -webkit-font-smoothing: antialiased;
+	  opacity:0.9;
+		}
+
+	.whiteArrow:hover {
+	  text-decoration: none;
+	  color:#77BD42;  /*green*/
+	  -webkit-transition: 0.5s;
+	  -moz-transition: 0.5s;
+	  -o-transition: 0.5s;
+	  -ms-transition: 0.5s;
+	  transition: 0.5s;
+	}
+
+
+	.form-control { border-radius:0; }
+	.form-control {
+		display: block;
+		width: 100%;
+		font-size: 14px;
+		line-height: 1.42857;
+		color: #555;
+		vertical-align: middle;
+		background-color: #FFF;
+		background-image: none;
+		border: 1px solid #CCC;
+		border-radius: 4px;
+		box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;
+		transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+		height: 25px;
+		padding: 5px 5px;
+	}
+
+	.input-sm { border-radius:0; }
+
+
+/*////////////////////////////////////////*/
+/* CSS Style for List webpages in Convio*/
+/*////////////////////////////////////////*/
+
+	.clearfix { 
+       margin-left:0;
+       font-size:14px;
+       font-family: 'Titling Gothic FB Narr', sans-serif;
+	   /*font-family:'News Cycle', sans-serif;*/
+	}
+
+    .clearfix img{ float:left; margin:10px; border-style:solid; border-width:1px; border-color:lightgrey; }
+
+    .clearfix h3 { 
+       font-size:15px;
+       font-weight:bold;
+       font-family: 'Titling Gothic FB Narr', sans-serif;
+       color:#77BD42;
+    	}
+
+    .clearfix a { color:#5A5A5A;}
+
+    .clearfix h3:hover { 
+	  text-decoration: underline;
+	  /*color:#44781d;*/
+	  -webkit-transition: 0.5s;
+	  -moz-transition: 0.5s;
+	  -o-transition: 0.5s;
+	  -ms-transition: 0.5s;
+	  transition: 0.5s;
+    	}
+
+	.title {font-weight:bold;}
+
+/*Main Banner*/
+	.container .jumbotron {
+		margin-bottom:0;
+        margin-top:0;
+		border-radius:0;
+		padding: 70px 10px 5px 10px;
+		background: rgba(119, 193, 67, 0.8);
+		color: #FFFFFF;
+	}
+
+	.jumbotron h3 {  /*OFFICIAL WEBSITE OF NEW YORK CITY'S*/
+		margin-top:0;
+		margin-bottom: 10px;
+		font-size: 16px;
+        word-spacing:15px;
+		z-index:1000px;
+		color: #FFFFFF;
+		text-transform: uppercase;
+	}
+
+
+	.jumbotron h1 { /*CENTRAL PARK*/
+    font-size: 45px;
+    color: #FFF;
+    margin-top: -10px;
+    font-family: 'Titling Gothic FB Norm Med',sans-serif;
+    text-transform: uppercase;
+	}
+
+
+/*///////////////////////////////////////*/
+/* TODAY BOX HOVER*/
+/*///////////////////////////////////////*/
+
+	.firstnavToday {
+	/* background-color: #6d6e71;*/
+	background-color:#666666; /*provisional for weather component*/
+    border-radius:0;
+    width:74%;
+    margin-top:20px;
+	}
+
+	.hrTB { margin:-20px 0px 10px 0px; height: 2px;}
+
+	.firstnavToday > .knockout > li {
+    font-size: 1em;
+    padding:0;
+	/*margin-right: 2.7vw; Doesn't work in Chrome*/
+	}
+
+	.firstnavToday a:hover { color:#77BD42;}
+
+	.firstnavToday .nav li {
+	position: static;
+    padding:0;
+	}
+
+	.firstnavToday a { color:white;}
+	.firstnavToday .dropdown-menu {
+		width: 100%;
+	}
+
+	.secondnavToday {               /*dropdown menu*/
+		/*background-color: #6d6e71;*/
+		background-color:#666666; /*provisional for weather component*/
+		margin: auto;
+		padding: 10px;
+		min-height:0;
+		position: absolute;
+		width: 100%;
+        color:white;
+	}
+
+	#about-nav {
+		display: none;
+	}
+
+	.secondnavToday 
+	.list-inline > li:first-child {
+		padding-left: 10px;
+	}
+	.about-nav > li {
+		padding-right:0.6vw;
+		padding-left: 0.9vw;
+		font-size: 12px; /* 0.6vw; Check this in small resolutions*/
+	}
+	.secondnavToday > .navbar-nav > li > a {
+		padding:0;
+		line-height: 12px;
+		color: #585858;
+	}
+
+	.secondnavToday > .navbar-nav > li > a:hover {
+		color: #77BD42;
+	}
+
+
+
+/*///////////////////////////////////////*/
+/* CAMERA - IMAGE CAPTION */
+/*///////////////////////////////////////*/
+
+	.white, .white a {
+	  color: #fff;
+	  font-size: 1.8em;	/*Makes glyphicon white and bigger*/
+	}
+
+	.white2 x .white2 a {
+	  color: #fff;
+	  font-size: 0.2em;	/*Makes glyphicon white and bigger*/
+	}
+
+
+	.btnCaption {
+	  display: inline-block;
+	  padding: 6px 12px;
+	  margin-bottom: 0;
+	  font-size: 14px;
+	  font-weight: normal;
+	  line-height: 1.428571429;
+	  text-align: center;
+	  white-space: nowrap;
+	  vertical-align: middle;
+	  cursor: pointer;
+	  background-image: none;
+
+
+	}
+
+	.btnCaption:focus {
+	  /*outline: thin dotted;
+	  outline: 5px auto -webkit-focus-ring-color;
+	  outline-offset: -2px;*/
+	  outline:none;
+
+	}
+
+	.btnCaption:hover,
+	.btnCaption:focus {
+	  color: #333333;
+	  text-decoration: none;
+	  border: none;
+	}
+
+	.btnCaption:active,
+	.btnCaption.active {
+	  background-image: none;
+	  outline: 0;
+	  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	  border: none;
+	}
+
+	.btnCaption.disabled,
+	.btnCaption[disabled],
+	fieldset[disabled] .btnCaption {
+	  pointer-events: none;
+	  cursor: not-allowed;
+	  opacity: 0.65;
+	  filter: alpha(opacity=65);
+	  -webkit-box-shadow: none;
+			  box-shadow: none;
+	  border: none;
+	}
+
+	.btnCaption-default {
+	  color: #333333;
+	  background-color: transparent;
+	  border: none;
+	}
+
+	.btnCaption-default:hover,
+	.btnCaption-default:focus,
+	.btnCaption-default:active,
+	.btnCaption-default.active,
+	.open .dropdown-toggle.btnCaption-default {
+	  color: #333333;
+	  background-color: transparent;
+	  border: none;
+	}
+
+	.btnCaption-default:active,
+	.btnCaption-default.active,
+	.open .dropdown-toggle.btnCaption-default {
+	  background-image: none;
+	  border: none;
+	}
+
+	.btnCaption-default.disabled,
+	.btnCaption-default[disabled],
+	fieldset[disabled] .btnCaption-default,
+	.btnCaption-default.disabled:hover,
+	.btnCaption-default[disabled]:hover,
+	fieldset[disabled] .btnCaption-default:hover,
+	.btnCaption-default.disabled:focus,
+	.btnCaption-default[disabled]:focus,
+	fieldset[disabled] .btnCaption-default:focus,
+	.btnCaption-default.disabled:active,
+	.btnCaption-default[disabled]:active,
+	fieldset[disabled] .btnCaption-default:active,
+	.btnCaption-default.disabled.active,
+	.btnCaption-default[disabled].active,
+	fieldset[disabled] .btnCaption-default.active {
+	  background-color: transparent;
+	  border: none;
+	}
+
+	.btnCaption-default .badge {
+	  color: #ffffff;
+	  background-color: #fff;
+	  border: none;
+	}
+
+
+/*///////////////////////////////////////*/	
+/* More Events Button */
+/*///////////////////////////////////////*/
+
+	.btnMoreEvents {
+	  background: #79bf43;
+	  background-image: -webkit-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -moz-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -ms-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -o-linear-gradient(top, #79bf43, #69962e);
+	  background-image: linear-gradient(to bottom, #79bf43, #69962e);
+	  -webkit-border-radius: 19;
+	  -moz-border-radius: 19;
+	  border-radius: 19px;
+	  -webkit-box-shadow: 2px 2px 2px #666666;
+	  -moz-box-shadow: 2px 2px 2px #666666;
+	  box-shadow: 2px 2px 2px #666666;
+	  color: #ffffff !important;
+	  font-size: 12px;
+	  padding: 8px 20px 8px 20px !important;
+	  border: solid #79bf43 0px;
+	  text-decoration: none;
+	  text-transform:uppercase;
+	  text-align:center;
+	  margin-left:15px;
+	  margin-right:15px
+	  }
+
+	.btnMoreEvents:hover {
+	  background: #8ad150;
+	  background-image: -webkit-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -moz-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -ms-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -o-linear-gradient(top, #8ad150, #69962e);
+	  background-image: linear-gradient(to bottom, #8ad150, #69962e);
+	  text-decoration: none;
+	  color: #ffffff;
+	  text-transform:uppercase;
+	  }
+
+	  .knockout, .knockout > li > a {
+	    color: #FFFFFF;
+		padding-left:15px;
+		}
+
+/*///////////////////////////////////////*/
+/*Green Bar with Icons*/
+/*///////////////////////////////////////*/
+
+	.centerGreen {
+		height: 80px;
+		background: rgba(119, 193, 67, 0.8);
+		position: absolute;
+		bottom:0;
+		width: 100%;
+	}
+
+	.centerGreen .iconDiv {
+		padding: 20px 0 0 50px;
+		height: 80px;
+	}
+
+	.centerGreen .iconDiv .lg-icon {
+		font-size: 48px;
+		margin-right: 10px;
+		float: left;
+	}
+
+	.centerGreen a { color:white;}
+	.centerGreen a:hover { 
+	  text-decoration: none;
+	  text-shadow: 4px 4px 4px #376f0f;
+	  color:white;
+	  -webkit-transition: 0.4s;
+	  -moz-transition: 0.4s;
+	  -o-transition: 0.4s;
+	  -ms-transition: 0.4s;
+	  transition: 0.4s;
+	}
+
+	.greenIcon { float:left; margin-top:-10px; margin-right:5px;}
+	.greenIcon img {width:65%; height:65%;}
+	.greenTitle { float:left;}
+
+
+/*///////////////////////////////////////*/
+/* Homepage 3 boxes*/
+/*///////////////////////////////////////*/
+
+	.mainContent {
+	font-family: 'Titling Gothic FB Narr Std', sans-serif;
+	/*font-family: 'News Cycle', sans-serif;*/
+    -webkit-font-smoothing: antialiased;
+	font-size: 15px;
+	font-weight:normal;
+	}
+
+	.mainContent p {padding: 10px 25px 10px 25px; text-align:left;}
+	.mainContent h2 {
+	font-family: 'Titling Gothic FB Cond', sans-serif;
+	/*font-family: 'Oswald', sans-serif;*/
+    -webkit-font-smoothing: antialiased;
+	font-weight:normal;
+	color: rgb(119, 189, 66);
+	text-align:center !important;
+	}
+
+	.mainLink {
+	font-family: 'Titling Gothic FB Narr Std', sans-serif;
+	/*font-family: 'News Cycle', sans-serif;*/
+    -webkit-font-smoothing: antialiased;
+	font-size: 17px;
+	font-weight: normal;
+	color:rgb(119, 189, 66); /*green*/
+	margin-left:0;
+	text-align:left;
+	float:left;
+	}
+
+	.mainLink a {
+	color:rgb(119, 189, 66); /*green*/
+	text-decoration:none;
+	}
+
+	.mainLink:hover, 
+	.mainLink:focus{
+	color:rgb(108, 109, 112); /*gray*/
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+	text-decoration:none;
+	}
+
+	.img-responsive {
+	  display: block;
+	  height: auto;
+	  max-width: 100%;
+	  margin:auto;
+	  padding:auto;
+	}
+
+/* SIGN UP Button */
+	.btnSignUp {
+	  background: #79bf43;
+	  background-image: -webkit-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -moz-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -ms-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -o-linear-gradient(top, #79bf43, #69962e);
+	  background-image: linear-gradient(to bottom, #79bf43, #69962e);
+	  -webkit-border-radius: 19;
+	  -moz-border-radius: 19;
+	  border-radius: 19px;
+	  -webkit-box-shadow: 2px 2px 2px #666666;
+	  -moz-box-shadow: 2px 2px 2px #666666;
+	  box-shadow: 2px 2px 2px #666666;
+	  color: #ffffff !important;
+	  font-size: 12px;
+	  padding: 10px 20px 10px 20px !important;
+	  border: solid #79bf43 0px;
+	  text-decoration: none;
+	  text-transform:uppercase;
+	  text-align:center;
+	  float:right;
+	}
+
+	.btnSignUp:hover {
+	  background: #8ad150;
+	  background-image: -webkit-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -moz-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -ms-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -o-linear-gradient(top, #8ad150, #69962e);
+	  background-image: linear-gradient(to bottom, #8ad150, #69962e);
+	  text-decoration: none;
+	  color: #ffffff;
+	  text-transform:uppercase;
+	}
+
+	.formSignUp{
+
+	width:170px;
+	margin-top:8px;
+	float:left;
+	}
+
+/*///////////////////////////////////////*/
+/* DONATION LEVELS Buttons */
+/*///////////////////////////////////////*/
+
+
+	.btnDonate35 {
+	  background: #79bf43;
+	  background-image: -webkit-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -moz-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -ms-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -o-linear-gradient(top, #79bf43, #69962e);
+	  background-image: linear-gradient(to bottom, #79bf43, #69962e);
+	  -webkit-border-radius: 19;
+	  -moz-border-radius: 19;
+	  border-radius: 19px;
+	  -webkit-box-shadow: 2px 2px 2px #666666;
+	  -moz-box-shadow: 2px 2px 2px #666666;
+	  box-shadow: 2px 2px 2px #666666;
+	  color: #ffffff !important;
+	  font-size: 17px;
+	  font-weight: bold;
+	  padding: 10px 25px 10px 25px !important;
+	  border: solid #79bf43 0px;
+	  text-decoration: none;
+	  text-align:center;
+	}
+
+	.btnDonate35:hover {
+	  background: #8ad150;
+	  background-image: -webkit-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -moz-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -ms-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -o-linear-gradient(top, #8ad150, #69962e);
+	  background-image: linear-gradient(to bottom, #8ad150, #69962e);
+	  text-decoration: none;
+	  color: #ffffff;
+	}
+
+
+/*///////////////////////////////////////*/
+/* FOOTER */
+/*///////////////////////////////////////*/
+
+	footer {
+	background-image: url( http://cpc.convio.net/redesign/img/cpc/grass3.png );
+	background-repeat:repeat-x;
+	height: 250px;
+	width:100%;
+	color: #FFFFFF;
+	padding: 75px 0 25px 0;
+	margin:0;
+	font-size:14px;
+	text-align:center;
+	/*z-index:1000;*/
+	position:relative;
+	bottom:-60px;
+	}
+
+	.footerLogo1 { float:left; }
+	.footerLink {color: #FFFFFF; background-color:#77c043; width:100%;}
+	.footerLink p {text-align:center; width:100%; }
+	.footerLink a {	
+		color: #FFFFFF; 
+		padding-left:15px; 
+		margin-right:0; 
+		text-decoration:none; 
+		margin-bottom:25px;}
+	.footerLink a:hover, 
+	.footerLink a:focus {
+		color:rgb(108, 109, 112) !important; /*gray*/
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
+		-ms-transition: 0.5s;
+		transition: 0.5s;
+		text-decoration:none;
+	}
+
+	.footerLogo2 {float:right; top:0;}
+	.footerAddress {font-size:12px; margin-top:30px;}
+
+
+
+
+/*///////////////////////////////////////*//*///////////////////////////////////////*/
+	/*INTERIOR PAGES*/
+/*///////////////////////////////////////*//*///////////////////////////////////////*/
+	
+	.top-image {
+		position: relative;
+	}
+	.top-image img {
+		width: 100%;
+	}
+	.main-body > .container {
+		padding: 0 30px;
+	}
+
+
+	.content-utilities { padding-top: 10px;}
+
+	.titleSection { 
+	  font-family: 'Titling Gothic FB Cond', sans-serif;
+	  /*font-family: 'Oswald', sans-serif;*/
+	  font-weight:300; 
+	  color: rgb(119, 189, 66);
+      margin-top:35px;
+	} 
+
+	.thumbnail {
+	  display: block;
+	  padding: 4px;
+	  margin-bottom: 20px;
+	  line-height: 1.428571429;
+	  background-color: transparent;
+	  border:none;
+	  color:#77c043;
+	}
+
+	.thumbnail p{ text-align:center; font-size:13px; text-transform: uppercase; margin-top:15px;}
+
+	.thumbnail > img,
+	.thumbnail a > img {
+	  display: block;
+	  height: auto;
+	  max-width: 100%;
+	  margin-right: auto;
+	  margin-left: auto;
+	  text-decoration:none;
+	}
+
+	a.thumbnail:hover,
+	a.thumbnail:focus,
+	a.thumbnail.active {
+		color:rgb(108, 109, 112); /*gray*/
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
+		-ms-transition: 0.5s;
+		transition: 0.5s;
+		text-decoration:none;
+	}
+
+
+/*///////////////////////////////////////*/
+/*Surveys Style*/
+/*///////////////////////////////////////*/
+
+.Button {	  /*Register Button*/
+      background: #79bf43;
+	  background-image: -webkit-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -moz-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -ms-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -o-linear-gradient(top, #79bf43, #69962e);
+	  background-image: linear-gradient(to bottom, #79bf43, #69962e);
+	  -webkit-border-radius: 19;
+	  -moz-border-radius: 19; 
+	  border-radius: 19px;
+	  -webkit-box-shadow: 2px 2px 2px #666666;
+	  -moz-box-shadow: 2px 2px 2px #666666;
+	  box-shadow: 2px 2px 2px #666666;
+	  color: #ffffff;
+	  font-size: 12px;
+	  padding: 10px 20px 10px 20px;
+	  border: solid #79bf43 0px;
+	  text-decoration: none;
+	  text-transform:uppercase;
+	  text-align:center;
+	  margin-left:5%;
+      margin-top:20px;
+      float:left;}
+
+.Button:hover {
+    	  background: #8ad150;
+	  background-image: -webkit-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -moz-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -ms-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -o-linear-gradient(top, #8ad150, #69962e);
+	  background-image: linear-gradient(to bottom, #8ad150, #69962e);
+	  text-decoration: none;
+	  color: #ffffff;
+	  text-transform:uppercase;   
+}
+
+    .Explicit { font-size:15px; font-weight:normal;}    
+
+    .embeddedSurvey {margin-left:-40px;}
+
+	.embeddedSurvey tr { 
+		color:#636363;
+		}
+
+	.embeddedSurvey td { 
+		color:#636363;
+		padding-bottom:5px;	
+		}
+ 
+		
+	.embeddedSurvey .num { 
+		color:#333333;
+		font-family: 'Titling Gothic FB Narr Std', sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-weight:bold;
+		font-size:15px;
+		}/*dark gray*/
+
+	.embeddedSurvey label {
+		color:#333333;
+		font-family: 'Titling Gothic FB Narr Std', sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-weight:normal;
+		font-size:15px;
+		padding:0;
+        margin:10px 10px 0 0;
+		}
+
+	.embeddedSurvey textarea { 
+		color:#444444;
+		width:600px;
+		height:100px;
+		} 
+
+	.embeddedSurvey select {   	
+		color:#636363;
+		height:30px;
+		font-size:14px !important;
+		}
+
+
+	.embeddedSurvey #cons_first_name, p[type="text"]  {
+		color:#444444;
+		width:250px;
+		height:35px;
+		}
+
+	.embeddedSurvey #cons_first_name, td[type="text"]  {
+		color:#444444;
+		width:250px;
+		height:35px;
+		font-size:14px;
+		}
+	
+	.embeddedSurvey #cons_last_name, td[type="text"]  {
+		color:#444444;
+		width:250px;
+		height:35px;
+		font-size:14px;
+		}
+	
+	
+	.embeddedSurvey #cons_email, td[type="text"]  {
+		color:#444444;
+		width:250px;
+		height:35px;
+		font-size:14px;
+		}
+	
+	
+
+	.embeddedSurvey #cons_street1, td[type="text"]  {
+		color:#444444;
+		width:502px;
+		height:35px;
+		font-size:14px;
+		}
+
+	.embeddedSurvey #cons_street2, td[type="text"]  {
+		color:#444444;
+		width:502px;
+		height:35px;
+		font-size:14px;
+		margin-top:-60px;
+		}    
+
+	.embeddedSurvey input[type="text"]  {
+		color:#444444;
+		height:35px;
+		font-size:14px;
+		}
+
+	.embeddedSurvey input[type="radio"]{
+		width:20px;
+		background-color:white;
+		float:left;
+		margin-right:10px;
+		margin-top:0 !important;
+		font-size:14px;	
+		}
+
+	.embeddedSurvey input[type="checkbox"] { 
+		width:20px;
+		background-color:white;
+		float:left;
+		margin-right:10px;
+		margin-top:15px;
+		font-size:14px;       
+		}
+
+
+	.embeddedSurvey input.Button { 
+	  background: #79bf43;
+	  background-image: -webkit-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -moz-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -ms-linear-gradient(top, #79bf43, #69962e);
+	  background-image: -o-linear-gradient(top, #79bf43, #69962e);
+	  background-image: linear-gradient(to bottom, #79bf43, #69962e);
+	  -webkit-border-radius: 19;
+	  -moz-border-radius: 19; 
+	  border-radius: 19px;
+	  -webkit-box-shadow: 2px 2px 2px #666666;
+	  -moz-box-shadow: 2px 2px 2px #666666;
+	  box-shadow: 2px 2px 2px #666666;
+	  color: #ffffff;
+	  font-size: 12px;
+	  padding: 10px 20px 10px 20px;
+	  border: solid #79bf43 0px;
+	  text-decoration: none;
+	  text-transform:uppercase;
+	  text-align:center;
+	  float: left;
+	  margin-left: 5%;
+	  margin-top: 20px;
+	} 
+
+	.embeddedSurvey input.Button:hover { 
+	  background: #8ad150;
+	  background-image: -webkit-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -moz-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -ms-linear-gradient(top, #8ad150, #69962e);
+	  background-image: -o-linear-gradient(top, #8ad150, #69962e);
+	  background-image: linear-gradient(to bottom, #8ad150, #69962e);
+	  text-decoration: none;
+	  color: #ffffff;
+	  text-transform:uppercase;
+
+	} 
+
+
+/* Job list style */
+
+	.clearjobs {list-style:none; margin-left:-20px;}
+
+
+/*EVENTS SINGLE PAGE*/
+
+	.headlineEvent {margin-top:0;}
+	.mainImageEvent {float:left; }
+
+	#memDonWrap .memWrapCol #ticketInterface input, #memDonWrap .memWrapCol #ticketInterface textarea {
+		width: 20px;
+	}
+	#donAmt { background: #F99; }
+
+
+
+/*///////////////////////////////////////*/
+/*Shop Elements for CMS */
+/*///////////////////////////////////////*/
+
+		#topLinks {height: 25px; padding:0 0 0 5px; width:75%; float:right;}
+
+		.viewAll {float: left; margin-bottom:0 !important;}
+		.viewCart {float: right; vertical-align: middle;}
+
+		.shopimg { outline: none;  display:block; float:right; border:0; }
+	
+		#contactinfo {
+			background-color:#e5e5e5;
+			color:#474747; 
+			padding:10px; 
+			font-size: 12px;
+			text-align:center;
+			/*letter-spacing:0.3px;*/
+			height:55px;
+			width:75%;
+			float:right;
+			margin:0;
+		}    
+ 
+		#contactinfo a:link { /* unvisited link */
+			color: #75a942;
+			-webkit-transition: 0.5s;
+			-moz-transition: 0.5s;
+			-o-transition: 0.5s;
+			-ms-transition: 0.5s;
+			transition: 0.5s;
+			text-decoration:underline;	
+		}
+		#contactinfo a:visited {color:#75a942; text-decoration:underline;}  /* visited link */
+		#contactinfo a:hover { color: #3c98d1; text-decoration:underline;} /* mouse over link */
+
+		.rowShop {
+		margin-right:0;
+		margin-left:0;
+		margin-top:40px;
+	}
+
+
+/*///////////////////////////////////////*/
+/*Alert Homepage*/
+/*///////////////////////////////////////*/
+	.alertStyle {  
+		text-align:center; color:#f1744f; 
+		font-weight:bold; background-color:#ededed; 
+		padding:3px; 
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;}
+
+	.alertStyle a{color:#f1744f; text-decoration:none;}
+	.p1 { font-weight:normal; color:gray;}
+
+/*Email Sign Up*/
+	#emailHomepage { margin-left: 35px; margin-right: 35px; }
+
+
+/*Location information on attractions*/
+
+
+	.right_box_flex { clear:both;}
+
+
+

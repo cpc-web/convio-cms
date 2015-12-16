@@ -1,0 +1,651 @@
+/*************************** general styles ***********************/
+.cpc-test {
+	.alert {
+	background: #e7e7e7;
+	position: relative;
+	font-size: 16px;
+	color:  #CC0000;
+	margin-bottom: 0;
+	border-radius: 0;
+	word-spacing: 1.5px;
+	letter-spacing: .5px;
+	z-index: 1000;
+	text-align: center;
+	}
+
+	.cpc-test .close-alert a {
+	text-align: right;
+	color:  #CC0000;
+	}
+
+	.close-alert a:hover {
+	color:  #CC0000;  
+	}
+
+	body {
+	font-family: 'Titling Gothic FB Narr', sans-serif;  
+	}
+
+	input, select, textarea {
+	font-family: 'Titling Gothic FB Narr', sans-serif;    
+	}
+
+	h2, h3, .h2, .h3 {
+	margin-top: 0;  
+	margin-bottom: 0;
+	}
+
+	a  {
+	text-decoration: none;
+	color:inherit;  
+	}
+
+	a:hover {
+	color:white;
+	text-decoration:none; 
+	}
+
+	a:focus {
+	color:white;
+	text-decoration:none;   
+	}
+
+	a:active {
+	color:white;
+	text-decoration:none; 
+	}
+
+	.clickable {
+	cursor: pointer;  
+	}
+
+	.centered {
+	text-align: center;
+	margin: 0 auto;
+	}
+
+	.mid-email-capture {
+	margin-top: 30px;
+	outline: none;
+	border: 1px solid #6c6d70;
+	height: 41px;
+	width: 300px;
+	padding-left: 10px;
+	}
+
+	.top-email-capture {
+	margin-top: 20px;
+	height: 37px;
+	 border-radius: 2px; 
+	outline: none;
+	border: 1px solid #bdbdbd;
+	min-width: 300px;
+	padding: 0 10px;
+	margin-right: -4px;
+	}
+
+	.row {
+	padding-left: 0;
+	padding-right: 0;
+	margin-right: 0;
+	margin-left: 0; 
+	}
+
+	.container {
+	padding-right: 0;
+	padding-left: 0;  
+	}
+
+	.knockout, .knockout > li > a {
+	color: white;	
+	}
+
+
+
+
+	/*************************** hero image and cta ******************/
+	.main-image-mainpage {
+	background: url("http://www.centralparknyc.org/assets/images/2015/images/images/park_aerial_summer_hp-1.jpg")  no-repeat  center center ;
+	max-width: 1170px;
+	height: 430px;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  background-color: #DEDEDE;
+
+	}
+
+
+	.main-cta-mainpage {
+	background-color: rgba(255, 255, 255, .8);
+	width: 60%;
+	border-radius: 2px;
+	padding: 20px ;
+	text-align: center;
+	margin: 18em auto 0;
+	}
+
+	.main-cta-text {
+	font-family: 'Titling Gothic FB Cond';
+	color: #636466; 
+	font-size: 2em;
+	}
+
+	.main-cta-mainpage-mobile {
+	width: 100%;
+	padding: 15px;
+	text-align: center;
+	background-color: #DEDEDE;
+	}
+
+	@media only screen and (max-width: 1200px) and (min-width: 992px ) {
+	.main-cta-mainpage {
+	width: 75%; 
+	}
+	}
+
+	@media only screen and (max-width: 991px) and (min-width: 768px ) {
+	.main-cta-mainpage {
+	width: 75%; 
+	}
+	.main-cta-text {
+	font-size: 1.6em;
+	}
+	}
+
+	/*************************** second row text box row ******************/
+	.middle-cta{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	}
+
+	.col-sm-4.cta-middle {
+	width: 32.4%; 
+	padding-left:0;
+	padding-right:0;
+	height: 230px;
+	max-width: 500px;
+	}
+
+
+
+	.right-margin {
+	margin-right: 15px; 
+	}
+
+	/*.inner-header {
+	padding: 10px;
+	display: inline-block;
+	font-size: 24px;
+	color: #636466; 
+	font-family: 'Titling Gothic FB Cond';  
+	margin: 15px 0 0; 
+	}*/
+
+	.inner-header-02 {
+	background-color: transparent;  
+	margin: 15px 0 0; 
+	text-align: center;
+	font-size: 24px;
+	font-family: 'Titling Gothic FB Cond';  
+	display: inline-block;
+	padding: 10px;
+	color: #636466; 
+	}
+
+	.cta-02 input {
+	font-size: 14px;  
+	}
+
+	.inner-content-header {
+	background-color: rgba(255, 255, 255, .8);  
+	transition: background-color .4s ease;
+	-webkit-transition: background-color .4s ease;
+	-moz-transition: background-color .4s ease;
+	-o-transition: background-color .4s ease;
+	padding: 10px;
+	display: inline-block;
+	font-size: 24px;
+	color: #636466; 
+	font-family: 'Titling Gothic FB Cond';  
+	margin: 15px 0 0; 
+
+	}
+
+	.inner-content-header-active {
+	background-color: none;  
+	transition: background-color .3s ease;
+	-webkit-transition: background-color .3s ease;
+	-moz-transition: background-color .3s ease;
+	-o-transition: background-color .3s ease;
+	padding: 10px;
+	display: inline-block;
+	font-size: 24px;
+	color: #636466; 
+	font-family: 'Titling Gothic FB Cond';  
+	margin: 15px 0 0; 
+	}
+
+	.inner-sub {
+	float: left;
+	clear: both;
+	color: #636466;
+	padding: 0 10px;
+	position: relative;
+	font-size: 18px;
+	}
+
+	.inner-content-sub {
+	opacity: 0; 
+	transition: opacity .4s ease;
+	-webkit-transition: opacity .4s ease;
+	-moz-transition: opacity .4s ease;
+	-o-transition: opacity .4s ease;
+	font-family: 'Titling Gothic FB Cond';  
+	height: 75px;
+	}
+
+	.inner-content-sub-active {
+	opacity: 1;
+	transition: opacity .9s ease;
+	-webkit-transition: opacity .9s ease;
+	-moz-transition: opacity .9s ease;
+	-o-transition: opacity .9s ease;
+	font-family: 'Titling Gothic FB Cond';  
+	height: 75px;
+	}
+
+	.cta-01 {
+	background: 
+	url("http://www.centralparknyc.org/assets/images/2015/images/images/mid-cta-01.jpg")  center;
+	transition: background .8s ease;
+	-webkit-transition: background .8s ease;
+	-moz-transition: background .8s ease;
+	-o-transition: background .8s ease;
+
+	}
+
+	.cta-01-active {
+	background: 
+	url("http://www.centralparknyc.org/assets/images/2015/images/images/mid-cta-01-hover.jpg")  center;
+	transition: background .6s ease;
+	-webkit-transition: background .6s ease;
+	-moz-transition: background .6s ease;
+	-o-transition: background .6s ease;
+
+	}
+
+
+	.cta-02 {
+	background-color: #DEDEDE;
+	}
+
+	.cta-03 {
+	background: 
+	url("http://www.centralparknyc.org/assets/images/2015/images/images/mid-cta-03.jpg") center;  
+	transition: background .6s ease;
+	-webkit-transition: background .6s ease;
+	-moz-transition: background .6s ease;
+	-o-transition: background .6s ease;
+
+	}
+
+	.cta-03-active {
+	background: 
+	url("http://www.centralparknyc.org/assets/images/2015/images/images/mid-cta-03-hover.jpg") center;  
+	transition: background .6s ease;
+	-webkit-transition: background .6s ease;
+	-moz-transition: background .6s ease;
+	-o-transition: background .6s ease;
+
+	}
+
+	.fa-heart {
+	color: #e66766; 
+	}
+
+
+
+	/*************************** follow us mid-page *****************/
+
+	.followus-midpage {
+	background-color: #A3A4A2;
+	color: white;
+	padding: 10px;
+	display: table;
+	width: 100%; 
+	}
+
+	.followus-midpage > li { 
+	display: table-cell;
+	text-align: center;
+	float: none;
+	line-height: 1.8;
+	}
+
+	.followus-list-midpage {
+	list-style: none;
+	}
+
+	.followus-icon-midpage  {
+	float: left;  
+	width: 20%;
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Titling Gothic FB Cond';
+	color: white !important;
+	}
+
+	.followus-icon-midpage.fa-social-midpage a:hover, a:active, a:focus  {
+	text-transform: none; 
+	color:  #C2E2B3;
+	transition: color .3s ease;
+	-webkit-transition: color .3s ease;
+	-moz-transition: color .3s ease;
+	-o-transition: color .3s ease;
+	}
+
+
+
+	.followus-midpage.fa-social-midpage {
+	color: white;	
+	transition: color .3s ease;
+	-webkit-transition: color .3s ease;
+	-moz-transition: color .3s ease;
+	-o-transition: color .3s ease;
+	}
+
+	.followus-icon-midpage.fa-social-midpage a, a:visited {
+	color:  white;
+	text-transform: none; 
+	}
+
+	.followus-icon-midpage.fa-social-midpage .fa-instagram a:hover, a:active, a:focus {
+	text-transform: none; 
+	color:  #C2E2B3;
+	}
+
+	.followus-icon-midpage.fa-social-midpage .fa-instagram a, a:visited {
+	color:  white;
+	text-transform: none; 
+	} 
+
+	i.fa.fa-instagram.fa-social-midpage {
+	color: white;	
+	}
+
+	i.fa.fa-instagram.fa-social-midpage a:hover {
+	color: #C2E2B3;
+	}
+	/*************************** featured content *****************/
+	.featured-row {
+	margin: 30px auto;  
+	}
+
+	.featured-content {
+	max-width: 49%;
+	padding-left: 0;
+	font-family: 'Titling Gothic FB Narr', sans-serif;  
+	color: white;
+	}
+
+	.featured {
+	background-color: #68b247;
+	padding: 5px 10px;  
+	float: left;
+	color: white;
+	margin-top: 30px;
+	border-radius: 2px;
+	}
+
+	.featured-title {
+	margin-top: 20px;
+	font-size: 30px;
+	color: white; 
+	float: left;
+	clear:both;
+	color: #636466;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: rgba(255, 255, 255, .8);
+	}
+
+	.featured-subtitle {
+	clear:both; 
+	font-size: 24px;
+	padding-left: 15px;
+	color: transparent;
+	}
+
+	.featured-subsubtitle {
+	clear:both; 
+	font-size: 18px;
+	padding-left: 15px;
+	color: transparent;
+	}
+
+	.featured-cta {
+	float: right;
+	position: relative;
+
+	}
+
+	.cta-04 {
+	background: url('http://www.centralparknyc.org/assets/images/2015/images/images/feature-01.jpg') no-repeat center;  
+	height: 300px;
+	max-width: 570px;
+	transition: background .8s ease;
+	-webkit-transition: background .8s ease;
+	-moz-transition: background .8s ease;
+	-o-transition: background .8s ease;
+
+	}
+
+	.cta-04-active {
+	background: url('http://www.centralparknyc.org/assets/images/2015/images/images/feature-01-hover.jpg') no-repeat center;  
+	height: 300px;
+	max-width: 570px;
+	transition: background .6s ease;
+	-webkit-transition: background .6s ease;
+	-moz-transition: background .6s ease;
+	-o-transition: background .6s ease;
+
+	}
+
+	.cta-05 {
+	background: url('http://www.centralparknyc.org/assets/images/2015/images/images/feature-02.jpg') no-repeat center;  
+	height: 300px;
+	max-width: 570px;
+	transition: background .8s ease;
+	-webkit-transition: background .8s ease;
+	-moz-transition: background .8s ease;
+	-o-transition: background .8s ease;
+	}
+
+	.cta-05-active {
+	background: url('http://www.centralparknyc.org/assets/images/2015/images/images/feature-02-hover.jpg') no-repeat center;  
+	height: 300px;
+	max-width: 570px;
+	transition: background .6s ease;
+	-webkit-transition: background .6s ease;
+	-moz-transition: background .6s ease;
+	-o-transition: background .6s ease;
+
+	}
+
+	.featured-content-right {
+	margin-right: 30px;
+	}
+
+
+
+
+	/*************************** follow us bottom page *****************/
+	.followus {
+	background-color: #86C26B;
+	color: white;
+	padding: 10px  20px;
+	display: table; 
+	width: 100%; 
+	margin-top: 30px;
+	}
+
+	.followus > li { 
+	display: table-cell;
+	text-align: center;
+	float: none;
+	line-height: 1.8;
+	}
+
+	.followus-list {
+	list-style: none; 
+	margin-right: 10px;
+	}
+
+
+	.followus-icon {  
+	width: 4%;
+	text-align: center;
+	font-family: 'Titling Gothic FB Cond';
+	line-height: 2;
+	float: right;
+
+	}
+
+	.followus-text {
+	width: 10%; 
+	}
+
+	.fa-social-bottom {
+	font-size: 30px;  
+	line-height: 1.1;
+	}
+
+	.followus-icon a:hover{
+	color: #636466;
+	transition: color .3s ease;
+	-webkit-transition: color .3s ease;
+	-moz-transition: color .3s ease;
+	-o-transition: color .3s ease;
+	}
+	/*************************** footer *****************/
+
+
+
+	.main-footer {
+	background-color: #68b247;
+	color: white;
+	font-family: 'Titling Gothic FB Narr', sans-serif;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-ms-font-smoothing:antialiased;
+	font-size: 12px;
+	padding: 20px 20px 10px;
+	margin:0 auto;
+	max-width: 1170px;
+	}
+
+	.footer-logo-01 {
+	margin-bottom: 10px;
+	}
+
+	.footer-main-item {
+	font-weight: bold;
+	}
+
+	.footerUL {
+	list-style: none; 
+	padding-left: 0;
+	}
+
+	/*///////////////////////////////////////*/
+	/* FOOTER */
+	/*///////////////////////////////////////*/
+
+	.mobileFooter {
+	padding-top: 10px;
+	background-color: #68B24A;
+	text-align: center;
+	letter-spacing: 1px;
+	}
+
+	.mobile-footer-menu {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+	}
+
+	.mobile-footer-menu li {
+	margin-bottom: 10px;  
+	}
+
+
+	.footerLogo1 { float:left; }
+	.footerLink {color: #FFFFFF; width:100%;}
+	.footerLink p {text-align:center; width:100%; }
+	.footerLink a { 
+	color: #FFFFFF; 
+	margin-right:0; 
+	text-decoration:none; 
+	margin-bottom:25px;}
+	.footerLink a:hover, 
+	.footerLink a:focus {
+	color:rgb(108, 109, 112) !important; /*gray*/
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+	text-decoration:none;
+	}
+
+	.footerLogo2 {float:right; top:0;}
+	.footerAddress {font-size:11px; }
+
+	.starBar { width: 100%; }
+	.starBar img { margin: 12px 12px -30px; }
+	.starBar {
+	width: 352px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	}
+
+	/*************************** mobile email capture *****************/
+
+	.mobile-email-capture {
+	height: 200px;
+	background-color: #DEDEDE;  
+	color: #636466;
+	text-align: center;
+	width: 90%;
+	float: none;
+	margin: 10px auto 30px;
+	padding: 5px;
+	max-width: 500px;
+	}
+
+	.mobile-email-capture input {
+	margin: 20px auto;
+	outline: none;
+	border: 1px solid #6c6d70;
+	height: 41px;
+	width: 90%;
+	background-color: white;
+	padding: 10px;
+	font-size: 12px;
+
+	}
+
+	.inner-header-mobile-email {
+	font-family: 'Titling Gothic FB Cond', sans-serif;
+	font-size: 24px;
+	margin: 0 auto; 
+	text-align: center;
+	margin-top: 10px;
+	padding-top: 10px;
+	}
+}	
+
+
+

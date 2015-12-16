@@ -1,0 +1,451 @@
+<!-- Free Child Event -->
+<!-- July 2015 -->
+<!-- mary edits: js fix for events occurred -->
+
+<link rel="stylesheet" type="text/css" href="http://cpc.convio.net/site/PageServer?pagename=event_tix_styles&pgwrap=n" />
+<style type="text/css">
+  #bodyScript { display: none; }
+  #memDonWrap { width: 100%; margin: 0; }
+  #memDonWrap .memWrapCol {
+    float: left;
+    margin: 5px 5px 0;
+    width: 100%;
+    padding-right: 20px;
+  }
+hr {
+margin-top: 0px;
+margin-bottom: 5px;
+border-right: 0px none;
+border-width: 1px 0px 0px;
+border-style: solid none none;
+border-color: #DFECCD -moz-use-text-color -moz-use-text-color;
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+border-image: none;
+}
+.smalltext {font-size: 12px; margin-bottom: 10px; font-style: italic;}
+  #memDonWrap h2.leftHead { width: 260px; }
+  .dropdownShare:hover .dropdown-menu-share { display: block; }
+  .dropdown-menu-share { min-width: 180px; margin: 0; }
+  .utilityRow { margin-top: 15px; margin-bottom: 15px; }
+  #breadcrumbs { margin-left:-30px;}
+  #memDonWrap li.membersItem { margin-bottom: 20px; padding-bottom: 20px; }
+  #mainImage img {
+    display: block;
+    height: auto;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+  #memDonWrap h2 { padding: 6px 15px; }
+  #ticketTypeArea { height: 60px; }
+  #memDonWrap .memWrapCol #ticketInterface input.discCode { width: 60px; margin: 10px; }
+  #eventDate {float: left; clear:both;}
+  #eventLocation {float: left; margin-bottom: 10px;}
+  #startPast {float:left; background-color: rgb(247, 247, 247); border: 1px solid rgb(104, 178, 71); padding: 2px 10px; border-radius: 5px; margin-bottom: 10px;}
+  #cancelled {float:left; background-color: rgb(247, 247, 247); border: 1px solid rgb(104, 178, 71); padding: 2px 10px; border-radius: 5px; margin-bottom: 10px;}
+  
+  @media(max-width:767px) {
+    .left-nav {
+      min-height: 30px;
+      padding: 0px;
+      width: 100%;
+    }
+    .secondnav { visibility: visible; }
+    .top-image { visibility: hidden; height: 55px; min-height: 55px; }
+  }
+
+</style>
+
+<div id="cancelCMS" style="display: none;">${cancelled}</div>
+
+<div id="urid" style="display: none"><convio:session name="80" param="urid" /></div>
+
+  <!-- Top Image  ================================================== -->
+    <div class="top-image">
+        <t:if test="top_image.length > 0">
+    <img id="top_image" alt="Top Image" class="img-responsive hidden" src="${top_image.url}" />
+  </t:if><t:else>
+    <t:set id="randomTopImg" value="random(5)+1" />
+    <img id="top_image" alt="Top Image" class="img-responsive hidden" src="http://cpc.convio.net/redesign/img/header/insidepages${randomTopImg}_2014.jpg" />
+  </t:else>
+  <script type="text/javascript">
+    jQuery(document).ready(function() { jQuery('#top_image').removeClass('hidden'); });
+  </script>
+    </div>
+    <!-- /.top-image -->
+
+    <!--- /////////// EVERYTHING ABOVE THIS POINT IS COMMON TO ALL INTERIOR TEMPLATES ////////////// -->
+
+  <div id="ieBug" style="display: none;">false</div>
+    <div class="main-body">
+        <div class="container">
+      <div class="row">
+        <div class="col-sm-2 col-sm-offset-10 utilityRow" id="share"> 
+          <div class="dropdownShare" style="float:right;">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            SHARE <span class="glyphicon glyphicon-share"></span>
+            </a>
+            <ul class="dropdown-menu-share">
+              <li>
+                <p>Share On <a href="https://www.facebook.com/sharer/sharer.php?u=${url}"><img src="http://cpc.convio.net/redesign/img/cpc/facebook.png" alt="Facebook"></a>
+                <a href="https://twitter.com/share"><img src="http://cpc.convio.net/redesign/img/cpc/twitter.png" alt="Twitter"/></a>
+                <a href="https://plus.google.com/share?url=${url}" onclick="javascript:window.open(this.href,
+                  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cpc.convio.net/redesign/img/cpc/gplus.png" alt="Google +"/></a>
+                <a  href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-shape="round" ><img src="http://cpc.convio.net/redesign/img/cpc/pinterest.png" alt="Pinterest" style="margin-top:5px;"/></a> </p>
+                <!--<p>Share by Email:
+                <input type="text" name="email" value="Your email here" class="emailShareInput"></p>-->
+              </li>
+            </ul>
+          </div>
+        </div><!-- .col-sm-2 -->
+      </div><!-- .row -->
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <t:if test="image.length > 0">
+            <div id="mainImage" class="mainImageEvent" style="padding-bottom: 10px;">${image}</div><br />
+          </t:if><t:else>
+            <div id="mainImage">${parent_event.image}</div><br />
+          </t:else>
+        </div> <!--col-sm-6-->
+        <t:if test="parent_event.length > 0">
+          <div class="col-sm-6 col-xs-12 eventContent">
+            <div id="rdURL" style="display: none;">${parent_event.redirect_url}</div>
+            <script type="text/javascript">
+              var element = document.getElementById('rdURL');
+              // innerText for IE, textContent for other browsers
+              var text = element.innerText || element.textContent;
+              if ( text != '') { window.location=text; }
+            </script>
+            <h1 class="headlineEvent">${parent_event.title}<t:if test="subtitle != null">: ${subtitle}</t:if></h1>
+            <div id="startPast" style="float: left;  display: none;">
+              <h4>SORRY, THIS EVENT HAS ALREADY OCCURRED.</h4>
+            </div>
+            <div id="cancelled" style="float: left;  display: none;">
+              <h4>SORRY, THIS EVENT IS CANCELLED.</h4>
+            </div>
+            <div id="eventDate">Date: ${date}, <t:if test="start_time != null">${start_time}</t:if><t:else>${parent_event.start_time}</t:else> to <t:if test="end_time != null">${end_time}</t:if><t:else>${parent_event.end_time}</t:else></div>
+            <div id="eventLocation">Location: <a href="${related_location.url}"><span id="eventLocationName"><t:if test="location != null">${location}</t:if><t:else>${parent_event.location}</t:else></span></a></div>
+          </div><!-- .eventContent -->
+          <div class="col-sm-6 col-xs-12 eventContent">
+            ${parent_event.body}
+            
+            <t:if test="body != null">
+              ${body}
+            </t:if>
+          </div><!-- .eventContent -->
+        </t:if>
+        </t:if><t:else>
+          <div class="col-sm-6 col-xs-12 eventContent">
+            <div id="rdURL" style="display: none;">${redirect_url}</div>
+            <script type="text/javascript">
+              var element = document.getElementById('rdURL');
+              // innerText for IE, textContent for other browsers
+              var text = element.innerText || element.textContent;
+              if ( text != '') { window.location=text; }
+            </script>
+            <h1 class="headlineEvent">${title}<t:if test="subtitle != null">: ${subtitle}</t:if></h1>
+            <div id="startPast" style="float: left;  display: none;">
+              <h4>SORRY, THIS EVENT HAS ALREADY OCCURRED.</h4>
+            </div>
+            <div id="cancelled" style="float: left;  display: none;">
+              <h4>SORRY, THIS EVENT IS CANCELLED.</h4>
+            </div>
+            <div id="eventDate">Date: ${date}, ${start_time} to ${end_time}</div>
+            <div id="eventLocation">Location: <a href="${related_location.url}"><span id="eventLocationName">${location}</span></a></div>
+            
+          </div><!-- .eventContent -->
+          <div class="col-sm-6 col-xs-12 eventContent">
+            <p>${body}</p>
+          </div><!-- .eventContent -->
+        </t:else>
+        <div id="eventTicketed" style="display: none;">${ticketed_event_type}</div>
+        <div id="thunderID" style="display: none;">${thundertix_id}</div>       
+        <div class="col-xs-12">
+          <div id="eventDateForm" style="display: none;"><t:value id="date" format="yyyy/MM/dd"></t:value></div>
+          <div id="eventStartTime" style="display: none;"><t:if test="start_time != null || parent_event.length <= 0">${start_time}</t:if><t:else>${parent_event.start_time}</t:else></div>
+          <div id="eventEndTime" style="display: none;"><t:if test="end_time != null || parent_event.length <= 0">${end_time}</t:if><t:else>${parent_event.end_time}</t:else></div>
+
+
+
+          <div id="ieMessage" style="float: left;  display: none;">
+            <h4>We apologize, but online ticket purchases require Google Chrome, Safari, or Firefox. If you are not using one of these browsers, please call the Belvedere Castle visitor center at (212) 772-0210 to purchase tickets for ticketed tours. Thank you for your patience as we resolve this issue!</h4><br /><br /><br />
+          </div>
+          
+    
+        </div> <!--col-sm-6-->
+      </div><!-- .row -->
+    </div><!-- .main-body -->
+  </div><!-- .container -->
+
+<!--script type="text/javascript">
+  function isSecure() {
+    return false;
+  }
+</script-->
+
+<!--script src="http://support.centralparknyc.org/site/PageNavigator/ticket_security.html?pgwrap=n"></script-->
+
+<script type="text/javascript">
+(function($) {
+  $(function() {
+    var cancelCMS = $('#cancelCMS').text();
+    if (cancelCMS == 'cancelled') {
+      $('#cancelled').show();
+      $('#tixSection').hide();
+    } else {
+      // create Date object for current time and compare to 
+      var today = new Date();
+      var myTomorrow = new Date(today.getTime() + 24 * 60 * 60 * 1000);
+      var utc = today.getTime() + (today.getTimezoneOffset() * 60000);
+      var nowDateNYC = new Date(utc - 14400000);
+      var myDate = $('#eventDateForm').text().toString();
+      var myTime = $('#eventEndTime').text().toString();
+      var startString = myDate.concat(' ').concat(myTime);
+      var myStart = Date.parse(startString);
+      //alert('now : '+nowDate+' now raw: '+Date.parse(nowDate).toString()+' now timezone adjusted: '+nowDateNYC+' now timezone adjusted raw: '+Date.parse(nowDateNYC).toString()+' event date: '+startString+' raw event date: '+myStart);
+      if (myStart < nowDateNYC) {
+        $('#startPast').show();
+        $('#memDonWrap').hide();
+      } else {
+        var myTicketed = $('#eventTicketed').text();
+        console.log('myTicketed:',myTicketed);
+        if (myTicketed == 'Ticketed' || myTicketed == 'RSVP') {
+          var frameID = $('#thunderID').text();
+          console.log('frameID:',frameID);
+          var frameSource = '<iframe class="iframe-class" width="100%" height="1200px" frameborder="0" scrolling="auto" src=https://centralparkconservancy.thundertix.com/orders/new?performance_id='+frameID+' marginheight="0" marginwidth="0" allowtransparency="true"></iframe>';
+          $('#tixSection').show()
+          $('#tixInterface').html(frameSource);
+        }
+      }
+    }
+  });
+})(jQuery);
+</script><!-- Free Child Event -->
+<!-- July 2015 -->
+<!-- mary edits: js fix for events occurred -->
+
+<link rel="stylesheet" type="text/css" href="http://cpc.convio.net/site/PageServer?pagename=event_tix_styles&pgwrap=n" />
+<style type="text/css">
+  #bodyScript { display: none; }
+  #memDonWrap { width: 100%; margin: 0; }
+  #memDonWrap .memWrapCol {
+    float: left;
+    margin: 5px 5px 0;
+    width: 100%;
+    padding-right: 20px;
+  }
+hr {
+margin-top: 0px;
+margin-bottom: 5px;
+border-right: 0px none;
+border-width: 1px 0px 0px;
+border-style: solid none none;
+border-color: #DFECCD -moz-use-text-color -moz-use-text-color;
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+border-image: none;
+}
+.smalltext {font-size: 12px; margin-bottom: 10px; font-style: italic;}
+  #memDonWrap h2.leftHead { width: 260px; }
+  .dropdownShare:hover .dropdown-menu-share { display: block; }
+  .dropdown-menu-share { min-width: 180px; margin: 0; }
+  .utilityRow { margin-top: 15px; margin-bottom: 15px; }
+  #breadcrumbs { margin-left:-30px;}
+  #memDonWrap li.membersItem { margin-bottom: 20px; padding-bottom: 20px; }
+  #mainImage img {
+    display: block;
+    height: auto;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+  #memDonWrap h2 { padding: 6px 15px; }
+  #ticketTypeArea { height: 60px; }
+  #memDonWrap .memWrapCol #ticketInterface input.discCode { width: 60px; margin: 10px; }
+  #eventDate {float: left; clear:both;}
+  #eventLocation {float: left; margin-bottom: 10px;}
+  #startPast {float:left; background-color: rgb(247, 247, 247); border: 1px solid rgb(104, 178, 71); padding: 2px 10px; border-radius: 5px; margin-bottom: 10px;}
+  #cancelled {float:left; background-color: rgb(247, 247, 247); border: 1px solid rgb(104, 178, 71); padding: 2px 10px; border-radius: 5px; margin-bottom: 10px;}
+  
+  @media(max-width:767px) {
+    .left-nav {
+      min-height: 30px;
+      padding: 0px;
+      width: 100%;
+    }
+    .secondnav { visibility: visible; }
+    .top-image { visibility: hidden; height: 55px; min-height: 55px; }
+  }
+
+</style>
+
+<div id="cancelCMS" style="display: none;">${cancelled}</div>
+
+<div id="urid" style="display: none"><convio:session name="80" param="urid" /></div>
+
+  <!-- Top Image  ================================================== -->
+    <div class="top-image">
+        <t:if test="top_image.length > 0">
+    <img id="top_image" alt="Top Image" class="img-responsive hidden" src="${top_image.url}" />
+  </t:if><t:else>
+    <t:set id="randomTopImg" value="random(5)+1" />
+    <img id="top_image" alt="Top Image" class="img-responsive hidden" src="http://cpc.convio.net/redesign/img/header/insidepages${randomTopImg}_2014.jpg" />
+  </t:else>
+  <script type="text/javascript">
+    jQuery(document).ready(function() { jQuery('#top_image').removeClass('hidden'); });
+  </script>
+    </div>
+    <!-- /.top-image -->
+
+    <!--- /////////// EVERYTHING ABOVE THIS POINT IS COMMON TO ALL INTERIOR TEMPLATES ////////////// -->
+
+  <div id="ieBug" style="display: none;">false</div>
+    <div class="main-body">
+        <div class="container">
+      <div class="row">
+        <div class="col-sm-2 col-sm-offset-10 utilityRow" id="share"> 
+          <div class="dropdownShare" style="float:right;">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            SHARE <span class="glyphicon glyphicon-share"></span>
+            </a>
+            <ul class="dropdown-menu-share">
+              <li>
+                <p>Share On <a href="https://www.facebook.com/sharer/sharer.php?u=${url}"><img src="http://cpc.convio.net/redesign/img/cpc/facebook.png" alt="Facebook"></a>
+                <a href="https://twitter.com/share"><img src="http://cpc.convio.net/redesign/img/cpc/twitter.png" alt="Twitter"/></a>
+                <a href="https://plus.google.com/share?url=${url}" onclick="javascript:window.open(this.href,
+                  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cpc.convio.net/redesign/img/cpc/gplus.png" alt="Google +"/></a>
+                <a  href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-shape="round" ><img src="http://cpc.convio.net/redesign/img/cpc/pinterest.png" alt="Pinterest" style="margin-top:5px;"/></a> </p>
+                <!--<p>Share by Email:
+                <input type="text" name="email" value="Your email here" class="emailShareInput"></p>-->
+              </li>
+            </ul>
+          </div>
+        </div><!-- .col-sm-2 -->
+      </div><!-- .row -->
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <t:if test="image.length > 0">
+            <div id="mainImage" class="mainImageEvent" style="padding-bottom: 10px;">${image}</div><br />
+          </t:if><t:else>
+            <div id="mainImage">${parent_event.image}</div><br />
+          </t:else>
+        </div> <!--col-sm-6-->
+        <t:if test="parent_event.length > 0">
+          <div class="col-sm-6 col-xs-12 eventContent">
+            <div id="rdURL" style="display: none;">${parent_event.redirect_url}</div>
+            <script type="text/javascript">
+              var element = document.getElementById('rdURL');
+              // innerText for IE, textContent for other browsers
+              var text = element.innerText || element.textContent;
+              if ( text != '') { window.location=text; }
+            </script>
+            <h1 class="headlineEvent">${parent_event.title}<t:if test="subtitle != null">: ${subtitle}</t:if></h1>
+            <div id="startPast" style="float: left;  display: none;">
+              <h4>SORRY, THIS EVENT HAS ALREADY OCCURRED.</h4>
+            </div>
+            <div id="cancelled" style="float: left;  display: none;">
+              <h4>SORRY, THIS EVENT IS CANCELLED.</h4>
+            </div>
+            <div id="eventDate">Date: ${date}, <t:if test="start_time != null">${start_time}</t:if><t:else>${parent_event.start_time}</t:else> to <t:if test="end_time != null">${end_time}</t:if><t:else>${parent_event.end_time}</t:else></div>
+            <div id="eventLocation">Location: <a href="${related_location.url}"><span id="eventLocationName"><t:if test="location != null">${location}</t:if><t:else>${parent_event.location}</t:else></span></a></div>
+          </div><!-- .eventContent -->
+          <div class="col-sm-6 col-xs-12 eventContent">
+            ${parent_event.body}
+            
+            <t:if test="body != null">
+              ${body}
+            </t:if>
+          </div><!-- .eventContent -->
+        </t:if>
+        </t:if><t:else>
+          <div class="col-sm-6 col-xs-12 eventContent">
+            <div id="rdURL" style="display: none;">${redirect_url}</div>
+            <script type="text/javascript">
+              var element = document.getElementById('rdURL');
+              // innerText for IE, textContent for other browsers
+              var text = element.innerText || element.textContent;
+              if ( text != '') { window.location=text; }
+            </script>
+            <h1 class="headlineEvent">${title}<t:if test="subtitle != null">: ${subtitle}</t:if></h1>
+            <div id="startPast" style="float: left;  display: none;">
+              <h4>SORRY, THIS EVENT HAS ALREADY OCCURRED.</h4>
+            </div>
+            <div id="cancelled" style="float: left;  display: none;">
+              <h4>SORRY, THIS EVENT IS CANCELLED.</h4>
+            </div>
+            <div id="eventDate">Date: ${date}, ${start_time} to ${end_time}</div>
+            <div id="eventLocation">Location: <a href="${related_location.url}"><span id="eventLocationName">${location}</span></a></div>
+            
+          </div><!-- .eventContent -->
+          <div class="col-sm-6 col-xs-12 eventContent">
+            <p>${body}</p>
+          </div><!-- .eventContent -->
+        </t:else>
+        <div id="eventTicketed" style="display: none;">${ticketed_event_type}</div>
+        <div id="thunderID" style="display: none;">${thundertix_id}</div>       
+        <div class="col-xs-12">
+          <div id="eventDateForm" style="display: none;"><t:value id="date" format="yyyy/MM/dd"></t:value></div>
+          <div id="eventStartTime" style="display: none;"><t:if test="start_time != null || parent_event.length <= 0">${start_time}</t:if><t:else>${parent_event.start_time}</t:else></div>
+          <div id="eventEndTime" style="display: none;"><t:if test="end_time != null || parent_event.length <= 0">${end_time}</t:if><t:else>${parent_event.end_time}</t:else></div>
+
+
+
+          <div id="ieMessage" style="float: left;  display: none;">
+            <h4>We apologize, but online ticket purchases require Google Chrome, Safari, or Firefox. If you are not using one of these browsers, please call the Belvedere Castle visitor center at (212) 772-0210 to purchase tickets for ticketed tours. Thank you for your patience as we resolve this issue!</h4><br /><br /><br />
+          </div>
+          
+    
+        </div> <!--col-sm-6-->
+      </div><!-- .row -->
+    </div><!-- .main-body -->
+  </div><!-- .container -->
+
+<!--script type="text/javascript">
+  function isSecure() {
+    return false;
+  }
+</script-->
+
+<!--script src="http://support.centralparknyc.org/site/PageNavigator/ticket_security.html?pgwrap=n"></script-->
+
+<script type="text/javascript">
+(function($) {
+  $(function() {
+    var cancelCMS = $('#cancelCMS').text();
+    if (cancelCMS == 'cancelled') {
+      $('#cancelled').show();
+      $('#tixSection').hide();
+    } else {
+      // create Date object for current time and compare to 
+      var today = new Date();
+      var myTomorrow = new Date(today.getTime() + 24 * 60 * 60 * 1000);
+      var utc = today.getTime() + (today.getTimezoneOffset() * 60000);
+      var nowDateNYC = new Date(utc - 14400000);
+      var myDate = $('#eventDateForm').text().toString();
+      var myTime = $('#eventEndTime').text().toString();
+      var startString = myDate.concat(' ').concat(myTime);
+      var myStart = Date.parse(startString);
+      //alert('now : '+nowDate+' now raw: '+Date.parse(nowDate).toString()+' now timezone adjusted: '+nowDateNYC+' now timezone adjusted raw: '+Date.parse(nowDateNYC).toString()+' event date: '+startString+' raw event date: '+myStart);
+      if (myStart < nowDateNYC) {
+        $('#startPast').show();
+        $('#memDonWrap').hide();
+      } else {
+        var myTicketed = $('#eventTicketed').text();
+        console.log('myTicketed:',myTicketed);
+        if (myTicketed == 'Ticketed' || myTicketed == 'RSVP') {
+          var frameID = $('#thunderID').text();
+          console.log('frameID:',frameID);
+          var frameSource = '<iframe class="iframe-class" width="100%" height="1200px" frameborder="0" scrolling="auto" src=https://centralparkconservancy.thundertix.com/orders/new?performance_id='+frameID+' marginheight="0" marginwidth="0" allowtransparency="true"></iframe>';
+          $('#tixSection').show()
+          $('#tixInterface').html(frameSource);
+        }
+      }
+    }
+  });
+})(jQuery);
+</script>

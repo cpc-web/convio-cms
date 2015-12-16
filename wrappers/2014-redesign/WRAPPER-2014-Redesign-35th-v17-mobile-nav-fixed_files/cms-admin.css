@@ -1,0 +1,142 @@
+/**
+ * $Source$
+ * $Author$
+ * $Revision$
+ * $Date$
+ *
+ * General CMS admin styles.
+ **/
+
+/* General CSS */
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+.yui-skin-cms a {
+  color: blue;
+  text-decoration: none;
+}
+.yui-skin-cms a:visited {
+  color: blue;
+  text-decoration: none;
+}
+.yui-skin-cms a:hover {
+  text-decoration: underline;
+}
+*/
+
+.yui-skin-cms img {
+  border: 0;
+}
+
+/* iframe portals */
+
+#pageContent {
+  background: url("/admin/components/header/assets/body_bg.png") repeat-x scroll 0 0 #CCCCCC;
+  margin: 0;
+}
+
+#pageContent #bodyFrameContainer {
+  margin: 0;
+  padding: 17px;
+}
+
+#pageContent #bodyFrame {
+  border: 1px solid #999999;
+  margin: 0;
+}
+
+
+/* Feedback link and dialog */
+
+.yui-skin-cms .feedback {
+  padding: 2px 4px 2px 16px;
+  background: left center no-repeat;
+  background-image: url('/assets/icons/16x16/feedback.gif');
+}
+
+.yui-skin-cms .feedbackLink {
+  font-weight:bold; 
+  font-size:12px;
+}
+
+.yui-skin-cms .feedbackTag {
+  margin: 0;
+  padding: 0;
+}
+
+.yui-skin-cms .feedbackBlurb {
+  width:400px;
+  white-space:auto;
+  font-family: arial,helvetica,clean,sans-serif;
+  margin-left: 0;
+  margin-bottom: 30px;
+}
+
+.yui-skin-cms .feedbackDisclaimer {
+  font-size: 11px;
+  margin-left: 0;
+}
+
+.yui-skin-cms .editorToggle {
+  margin:2px;
+  text-align:right;
+  font-size:10px;
+  white-space:nowrap;
+}
+
+.yui-skin-cms span.cms-required {
+  color: red;
+  font-family: Tahoma;
+  font-weight: normal;
+  vertical-align: text-top;
+}
+
+
+/* Error display for invalid data when saving content. */
+
+.yui-skin-cms .invalidDataErrorHeading {
+  margin: 0 0 0 30px;
+}
+
+.yui-skin-cms .invalidDataErrorList {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  max-height: 450px;
+  padding: 10px 0 0 30px;
+  overflow: auto;
+}
+
+/* Authoring wizard properties display widgets */
+
+.yui-skin-cms .relatedItemUploadDisplay {
+  border: 1px solid #777777;
+  float: right;
+  margin-left: 12px;
+}
+
+.yui-skin-cms .relatedItemUploadDisplay .header {
+  background-color: #DDDDDD;
+  border-bottom: 1px solid #777777;
+  color: #333333;
+  font-weight: bold;
+  min-width: 120px;
+  padding: 2px;
+}
+
+.yui-skin-cms .relatedItemUploadDisplay .body {
+  padding: 4px;
+}
+
+.yui-skin-cms .relatedItemUploadDisplay .body .relatedItem {
+  text-align: center;
+}
+
+.yui-skin-cms .relatedItemUploadDisplay .body .relatedItem img.thumbnail {
+  border: 0;
+  margin: 2px;
+}

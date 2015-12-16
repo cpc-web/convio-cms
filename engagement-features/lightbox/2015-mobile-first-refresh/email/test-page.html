@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<head>
+     
+  <!-- Latest compiled and minified CSS -->
+  <link href="http://cloud.webtype.com/css/2ebe6d20-6380-420e-a3c8-7a19f4a641e2.css" rel="stylesheet" type="text/css">
+<link href="http://www.centralparknyc.org/assets/css/bootstrap-303-min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href="new-css.css" rel="stylesheet" />
+
+<script type='text/javascript' src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+
+<style>
+body {
+background:url('screen-shot.png');
+background-size: 100%;
+z-index: -1000;
+}
+</style>
+</head>
+<body>
+
+<div class="modal fade" id="captureModal">
+  <div class="container mobile-container">
+    <div class="row">
+      <div class="close-button">
+        <div type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times-circle-o"></i></span></div>
+      </div>
+    </div>
+    <div class="row">  
+      <header class="title">
+        Get the Inside Scoop on Central Park!
+      </header>
+    </div>  
+    <div class="row">
+      <div class="inside-text">
+        Be the first to know what's going on in the Park, unearth Park secrets, get special offers, and more.
+      </div>
+    </div>
+    <div class="row">  
+      <form novalidate="novalidate" id="lbox_register_form" name="lbox_register_form" method="post" action="javascript:void(0);">
+        <input id="cons_email" name="cons_email" placeholder="Your Email" type="text">
+        <input id="cons_zip_code" name="cons_zip_code" placeholder="Your Zip Code" type="text">
+        <input value="true" name="cons_email_opt_in" type="hidden">
+        <input name="cons_info_component" value="true" type="hidden">
+        <input name="cons_mail_opt_in" value="true" type="hidden">
+        <input name="ACTION_SUBMIT_SURVEY_RESPONSE" value="Submit Survey" type="hidden">
+        <input name="NEXTURL" value="http://www.centralparknyc.org/cpc-registration.html?show=all" type="hidden">
+        <input name="s_src" value="website" type="hidden">
+        <input name="s_subsrc" value="insider_lightbox_2015" type="hidden">
+        <input name="denySubmit" value="" alt="This field is used to prevent form submission by scripts." type="hidden">
+        <input name="SURVEY_ID" value="4520" type="hidden">
+        <input name="ERRORURL" id="ERRORURL" value="http://www.centralparknyc.org/cpc-registration.html" type="hidden">
+        <input name="ifUsername" id="ifUsername" value="[[S1:user_name]]" type="hidden">
+        <button class="btnSignUpLightbox clickable" id="formSubmit">
+        Sign Up Today
+        </button>  
+      </form>
+    </div>  
+    <div class="bottom-link">
+      <div class="close bottom-link" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Continue to CentralParkNYC.org</span></div>
+    </div>
+
+  </div> <!-- close container -->  
+</div> <!-- close modal -->
+
+
+
+
+
+</body>
+
+<script type="text/javascript">
+    $(window).load(function(){
+        $('#captureModal').modal('show');
+    });
+</script>
+</html>

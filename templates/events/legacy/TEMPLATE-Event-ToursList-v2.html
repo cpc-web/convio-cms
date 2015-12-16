@@ -1,0 +1,13 @@
+<!-- v1 - march 2014 -->
+<div class="templateRepeat">
+		<div class="eventXML" id=${itemID}><Event><id>${itemID}</id><calendar_id>${calendar_id}</calendar_id><name><t:if test="cancelled == 'cancelled'">CANCELLED: </t:if>${title}</name><time>${start_time} to ${end_time}</time><date><t:value id="date" format="EEE, MMM d, yyyy">Fri, Dec 31, 1999</t:value></date><parent>${parent_event.itemID}</parent><type><t:if test="parent_event.length > 0">${parent_event.event_type}</t:if><t:else>${event_type}</t:else></type><ticketed>${ticketed_event_type}</ticketed><cancel><t:value id="cancelled"></t:value></cancel><url>${url}</url></Event></div>
+</div>
+
+<!-- v2 - 12 Sept 2014 -->
+<div class="templateRepeat">
+		<t:if test="parent_event.length > 
+			<div class="eventXML" id=${itemID}><Event><id>${itemID}</id><name><t:if test="cancelled == 'cancelled'">CANCELLED: </t:if>${parent_event.title}<t:if test="subtitle != null">: ${subtitle}</t:if></name><time><t:if test="start_time.length > 0">${start_time}</t:if><t:else>${parent_event.start_time}</t:else> to <t:if test="end_time.length > 0">${end_time}</t:if><t:else>${parent_event.end_time}</t:else></time><date><t:value id="date" format="EEE, MMM d, yyyy">Fri, Dec 31, 1999</t:value></date><parent>${parent_event.itemID}</parent><type>${parent_event.event_type}</type><ticketed>${ticketed_event_type}</ticketed><cancel><t:value id="cancelled"></t:value></cancel><url>${url}</url><image><t:if test="image.length > 0"><t:value id="image.url"></t:value></t:if><t:else><t:value id="parent_event.image.url"></t:value></t:else></image><description>${parent_event.short_description}<t:if test="short_description != null"><br />${short_description}</t:if></description></Event></div>
+		</t:if><t:else>
+			<div class="eventXML" id=${itemID}><Event><id>${itemID}</id><calendar_id>${calendar_id}</calendar_id><name><t:if test="cancelled == 'cancelled'">CANCELLED: </t:if>${title}</name><time>${start_time} to ${end_time}</time><date><t:value id="date" format="EEE, MMM d, yyyy">Fri, Dec 31, 1999</t:value></date><parent>0</parent><type>${event_type}</type<ticketed>${ticketed_event_type}</ticketed><cancel><t:value id="cancelled"></t:value></cancel><url>${url}</url><image><t:value id="image.url"></image><description>${short_description}</description></Event></div>
+		</t:else>
+</div>

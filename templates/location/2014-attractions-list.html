@@ -1,0 +1,67 @@
+<div class="templateRepeat">
+	<t:set id="attractionClass" value="'attraction feature_all'" />
+	<t:if test="featured_attraction.length > 0"><t:list id="featured_attraction"><t:if test="matches(name,'yes')"><t:set id="attractionClass" value="concat(attractionClass, ' feature_featured')" /></t:if></t:list></t:if>
+	<t:if test="attraction_type.length > 0"><t:list id="attraction_type"><t:set id="attractionClass" value="concat(attractionClass, concat(' what_', name))" /></t:list></t:if>
+	<t:if test="audience.length > 0"><t:list id="audience"><t:set id="attractionClass" value="concat(attractionClass, concat(' whom_', name))" /></t:list></t:if>
+	<t:if test="park_area.length > 0"><t:list id="park_area"><t:set id="attractionClass" value="concat(attractionClass, concat(' where_', name))" /></t:list></t:if>
+	<t:if test="matches(restroom,'yes')"><t:set id="attractionClass" value="concat(attractionClass, ' feature_restroom')" /></t:if>
+	<t:if test="!isNull(audio_id)"><t:set id="attractionClass" value="concat(attractionClass, ' feature_audio')" /></t:if>
+
+	<!-- BEGIN PANEL - each small box -->
+	<div class="panel panel-default ${attractionClass}">
+		<div class="panel-body">
+			
+			<t:if test="large.length > 0"><a data-target="#attraction_${itemID}" data-toggle="modal" href="#"><img class="img-responsive" src="${large.url}" alt="${large.alt_text}"></a><br></t:if>
+			<h4 class="attraction-title"><a data-target="#attraction_${itemID}" data-toggle="modal" href="#">${title}</a></h4>
+			<div style="display:none;" class="attraction-description"><t:value id="description"></t:value></div>
+			<t:if test="park_area.length > 0">
+				<p>Near: <t:list id="park_area"><a class="filter where" href="#where_${name}"><span class="label label-primary where_${name}">${label}</span></a><t:if test="index != length">,</t:if></t:list></p>
+			</t:if>
+			<t:if test="matches(restroom,'yes') || !isNull(audio_id)"><p><t:if test="matches(restroom,'yes')"><a class="filter feature" href="#feature_restroom"><img width="45" src="http://www.centralparknyc.org/assets/images/2014/restroom-icon.png" alt="Restroom"></a></t:if><t:if test="!isNull(audio_id)"><a class="filter audio" href="#feature_audio"><img width="45" src="http://www.centralparknyc.org/assets/images/2015/audio_headphones.jpg" alt="Audio Guide"></a></t:if></p></t:if>
+		</div>
+	</div><!-- END PANEL -->
+
+	<!-- BEGIN MODAL - each popover box -->
+	<div aria-hidden="true" aria-labelledby="attraction_${itemID}_label" role="dialog" tabindex="-1" id="attraction_${itemID}" class="see-and-do-modal modal fade ${attractionClass}" style="display:none;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button aria-hidden="true" data-dismiss="modal" class="close" type="button">x</button>
+
+				</div>
+				<div class="modal-body">
+					<t:if test="large.length > 0"><img class="img-responsive" src="${large.url}" alt="${large.alt_text}"><br></t:if>
+					<h4 id="attraction_${itemID}_label" class="modal-title">${title}</h4>
+					<p><t:value id="description"></t:value></p>
+					<p class="text-center primary-buttons"><a href="${url}" class="btn btn-primary more-info" type="button">More Info</a>&nbsp;&nbsp;&nbsp;<a href="http://www.centralparknyc.org/maps/index.html?attraction=${itemID}" class="btn btn-primary map-it" type="button">Map It</a><br><br></p>
+					<table class="table"><tbody>
+					<t:if test="attraction_type.length > 0">
+						<tr>
+							<td>What:</td>
+							<td><t:list id="attraction_type"><a class="filter what" href="#what_${name}">${label}</a><t:if test="index != length">,</t:if></t:list></td>
+						</tr>
+					</t:if>
+					<t:if test="audience.length > 0">
+						<tr>
+							<td>For:</td>
+							<td><t:list id="audience"><a class="filter whom" href="#whom_${name}">${label}</a><t:if test="index != length">,</t:if></t:list></td>
+						</tr>
+					</t:if>
+					<t:if test="park_area.length > 0">
+						<tr>
+							<td>Near:</td>
+							<td><t:list id="park_area"><a class="filter where" href="#where_${name}"><span class="label label-primary where_${name}">${label}</span></a><t:if test="index != length">,</t:if></t:list></td>
+						</tr>
+					</t:if>
+					<t:if test="matches(restroom,'yes') || !isNull(audio_id)">
+						<tr>
+							<td>Other:</td>
+							<td><t:if test="matches(restroom,'yes')"><a class="filter feature" href="#feature_restroom"><img width="45" src="http://www.centralparknyc.org/assets/images/2014/restroom-icon.png" alt="Restroom"></a></t:if><t:if test="!isNull(audio_id)"><a class="filter audio" href="#feature_audio"><img width="45" src="http://www.centralparknyc.org/assets/images/2015/audio_headphones.jpg" alt="Audio Guide"></a></t:if></td>
+						</tr>
+					</t:if>
+					</tbody></table>					
+				</div>				 
+			</div>
+		</div>
+	</div><!-- END MODAL popover box -->
+</div>

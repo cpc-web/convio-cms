@@ -1,0 +1,159 @@
+<!-- SHOP HOMEPAGE v3 - with slideshow - 24 Nov 2014 -->
+<style>
+
+.shopimg { outline: none; display:block; float:left; }
+    
+#contactinfo {
+    background-color:#e5e5e5;
+    color:#474747; 
+    font-size: 11px;
+    text-align:center;
+    height:55px;
+    width:100%;
+    margin-top:0px;
+	vertical-align:text-top;    
+}    
+ 
+#contactinfo a:link { /* unvisited link */
+    color: #75a942;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+    text-decoration:underline;	
+}
+#contactinfo a:visited {color:#75a942; text-decoration:underline;}  /* visited link */
+#contactinfo a:hover { color: #3c98d1; text-decoration:underline;} /* mouse over link */
+
+.flatshipping {
+	background-color:#e5e5e5 ;
+	color:#77C043;
+	text-align: center;
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-top: 8px;
+	float: right;
+}
+.flatshipping h2 {
+	font-size: 2em;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+/*.flatshipping {
+	background-color:#e5e5e5 ;
+	font-size: 2em;
+	font-weight: 100;
+	color:#77C043;
+	text-transform: uppercase;
+	text-align: center;
+	height: 50px;
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-top: 8px;
+	float: right;
+}*/
+
+	.lpslides { 
+        height:380px; 
+        width:750px !important; 
+        /*background-color:gray;*/
+        margin: 0px 15px 50px 15px;
+       }
+	.lpslides img{ 
+        margin: 0px;
+       }
+
+	#slidenav {
+		z-index:200; 
+        position:relative;
+		top:-30px;
+        right:0px;
+        float:right;
+		background-color: #000000;
+	}
+	#slidenav a { color: #FFFFFF; margin: 0 5px; }
+	#slidenav a:hover { color:#77bd42; margin: 0 5px; }
+	ul#lpslideshow { height:380px; }
+	ul#lpslideshow li { height:380px; list-style-type: none; }
+
+</style>
+
+
+
+	<div class="row ">
+
+			<div class="col-md-9">
+					<div>
+						<span style="float: left; margin-bottom: 0px ! important;">
+								<a href="https://secure2.convio.net/cpc/site/Ecommerce?store_id=1101&VIEW_CATALOG=true&FOLDER=0&TYPE=&NAME=">View All</a>
+							</span>
+							<span style="float: right; vertical-align: middle;">
+								<a href="https://secure2.convio.net/cpc/site/Ecommerce?store_id=1101&VIEW_CART=true&FOLDER=0&TYPE=&NAME="> 
+									<span class="glyphicon glyphicon-shopping-cart">&nbsp;</span>View Cart 
+								</a>
+							</span> 
+					</div>
+
+					<div class="flatshipping">
+					<h2>Enjoy $8 flat rate shipping for all orders!</h2>
+					<p>Must purchase by December 10 for delivery before December 25.</p>
+					</div>
+		        <div>
+				 <!-- BEGIN Slideshow - if content exists in CMS -->
+					<t:if test="slides.length > 0">
+						<t:if test="slides.length > 1">
+							<script type="text/javascript" src="http://cpc.convio.net/js/jquery-cycle-min.js"></script>
+							<script type="text/javascript">
+								(function($){
+									$(document).ready(function() {
+										$('#lpslideshow').cycle({fx: 'fade', pager: '#slidenav', pause: 1, speed: 600, timeout: 5000, fit: true, cleartype:  true, cleartypeNoBg:  true });
+									});
+								})(jQuery);
+							</script>
+						</t:if>
+						<div class="row">
+							<div class="col-md-12 col-xs-12">
+								<div class="lpslides">
+									<ul id="lpslideshow" class="clearfix">
+										<t:list id="slides">
+											<li>
+												<t:list id="new_window">
+													<t:if test="name == 'no'">
+														<t:set id="nwin" value="'0'" />
+													</t:if>
+													<t:if test="name == 'yes'">
+														<t:set id="nwin" value="'1'" />
+													</t:if>
+												</t:list>
+												<t:if test="isNull(link_url)"><img class="img-responsive" src="${url}" alt="${alt_txt}" /></t:if>
+												<t:if test="!isNull(link_url) && nwin == '1'"><a href="${link_url}" target="_blank"><img src="${url}" alt="${alt_text}" /></a></t:if>
+												<t:if test="link_url != null && nwin == '0'"><a href="${link_url}"><img src="${url}" alt="${alt_text}" /></a></t:if>
+												<t:if test="!isNull(description)"><div class="scaption">${description}</div></t:if>
+											</li>
+										</t:list>
+									</ul>
+									<div id="slidenav"></div>
+								</div>
+							</div>
+						</div>
+					</t:if><!-- END slideshow -->
+					<t:else><!-- large image -->
+						<t:if test="large.length > 0">
+							<img class="img-responsive" src="${large.url}" />
+						</t:if>
+					</t:else><!-- END large image -->
+				</div>
+				<!--img class="img-responsive shopimg" border="0"  src="http://cpc.convio.net/redesign/img/cpc/store-v4-2014.jpg" usemap="#Map" />
+				</div>
+
+		     <map id="Map" name="Map">
+			   <area shape="poly" coords="504, 262, 503, 349, 667, 348, 676, 424, 753, 447, 859, 440, 920, 360, 931, 275, 821, 201, 819, 154, 812, 111, 749, 105, 711, 140, 728, 172, 725, 203, 673, 236, 664, 264" href="https://secure2.convio.net/cpc/site/Ecommerce/1516205974?VIEW_PRODUCT=true&product_id=6522&store_id=1101" alt="Central Park Womens Cycling Shirt" title="Central Park Womens Cycling Shirt" />
+			<area shape="poly" coords="66, 383, 61, 473, 236, 474, 318, 503, 366, 517, 468, 475, 468, 308, 415, 285, 344, 277, 216, 354, 204, 383" href="https://secure2.convio.net/cpc/site/Ecommerce/102348892?VIEW_PRODUCT=true&product_id=5741&store_id=1101" alt="Central Park Charm Bracelet" title="Central Park Charm Bracelet" />
+			<area shape="poly" coords="71, 121, 70, 340, 96, 352, 277, 265, 299, 239, 414, 235, 429, 116, 212, 105" href="https://secure2.convio.net/cpc/site/Ecommerce/189757232?VIEW_PRODUCT=true&product_id=1621&store_id=1101" alt="Central Park: An American Masterpiece" title="Central Park: An American Masterpiece" /-->
+	</div><!--.col-md-8-->
+
+</div> <!--.row-->

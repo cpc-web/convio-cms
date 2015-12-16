@@ -1,0 +1,473 @@
+<!-- frontend of cpc insider registration page march 2015-->
+<head>
+<link href="http://cpc.convio.net/css/register-styles-v4.css" rel="stylesheet">
+</head>
+<!-- Page Body -->
+<div id="regPageWrapper">
+	<div id="regMainForm">
+		<div class="row">
+			<div class="col-xs-12">
+				<img src="/preview!www.centralparknyc.org/assets/images/2014/Mall_2011_1.jpg" class="img-responsive">
+			</div>
+		</div>		
+		<div id="introCopy">
+			<h1>Sign up for Insider emails<br />and you'll receive:</h1>
+			<p>Our monthly newsletter and curated content<br />Exclusive online shopping deals<br />Advance notice of special events<br />... and much more Insider access each season!</p>
+		</div>
+		<div id="formWrapper">
+			<form id="registerForm" name="registerForm" method="post" action="http://support.centralparknyc.org/site/Survey">
+				<div id="reqInfo" class="infoArea">
+					<div id="login_error">*required field</div>
+					<div><label for="cons_first_name">First Name*</label><input type="text" id="cons_first_name" name="cons_first_name" value="${cons.name.first}" /></div>
+					<div><label for="cons_last_name">Last Name*</label><input type="text" id="cons_last_name" name="cons_last_name" value="${cons.name.last}" /></div>
+					<div><label for="cons_email">Email*</label><input type="text" id="cons_email" name="cons_email" value="${cons.email.primary_address}" /></div>
+				</div>
+				<div class="row"> 
+					<div class="col-xs-12">
+						<div id="addressButton" class="formButton clickable">ADD ADDRESS INFO</div>
+					</div>	
+				</div>	
+				<div id="addressInfo" class="infoArea">
+					<div class="addressInput"><label for="cons_street1">Street 1: </label><input type="text" name="cons_street1" id="cons_street1" value="" maxlength="128" /></div>
+					<div class="addressInput"><label for="cons_street2">Street 2: </label><input type="text" name="cons_street2" id="cons_street2" value="" maxlength="128" /></div>
+					<div class="addressInput"><label for="cons_city">City: </label><input type="text" name="cons_city" id="cons_city" value="" maxlength="128" /></div>
+					<div class="addressInput state" id="addressState"><label for="cons_state">State: </label><select name="cons_state" id="cons_state" size="1" >
+						<option ></option>
+						<option value="AK" >AK</option>
+						<option value="AL" >AL</option>
+						<option value="AR" >AR</option>
+						<option value="AZ" >AZ</option>
+						<option value="CA" >CA</option>
+						<option value="CO" >CO</option>
+						<option value="CT" >CT</option>
+						<option value="DC" >DC</option>
+						<option value="DE" >DE</option>
+						<option value="FL" >FL</option>
+						<option value="GA" >GA</option>
+						<option value="HI" >HI</option>
+						<option value="IA" >IA</option>
+						<option value="ID" >ID</option>
+						<option value="IL" >IL</option>
+						<option value="IN" >IN</option>
+						<option value="KS" >KS</option>
+						<option value="KY" >KY</option>
+						<option value="LA" >LA</option>
+						<option value="MA" >MA</option>
+						<option value="MD" >MD</option>
+						<option value="ME" >ME</option>
+						<option value="MI" >MI</option>
+						<option value="MN" >MN</option>
+						<option value="MO" >MO</option>
+						<option value="MS" >MS</option>
+						<option value="MT" >MT</option>
+						<option value="NC" >NC</option>
+						<option value="ND" >ND</option>
+						<option value="NE" >NE</option>
+						<option value="NH" >NH</option>
+						<option value="NJ" >NJ</option>
+						<option value="NM" >NM</option>
+						<option value="NV" >NV</option>
+						<option value="NY" selected="selected" >NY</option>
+						<option value="OH" >OH</option>
+						<option value="OK" >OK</option>
+						<option value="OR" >OR</option>
+						<option value="PA" >PA</option>
+						<option value="RI" >RI</option>
+						<option value="SC" >SC</option>
+						<option value="SD" >SD</option>
+						<option value="TN" >TN</option>
+						<option value="TX" >TX</option>
+						<option value="UT" >UT</option>
+						<option value="VA" >VA</option>
+						<option value="VT" >VT</option>
+						<option value="WA" >WA</option>
+						<option value="WI" >WI</option>
+						<option value="WV" >WV</option>
+						<option value="WY" >WY</option>
+						<option value="AS" >AS</option>
+						<option value="FM" >FM</option>
+						<option value="GU" >GU</option>
+						<option value="MH" >MH</option>
+						<option value="MP" >MP</option>
+						<option value="PR" >PR</option>
+						<option value="PW" >PW</option>
+						<option value="VI" >VI</option>
+						<option value="AA" >AA</option>
+						<option value="AE" >AE</option>
+						<option value="AP" >AP</option>
+						<option value="AB" >AB</option>
+						<option value="BC" >BC</option>
+						<option value="MB" >MB</option>
+						<option value="NB" >NB</option>
+						<option value="NL" >NL</option>
+						<option value="NS" >NS</option>
+						<option value="NT" >NT</option>
+						<option value="NU" >NU</option>
+						<option value="ON" >ON</option>
+						<option value="PE" >PE</option>
+						<option value="QC" >QC</option>
+						<option value="SK" >SK</option>
+						<option value="YT" >YT</option>
+						<option value="None" >None</option>
+					</select></div>
+				</div>
+				<div class="row">	
+					<div class="col-xs-12">
+						<div id="interestsButton" class="formButton clickable">SELECT EMAIL INTERESTS</div>
+					</div>
+				</div>
+				<div id="interestsInfo" class="infoArea">
+					<span>I would like to receive the following type(s) of e-mail:</span>
+					<div id="interestSelections">
+						<div class="row selected">
+							<div class="col-xs-2">
+								<input type="checkbox" name="question_3983" id="1872_1020_2_3983_6" class="checkbox" value="1223" checked="checked" />
+							</div>
+							<div class="col-xs-10">
+								<label for="1872_1020_2_3983_6" class="wrapable">Central Park Insider  E-Newsletter</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2">
+								<input type="checkbox" name="question_3983" id="1872_1020_2_3983_5" class="checkbox" value="1309"  />
+							</div>
+							<div class="col-xs-10">
+								<label for="1872_1020_2_3983_5" class="wrapable">Kids & Family Activities</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2">
+								<input type="checkbox" name="question_3983" id="1872_1020_2_3983_7" class="checkbox" value="1308"  />
+							</div>
+							<div class="col-xs-10">
+								<label for="1872_1020_2_3983_7" class="wrapable">Wildlife & Horticulture</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2">
+								<input type="checkbox" name="question_3983" id="1872_1020_2_3983_8" class="checkbox" value="1524"  />
+							</div>
+							<div class="col-xs-10">
+								<label for="1872_1020_2_3983_8" class="wrapable">Fitness & Sports</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2">
+								<input type="checkbox" name="question_3983" id="1872_1020_2_3983_9" class="checkbox" value="1781"  />
+							</div>
+							<div class="col-xs-10">
+								<label for="1872_1020_2_3983_9" class="wrapable">Tours & Park Visits</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2">
+								<input type="checkbox" name="question_3983" id="1872_1020_2_3983_3" class="checkbox" value="1522"  />
+							</div>
+							<div class="col-xs-10">
+								<label for="1872_1020_2_3983_3" class="wrapable">Concerts, Theater and Talks</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2">
+								<input type="checkbox" name="question_3983" id="1872_1020_2_3983_4" class="checkbox" value="1523"  />
+							</div>
+							<div class="col-xs-10">
+								<label for="1872_1020_2_3983_4" class="wrapable">Shopping & Special Offers</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2">
+								<input type="checkbox" name="question_3983" id="1872_1020_2_3983_1" class="checkbox" value="1521"  />
+							</div>
+							<div class="col-xs-10">
+								<label for="1872_1020_2_3983_1" class="wrapable">Benefit Events for Central Park</label>						
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2">
+								<input type="checkbox" name="question_3983" id="1872_1020_2_3983_2" class="checkbox" value="1221"  />
+							</div>
+							<div class="col-xs-10">
+								<label for="1872_1020_2_3983_2" class="wrapable">Central Park Paws Dog Owners Group</label>
+							</div>
+						</div><!-- /.row -->
+					</div><!-- /.div #interestSelections -->
+					<!--ul id="interestSelections">
+						<li class="selected">
+							<input type="checkbox" name="question_3983" id="1872_1020_2_3983_6" class="checkbox" value="1223" checked="checked" />
+							<label for="1872_1020_2_3983_6" class="wrapable">Central Park Insider  E-Newsletter</label>
+						</li>
+						<li>
+							<input type="checkbox" name="question_3983" id="1872_1020_2_3983_5" class="checkbox" value="1309"  />
+							<label for="1872_1020_2_3983_5" class="wrapable">Kids & Family Activities</label>
+						</li>
+						<li>
+							<input type="checkbox" name="question_3983" id="1872_1020_2_3983_7" class="checkbox" value="1308"  />
+							<label for="1872_1020_2_3983_7" class="wrapable">Wildlife & Horticulture</label>
+						</li>
+						<li>
+							<input type="checkbox" name="question_3983" id="1872_1020_2_3983_8" class="checkbox" value="1524"  />							<label for="1872_1020_2_3983_8" class="wrapable">Fitness & Sports</label>
+						</li>
+						<li>
+							<input type="checkbox" name="question_3983" id="1872_1020_2_3983_9" class="checkbox" value="1781"  />
+							<label for="1872_1020_2_3983_9" class="wrapable">Tours & Park Visits</label>
+						</li>
+						<li>
+							<input type="checkbox" name="question_3983" id="1872_1020_2_3983_3" class="checkbox" value="1522"  />
+							<label for="1872_1020_2_3983_3" class="wrapable">Concerts, Theater and Talks</label>
+						</li>
+						<li>
+							<input type="checkbox" name="question_3983" id="1872_1020_2_3983_4" class="checkbox" value="1523"  />
+							<label for="1872_1020_2_3983_4" class="wrapable">Shopping & Special Offers</label>
+						</li>
+						<li>
+							<input type="checkbox" name="question_3983" id="1872_1020_2_3983_1" class="checkbox" value="1521"  />
+							<label for="1872_1020_2_3983_1" class="wrapable">Benefit Events for Central Park</label>						
+						</li>
+						<li>
+							<input type="checkbox" name="question_3983" id="1872_1020_2_3983_2" class="checkbox" value="1221"  />
+							<label for="1872_1020_2_3983_2" class="wrapable">Central Park Paws Dog Owners Group</label>
+						</li>
+					</ul-->
+				</div>
+				<div class="addressInput zip" id="addressZip"><label for="cons_zip_code">Zip Code*</label><input type="text" id="cons_zip_code" name="cons_zip_code" value="${cons.primary_address.zip}" /></div>
+				<input type="hidden" name="cons_info_component" id="cons_info_component" value="t" />
+				<input type="hidden" name="cons_mail_opt_in" id="cons_mail_opt_in" value="t" />
+				<input type="hidden" name="ACTION_SUBMIT_SURVEY_RESPONSE" value="Submit Survey" />
+				<input type="hidden" id="api_key" value="cpcapis"/>
+				<input type="hidden" id="v" value="1.0"/>
+				<input type="hidden" id="servlet" value="http://support.centralparknyc.org/site/CRConsAPI"/>
+				<input type="hidden" id="msg_united_kingdom" value="UNITED KINGDOM"/>
+				<input type="hidden" id="msg_server_error" value="Error"/>
+				<input type="hidden" id="msg_address_not_in_list" value="-- My address is not in this list --"/>
+				<input type="hidden" name="NEXTURL" value="http://www.centralparknyc.org/" />
+				<input type="hidden" name="s_src" value="website" />
+				<input type="hidden" name="s_subsrc" value="insider_register_page" />
+				<input type="hidden" name="denySubmit" id="denySubmit" value="" alt="This field is used to prevent form submission by scripts." />
+				<input type="hidden" name="SURVEY_ID" id="SURVEY_ID" value="1020" />
+				<div id="regFormSubmit" class="submitButton clickable">
+					SUBMIT
+				</div>
+				<input type="hidden" name="ERRORURL" id="ERRORURL" value="http://www.centralparknyc.org/cpc-registration.html" />
+			</form>
+			<div id="note">&nbsp;</div>
+		</div>
+	</div>
+	<div id="regThanksMessage">
+		<h1>Thank you for being<br />a Central Park Insider!</h1>
+		<p>You can update your information and preferences any time by <span id="regLink"><a href="http://support.centralparknyc.org/site/UserLogin">logging in.</a></span><span id="regText">logging in.</span><br />
+		We can&rsquo;t wait to share the latest news with you.<br />
+		While you&rsquo;re waiting, you can follow us<br />on <a href="http://www.twitter.com/centralparknyc?utm_source=cpc&utm_medium=register+page&utm_content=Twitter+link&utm_campaign=Email+Capture+2013" target="_blank">twitter</a> and <a href="http://www.facebook.com/centralparknyc?utm_source=cpc&utm_medium=register+page&utm_content=Facebook+link&utm_campaign=Email+Capture+2013" target="_blank">facebook</a> for more!
+		</p>
+	</div><!-- CLOSE regThanksMessage -->
+	<!--div id="memLoader">
+		<img src="http://cpc.convio.net/images/content/pagebuilder/loadingAnimation.gif"/>
+	</div-->
+</div>
+<!-- end of Content -->
+
+<script src="https://secure2.convio.net/cpc/js/jquery-tools-min.js"></script>
+<script src="https://secure2.convio.net/cpc/js/jquery-cycle-min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://secure2.convio.net/cpc/js/jquery.validate.min.js"></script>
+
+<script src="https://secure2.convio.net/cpc/js/luminateExtend.js"></script>
+<script type="text/javascript">// <![CDATA[
+
+jQuery.fn.center = function () {
+    this.parent().css({
+    	'z-index': '100000',
+    	'position': 'fixed',
+    	'top': '0',
+    	'left': '0',
+    	'width': $(window).width(),
+    	'height': $(window).height(),
+    	'opacity': '0.75'
+    }).show();
+
+    this.css("position","absolute");
+    this.css("top", (($(window).height() - this.outerHeight()) / 2) + $(window).scrollTop() + "px");
+    this.css("left", (($(window).width() - this.outerWidth()) / 2) + $(window).scrollLeft() + "px");
+    return this;
+};
+
+var urlFull = document.location.href;
+
+//start with luminateExtend init call
+$(function() {
+  luminateExtend({
+    apiKey: 'cpcapis',
+    response_format: 'xml',
+    path: {
+      nonsecure: 'http://support.centralparknyc.org/site/', 
+      secure: 'https://secure2.convio.net/cpc/site/'
+    }
+  });
+});
+
+function submitRegistration() {	
+	if ( $('#registerForm').valid() ) {
+		$('#regFormSubmit').hide();
+		if(($('#cons_zip_code').val() == '') && ($('#cons_state').val() == 'NY')) {
+			$('#cons_state').val('');
+		}
+		//$('#memLoader').css('opacity', '0.5').show().center();
+		var myForm = $('#registerForm');
+		var myData = 'method=submitSurvey&survey_id=1020';//&cons_email='+myEmail;
+		luminateExtend.api({
+			api: 'survey',
+			requestType: 'POST',
+			data: myData,
+			form: myForm,
+			requiresAuth: 'true',
+			callback: function(data){
+				console.log(data);
+				//alert('success='+data.submitSurveyResponse.success);
+				var successVar = (data.submitSurveyResponse) ? data.submitSurveyResponse.success : '';
+				var errorVar = (data.errorResponse) ? data.errorResponse.code : '';
+				if(successVar == 'true') {
+					submitOptimizelyEvent('email_signup_cpc-registration');
+					//$('#memLoader').hide();
+					// change login box on successful form submission
+					var firstName = $('#cons_first_name').val();
+					$('[id^="login_box"]').html('<div id="login_box_w"><div class="welcome">Welcome, '+firstName+'!</div><div class="welcome_menu"><a class="menu_link" href="http://support.centralparknyc.org/site/UserLogin?logout=1&NEXTURL='+urlFull+'">Logout </a> | <a class="menu_link" href="https://secure2.convio.net/cpc/site/ConsProfileUser">Profile </a> | <a class="menu_link" href="https://secure2.convio.net/cpc/site/ConsInterestsUser/?tabID=interests">Preferences </a></div></div>');
+					$('#note').html('&nbsp;');
+					$('#regMainForm').hide();
+					$('#regThanksMessage').show();
+					ga('send', 'event', 'Email Sign-up', 'Email Sign-up', 'cpc-registration');
+				} else {
+					if (errorVar == '1734') {
+						$('#regFormSubmit').show();
+						$('#note').show().html('<p style="color: #F00">This email address already exists; please <a href="http://support.centralparknyc.org/site/UserLogin?NEXTURL=http://www.centralparknyc.org/cpc-registration.html">log in</a> to continue.</p>');
+						ga('send', 'event', 'Email Sign-up', 'Duplicate Sign-up', 'cpc-registration');
+					} else {
+						$('#regFormSubmit').show();
+						//$('#memLoader').hide();
+						$('#note').show().html('<p style="color: #F00">'+data.submitSurveyResponse.errors.errorMessage+'<p>');
+						ga('send', 'event', 'Email Sign-up', 'Failed Sign-up', 'cpc-registration');
+					}
+				}
+			}
+		});
+	} else {
+		window.scrollBy(0,-50);
+	}
+}
+
+/*function toggleCheckbox_old() {
+    if($(this).is(':checked')) {
+      $(this).parent('li').addClass('selected');
+    } else {
+      $(this).parent('li').removeClass('selected');
+    }
+};*/
+
+function toggleCheckbox() {
+    if($(this).is(':checked')) {
+      $(this).parent().parent('.row').addClass('selected');
+    } else {
+      $(this).parent().parent('.row').removeClass('selected');
+    }
+};
+
+function showAddress() {
+	$('#addressInfo').show();
+	$('#addressZip').appendTo($('#addressInfo'));
+	$('#addressButton').text('HIDE ADDRESS INFO');
+};
+
+function hideAddress() {
+	$('#addressInfo').hide();
+	$('#addressButton').text('ADD ADDRESS INFO');
+	$('#addressZip').appendTo($('#reqInfo'));
+};
+
+function showInterests() {
+	$('#interestsInfo').show();
+	$('#interestsButton').text('HIDE EMAIL INTERESTS');
+};
+
+function hideInterests() {
+	$('#interestsInfo').hide();
+	$('#interestsButton').text('SELECT EMAIL INTERESTS');
+};
+
+// initialize page
+(function($) {
+	$(function() {
+		
+		// UTILITIES for handling URL parameters
+		var showCode = '';
+		var urlParams = document.location.search;
+		urlParams = urlParams.substring(1);
+		paramsArray = urlParams.split('&');
+		for (var i=0; i<paramsArray.length; i++) { 
+			var keyValue = paramsArray[i].split('='); 
+			var key = keyValue[0]; 
+			var value = keyValue[1];
+			if (key == 'show') { 
+				showCode= value; 
+			}
+		}
+		if (showCode == 'all') {
+			showAddress();
+			showInterests();
+			$('#introCopy').html('<h1>Tell us more about yourself<br />so we can send you the right stuff!</h1>');
+		} else {
+			hideAddress();
+		}
+		
+		/* static and some dynamic validation rules for the registration - only handling front-end validation */
+		$('#registerForm').validate({
+			rules: {
+				'cons_first_name': { 'required' : true, 'maxlength' : 50 },
+				'cons_last_name'	: { 'required' : true, 'maxlength' : 50 },
+				'cons_email'		: { 'required': true, 'email': true, 'maxlength' : 50 },
+				'cons_zip_code'		: { 'required' : true, 'rangelength' : [5,10] }
+			},
+			messages: {
+				'cons_first_name':  { 'required':	'* required',
+												'maxlength':	'* maximum length 50 characters' },
+				'cons_last_name'	: { 'required':		'* required',
+												'maxlength':	'* maximum length 50 characters' },
+				'cons_email'		: { required: '* required', email: '* please enter a valid email', 'maxlength':	'* maximum length 50 characters' },
+				'cons_zip_code'		: { 'required' : '* required',
+												'rangelength':	'* must be between 5 and 10 characters'  }
+			}
+		});
+		
+		/* STARTUP */
+		/* override the HTML form submission so the user remains on the page while the AJAX processing can occur */
+		$('#regFormSubmit').click(function() {
+			submitRegistration();
+			return false;
+		});
+		$('#cons_zip_code').keypress(function (e) {
+			if (e.which == 13) {
+				submitRegistration();
+				return false;
+			}
+		})
+		
+		$('input:checkbox').click(toggleCheckbox);
+
+		$('#addressButton').click(function() {
+			if($('#addressInfo').css('display') == 'none') {
+				showAddress();
+			} else {
+				hideAddress();
+			}
+		})
+		$('#interestsButton').click(function() {
+			if($('#interestsInfo').css('display') == 'none') {
+				showInterests();
+			} else {
+				hideInterests();
+			}
+		})
+		$('#registerForm').attr('action', 'javascript:void(0);');
+		
+	});
+})(jQuery);
+	// ]]></script>
+

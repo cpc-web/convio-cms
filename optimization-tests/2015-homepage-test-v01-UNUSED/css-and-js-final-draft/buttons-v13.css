@@ -1,0 +1,107 @@
+/* general button styles */
+.btn-cpc {
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding-left: .5em;
+  background: #68b246;
+  overflow: hidden;
+  padding: 0 0 0 1em;
+  height: 36px;
+  box-shadow: 0px 1px 0px 0px #666;
+  -webkit-box-shadow: 0px 1px 0px 0px #666;
+  -moz-box-shadow: 0px 1px 0px 0px #666;
+  margin: 0 auto;
+  border: none;
+  font-family: 'Titling Gothic FB Cond';
+  line-height: 2.3;
+  letter-spacing: 1.3px;
+  transition: background .4s ease;
+  -webkit-transition: background .4s ease;
+  -moz-transition: background .4s ease;
+  -o-transition: background .4s ease; }
+
+@-moz-document url-prefix() {
+  .btn-cpc {
+    height: 37px; } }
+.btn-cpc:hover {
+  background: #499529;
+  color: white;
+  text-decoration: none;
+  transition: background .4s ease;
+  -webkit-transition: background .4s ease;
+  -moz-transition: background .4s ease;
+  -o-transition: background .4s ease; }
+
+.btn-cpc a {
+  color: white;
+  text-decoration: none; }
+
+.btn-cpc a:hover, a:visited, a:focus {
+  color: white;
+  color: white;
+  text-decoration: none; }
+
+.button-arrow {
+  background-color: #499529;
+  padding: 20px;
+  line-height: 2;
+  height: 37px;
+  margin-left: 15px; }
+
+/* hero image button styles */
+.btn-hero {
+  margin-top: 10px; }
+
+/* middle row button styles */
+.btn-mid-cta {
+  margin-right: 20px; }
+
+.btn-mid-cta-02 {
+  margin-top: 38px; }
+
+.btn-inner-content {
+  float: right;
+  margin-top: 35px; }
+
+.button-arrow-mid-01 {
+  margin-left: 11px; }
+
+.button-arrow-mid-01-active {
+  margin-left: 205px; }
+
+.button-arrow-mid-02 {
+  margin-left: 108px; }
+
+.button-arrow-mid-03 {
+  margin-left: 157px; }
+
+.btn-mid-email {
+  margin-top: 45px; }
+
+.btn-mid-join {
+  margin-top: 26px; }
+
+.button-row {
+  margin-top: 29px; }
+
+.btn-mid-support {
+  display: inline-block;
+  background-color: #FFA500;
+  color: #FFF;
+  border-radius: 2px;
+  min-width: 87px;
+  text-align: center;
+  margin: 0px 20px 20px 0px;
+  box-shadow: 0px 1px 0px #666;
+  border: 0px none;
+  font-family: "Titling Gothic FB Cond";
+  font-size: 18px;
+  height: 36px; }
+
+/* featured content button styles */
+.btn-featured {
+  margin-top: 105px; }
+
+/*# sourceMappingURL=buttons-v13.css.map */

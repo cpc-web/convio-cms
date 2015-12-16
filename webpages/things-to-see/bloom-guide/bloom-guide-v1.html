@@ -1,0 +1,105 @@
+<li <t:if test="membership == 'members_only'">class="membersItem"</t:if>><label><span id="type_name_${index}"><t:value id="description">Ticket Name</t:value></span> - $<span id="type_cost_${index}"><t:value id="cost">cost</t:value></span><t:if test="membership == 'members_only'"><span class="membersOnly"><input class="amount members" id="type_id_${index}" name="type_id" type="radio" value="${cost}" /></span></t:if><t:else><input class="amount" id="type_id_${index}" name="type_id" type="radio" value="${cost}" /></t:else></label></li>
+
+<style type="text/css">
+        ul#attractions { padding-left: 0; }
+	#attractions li { list-style: none outside none; }
+	#attractions div.content {
+		float: right;
+		width: 370px;
+	}
+	img.left {
+		float: left;
+		margin: .25em .5em auto 0;
+	}
+        .btn-print { font-size: 14px; height: 46px; color: #77bd42; border: none; }
+</style>
+
+<div id="left_box_map" style="width:100%">
+<!--img class="img-responsive" src="/preview!www.centralparknyc.org/assets/images/visit-images/bloom-guide-fall2013-header-750w.jpg" /-->
+<p>&nbsp;</p>
+<p>As a special thank you for being a member of the Conservancy, we're offering you our exclusive Central Park Conservancy Bloom Guide! With our Bloom Guide, you can have an insider's look at the Park's most gorgeous landscapes and unique blooms, every day of the week.</p>
+<!--p>Below you'll see a Google map of 24 different bloom sites. To find out more about each location, click on the green icon shown on the map. For a list of the beautiful blooms you'll be able to see at that site, click the location's name. From there, you'll find a list of blooms and their bloom dates.</p-->
+<p>We'll add to our Bloom Guide season after season, so don't forget to come back in a few months to see some stunning new blooms!</p>
+<div id="bloom-full" style="display: none;">
+<!-- embedded page: bloom-map-display.html, for displaying map with security controls -->
+<!--div style="display: inline;" class="templateComponent" id="item-325374159"></div-->
+<table style="width:100%">
+<tr>
+<td>
+<b>Choose from the drop-down menus and click select to filter the list of blooms below by Park bloom season or location.</b>
+</td>
+<td style="text-align:right"><t:include id="printer_friendly-325607075" /></td>
+</tr></table>
+<!-- filter criteria for bloom list -->
+<div style="display: inline;" class="templateComponent" id="filter-criteria-325374160"></div>
+
+<!-- list of blooms -->
+<div style="display: inline;" class="templateComponent" id="templatelist-325374161"></div>
+</div><!-- /bloom-full -->
+<div id="bloom-security">
+<p>Bloom Guide is a members-only feature. To access, please enter your members-only discount code below.<br /><br /><input style="width: 120px;" id="discCode" type="text" placeholder="discount code" /><div id="tryMember" class="btnSignUp">Apply Code</div><br /><span id="memberHelp">MEMBERS: to obtain your members-only discount code please contact membership@centralparknyc.org or call 212.310.6672</span></p>
+</div><!-- /bloom-security -->
+</div>
+
+<script type="text/javascript">
+var isMember = false;
+var memberTixHolder;
+
+(function($) {
+	
+	/* onload */
+	$(function() {
+		
+		/* STARTUP */
+		
+		//$('#donation_form_id').attr('action', 'javascript:void(0);');
+		
+		/*if (isSecure() != true) {
+		//alert('secure');
+		$('.membersOnly').html('&nbsp;&nbsp;<a href="http://support.centralparknyc.org/site/UserLogin?NEXTURL=${url}" target="_blank">Login</a> or <a href="https://secure2.convio.net/cpc/site/SPageServer?pagename=membership&s_src=website&s_subsrc=tour_purchase_page">join</a>!<br /><br />');
+		} else {
+			$('.amount').prop('checked', false);
+			$('.members').prop('checked', true);
+			calcAmount();
+		}*/
+		
+		function tryMembership() {
+			var myCode = $('#discCode').val().toUpperCase();
+			//alert('my code= '+myCode);
+			var styles = { 
+				color: '#FF0000',
+				fontWeight: 'bold',
+				backgroundColor: '#DDDDDD'
+			};
+			if (myCode == 'DENE10' || myCode == 'MINTON20') {
+				$('#bloom-security').hide();
+				$('#bloom-full').show();
+				isMember = true;
+			} else {
+				$('#memberHelp').css(styles);
+			}
+		};
+		
+		/*if (isMember != true) {
+		//alert('secure');
+		$('#ticketTypeArea').css('height', '180px');
+		memberTixHolder = $('.membersOnly').html();
+		//alert(''+memberTixHolder.toString());
+		$('.membersOnly').html('&nbsp;&nbsp;<a href="https://secure2.convio.net/cpc/site/SPageServer?pagename=membership&s_src=website&s_subsrc=tour_purchase_page">Join today</a> or enter discount code below</a><br /><br /><input style="width: 120px;" id="discCode" type="text" placeholder="discount code" /><div id="tryMember" class="btnSignUp">Apply Code</div><br /><span id="memberHelp">MEMBERS: to obtain your members-only discount code please contact membership@centralparknyc.org or call 212.310.6672</span>');
+		} else {
+			$('.membersOnly').html(memberTixHolder);
+			$('.amount').prop('checked', false);
+			$('.members').prop('checked', true);
+			calcAmount();
+			$('#ticketTypeArea').css('height', '60px');
+		}*/
+		
+		$('#tryMember').click(function() {
+			tryMembership();
+		});
+		
+	});
+	
+})(jQuery);
+
+</script>

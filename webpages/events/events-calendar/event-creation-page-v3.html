@@ -1,0 +1,108 @@
+<!-- event creation page v3 22 Aug 2014-->
+<!-- component to pull list of ticketed items from Events folder -->
+<div style="display: inline;" class="templateComponent" id="templatelist-479297317"></div>
+
+<button id="addAll">add all events</button>
+<button id="resetAll" style="display: none;">reset event creation</button>
+
+<div id="resultList"></div>
+
+<script type="text/javascript"> //<![CDATA[
+(function($) {
+
+	////////////////////////////// TICKET APP METHODS /////////////////////////
+	//var baseUrl = 'http://localhost:11080/rest/';
+	var baseUrl = 'http://cpc-eventix.appspot.com/rest/';
+	var xmlBase = '<?xml version="1.0" encoding="utf-8"?>';
+	var results = [];
+
+	function getEvents() {
+		var myUrl = baseUrl + 'Event?fgt_date=2015-01-01'; // var myUrl = baseUrl + 'Event';
+		var request = $.ajax({
+			url: myUrl,
+			type: 'GET',
+			success: function(data){
+				getEventsCallback(data)
+			},
+			error: function(data){
+				console.log("Error:", request);
+				alert('ERROR DATA!: '+request);
+			}
+		});
+	}
+	
+	function getEventsCallback(data){		// CALLBACK FUNCTION - to be modified on each page
+		console.log("success data:", data);
+		results = [];
+		var events = $(data).find('Event');
+		events.each(function() {
+			var myID = $(this).find('id').text();
+			//alert('my id: '+myID);
+			results.push(myID);
+		})
+		console.log("Results:", results);
+	}
+	
+	function postEvent(data) {
+		var resultKey;
+		var myUrl = baseUrl + 'Event?type=structured';
+		var myData = data;
+		$.ajax({
+			url: myUrl,
+			data: myData,
+			dataType: 'XML',
+			type: 'POST',
+			success: function(data){
+				console.log("Post Event Success: ", data);
+				//getEvents();
+				resultKey = $(data).find('key').text();
+				//alert('Event Create Key: '+resultKey);
+			},
+			error: function(data){
+				console.log("Error: ", data);
+				//setTimeout(function(){getEvents()}, 2000);
+				resultKey = $(data).find('key').text();
+			}
+		});
+		return resultKey;
+	}
+
+	function addEvents() {		// SETUP FUNCTION - to be modified on each page
+		$('.eventXML').each(function() {
+			$('#resultList').html('');
+			var myID = $(this).find('id').text();
+			var resultIndex = results.indexOf(myID);
+			if ( resultIndex == -1) {
+				alert('my id: '+myID+' indexed at position: '+resultIndex);
+				var myHTML = $(this).html();
+				myHTML = myHTML.replace(/event/g,"Event");
+				myHTML = myHTML.replace(/maxinv/g,"maxInv");
+				alert('Creating: '+myHTML);
+				myHTML = xmlBase+myHTML;
+				$('#resultList').append('Posting: '+myHTML+'<br />');
+				postEvent(myHTML);
+			}
+		});
+		$('#addAll').hide();
+		$('#resetAll').show();
+	}
+	
+	function resetButton() {
+		getEvents();
+		$('#addAll').show();
+		$('#resetAll').hide();
+	}
+	
+	/* onload */
+	$(function() {
+		getEvents();
+		$('#addAll').click(function() {
+			addEvents();
+		});
+		$('#resetAll').click(function() {
+			resetButton();
+		});
+	});
+	
+})(jQuery);
+//]]></script>

@@ -1,0 +1,27 @@
+<div class="templateRepeat">
+  <div id="alert_${itemID}" class="current-alert">
+    <h3 class="current-alert-date">
+      <t:value id="start_date" format="EEEEE, MMMMM d, yyyy">Fri, Dec 31, 1999</t:value><t:if test="start_date != end_date && !isNull(end_date)">&nbsp;to&nbsp;<t:value id="end_date" format="EEEEE, MMMMM d, yyyy">Fri, Dec 31, 1999</t:value></t:if>
+    </h3>
+    <h3 class="current-alert-times">  
+      <t:if test="!isNull(alert_times)">
+        ${alert_times}
+      </t:if>
+    </h3>
+    <div class="current-alert-headline">${headline}</div>
+    <t:if test="!isNull(body)">
+      <div class="current-alert-body">${body}</div>
+    </t:if>
+    <ul class="current-alert-details">
+     <t:if test="!isNull(park_area_impacted)">
+      <li class="current-alert-impacted"><strong>Closures and Affected Areas</strong>: ${park_area_impacted}</li>
+      </t:if>
+      <t:if test="!isNull(more_information)">
+        <li class="current-alert-more-info">
+          <strong>More Information</strong>: 
+            <a href="http://${more_information}" target="_blank">${more_information}</a>
+        </li>
+      </t:if>
+    </ul><hr class="myHr">
+  </div>
+</div>

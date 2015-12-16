@@ -1,0 +1,198 @@
+<!-- DEFAULT PAGE TEMPLATE v7 -->
+<!-- top image, sidebar with nav, breadcrumbs, slideshow in main content area -->
+<!-- ADD jQuery cycle for slideshow functionality -->
+ 
+ <style type="text/css"> /*This style has to be in nav.css */
+	.scaption {
+		color:#000000;
+		height:auto; 
+		z-index:100;
+		padding: 0 20px;
+	}
+	.lpslides { 
+        height:380px; 
+        width:750px !important; 
+        background-color:gray; 
+        margin: 0px 15px 50px 15px;
+       }
+	.lpslides img{ 
+        margin: 0px;
+       }
+
+	#slidenav {
+		z-index:200; 
+        position:relative;
+		top:-30px;
+        right:0px;
+        float:right;
+		background-color: #000000;
+	}
+		
+	@media(max-width:767px) {
+		.left-nav {
+			min-height: 30px;
+			padding: 0px;
+			width: 100%;
+		}
+		.secondnav { visibility: visible; }
+		.top-image { visibility: hidden; height: 55px; }
+	}
+	
+	.sectionToggle { 
+		left: 30%;
+		width: 40%;
+		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		z-index: 1000;
+	}
+
+	#slidenav a { color: #FFFFFF; margin: 0 5px; }
+	#slidenav a:hover { color:#77bd42; margin: 0 5px; }
+	ul#lpslideshow { height:380px; }
+	ul#lpslideshow li { height:380px; list-style-type: none; }
+
+	#subnav li { position: relative; }
+	#subnav li ul { display: none; position: absolute; left: 60%; top: 0;  width: 100%; background-color: #666666; z-index: 1000; padding: 10px; border: 1px solid #777777; }
+	#subnav li ul:after, #subnav li ul:before { right: 100%; top: 18px; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+	#subnav li ul:after { border-color: rgba(102, 102, 102, 0); border-right-color: #666666; border-width: 9px; margin-top: -9px; }
+	#subnav li ul:before { border-color: rgba(204, 204, 204, 0); border-right-color: #777777; border-width: 11px; margin-top: -11px; }
+	#subnav li:hover ul { display: block; }
+	.dropdownShare:hover .dropdown-menu-share { display: block; }
+	.dropdown-menu-share { min-width: 180px; margin: 0; }
+</style>
+
+
+ 	<!-- Top Image	================================================== -->
+    <div class="top-image">
+        <t:if test="top_image.length > 0">
+			<img alt="Top Image" class="img-responsive" src="${top_image.url}" />
+		</t:if><t:else>
+			<!-- RANDOM top image Serving -->
+			<script type="text/javascript">
+			<!--   
+			   var imgChoice = Math.floor(Math.random() * 5);
+			   imgChoice = imgChoice + 1;
+			   //write image
+			   document.write('<img alt="Top Image" class="img-responsive" src="http://cpc.convio.net/redesign/img/header/insidepages'+imgChoice+'_2014.jpg" />');
+			//-->
+			</script><!-- END Random top image -->
+		</t:else>
+    </div>
+    <!-- /.top-image -->
+<!-- NEXT: change this to <t:value id="top-image"></t:value> OR random from /redesign/img/header/insidepages5_2014.jpg -->
+	<div class="sectionToggle">
+		<button data-target=".left-nav" data-toggle="collapse" class="navbar-toggle knockout hidden-md hidden-lg"><span id="breadLink">Placeholder</span><span class="caret"></span></button>
+	</div>
+
+    <!--- /////////// EVERYTHING ABOVE THIS POINT IS COMMON TO ALL INTERIOR TEMPLATES ////////////// -->
+
+    <div class="main-body">
+        <div class="container">
+            <div class="row two-column-content">
+                <!-- all page content -->
+                <div class="col-md-3 left-nav knockout collapse navbar-collapse"> 
+					<!-- begin section nav -->
+					<div style="display: inline;" class="templateComponent" id="sectionNavigation-497998852"></div>
+
+<!--div class=templateComponent id="sectionNavigation-167468350" style="DISPLAY: inline"></div-->
+					<!-- end section nav -->
+                </div>
+                <!-- /.left-nav -->
+
+                <div class="col-md-9 right-content">
+                    <div class="row content-utilities" id="">
+                        <div class="col-md-9 col-md-offset-1">
+							<div id="breadcrumbs" class="hidden-xs">
+								<t:include id="breadcrumb-167468353" />
+							</div>
+                        </div>
+
+                        <div class="col-md-2">	
+							<div class="dropdownShare" style="float:right;">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								SHARE <span class="glyphicon glyphicon-share"></span>
+							</a>
+							<ul class="dropdown-menu-share">
+								<li>
+									<p>Share On <a href="https://www.facebook.com/sharer/sharer.php?u=${url}"><img src="http://cpc.convio.net/redesign/img/cpc/facebook.png" alt="Facebook"></a>
+									<a href="https://twitter.com/share"><img src="http://cpc.convio.net/redesign/img/cpc/twitter.png" alt="Twitter"/></a>
+									<a href="https://plus.google.com/share?url=${url}" onclick="javascript:window.open(this.href,
+									  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cpc.convio.net/redesign/img/cpc/gplus.png" alt="Google +"/></a>
+									<a  href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-shape="round" ><img src="http://cpc.convio.net/redesign/img/cpc/pinterest.png" alt="Pinterest" style="margin-top:5px;"/></a> </p>
+								</li>
+							</ul>
+                        </div>
+
+                    </div>
+                    <!-- /.row #content-utilities <span class="caret"></span>-->
+
+
+                    <div class="row" id="main-content">
+                        <div class="col-md-11 col-md-offset-1">
+                            <h2 class="titleSection">${title}</h2>
+
+						<hr class="lineInside"/>
+                            <!-- BEGIN Slideshow - if content exists in CMS -->
+                            <t:if test="slides.length > 0">
+                            	<t:if test="slides.length > 1">
+									<script type="text/javascript" src="http://cpc.convio.net/js/jquery-cycle-min.js"></script>
+									<script type="text/javascript">
+										(function($){
+											$(document).ready(function() {
+												$('#lpslideshow').cycle({fx: 'fade', pager: '#slidenav', pause: 1, speed: 600, timeout: 5000, cleartype:  true, cleartypeNoBg:  true });
+											});
+										})(jQuery);
+									</script>
+								</t:if>
+								<div class="row">
+									<div class="col-md-12 col-xs-12">
+										<div class="lpslides">
+											<ul id="lpslideshow" class="clearfix">
+												<t:list id="slides">
+													<li>
+														<t:list id="new_window">
+															<t:if test="name == 'no'">
+																<t:set id="nwin" value="'0'" />
+															</t:if>
+															<t:if test="name == 'yes'">
+																<t:set id="nwin" value="'1'" />
+															</t:if>
+														</t:list>
+														<t:if test="isNull(link_url)"><img src="${url}" alt="${alt_txt}" /></t:if>
+														<t:if test="!isNull(link_url) && nwin == '1'"><a href="${link_url}" target="_blank"><img src="${url}" alt="${alt_text}" /></a></t:if>
+														<t:if test="link_url != null && nwin == '0'"><a href="${link_url}"><img src="${url}" alt="${alt_text}" /></a></t:if>
+														<t:if test="!isNull(description)"><div class="scaption">${description}</div></t:if>
+													</li>
+												</t:list>
+											</ul>
+											<div id="slidenav"></div>
+										</div>
+									</div>
+								</div>
+							</t:if><!-- END slideshow -->
+							<t:else><!-- large image -->
+								<t:if test="large.length > 0">
+									<img class="img-responsive" src="${large.url}" />
+								</t:if>
+							</t:else><!-- END large image -->
+							${body}
+                        </div><!-- /.col-md-11 col-md-offset-1a-->
+                    </div><!-- /.row #main-content -->
+                </div><!-- /.right-content-->
+            </div><!-- /.row two-column-content -->
+        </div><!-- /.container -->
+    </div><!-- /.MainBody -->
+	
+	<script type="text/javascript">// <![CDATA[
+		(function($){	
+			$(document).ready(function() {
+				var breadFolder = $('a.breadcrumb:eq(1)').text();
+				if(breadFolder == 'Things to See and Do') {
+					$('#breadLink').text('See & Do');
+				} else {
+					$('#breadLink').text(breadFolder);
+				}
+			});
+		})(jQuery);
+	// ]]></script>

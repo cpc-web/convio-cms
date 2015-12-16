@@ -1,0 +1,323 @@
+<style type="text/css">
+#mapDiv {
+    display: block;
+    height: 750px;
+    width: 750px;
+    float: left;
+}
+.map-cat {
+    display: inline-block;
+    font-size: 0.8em;
+    margin: 10px 0px 0.25em 40px;
+    width: 300px;
+}
+.map-cat img {
+    position: relative;
+}
+.features {
+    display: block;
+    padding: 0 0 1.5em;
+}
+.info {
+    display: block;
+    font-size: 0.92em;
+    max-width: 200px;
+    min-height: 120px;
+    min-width: 150px;
+    padding: 0.25em 0.25em 1em;
+}
+.info img.left {
+    margin: 0 5px 0 0;
+}
+.info a {
+    color: #0099FF;
+    text-decoration: underline;
+}
+.info .description {
+    display: block;
+}
+</style>
+
+<div class="h2">Welcome to the Central Park Conservancy's interactive map of Central Park.</div>
+<p>Virtually everything to see or do in Central Park is represented on the map by a symbol, such as playgrounds, places to eat and cultural points of interest. Use the legend below to select the types of things you would like to displayed on the map. Click on an icon to see a summary and links to additional information about the attraction. You can also go to a Visitor Center to pick up a free map, download a <a href="/preview!www.centralparknyc.org/assets/pdfs/maps/CPC_Map_2014_V2.pdf" onclick="ga('send', 'event', 'PDFmaps', 'Download', 'Central_Park_Map_2014', {'nonInteraction': 1});"  target="_blank">printable version of the map</a>, search our list of <a href="/preview!www.centralparknyc.org/things-to-see-and-do/" target="_blank" >things to see in Central Park </a>, check out our  <a href="/preview!www.centralparknyc.org/assets/pdfs/maps/CPC_RunningMap_2014.pdf" target="_blank"> Central Park Running map</a>, or print a <a href="/preview!www.centralparknyc.org/tours/self-guided/walking-tours.html" target="_blank">self-guided Walking Tours map</a>.
+<br /><br /></p>
+
+
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAXUxeuSv3nsVtWOxco9i4VBTPH2CjCxXfGYrjWfz4J_1a91e84RTKDG04kVO45irX4ZwNDEZNPaZazg" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[ 
+// function setUp
+// Returns: the map
+//	
+var myMap;
+var myAttr = new Array();
+function setUp() {
+  var map = new GMap2(document.getElementById('mapDiv'));
+  map.addControl(new GLargeMapControl());
+	map.addControl(new GOverviewMapControl()); 
+  map.addControl(new GMapTypeControl());
+  map.setCenter(new GLatLng(40.781788,-73.9695 ),14);
+  loadData(map);
+	myMap = map;
+  return map;
+}
+function setUp2() {
+  var map = new GMap2(document.getElementById('mapDiv'));
+  map.addControl(new GLargeMapControl());
+	map.addControl(new GOverviewMapControl()); 
+  map.addControl(new GMapTypeControl());
+	map.setCenter(new GLatLng(40.781788,-73.9695 ),14);
+	var key = '${param.attraction}';
+  loadAttraction(map, key);
+	myMap = map;
+  return map;
+}
+// function createMarker
+// point: the location of the marker
+// icon: the icon to use to show the marker
+// html: the markup for the popup info window (optional)
+// Returns: the marker
+//
+function createMarker(point, icon, html) {
+  var marker = new GMarker(point, icon);
+  // If there is something to show in the popup...
+  if (html != null) { GEvent.addListener(marker, "click", function() {  marker.openInfoWindowHtml(html);  });
+  }
+  return marker;
+}
+
+
+// Define a class to represent a Travelogue
+function Travelogue(data) {
+	var titles = data.getElementsByTagName('title')[0].childNodes[0];
+	if (titles != null) { this.title = titles.nodeValue; 
+	} else { this.title = null; }
+
+	var myKey = data.getElementsByTagName('key')[0].childNodes[0];
+	if (myKey != null) { this.myKey = myKey.nodeValue; 
+	} else { this.myKey = null; }
+
+	var alink = data.getElementsByTagName('link')[0].childNodes[0];
+	if (alink != null) { this.alink = alink.nodeValue;  
+	} else { this.alink = null; }
+	
+	var latitudes = data.getElementsByTagName('latitude')[0].childNodes[0];
+	if (latitudes != null) { this.latitude = latitudes.nodeValue;
+	} else { this.latitude = null; }
+
+	var longitudes = data.getElementsByTagName('longitude')[0].childNodes[0];
+	if (longitudes != null) { this.longitude = longitudes.nodeValue; 
+	} else { this.longitude = null; }
+	
+	var feature = data.getElementsByTagName('feature')[0].childNodes[0];
+	if (feature != null) { this.feature = feature.nodeValue; 
+	} else { this.feature = null; }
+	
+	var perktype = data.getElementsByTagName('perktype')[0].childNodes[0];
+	if (perktype != null) { this.perktype = perktype.nodeValue;
+	} else { this.perktype = null; }
+	
+	var contact = data.getElementsByTagName('contact')[0].childNodes[0];
+	if (contact != null) { this.contact = contact.nodeValue; 
+	} else { this.contact = null; }
+	
+	var pic = data.getElementsByTagName('image')[0].childNodes[0];  
+	if (pic != null) { this.pic = pic.nodeValue; 
+	} else { this.pic = null; }
+	
+	var description = data.getElementsByTagName('description')[0].childNodes[0];
+	if (description != null) { this.description = description.nodeValue; 
+	} else { this.description = null; }
+	
+	this.getTitle = function () { return this.title; }
+	this.getKey = function () { return this.myKey; }
+  this.getLink = function () { return this.alink; }
+	this.getLatitude = function () { return this.latitude; }
+  this.getLongitude = function () { return this.longitude; }
+  this.getFeature = function () { return this.feature; }
+  this.getPerkType = function () { return this.perktype; }
+	this.getContact = function () { return this.contact; }
+	this.getImage = function () { return this.pic; }
+	this.getDescription = function () { return this.description; }
+}
+
+function getInfoWindowHTML(travelogue) {
+	var string = '<div class="info clearfix">';
+	if (travelogue.getImage != null) { string += '<img src="'+travelogue.getImage()+'" alt="" class="left" />'; }
+	string += '<div class="name"><a href="'+travelogue.getLink()+'">'+travelogue.getTitle()+'</a></div>';
+
+	
+	if (travelogue.getContact() != null) { string += '<div class="contact">'+travelogue.getContact()+'</div>'; }
+	if (travelogue.getDescription() != null) {string += '<div class="description">'+travelogue.getDescription()+'</div>'; }
+	string += '</div>';
+  return  string;
+}
+
+function hideMarkers (map, cat) {
+if (cat == 'all' || cat == null) { var url = 'http://www.centralparknyc.org/assets/map-list.xml'; 
+	} else { 
+		var url = 'http://www.centralparknyc.org/assets/map-list.xml?map_feature='+cat; 
+	}
+GDownloadUrl(url, function(data, responseCode) {
+  var xml = GXml.parse(data);
+  var records= xml.documentElement.getElementsByTagName("attraction");
+ if (records.length == 0) { return; }
+  for (var r = 0; r < records.length; r++) {
+    var travelogue = new Travelogue(records[r]);
+		var myKey = travelogue.getKey();
+		var marker = myAttr[myKey];
+		map.removeOverlay(marker);
+		myAttr[myKey] = null;
+	}
+});
+}
+function showMarkers(map, cat){
+if (cat == 'all' || cat == null) { var url = 'http://www.centralparknyc.org/assets/map-list.xml'; 
+	} else { 
+		var url = 'http://www.centralparknyc.org/assets/map-list.xml?map_feature='+cat; 
+	}
+GDownloadUrl(url, function(data, responseCode) {
+  var xml = GXml.parse(data);
+  var records= xml.documentElement.getElementsByTagName("attraction");
+	if (records.length == 0) { return; }
+	var icon = new GIcon(G_DEFAULT_ICON);
+	icon.iconSize = new GSize(20, 23);
+	icon.iconAnchor = new GPoint(10, 11);
+	var bounds = new GLatLngBounds();
+  for (var r = 0; r < records.length; r++) {
+    var travelogue = new Travelogue(records[r]);
+		var myKey = travelogue.getKey();
+		if(myAttr[myKey] == null) {
+		var feat = travelogue.getFeature();
+		icon.image = 'http://www.centralparknyc.org/assets/images/map-thumbs/'+feat+'.png';
+		icon.shadow = '';
+    var html = getInfoWindowHTML(travelogue);
+    var point = new GLatLng(travelogue.getLatitude(), travelogue.getLongitude());
+		bounds.extend(point);
+		var marker = createMarker(point, icon, html);
+		myAttr[myKey] = marker;
+		map.addOverlay(marker);
+		}
+ 	}
+});	
+}
+function toggleCategory(cat, value) {
+	if (value) { 
+		if(cat == 'all') {
+		for (var i = 0; i < document.features.elements.length; i++) { document.features.elements[i].checked = true;}
+		}
+ showMarkers(myMap, cat);
+	}else { 
+		if(cat == 'all') {
+		for (var i = 0; i < document.features.elements.length; i++) { document.features.elements[i].checked = false;}
+		} else { document.getElementById('all').checked = false; }
+	 hideMarkers(myMap, cat);
+	}
+}
+function loadAttraction(map, key) {
+if (key == "" || key == null) { alert('No attraction to load'+key); }
+else { var url = 'http://www.centralparknyc.org/assets/attraction-list.xml?itemid='+key; 
+GDownloadUrl(url, function(data, responseCode) {
+  var xml = GXml.parse(data);
+  var records= xml.documentElement.getElementsByTagName("attraction");
+	if (records.length == 0) { return; }
+	var icon = new GIcon(G_DEFAULT_ICON);
+	icon.iconSize = new GSize(20, 23);
+	icon.iconAnchor = new GPoint(10, 11);
+	var bounds = new GLatLngBounds();
+  for (var r = 0; r < records.length; r++) {
+    var travelogue = new Travelogue(records[r]);
+		var myKey = travelogue.getKey();
+		var feat = travelogue.getFeature();
+		icon.image = 'http://www.centralparknyc.org/assets/images/map-thumbs/'+feat+'.png';
+		icon.shadow = '';
+    var html = getInfoWindowHTML(travelogue);
+		var point = new GLatLng(travelogue.getLatitude(), travelogue.getLongitude());
+		bounds.extend(point);
+		var marker = createMarker(point, icon, html);
+		myAttr[myKey] = marker;
+		map.addOverlay(marker);
+ 	}
+});	
+}	
+}
+function loadData(map) {
+GDownloadUrl('http://www.centralparknyc.org/assets/map-list.xml', function(data, responseCode) {
+  var xml = GXml.parse(data);
+  var records= xml.documentElement.getElementsByTagName("attraction");
+ if (records.length == 0) { return; }
+  var icon = new GIcon(G_DEFAULT_ICON);
+	icon.iconSize = new GSize(20, 23);
+	icon.iconAnchor = new GPoint(10, 11);
+  var bounds = new GLatLngBounds();
+  for (var r = 0; r < records.length; r++) {
+    var travelogue = new Travelogue(records[r]);
+    var html = getInfoWindowHTML(travelogue);
+    var point = new GLatLng(travelogue.getLatitude(), travelogue.getLongitude());
+		var myKey = travelogue.getKey();
+		var feat = travelogue.getFeature();
+		icon.image = 'http://www.centralparknyc.org/assets/images/map-thumbs/'+feat+'.png';
+		icon.shadow = '';
+    bounds.extend(point);
+    var marker = createMarker(point, icon, html);
+		myAttr[myKey] = marker;
+    map.addOverlay(marker);
+  }
+	
+});	
+}
+//]]>
+</script>
+<t:if test="param.attraction != null">
+<script type="text/javascript">
+//<![CDATA[
+if (GBrowserIsCompatible()) {
+  if (window.attachEvent) {
+    window.attachEvent("onload", setUp2);
+    window.attachEvent("onunload", GUnload);
+  } else { 
+    window.addEventListener('load',setUp2,false);
+    window.addEventListener('unload',GUnload,false);
+  }
+} else {
+  alert("Sorry, your web browser is not compatible with Google Maps");
+}
+//]]>
+</script>
+</t:if>
+<t:else>
+<script type="text/javascript">
+//<![CDATA[
+if (GBrowserIsCompatible()) {
+  if (window.attachEvent) {
+    window.attachEvent("onload", setUp);
+    window.attachEvent("onunload", GUnload);
+  } else { 
+    window.addEventListener('load',setUp,false);
+    window.addEventListener('unload',GUnload,false);
+  }
+} else {
+  alert("Sorry, your web browser is not compatible with Google Maps");
+}
+//]]>
+</script>
+</t:else>
+
+<div id="mapDiv">Google Map will appear here momentarily</div>
+<div id="errors"></div>
+
+
+<t:data name="myfeatures" class="categories" parent="/map-features" />
+<form name="features" class="features">
+<span class="map-cat">
+<t:if test="param.attraction != null"><input type="checkbox" class="map_checkbox" name="all" value="1" id="all" onclick="toggleCategory(this.name, this.checked)" /></t:if>
+<t:else><input type="checkbox" class="map_checkbox" name="all" value="1" id="all" checked="checked" onclick="toggleCategory(this.name, this.checked)" /></t:else>
+<label class="h4" for="map-all">&nbsp;All Attractions</label></span>
+<t:list id="myfeatures"><span class="map-cat">
+<t:if test="param.attraction != null"><input type="checkbox" class="map_checkbox" name="${name}" value="1" id="map-${name}" onclick="toggleCategory(this.name, this.checked)" /></t:if>
+<t:else><input type="checkbox" class="map_checkbox" name="${name}" value="1" id="map-${name}" onclick="toggleCategory(this.name, this.checked)"/ checked="checked" /></t:else>
+ <label for="map-all"> <img src="/preview!www.centralparknyc.org/assets/images/map-thumbs/${name}.png" /> ${label}</label></span>
+</t:list>
+
+
+</form>

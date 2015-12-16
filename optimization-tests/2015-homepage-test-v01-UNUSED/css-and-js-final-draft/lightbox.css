@@ -1,0 +1,203 @@
+ 
+/* MODAL Styles */
+
+/* CLOSE MODAL */
+
+
+.closeModal {
+float: right;
+top: -13px;
+right: -7px;
+z-index: 50;
+position: absolute; 
+padding-right: -15px; 
+padding-top: 5px;
+}
+
+.closeModal img {
+height: 25px; 
+vertical-align: top; 
+padding: 0; 
+margin:0;
+}
+
+.modal {
+overflow-y: hidden;
+outline: none;
+}
+
+.modal-body {
+position: relative;
+padding: 10px;
+background-color: white;
+margin: 0 10px 10px 10px;
+border: none;
+}
+
+@media(max-width:767px) {
+.modal-body {
+margin: 0;
+text-align: center;
+padding: 0 10px 10px 10px;
+}
+}
+
+@media(max-width:767px) {
+.modal-content {
+background: white ;
+}
+}
+
+.modal-content {
+border: 10px solid white;
+background: white url("http://www.centralparknyc.org/assets/images/2014/2105-recruit-modal-bkgb-md.jpg") ;
+}
+
+@media(max-width:767px) {
+.modal-content {
+background: white; 
+border: 10px solid #68B247;
+}
+}
+
+.modal-header {
+margin: 100px;
+padding: 15px;
+border-bottom: none;
+}
+
+@media(max-width:767px) {
+.modal-header {
+margin: 0;
+text-align: center;
+border-bottom: none;
+padding: 5px;
+}
+}
+
+@media(max-width:767px) {
+.modal-title-mobile {
+display: inline;
+color: #68b247;
+font-size: 24px;
+}
+
+.modal-title {
+display: none;
+}
+}
+
+@media(min-width:768px) {
+.modal-title-mobile {
+display: none;
+}
+
+.modal-title {
+display: inline;
+padding: 0 10px;
+border: none;
+color: #68b247;
+}
+}
+
+@media(min-width:768px) {
+.mobile-lightbox-image {
+display: none;
+}
+}
+
+@media (device-height: 480px) { 
+.mobile-lightbox-image {
+  display: none;
+}
+}
+
+.mobile-lightbox-image {
+padding: 2px 7px 2px 5px;
+}
+
+.modal-footer {
+border: medium none;
+background-color: white;
+padding: 0 20px 10px 10px;
+margin: 0px 10px 10px 10px;
+border: none;
+}
+
+.captureCopy h4 {
+color: #77bd42;
+text-align: left;
+margin-top: 1px;
+margin-bottom: 10px;
+padding: 0 10px;
+}
+
+@media(max-width:767px) {
+.captureCopy h4 {
+text-align: center;
+margin-top: 1px;
+margin-bottom: 10px;
+padding: 0 10px;
+font-size: 14px;
+}
+}
+
+@media (device-height: 480px) { 
+.captureCopy h4 {
+  font-size: 12px;
+}
+}
+
+.captureCopyHeading {
+text-align: center;
+padding-top: 0;
+color: #77bd42;
+}
+
+#lbox_register_form input {
+margin: 0px auto 10px;
+width: 100%;
+height: 34px;
+border-radius: 5px;
+padding: 0px 0px 0px 10px;
+position: relative;
+border: 1px solid #636466;
+margin: 0 auto 10px auto;
+}
+
+.sign-up-row {
+padding: 0 10px 0 10px;
+}
+
+#lbox_register_form input#cons_email {
+}
+
+#lbox_register_form label { 
+background-color: #FFFFFF; 
+}
+
+.btnSignUpLightbox { 
+background: linear-gradient(to bottom, #79BF43, #69962E) repeat scroll 0% 0% #79BF43;
+border-radius: 19px;
+box-shadow: 2px 2px 2px #666;
+color: #FFF !important;
+font-size: 12px;
+padding: 8px 20px !important;
+border: 0px solid #79BF43;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+float: center !important;
+}
+
+/* fundraising lightbox */
+#captureModal .modal-dialog {
+    max-width: 630px;
+    height: auto;
+} 
+
+/* capture lightbox */
+/* #captureModal .modal-dialog { width: auto; background-color: #FFFFFF; } */
+
+#captureModal .modal-dialog { width: auto; height: auto;  }
+.linkCopy { left: 57px; }

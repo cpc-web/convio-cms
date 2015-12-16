@@ -1,0 +1,349 @@
+
+<script>
+(function($){
+   var ready = function() { 
+      var clickHandler = function(e) {
+          var myId = ($(this).attr('id'));
+          var myInfo = "." + myId;
+          $(myInfo).slideToggle('slow');
+          $(this).children('.fa').toggle();
+      };
+
+      var closeHandler = function(e) {
+         var myRelId = $(this).attr('data-rel-id');
+         $('#' + myRelId).click();
+      };
+      
+      $( '.myClick' ).click(clickHandler);
+      $( '.myClose' ).click(closeHandler);
+   };
+  $(ready);
+})(jQuery);
+</script>
+
+
+<style>
+.fa-caret-down{
+display: none;
+font-size: 16px;
+vertical-align: center;
+}
+
+.fa-caret-right{
+font-size: 16px;
+vertical-align: center;
+}
+
+.greentext {
+color: #77Bd42;	
+}
+
+.innerContent {
+margin-left: 15px;	
+}
+
+.innerContentInfo {
+margin-bottom: 30px;	
+}
+
+.memberImg {
+max-width: 150px;
+padding: 5px;
+float: left;	
+}
+
+@media(max-width: 767px){
+.memberImg {
+margin:0 auto;	
+}	
+}
+
+.moreInfoBackground {
+background-color: #f7f7f7;
+padding: 10px 0;
+border-radius: 5px;
+margin-bottom: 20px;
+border: 1px solid #DFECCD;
+}
+
+.moreInfoClick {
+color: #77BD42;
+text-decoration: none;
+}
+
+.moreInfoClick:hover {
+color: #6C6D70;
+}
+
+.myInCP{
+margin-bottom: 20px;	
+}
+
+.myText h3 {
+margin-top: 10px;
+}
+
+.myText h4 {
+margin: 0;
+}
+
+.myClick {
+color: #77BD42;
+text-decoration: none;
+}
+
+.myClick:hover {
+color: #636466;	
+}
+
+.myContainer {
+padding: 0px 10px;	
+}
+
+.myClose {
+text-decoration: underline !important;
+font-size: 12px;	
+}
+
+.myHr {
+margin-top: 10px;
+margin-bottom: 10px;
+border-color: #DFECCD;
+}
+
+</style>
+
+<div class="myContainer">
+	<div class="row">
+		<p>As a way of thanking members for their support, the Central Park Conservancy provides members with a wide variety of special perks, such as reduced ticket prices for official Central Park tours, special discounts at participating in-Park vendors, and exclusive members-only events. </p>
+
+		<p style="margin-bottom: 15px;">To see a full listing of Conservancy programs, including those with member benefits, visit our <a href="/preview!www.centralparknyc.org/events/">events calendar</a>.</p>
+	</div>
+	<div class="row moreInfoBackground">
+		<div class="col-sm-3">
+			<img src="/preview!www.centralparknyc.org/assets/images/2014/about/programs/members/Events1.jpg" class="memberImg img-responsive">
+		</div>
+		<div class="col-sm-9 myText">
+			<h3>Events</h3> 
+			<p>Central Park Conservancy hosts exclusive member programs throughout the year that offer members with the opportunity to learn and discover more about Central Park. Many of these programs are led by Conservancy staff and expert guides. </p>
+			<p class="myClick clickable" id="myEvents">
+				<i class="fa fa-caret-right"></i>
+				<i class="fa fa-caret-down"></i>&nbsp;Learn More
+			</p>
+			<div class="myEvents innerContent" style="display:none;">
+				<div class="innerContentInfo">
+					<h4>Walks</h4>
+					<hr class="myHr">
+					<strong>Water Walk: Belvedere to the Lake</strong><br />
+					<p>A Central Park Conservancy staff led tour featuring some of the Park&rsquo;s most prominent water bodies, including The Gill and the Lake. Route involves many hills and stairs. 75 minutes.</p>
+
+					<p>Date and Time: Saturday, August 8, 2015 - 10:00 am OR 1:00 pm  <br/>
+					Location: Meet at <a href="http://www.centralparknyc.org/things-to-see-and-do/attractions/belvedere-castle.html">Belvedere Castle</a></p>
+
+					<p><a href="/preview!www.centralparknyc.org/about/programs/member-program-registration.html">Pre-registration</a> is required.</p>
+
+					<p>Please arrive 15 minutes in advance of the tour.</p>
+				</div>	
+
+				<div class="innerContentInfo">
+					<h4>Hound Hikes</h4>
+					<hr class="myHr"> 
+					<strong>Hound Hike: North Woods</strong> 
+					<p>View the tumbling cascades and rustic bridges of the North Woods, a forest retreat located right in Manhattan, on this guided tour for you and your pooch. Take in the summer sunshine as you explore one of Central Park's most beloved treasures. Route involves many hills and stairs.</p>
+
+					<p>Date and Time: Sunday, July 12, 2015 - 11:00 am to 12:30 pm<br />
+					Location: Meet at <a href="http://www.centralparknyc.org/things-to-see-and-do/attractions/charles-a-dana-discovery-center.html">Charles A. Dana Discovery Center</a></p>
+
+					<p>Please arrive 15 minutes in advance of the tour. This is an on-leash event.</p>
+
+					<p><a href="/preview!www.centralparknyc.org/about/programs/member-program-registration.html">Pre-registration</a> is required.</p>
+				</div>	
+
+				<div class="innerContentInfo">
+					<h4>Classes</h4>
+					<hr class="myHr">
+					<strong>Drawing Class with Jessica Daryl Winer</strong> 
+					<p>Attendees will learn how to capture the beauty of the Park on paper in this drawing class, led by Centennial Trees of Central Park artist, <a href="http://jessicadarylwiner.com/Home.html">Jessica Daryl Winer</a>.</p>
+
+					<p>Date and Time: Saturday, August 1, 2015 - 10:30 am to 12:00 pm<br />
+					Location: Meet at the <a href="http://www.centralparknyc.org/things-to-see-and-do/attractions/charles-a-dana-discovery-center.html">Charles A. Dana Discovery Center</a></p>
+
+					<p>Attendees should bring a large sketchpad and pencil. No drawing experience is necessary.</p>
+
+					<p><a href="/preview!www.centralparknyc.org/about/programs/member-program-registration.html">Pre-registration</a> is required. This is a members-only event.</p>
+
+					<p>Please arrive 15 minutes in advance for check-in.</p>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<p class="myClose clickable" data-rel-id="myEvents">
+							Close
+						</p>
+					</div>	
+				</div>	
+			</div>	
+		</div>
+	</div>
+
+	<div class="row moreInfoBackground">
+		<div class="col-sm-3">
+			<img src="/preview!www.centralparknyc.org/assets/images/2014/about/programs/members/Tours.jpg" class="memberImg img-responsive">
+		</div>
+		<div class="col-sm-9 myText">
+			<h3>Tours</h3> 
+			<p>Along with exclusive members-only events, members can take advantage of special benefits offered at public programs, including discounts on Park tours. </p>
+			<p class="myClick clickable" id="myTours">
+				<i class="fa fa-caret-right" ></i>
+				<i class="fa fa-caret-down"  ></i>&nbsp;Learn More
+			</p>
+			<div class="myTours innerContent" style="display:none;">
+				<div class="innerContentInfo">
+					<h4>Official Central Park Tours</h4>
+					<hr class="myHr">
+					<p>Learn more about the Park&rsquo;s history, design, horticulture, and ecology with the Conservancy&rsquo;s expert guides. Tours are offered year-round.</p>
+
+					<p><strong>MEMBERS</strong>: Enjoy discounted tickets. For registration and more information visit <a href="/preview!www.centralparknyc.org/tours">centralparknyc.org/tours</a>.</p>
+				</div>
+
+				<div class="innerContentInfo">
+					<h4>Birding Basics for Families</h4>
+					<hr class="myHr">
+					<p>Experience Central Park when it becomes a precious bird habitat and migration hot spot! Bring your family and join Conservancy Discovery Guides and NYC Audubon Society on a guided walk: <a href="/preview!www.centralparknyc.org/events/individual-events/birding-basics-for-families-5-10-2015.html">Birding Basics for Families</a>. Learn how to spot and identify our feathered neighbors in their natural surroundings. Binoculars available to borrow, limited to 20 participants. Ages 5+.</p>
+
+					<p>Date and Time: Every Sunday, 10:00 am - 11:00 am <br />
+					Location: Meet at The Charles A. Dana Discovery Center</p>
+
+					<p><a href="/preview!www.centralparknyc.org/about/programs/member-program-registration.html">Pre-registration</a> is required for Members.</p>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12">
+						<p class="clickable myClose" data-rel-id="myTours">
+							Close
+						</p>
+					</div>	
+				</div>		
+			</div>	
+		</div>
+	</div>
+
+	<div class="row moreInfoBackground">
+		<div class="col-sm-3">
+			<img src="/preview!www.centralparknyc.org/assets/images/2014/about/programs/members/Out-About.jpg" class="memberImg img-responsive">
+		</div>
+		<div class="col-sm-9 myText">
+			<h3>Out and About in the Park</h3> 
+			<p>In addition to discounts and pre-registration perks for tours and events, members are also presented with special benefits for regularly offered in-Park activities, perfect for the everyday Park patron.</p>
+			<p class="myClick clickable" id="myOutAbout">
+				<i class="fa fa-caret-right" ></i><i class="fa fa-caret-down"  ></i>&nbsp;Learn More
+			</p>
+			<div class="myOutAbout innerContent" style="display:none;">
+				<div class="innerContentInfo">
+					<h4>Discovery Kits</h4>
+					<hr class="myHr">
+					<p>Borrow a <a href="/preview!www.centralparknyc.org/things-to-see-and-do/attractions/discover-kit.html">Woodland or Aquatic Discovery Kit</a> equipped with binoculars, a hand lens, and flora/fauna guides for an in-Park adventure. An optional Discovery Journal with suggested activities and a large kid-friendly map will guide your exploration. Best for ages 6-10.</p>
+
+					<p>Date and Time: Daily, 10:00 am &ndash; 3:00 pm <br />
+					Location: Meet at Belvedere Castle and Charles A. Dana Discovery Center 
+
+					<p><strong>MEMBERS</strong>: Bring your membership card to receive a complimentary Discovery Journal.</p>
+				</div>	
+
+				<div class="innerContentInfo">
+					<h4>Central Park Circuit</h4>
+					<hr class="myHr">
+					<p>Reach your fitness goals in the world&rsquo;s most beautiful outdoor gym &ndash; Central Park! Get fit with innovative exercises designed by top trainers to utilize the Park&rsquo;s best natural features: rocks, trails, stairs, hills, and gorgeous open lawns. A variety of <a href="/preview!www.centralparknyc.org/about/programs/central-park-circuit.html">in-Park classes will help you to maximize your strength and agility</a>, as well as increase flexibility and muscle tone. Free. Ages 18+. Classes are drop-in and open to all fitness levels. Space is limited for each class on a first come, first served basis.</p>
+
+					<p>Date andTime: Tuesdays and Thursdays, Summer 2015, 6:30 pm &ndash; 7:30 pm <br/>
+					Location: Meet at East Meadow </p>
+
+					<p><strong>MEMBERS</strong>: Bring your membership card to each class for guaranteed entry.</p>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<p class="clickable myClose" data-rel-id="myOutAbout">
+							Close
+						</p>
+					</div>	
+				</div>	
+			</div>
+		</div>			
+	</div>
+
+
+	<div class="row moreInfoBackground">
+		<div class="col-sm-3">
+			<img src="/preview!www.centralparknyc.org/assets/images/2014/about/programs/members/Bloomguide1.jpg" class="memberImg img-responsive">
+		</div>
+		<div class="col-sm-9 myText">
+			<h3>Bloom Guide</h3> 
+			<p>Make the most of the season with the <a href="/preview!www.centralparknyc.org/things-to-see-and-do/bloom-guide/">Central Park Conservancy Bloom Guide</a>. Discover the horticultural beauty of Central Park with vivid photos and detailed descriptions of over 200 flowers, including where and when to find them blooming in the Park. </p>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<h2>Member Discounts</h2>
+		<p>One of the perks of joining Central Park Conservancy is that Conservancy members receive discounts in Central Park. Just bring your valid membership card to any of the participating establishments and you can enjoy discounts.</p>
+	</div>	
+		<div class="innerContent">
+			<div class="row">
+				<h4>In Central Park</h4>
+				<hr class="myHr">
+			</div>
+			<div class="row">	
+				<div class="col-sm-4 myInCP">
+					<strong>The Boathouse Caf&eacute; </strong><br />
+					Mid-Park at 74th Street <br />
+					212.517.2233<br />
+					<i>*One free cup of coffee per visit</i><br />
+				</div>
+				<div class="col-sm-4 myInCP">
+					<strong>Dairy Visitor Center and Gift Shop </strong><br/>
+					Mid-Park at 65th Street <br/>
+					212.794.6564<br/>
+					<i>*10% discount</i>
+				</div>
+				<div class="col-sm-4 myInCP">
+					<strong>Le Pain Quotidien </strong><br/>
+					Sheep Meadow at 69th Street <br/>
+					<i>10% discount, excludes alcohol</i><br/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 myInCP">
+					<strong>Kerbs Boathouse Cafe</strong><br/>
+					Conservatory Water <br/>
+					<i>*15% discount</i><br/>
+				</div>
+				<div class="col-sm-4 myInCP">
+					<strong>Swedish Cottage Marionette Theatre </strong><br/>
+					Inside Park at West 79th Street Enter at 81st Street and Central Park West <br/>
+					212.988.9093 <br/>
+					<i>*10% discount in gift shop</i><br/>
+				</div>
+				<div class="col-sm-4 myInCP">
+					<strong>Victorian Gardens (Seasonal)</strong><br/>
+					Inside Wollman Rink in the Park <br/>
+					212.982.2229 <br/>
+					<i>*2 for 1 admission: Monday - Thursday</i><br/>
+				</div>
+			</div>	
+			<div class="row">
+				<h4>Online</h4>
+				<hr class="myHr">
+				<p class="myInCP innerContent"><strong>Central Park Conservancy Online Store</strong><br/>
+					Purchase your favorite <a href="/preview!www.centralparknyc.org/shop/">Central Park gifts and souvenirs online and receive a 10% discount</a>. All proceeds go directly towards the ongoing care and maintenance of Central Park.</p>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col-xs-12">
+				<p>Not a member? Become one today by <a href="https://secure2.convio.net/cpc/site/SPageServer?pagename=membership&s_src=website&s_subsrc=member_perks_page">signing up here</a>. It&rsquo;s a quick and easy way to support the Central Park Conservancy&rsquo;s ongoing work to keep the Park a vital resource for you and all New Yorkers. In addition to knowing that you are part of the Park as a Conservancy member, you&rsquo;ll be thanked with programs and perks like those listed above, as well as other special opportunities throughout the year.</p>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+
+

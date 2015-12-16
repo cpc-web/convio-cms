@@ -1,0 +1,77 @@
+<div style="display: none;" class="templateComponent" id="templatelist-622644206"></div>
+
+<div class="col-md-9">
+<h4>Create a Living Memory</h4>
+<h4></h4>
+<p>The Tree Trust of Central Park Conservancy offers you the unique opportunity to support the care of Central Park&rsquo;s 19,000 trees. All contributions to the Tree Trust are placed in an endowment for existing trees and to fund the planting of new trees. Your gift will help ensure that Central Park&rsquo;s trees are well-maintained</p>
+<p>For important milestones in your life, endow a mature tree and create a living memory that will last for generations to come. Many donors choose to make a contribution as a gift in honor or in memory of someone, or to celebrate a joyous occasion.</p>
+<p>With the endowment of a mature tree, the gift is honored with an engraved paving stone at the southern end of Literary Walk in the heart of Central Park.</p>
+	<div style="border: 2px solid #78c043; padding: 10px;">
+		<h2 style="color: #78c043; text-align: center; margin-top: 0;">TreeMark</h2>
+		<p>Central Park Conservancy is able to facilitate group fundraising for a tree through TreeMark, an online fundraising tool. To set up a page for group fundraising and to learn more about TreeMark, please email <a href="mailto:trees@centralparknyc.org">trees@centralparknyc.org</a> or call 212.310.6617</p>
+		<p><strong>To donate to an existing group fundraiser, please enter the code/name here:</strong><input class="treeSearch" type="text" placeholder="enter code or name" /><button class="btnSubmit btnSignUp clickable" style="float: none;">Search</button></p>
+		<p class="searchError" style="display: none; color: #FF0000;">Sorry, that tree name or code could not be found.</p>
+		<p class="searchResult" style="display: none;">Found! <a id="foundHref" href="#"><u>Team: <span id="foundTeam"></span>, Coordinator: <span id="foundCoordinator"></span></u></a> (click to contribute)</p>
+		<p>All donations are non-refundable.</p>
+		<p>Should your group not reach its goal within one year, all contributions will be designated to support the general fund for the care and maintenance of Central Park trees.</p>
+	</div>
+</div>
+<div class="col-md-3">
+<div style="width: 100%; min-width: 190px; height: 100%; padding: 13px; background-color: #f7f7f7; font-size: 11px; position: relative; text-align: center; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">
+<p><img height="80%" src="/preview!www.centralparknyc.org/assets/images/event-images/womensCommittee.jpg" style="border: 0px;" width="80%" /></p>
+<p style="text-align: center;"><strong>Co-Chairmen </strong><br /> Marilyn Calderwood and Barbara Scott<br /> <strong>Honorary Co-Chairs</strong><br /> Jean Clark, Eleanora Kennedy and Betsy Barlow Rogers</p>
+<p style="text-align: center; color: #75a942; text-transform: uppercase;"><strong><br />Support us!</strong></p>
+<p><a class="btnMoreEvents" href="https://secure2.convio.net/cpc/site/Donation2?idb=1543343129&amp;df_id=1281&amp;df=pg&amp;1281.donation=form1">ENDOW A TREE</a></p>
+<br />
+<p style="font-size: 10.5px;">For more information on the Tree Trust, please call <strong>212.310.6617</strong> or email <a href="mailto:trees@centralparknyc.org">trees@centralparknyc.org</a></p>
+</div>
+</div>
+
+<script type="text/javascript">
+
+	String.prototype.contains = function(contains) {
+		return this.indexOf(contains) != -1 ? true : false;
+	};
+	(function($) {
+	
+		function searchTree() {
+			console.log('started search');
+			var myEntry = $('.treeSearch').val().toUpperCase();
+			$('.teamJSON').each(function() {
+				var thisString = $(this).html();
+				var thisJson = $.parseJSON(thisString);
+				console.log("string:",thisString," JSON: ",thisJson," code: ",thisJson.code);
+				var thisCode = thisJson.code.toUpperCase();
+				console.log(thisCode);
+				if (thisCode.contains(myEntry) && myEntry.length >= 4) {
+					$('.searchError').hide();
+					//$('.searchResult').html($(this).foundMsg.text()).show();
+					$('.searchResult').html('<a href="http://www.centralparknyc.org/about/about-cpc/womens-committee/treemark.html?teamID='+thisJson.team_id+'">Found - Team: '+thisJson.title+', Coordinator: '+thisJson.coordinator+'</a>').show();
+					//<a href='http://www.centralparknyc.org/about/about-cpc/womens-committee/treemark.html?teamID=${team_id}'>Found: Team ${title}, Coordinator ${coordinator}</a>
+					return false;
+				}
+				$('.searchResult').hide();
+				$('.searchError').show();
+			});
+		}
+
+	
+		/* onload */
+		$(function() {
+			console.log('onload function...');
+			
+			$('.btnSubmit').click( function() {
+				console.log('button clicked');
+				searchTree();
+				//return false;
+			});
+			
+			$('.treeSearch').keypress(function (e) {
+				if (e.which == 13) {
+					searchTree();
+					return false;
+				}
+			})
+		});
+	})(jQuery);
+</script>

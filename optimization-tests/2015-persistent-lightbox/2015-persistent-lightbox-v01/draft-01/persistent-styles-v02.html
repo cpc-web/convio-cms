@@ -1,0 +1,122 @@
+<style>
+
+ #per-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 500px;
+  right: -500px;
+  height: 100%;
+  background-color: #E5E5E5;
+  z-index: 1000;
+ }
+
+ .toggle-menu {
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-transition: 0.75s ease;
+  -moz-transition: 0.75s ease;
+  -o-transition: 0.75s ease;
+  transition: 0.75s ease;
+ }
+
+ #per-menu.active {
+  -webkit-transform: translate(-500px, 0px);
+  -moz-transform: translate(-500px, 0px);
+  -o-transform: translate(-500px, 0px);
+  -ms-transform: translate(-500px, 0px);
+  transform: translate(-500px, 0px);
+  z-index: 1000;
+  outline: 9999px solid rgba(0,0,0,0.5);
+}
+
+.menu-link {
+  position: relative;
+  top: 15px;
+  right: -100em;
+  font-size: 14px;
+  z-index: 10000;
+}
+
+.menu-sidebar {
+  height: 100%;
+  background-color: red;
+  right: 30px;
+  width: 30px;
+}
+
+.btn-plb {
+  margin-bottom: 20px;
+  background-color: blue;
+}
+
+.btn-cta {
+    background-color: #e20034;
+    height: 40px;
+    margin-top: 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-family: 'Titling Gothic FB Cond', sans-serif;
+    font-size: 20px;
+    box-shadow: 0px 1px 0px #666666;
+}
+
+.btn-tab-text {
+  transform: rotate(90deg);
+  float: right;
+  color: white;
+  width: 100px;
+  height: 64px;
+  letter-spacing: 2px;
+  font-family: 'Titling Gothic FB Cond', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.btn-tab {
+  top: 50%;
+  height: 131px;
+  margin-top: -70px;
+  position: absolute;
+  right: 15px;
+  width: 57px;
+  background-color: red;
+  outline: none;
+  border-radius: 2px;
+  border: none;
+  box-shadow: -1px 0px 0px #666666
+}
+
+
+
+
+</style>
+
+<div id="per-menu">
+  <div class="col-xs-1 menu-sidebar">
+    <button class="btn-tab"><span class="btn-tab-text">Donate Now</span></button>
+  </div>
+  <div class="col-xs-11">
+    <button class="btn-plb" id="label1">$35</button> <br/>
+    <button class="btn-plb" id="label2">$50</button> <br/>
+    <button class="btn-plb" id="label3">$100</button> <br/>
+    <button class="btn-plb" id="label4">$250</button> <br/>
+    <button class="btn-plb" id="label5">$500</button> <br/>
+    <button class="btn-plb" id="label6">$1000</button> <br/>
+    <input id="other_amount" name="other_amount" type="text" onkeypress="return isNumberKey(event)" value="" placeholder="($5 Min)"> <br/>
+    <input id="monthly_gift" name="monthly_gift" type="checkbox" /> <br/>
+    <div class="cta">
+      <a href="https://secure2.convio.net/cpc/site/SPageServer?pagename=donate_eoycampaign_2015_persistent_lb" class="donateCta"><button class="btn-cta">DONATE TODAY</button></a>
+    </div>
+
+  </div>
+    
+</div>
+
+

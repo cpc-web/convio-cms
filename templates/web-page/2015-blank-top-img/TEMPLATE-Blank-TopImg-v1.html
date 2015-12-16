@@ -1,0 +1,116 @@
+<style type="text/css">
+	.top-image { margin-bottom:20px;}
+	
+	.sectionToggle { 
+		left: 30%;
+		width: 40%;
+		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		z-index: 1000;
+	}
+	
+	@media(max-width:767px) {
+		.left-nav {
+			min-height: 30px;
+			padding: 0px;
+			width: 100%;
+		}
+		.secondnav { visibility: visible; }
+		.top-image { visibility: hidden; height: 55px; min-height: 55px; }
+	}
+
+	#slidenav a { color: #FFFFFF; margin: 0 5px; }
+	#slidenav a:hover { color:#77bd42; margin: 0 5px; }
+	ul#lpslideshow { height:380px; }
+	ul#lpslideshow li { height:380px; list-style-type: none; }
+
+	#subnav li { position: relative; }
+	#subnav li ul { display: none; position: absolute; left: 60%; top: 0;  width: 100%; background-color: #666666; z-index: 1000; padding: 10px; border: 1px solid #777777; }
+	#subnav li ul:after, #subnav li ul:before { right: 100%; top: 18px; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+	#subnav li ul:after { border-color: rgba(102, 102, 102, 0); border-right-color: #666666; border-width: 9px; margin-top: -9px; }
+	#subnav li ul:before { border-color: rgba(204, 204, 204, 0); border-right-color: #777777; border-width: 11px; margin-top: -11px; }
+	#subnav li:hover ul { display: block; }
+	.dropdownShare:hover .dropdown-menu-share { display: block; }
+	.dropdown-menu-share { min-width: 180px; margin: 0; }
+
+</style>
+<!-- Top Image	================================================== -->
+    <div class="top-image">
+        <t:if test="top_image.length > 0">
+			<img alt="Top Image" class="img-responsive" src="${top_image.url}" />
+		</t:if><t:else>
+			<!-- RANDOM top image Serving -->
+			<script type="text/javascript">
+			<!--   
+			   var imgChoice = Math.floor(Math.random() * 5);
+			   imgChoice = imgChoice + 1;
+			   //create image
+			   var topImg = new Image();
+			   topImg.src = 'http://cpc.convio.net/redesign/img/header/insidepages'+imgChoice+'_2014.jpg';
+			   // set src of top_image element when finished loading image
+			    topImg.onload = function() {  document.getElementById('top_image').src = this.src;  };
+			//-->
+			</script><!-- END Random top image -->
+			<img id="top_image" alt="Top Image" class="img-responsive" />
+		</t:else>
+    </div>
+    <!-- /.top-image -->
+<!-- NEXT: change this to <t:value id="top-image"></t:value> OR random from /redesign/img/header/insidepages5_2014.jpg -->
+
+
+    <!--- /////////// EVERYTHING ABOVE THIS POINT IS COMMON TO ALL INTERIOR TEMPLATES ////////////// -->
+
+	<div class="main-body">
+        <div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1" style="margin-left:0;">
+					<div id="breadcrumbs" class="hidden-xs">
+						<t:include id="breadcrumb-167468353" />
+					</div>
+				</div>
+
+				<div class="col-md-2">	
+					<div class="dropdownShare" style="float:right;">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						SHARE <span class="glyphicon glyphicon-share"></span>
+						</a>
+						<ul class="dropdown-menu-share">
+							<li>
+								<p>Share On <a href="https://www.facebook.com/sharer/sharer.php?u=${url}"><img src="http://cpc.convio.net/redesign/img/cpc/facebook.png" alt="Facebook"></a>
+								<a href="https://twitter.com/share"><img src="http://cpc.convio.net/redesign/img/cpc/twitter.png" alt="Twitter"/></a>
+								<a href="https://plus.google.com/share?url=${url}" onclick="javascript:window.open(this.href,
+								  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cpc.convio.net/redesign/img/cpc/gplus.png" alt="Google +"/></a>
+								<a  href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-shape="round" ><img src="http://cpc.convio.net/redesign/img/cpc/pinterest.png" alt="Pinterest" style="margin-top:5px;"/></a> </p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /.row #content-utilities <span class="caret"></span>-->
+				<div class="col-md-12 ">
+					<h2 class="titleSection">${title}</h2>
+
+				<hr class="lineInside"/>
+					<t:else><!-- large image -->
+						<t:if test="large.length > 0">
+							<img class="img-responsive" src="${large.url}" />
+						</t:if>
+					</t:else><!-- END large image -->
+					${body}
+				</div><!-- /.col-md-12 col-md-offset-1a-->
+			</div><!-- /.row -->
+        </div><!-- /.container -->
+	</div><!-- /.main-body -->
+	
+	<script type="text/javascript">// <![CDATA[
+		(function($){	
+			$(document).ready(function() {
+				var breadFolder = $('a.breadcrumb:eq(1)').text();
+				if(breadFolder == 'Things to See and Do') {
+					$('#breadLink').text('See & Do');
+				} else {
+					$('#breadLink').text(breadFolder);
+				}
+			});
+		})(jQuery);
+	// ]]></script>

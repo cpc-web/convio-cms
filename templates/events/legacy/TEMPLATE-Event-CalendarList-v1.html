@@ -1,0 +1,9 @@
+<div class="templateRepeat">
+	<div class="eventJSON">
+		<t:if test="parent_event.length > 0">
+			{"id":"${itemID}","title":"<t:if test="cancelled == 'cancelled'">CANCELLED: </t:if>${parent_event.title}","date":"${date}","dateform":"<t:value id="date" format="yyyy/MM/dd"></t:value>","starttime":"${start_time}","endtime":"${end_time}","location":"${parent_event.location}","class":"event-<t:list id="parent_event.event_type"><t:value id="name">type name</t:value></t:list>","categories":"<t:list id="parent_event.event_category"><t:value id="name">category name</t:value>,</t:list>","ticketed":"${ticketed_event_type}","image":"<t:value id='parent_event.image.url'></t:value>","url":"${url}","short_description":"${parent_event.short_description}"}
+		</t:if><t:else>
+			{"id":"${itemID}","title":"<t:if test="cancelled == 'cancelled'">CANCELLED: </t:if>${title}","date":"${date}","dateform":"<t:value id="date" format="yyyy/MM/dd"></t:value>","starttime":"${start_time}","endtime":"${end_time}","location":"${location}","class":"event-<t:list id="event_type"><t:value id="name">type name</t:value></t:list>","categories":"<t:list id="event_category"><t:value id="name">category label</t:value>,</t:list>","ticketed":"${ticketed_event_type}","image":"${image.url}","url":"${url}","short_description":"${short_description}"}
+		</t:else>
+	</div>
+</div>

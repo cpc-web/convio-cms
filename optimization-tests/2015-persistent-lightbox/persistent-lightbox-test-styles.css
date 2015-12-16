@@ -1,0 +1,434 @@
+/*add for persistent lightbox to eliminate space in nav menu caused by css positioning on persistent lightbox*/
+.secondnav-arrow {
+  margin-top: -10px;
+}
+
+.navbar-nav>li>a {
+  padding-top: 11px;
+  padding-bottom: 15px;
+  color: white;
+}
+
+/*control + mobile lightbox css */
+/*///////////////////////////////////////////*/
+/*//////////// ALL SCREENS //////////////////*/
+/*//////////////////////////////////////////*/
+.modal .close {
+  opacity: inherit;
+}
+
+.modal .close:hover {
+  opacity: inherit;
+}
+
+.modal .modal-footer {
+  border-top: 0;
+  padding: 0 20px;
+}
+
+.modal .modal-header {
+  border-bottom: 0;
+}
+
+/*///////////////////////////////////////////*/
+/*/////////////// DESKTOP ///////////////////*/
+/*///////////////////////////////////////////*/
+@media only screen and (min-width: 768px) {
+  .modal .btnSignUpLightboxDonate {
+    height: 39px;
+    background-color: #e20034;
+    color: white;
+    font-size: 15px;
+    font-family: 'Titling Gothic FB Cond', sans-serif;
+    letter-spacing: 1.5px;
+    word-spacing: 1.5px;
+    border: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 0 #666666;
+       -moz-box-shadow: 0 1px 0 #666666;
+            box-shadow: 0 1px 0 #666666;
+    line-height: 2;
+    width: 122px;
+    float: right;
+  }
+
+  .fade.in {
+    background-color: rgba(0, 0, 0, .7);
+  }
+
+  .modal input {
+    width: 36%;
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid #b7b7b7;
+    margin-right: 5px;
+  }
+
+  .modal .modal-content {
+    background-size: 500px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .modal .modal-footer {
+    color: #636466;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    text-align: left;
+    padding: 0 15px;
+    margin-top: 0;
+  }
+
+  .modal .modal-header {
+    background: white url('http://cpc.convio.net/images/fall-2015/central-park-mall-winter-for-web-desktop.jpg') center;
+    border: 10px solid white;
+    height: 300px;
+    background-size: 477px;
+    border-radius: 5px;
+    padding: 15px 15px 0;
+  }
+
+  .modal .modal-header .close {
+    margin-top: -20px;
+    margin-right: -10px;
+  }
+
+  .modal .modal-title {
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+    font-size: 33px;
+    color: white;
+    line-height: 1.2;
+    font-family: 'Titling Gothic FB Narr', sans-serif;
+    margin-top: 80px;
+    -webkit-text-shadow: 2px 3px 4px black;
+       -moz-text-shadow: 2px 3px 4px black;
+            text-shadow: 2px 3px 4px black;
+  }
+
+  .modal .sign-up-row {
+    margin: 5px -3px;
+  }
+}
+/*///////////////////////////////////////////*/
+/*////////////// END DESKTOP ////////////////*/
+/*///////////////////////////////////////////*/
+
+
+
+/*///////////////////////////////////////////*/
+/*/////////////// MOBILE ////////////////////*/
+/*///////////////////////////////////////////*/
+@media only screen and (max-width: 767px) {
+  .modal .bottom-link {
+    margin-top: 20px;
+    color: #636466;
+    text-align: center;
+    font-size: 14px;
+    opacity: 1;
+    font-size: 14px;
+    text-align: center;
+    float: none;
+    font-weight: normal;
+    text-shadow: none;
+    opacity: .7;
+  }
+
+  .modal .bottom-link:hover, .modal .bottom-link:focus {
+    color: #636466;
+    text-decoration: none;
+  }
+
+  .modal .btnSignUpLightboxDonate {
+    width: 100%;
+    height: 50px;
+    background-color: #e20034;
+    color: white;
+    font-size: 24px;
+    font-family: 'Titling Gothic FB Cond', sans-serif;
+    letter-spacing: 1.5px;
+    word-spacing: 1.5px;
+    border: none;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 0 #666666;
+       -moz-box-shadow: 0 1px 0 #666666;
+            box-shadow: 0 1px 0 #666666;
+  }
+
+  .fade.in {
+    background-color: rgba(255, 255, 255, .85);
+  }
+
+  .modal input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    outline: 0;
+    border: 0;
+    border-radius: 2px;
+    padding-left: 10px;
+  }
+
+  .modal .modal-content {
+    background-color: transparent;
+    border-radius: 0;
+    outline: 0;
+            box-shadow: none;
+    -webkit-box-shadow: 0;
+    border: 0;
+  }
+
+  .modal .modal-dialog {
+    margin: 0;
+  }
+
+  .modal .modal-footer {
+    font-size: 18px;
+    color: #636466;
+    text-align: center;
+    word-spacing: 1.5px;
+    line-height: 1.2;
+    font-family: 'Titling Gothic FB Narr', sans-serif;
+    margin-top: 0;
+    padding: 5px 30px;
+  }
+
+  .modal .modal-header {
+    padding: 0 15px;
+  }
+
+  .modal .modal-header .close {
+    margin-top: 0;
+    margin-right: 20px;
+    font-size: 40px;
+    color: #636466;
+    opacity: .7;
+  }
+
+  .modal .modal-sub-title {
+    padding-right: 5px;
+    margin-bottom: 15px;
+  }
+
+  .modal .modal-title {
+    font-size: 33px;
+    color: #636466;
+    font-family: 'Titling Gothic FB Cond', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    word-spacing: 1.5px;
+    line-height: 1.2;
+    padding: 0 20px;
+    margin-bottom: 10px;
+  }
+
+  .modal .sign-up-row {
+    margin-top: 10px;
+  }
+}
+/*///////////////////////////////////////////*/
+/*////////////// END MOBILE /////////////////*/
+/*///////////////////////////////////////////*/
+
+/*///////////////////////////////////////////*/
+/*/////////// LARGER SCREENS ////////////////*/
+/*///////////////////////////////////////////*/
+@media only screen and (min-width: 550px) and (max-width: 767px) {
+  .modal .sign-up-row {
+    margin: 10px 20px;
+  }
+}
+/*///////////////////////////////////////////*/
+/*/////////// END IPHONE 4/5 ////////////////*/
+/*///////////////////////////////////////////*/
+
+
+/*///////////////////////////////////////////*/
+/*///////////// IPHONE 4/5 //////////////////*/
+/*///////////////////////////////////////////*/
+@media only screen and (max-width: 330px) {
+  .modal .title {
+    font-size: 30px;
+  }
+}
+/*///////////////////////////////////////////*/
+/*/////////// END IPHONE 4/5 ////////////////*/
+/*///////////////////////////////////////////*/
+
+
+/* persistent lightbox css */
+@media only screen and (max-width: 768px) {
+  #per-menu {
+    display: none; } }
+@media only screen and (max-height: 480px) {
+  #per-menu {
+    display: none; } }
+@media only screen and (min-width: 767px) {
+  .toggle-menu-persistent {
+    /*  -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    -webkit-transition: transform 0.5s ease;*/
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -moz-transition: 0.5s transform ease;
+    -o-transition: 0.5s transform ease;
+    -ms-transition: -ms-transform 0.5s ease;
+    transition: 0.5s transform ease;
+    -webkit-transition: -webkit-transform 0.5s ease; }
+
+  .persistent-lightbox-overlay {
+    /*  outline: 9999px solid rgba(0,0,0,0.7);*/
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7); }
+
+  #per-menu.active {
+    -webkit-transform: translate(-500px, 0px);
+    -moz-transform: translate(-500px, 0px);
+    -o-transform: translate(-500px, 0px);
+    -ms-transform: translate(-500px, 0px);
+    transform: translate(-500px, 0px);
+    z-index: 10000; }
+
+  #per-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 500px;
+    right: -500px;
+    height: 100%;
+    background-color: #e5e5e5;
+    color: #636346;
+    z-index: 10000; }
+    #per-menu .menu-link {
+      position: relative;
+      top: 15px;
+      right: -100em;
+      font-size: 14px;
+      z-index: 10000; }
+    #per-menu .menu-sidebar {
+      height: 100%;
+      background-color: #e20034;
+      right: 30px;
+      width: 30px; }
+    #per-menu .btn-plb {
+      margin-bottom: 20px;
+      display: inline-block;
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      width: 87px;
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle;
+      margin-right: 30px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      outline: none;
+      border: none;
+      float: left; }
+    #per-menu .btn-plb-right {
+      margin-right: 0; }
+    #per-menu .btn-cta {
+      background-color: #e20034;
+      height: 40px;
+      margin-top: 10px;
+      width: 100%;
+      outline: none;
+      border: none;
+      border-radius: 2px;
+      color: white;
+      font-family: 'Titling Gothic FB Cond', sans-serif;
+      font-size: 20px;
+      box-shadow: 0px 1px 0px #666666; }
+    #per-menu .btn-tab-text {
+      transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      float: right;
+      color: white;
+      width: 155px;
+      height: 140px;
+      font-weight: 700;
+      font-family: 'Titling GOthic FB Cond', sans-serif;
+      font-size: 20px;
+      letter-spacing: 1.5px; }
+    #per-menu .btn-tab {
+      top: 50%;
+      height: 175px;
+      margin-top: -73px;
+      position: absolute;
+      right: 15px;
+      width: 50px;
+      background-color: #e20034;
+      outline: none;
+      border-radius: 2px;
+      border: none;
+      box-shadow: -1px 0px 0px #666666; }
+    #per-menu .btn-tab-text .fa-caret-down {
+      margin-left: 5px;
+      font-size: 30px;
+      top: 3px;
+      position: relative; }
+    #per-menu .triangle-lightbox {
+      border-style: solid;
+      border-width: 75px 0 75px 30px;
+      border-color: transparent transparent transparent #e20035;
+      line-height: 0px;
+      _border-color: #000000 #000000 #000000 #e20035;
+      _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+      top: 50%;
+      position: absolute;
+      margin-top: -73px;
+      left: 30px; }
+    #per-menu .lightbox-container {
+      margin: 10px 30px;
+      max-width: 375px; }
+    #per-menu .lightbox-header-text h2 {
+      margin-bottom: 15px;
+      text-align: center; } }
+  @media only screen and (min-width: 767px) and (max-height: 600px) {
+    #per-menu .lightbox-header-img {
+      display: none; } }
+@media only screen and (min-width: 767px) {
+    #per-menu .lightbox-header-img {
+      margin-bottom: 15px;
+      padding: 0 10px; }
+    #per-menu .lightbox-body {
+      margin: 0 10px; }
+    #per-menu .lightbox-body-text {
+      font-size: 18px; }
+    #per-menu .lightbox-body-buttons {
+      text-align: center;
+      margin-top: 15px; }
+    #per-menu #other_amount {
+      margin-bottom: 15px; }
+    #per-menu #monthly_gift {
+      margin-bottom: 15px; }
+    #per-menu .lightbox-close {
+      height: 6px; }
+    #per-menu .lightbox-close .fa-times {
+      float: right;
+      font-size: 20px;
+      position: relative;
+      right: -20px;
+      top: 0px;
+      cursor: pointer; }
+    #per-menu .lightbox-spinner {
+      position: fixed;
+      transform: translateY(-50%);
+      font-size: 24px;
+      top: 50%;
+      width: 80%;
+      text-align: center;
+      margin-top: -20px;
+      visibility: hidden; }
+    #per-menu i.fa.fa-spinner.fa-pulse {
+      font-size: 40px; } }

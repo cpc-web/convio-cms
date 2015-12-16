@@ -1,0 +1,30 @@
+<div id="left_box">
+  <div class="left_wrapper">
+    <p><a href="http://www.centralparknyc.org/visit/trees-blooms/bloom-guide/?season=${param.season}">Central Park Conservancy Bloom Guide</a></p>
+    <h1 class="drophead">${title}</h1>
+    <t:if test="large.length &gt; 0">
+<t:list id="large">
+<t:set id="imgwidth" value="imagewidth + 10" />
+<div class="imgdisplay" style="width: ${imgwidth}px;" >
+<img src="${url}" alt="${alt_text}" width="${imagewidth}" height="${imageheight}" />
+<t:if test="photo_credit != null"><div class="photo_credit" style="width: ${imgwidth}px;" >Photo by <t:value id="photo_credit"></t:value></div></t:if>
+</div>
+</t:list></t:if>
+
+    <!-- Bloom-specific info -->
+    <p><strong>Common Name:</strong> ${title}</p>
+    <p><strong>Botanical Name:</strong> <i>${botanical_name}</i></p>
+    <p><strong>Plant Type:</strong> ${plant_type}</p>
+    <p><strong>Plant Size:</strong> ${plant_size}</p>
+    <p><strong>Typical Bloom Time:</strong> ${start_month} to ${end_month}</p>
+    <t:if test="description != null"><p>${description}</p></t:if>
+    ${body}
+    <!-- END left side content -->
+  </div>
+</div>
+<div id="right_column">
+<div class="right_box_flex"><h2 class="right_box_headline">Park Locations</h2><t:list id="bloom_locations"><a href="${url}?season=${param.season}">${title}</a><br />${location_text} <p><strong><a href="http://www.centralparknyc.org/visit/trees-blooms/bloom-guide/bloom-guide-location-map.html?attraction=${itemid}&bloom_locations=${itemid}&loc_title=${title}&gLat=${location.latitude}&gLong=${location.longitude}&season=${param.season}">&raquo; Map It</a></p></strong><br /></t:list></div>
+<p>&nbsp;</p>
+
+<DIV class=templateComponent id=templatelist-69689827 style="DISPLAY: inline"></DIV>
+</div>

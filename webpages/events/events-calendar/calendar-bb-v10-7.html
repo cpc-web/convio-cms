@@ -1,0 +1,240 @@
+<!-- calendar v10.7 -->
+<!-- added CSS for calendar -->
+<!-- adding in Carla's styles from standalone v9 -->
+	<!--link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"-->
+	<link href="http://cpc.convio.net/redesign/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+<style type="text/css">
+	.control-label { padding-top: 7px; }
+	.input-group { width: 5%; }
+	
+	@media(max-width:767px) {
+		.filterButtons { display: none; }
+		.filter-block { display: none; }
+	}
+</style>
+
+<!-- CMS component for events import -->
+<div style="display: none;" class="templateComponent" id="templatelist-503243953"></div>
+
+<!--div class="container"-->
+	<div class="page-header">
+		<div>
+			<div class="filterButtons">
+				<div class="btn-groupCalendar">
+				  <button type="button" class="btn btn-all" data-event-type="all">All Events</button>
+				  <button type="button" class="btn btn-tours" data-event-type="tours">Tours</button>
+				  <button type="button" class="btn btn-benefit" data-event-type="benefit-events">Benefit Events</button>
+				  <button type="button" class="btn btn-exhibit" data-event-type="exhibits">Exhibits</button>
+				  <button type="button" class="btn btn-sports" data-event-type="fitness-recreation-sporting">Sports</button>		
+				  <button type="button" class="btn btn-performance" data-event-type="performances">Performances</button>
+				  <button type="button" class="btn btn-social" data-event-type="social-community">Social</button>
+				  <button type="button" class="btn btn-talk" data-event-type="talks-workshops">Talks</button>
+				  <button type="button" class="btn btn-volunteer" data-event-type="volunteer-events">Volunteer</button>
+				</div>
+			</div>
+		</div>
+		<div class="filter-block">
+			<div class="filter-main">
+				<div class="filter-search-row">
+					<label class="col-md-3 col-md-offset-1 control-label">Filter by Event Type (Above)</label>
+					<!--div class="filter-search">
+						<div class="input-group">
+						  <input type="search" placeholder="Search events by keyword" class="form-control">
+						  <span class="input-group-btn" >
+							<button class="btn btn-default" type="button" ><span class="glyphicon glyphicon-search"></span></button>
+						  </span>
+						</div>
+					</div-->
+					<form action="" class="filter-date form-horizontal"  role="form">
+						<fieldset>
+							<div class="form-group">
+								<label for="dtp_input2" class="col-md-3 control-label">Go to Date:</label>
+								<div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+									<input class="form-control" size="16" type="text" value="" readonly style="display: none;" />
+									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+								</div>
+								<input type="hidden" id="dtp_input2" value="" /><br/>
+							</div>
+						</fieldset>
+					</form>
+					<div class="filter-categories-block">
+						<label for="filter-categories">Filter by Category:</label>
+						<select class="filter-categories">
+							<option value="all" selected="selected">All Categories</option>
+							<option value="history-design">History & Design</label>
+							<option value="benefit-events">Benefit Event</label>
+							<option value="dog-owners">Dog Owners</label>
+							<option value="fitness-and-recreation">Fitness & Recreation</label>
+							<option value="free-events">Free Events</label>
+							<option value="kids-families">Kids & Families</label>
+							<option value="members-only">Member Programs</label>
+							<option value="member-perks">Member Perks</label>
+							<option value="partner-events">Partner Events</label>
+							<option value="retail-and-special-offers">Retail & Special Offer</label>
+							<option value="nature-horticulture">Nature & Horticulture</label>
+							<option value="cpc-sponsored">CPC Event</label>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-xs-1">
+				<div class="buttonPrev" data-calendar-nav="prev"></div>
+			</div>
+			<div class="col-md-8 col-xs-10 text-center">
+					<h3></h3>
+			</div>
+			<div class="col-md-2 col-xs-1">
+					<div class="buttonNext" data-calendar-nav="next"></div>
+			</div>
+			<!--button class="btn" data-calendar-nav="today">Today</button-->
+		</div>
+	</div>
+	<div class="span9">
+		<div id="calendar"></div>
+	</div>
+
+	<!-- js dependencies for calendar -->
+	<script type="text/javascript" src="http://cpc.convio.net/redesign/js/underscore-min.js"></script>
+	<script type="text/javascript" src="http://cpc.convio.net/redesign/components/jstimezonedetect/jstz.min.js"></script>
+    <script type="text/javascript" src="http://cpc.convio.net/redesign/js/calendar-cpc-v10_5.js"></script>
+	<script type="text/javascript" src="http://cpc.convio.net/redesign/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+	<!-- in-page additional scripts -->
+	<script type="text/javascript">// <![CDATA[
+		(function($) {
+			
+			"use strict";
+			var eventsList = [];
+			
+			$(document).ready(function() {
+				$('.eventJSON').each(function() {
+					var element = $(this).text();
+					var JSONelement = $.parseJSON(element);
+					var elementString = JSONelement.dateform.toString();
+					var startString = elementString.concat(' ').concat(JSONelement.starttime.toString());
+					var endString = elementString.concat(' ').concat(JSONelement.endtime.toString());
+					//var elementDate = Date.parse(elementString);
+					var myStart = Date.parse(startString);
+					var myEnd = Date.parse(endString);
+					//alert('this date '+elementString+' as date: '+elementDate+' start: '+startString+' as date:'+myStart+' end '+endString+' as date: '+myEnd);
+					JSONelement.popoverContent = '<div class="popoverHide" id="popoverID'+JSONelement.id+'"><img src="'+JSONelement.image+'" /><p><b>'+JSONelement.title+'<br />When: '+JSONelement.starttime+'<br />Where: '+JSONelement.location+'</b><br /><br />'+JSONelement.short_description+'<br /><br /><a class="btnGet" role="button" href="'+JSONelement.url+'">GET EVENT DETAILS</a></div>';
+					JSONelement.start = myStart;
+					JSONelement.end = myEnd;
+					eventsList.push(JSONelement);
+				});
+				console.log('load',eventsList);
+
+				var options = {
+					events_source: eventsList,
+					view: 'month',
+					tmpl_path: 'tmpls/',
+					tmpl_cache: false,
+					day: 'now',
+					onAfterEventsLoad: function(events) {
+					},
+					onAfterViewLoad: function(view) {
+						$('.page-header h3').text(this.getTitle());	// <======= THIS does header
+						$('.btn-group button').removeClass('active');
+						$('button[data-calendar-view="' + view + '"]').addClass('active');
+						var focusDate = this.options.day;
+						$('[data-cal-date="'+focusDate+'"]').closest('.cal-cell1').addClass('day-highlight');
+					},
+					classes: {
+						months: {
+							general: 'label'
+						}
+					},
+					modal: '#events-modal'
+				};
+
+				var calendar = $('#calendar').calendar(options);
+
+				$('div[data-calendar-nav]').each(function() {
+					var $this = $(this);
+					$this.click(function() {
+						calendar.navigate($this.data('calendar-nav'));
+					});
+				});
+				
+				function showTypes(eventType) {
+					if(eventType == 'all') {
+						//alert('showing all: '+eventType);
+						$('div[data-event-class]').show();
+					} else {
+						$('div[data-event-class]').hide();
+						//alert('showing type: '+eventType);
+						$('div[data-event-class="event-'+eventType+'"]').show();
+					}
+				}
+				
+				$('button[data-event-type]').each(function() {
+					var $this = $(this);
+					$this.click(function() {
+						$('select.filter-categories').val('all');
+						$('div[data-event-categories]').show();
+						showTypes($this.data('event-type'));
+					});
+				});
+				
+				function showCategories() {
+					var thisCategory = $('select.filter-categories option:selected').val();
+					if(thisCategory == 'all') {
+						$('div[data-event-categories]').show();
+					} else {
+						$('div[data-event-categories]').hide();
+						$('div[data-event-categories*="'+thisCategory+'"]').show();
+					}
+				}
+				
+				$('select.filter-categories').change(function() {
+					showCategories();
+				});
+				
+				/*function showCategories(eventCategory) {
+					if(eventCategory == 'all') {
+						$('div[data-event-categories]').show();
+					} else {
+						$('div[data-event-categories]').hide();
+						$('div[data-event-categories*="'+eventCategory+'"]').show();
+					}
+				}
+				
+				$('input[data-event-category]').each(function() {
+					var $this = $(this);
+					$this.click(function() {
+						showCategories($this.data('event-category'));
+					});
+				});*/
+				
+				$('.form_date').datetimepicker({
+					//language:  'fr',
+					weekStart: 0,
+					todayBtn:  1,
+					autoclose: 1,
+					todayHighlight: 1,
+					startView: 2,
+					minView: 2,
+					forceParse: 0,
+					onRender: function(ev) {
+						alert('date: '+ev.valueOf());// < date-start-display.valueOf() ? ' disabled' : '';
+					}
+				}).on('changeDate', function(ev){
+					var myDate = ev.date;
+					var myYear = myDate.getFullYear();
+					var myMonth = myDate.getMonth() + 1;
+					var myMonthFormatted = myMonth < 10 ? '0' + myMonth : myMonth;
+					var myDay = myDate.getDate();
+					var myDayFormatted = myDay < 10 ? '0' + myDay : myDay;
+					var myDateFormatted = ''+myYear+'-'+myMonthFormatted+'-'+myDayFormatted;
+
+					//alert('date: '+myDateFormatted);
+					calendar.options.day = myDateFormatted;
+					calendar.view('month');
+				});
+
+			})
+			
+		})(jQuery);
+	// ]]></script>

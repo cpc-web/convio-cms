@@ -1,0 +1,494 @@
+/*************************** second row text box row ******************/
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+  .cpc-test .col-sm-4.cta-middle {
+    width: 32.3%;
+  }
+
+  .cpc-test .container {
+    width: 970px;
+  }
+
+  .cpc-test .featured-content {
+    width: 48.4%;
+  }
+
+  .cpc-test  .cta-02 input {
+    font-size: 12px;
+  }
+
+  .cpc-test .btn-inner-content {
+    margin-top: 10px;
+  }
+
+  .cpc-test .btn-featured {
+    margin-top: 80px;
+  }
+
+  .inner-content-sub {
+    height: 100px;
+  }
+
+  .inner-content-sub-active {
+    height: 100px;
+  }
+
+  .main-cta-mainpage {
+    width: 80%;
+  } 
+}
+
+@media only screen and (max-width: 992px) {
+ #emailHomepage {
+    margin-left: 10px;
+    margin-right: 10px;
+} 
+}
+
+
+@media only screen and (max-width: 991px) and (min-width: 913px) {
+  .container {
+    width: 890px;
+  }
+
+  .col-sm-4.cta-middle {
+    width: 32.1%;
+  }
+
+  .cta-02 input {
+    font-size: 12px;
+  }
+
+  .featured-content {
+    width: 48.3%;
+  }
+
+  .btn-mid-cta-02 {
+    margin-top: 39px;
+  }
+
+  .cpc-test .btn-inner-content {
+    margin-top: 22px;
+  }
+
+  .btn-featured {
+    margin-top: 90px;
+  }
+
+  .inner-sub {
+    font-size: 16px;
+  }
+ 
+  .inner-content-sub {
+    height: 90px;
+  }
+
+  .inner-content-sub-active {
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .main-cta-mainpage {
+    width: 75%;
+  }
+
+  .main-cta-text {
+    font-size: 1.6em;
+  }
+}
+
+
+@media only screen and (max-width: 912px) and (min-width: 880px) {
+  .col-sm-4.cta-middle {
+    width: 32.1%;
+    height: 250px;
+  }
+
+  .container {
+    width: 850px;
+  }
+
+  .featured-content {
+    width: 48%;
+  }
+
+
+  .cta-02 input {
+    font-size: 12px;
+    margin-top: 45px;
+  }
+
+  .cpc-test .btn-inner-content {
+    margin-top: 40px;
+  }
+
+  .btn-mid-cta-02 {
+    margin-top: 45px;
+  }
+
+  .btn-featured {
+    margin-top: 80px;
+  }
+
+  .inner-content-sub {
+    height: 90px;
+  }
+
+  .inner-content-sub-active {
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 879px) and (min-width: 840px) {
+  .container {
+    width: 820px;
+  }
+
+  .col-sm-4.cta-middle {
+    width: 32%;
+    height: 250px;
+  }
+
+
+  .mid-email-capture {
+    margin-top: 50px;
+  }
+
+  .cta-02 input {
+    font-size: 12px;
+  }
+
+  .inner-header {
+    font-size: 22px;
+  }
+
+  .btn-mid-cta-02 {
+    margin-top: 43px;
+  }
+
+  .featured-content {
+    width: 48.1%;
+  }
+
+  .cpc-test .btn-featured {
+    margin-top: 90px;
+  }
+
+  .cpc-test .btn-inner-content {
+    margin-top: 45px;
+  }
+
+  .inner-sub {
+    font-size: 16px;
+  }
+
+  .inner-content-sub {
+    height: 90px;
+  }
+
+  .inner-content-sub-active {
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 839px) and (min-width: 800px) {
+  .col-sm-4.cta-middle {
+    width: 32%;
+    height: 250px;
+  }
+
+  .container {
+    width: 760px;
+  }
+
+  .featured-content {
+    width: 48.1%;
+  }
+
+  .cta-02 input {
+    font-size: 11px;
+  }
+
+  .inner-header {
+    font-size: 20px;
+  }
+  .mid-email-capture {
+    margin-top: 50px;
+  }
+
+  .featured-content {
+    width: 47.8%;
+  }
+
+  .btn-mid-cta-02 {
+    margin-top: 40px;
+  }
+
+  .cpc-test .btn-inner-content {
+    margin-top: 22px;
+  }
+
+  .inner-sub {
+    font-size: 16px;
+  }
+
+  .btn-featured {
+    margin-top: 70px;
+  }
+
+  .inner-content-sub {
+    height: 110px;
+  }
+
+  .inner-content-sub-active {
+    height: 110px;
+  }
+}
+
+@media only screen and (max-width: 799px) and (min-width: 768px) {
+  .cta-02 input {
+    font-size: 10px;
+  }
+
+  .inner-header {
+    font-size: 20px;
+  }
+
+  .col-sm-4.cta-middle {
+    width: 32%;
+    height: 250px;
+  }
+
+  .mid-email-capture {
+    margin-top: 50px;
+  }
+  .btn-mid-cta-02 {
+    margin-top: 40px;
+  }
+
+  .featured-content {
+    width: 47%;
+  }
+
+  .cpc-test .btn-inner-content {
+    margin-top: 20px;
+  }
+
+  .inner-sub {
+    font-size: 16px;
+  }
+
+  .btn-featured {
+    margin-top: 70px;
+  }
+
+  .inner-content-sub {
+    height: 110px;
+  }
+
+  .inner-content-sub-active {
+    height: 110px;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .cpc-test .btn-inner-content {
+    margin-top: 100px;
+    visibility: hidden;
+  }
+}
+
+
+
+/**************************** social ***********************/
+@media only screen and (max-width: 990px) and (min-width: 767px) {
+  .followus-icon {
+    width: 5%;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 493px) {
+  .mid-email-capture {
+    margin-top: 50px;
+  }
+}
+
+/*************************** mobile styles ******************/
+@media only screen and (max-width: 767px) and (min-width: 615px) {
+  .cpc-test .main-cta-mainpage-mobile {
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 280px auto 0;
+  }
+}
+
+@media only screen and (max-width: 614px) {
+  .cpc-test .main-cta-mainpage-mobile {
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 250px auto 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .btn-featured {
+    visibility: hidden;
+  }
+
+  .cpc-test .featured-row {
+    margin: 30px auto 0;
+  }
+
+  .cpc-test .col-sm-4.cta-middle {
+    width: 90%;
+    height: 250px;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .cpc-test .btn-mid-cta-02 {
+    margin-top: 70px;
+  }
+
+  .cpc-test .mid-email-capture {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .cpc-test .featured-content {
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto;
+    float: none;
+    height: 200px;
+  }
+
+  .cpc-test .btn-featured {
+    margin-top: 80px;
+  }
+
+  .cpc-test .followus-icon-midpage {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .cpc-test .middle-cta {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+
+  .cpc-test .followus {
+    padding: 10px 0;
+  }
+
+  .cpc-test .followus-icon {
+    width: 10%;
+  }
+
+  .cpc-test .main-image-mainpage-mobile {
+    background: url('http://www.centralparknyc.org/assets/images/2015/images/images/park_aerial_summer_hp-1.jpg')  no-repeat center center ;
+    height: 400px;
+  }
+
+  /*.cpc-test .main-cta-mainpage-mobile {
+padding: 15px;
+text-align: center;
+background-color: rgba(255, 255, 255, 1);
+margin: 250px auto 0;
+}*/
+
+  .cpc-test .inner-content-mobile {
+    font-size: 18px;
+    max-width: 500px;
+    color: #636466;
+    font-family: 'Titling Gothic FB Cond';
+  }
+
+  .cpc-test .inner-sub {
+    font-size: 16px;
+  }
+
+  .cpc-test .col-xs-12.hidden-lg.hidden-md.hidden-sm.mobile-cta-bar {
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+    margin-bottom: 30px;
+  }
+
+
+  .cpc-test .mobile-cta-bar-bottom {
+    margin-bottom: 20px !important;
+  }
+
+  .cpc-test .btn-cpc {
+    margin: 10px;
+    display: inline-block !important;
+  }
+
+  .cpc-test .inner-header-02 {
+    padding: 5px;
+  }
+
+  .cpc-test .col-xs-12.col-sm-4.cta-middle.cta-02.right-margin.centered {
+    margin-bottom: 30px;
+    height: 200px;
+  }
+
+  .cpc-test .featured-content-right {
+    margin: 0 auto;
+  }
+
+  .cpc-test .footerLink {
+    padding: 10px;
+  }
+
+  .cpc-test .footerLink a {
+    font-size: 18px;
+  }
+}
+/*************************** styles for mobile cta text ******************/
+
+@media only screen and (max-width: 767px) and (min-width: 330px) {
+  .cpc-test .main-cta-text-mobile {
+    font-family: 'Titling Gothic FB Cond';
+    color: #636466;
+    font-size: 1.8em;
+  }
+
+  .cpc-test .mobile-cta-bar {
+    height: 150px;
+    background-color: #f7f7f7;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 330px) and (min-width: 200px) {
+  .cpc-test .main-cta-text-mobile {
+    font-family: 'Titling Gothic FB Cond';
+    color: #636466;
+    font-size: 1.7em;
+  }
+
+
+  .cpc-test .mobile-cta-bar {
+    height: 180px;
+    background-color: #f7f7f7;
+    padding: 10px;
+  }
+}
+
+
+
+/*************************** footer styles ******************/
+
+@media only screen and (max-width: 992px) and (min-width: 767px) {
+  .cpc-test  .main-footer {
+    font-size: 10px;
+  }
+}

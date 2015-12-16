@@ -1,0 +1,5 @@
+<div class="templateRepeat">
+		<div class="parentXML" id=${itemID}><Event><id>${itemID}</id><name>${title}</name><location><a href="${related_location.url}" target="_blank">${location}</a></location><location_description>${location_description}</location_description><mainimg>${image}</mainimg><imgUrl>${image.url}</imgUrl><description>${description}</description><short_description>${short_description}</short_description><t:list id="ticket_types"><ticket><name><t:value id="description">Ticket Name</t:value></name><cost><t:value id="cost">cost</t:value></cost><members><t:if test="membership == 'members_only'">true</t:if><t:else>false</t:else></members></ticket></t:list><categories><t:list id="event_category">
+			<category><t:value id="label">Category Name Goes Here</t:value></category>
+		</t:list></categories></Event></div>
+</div>

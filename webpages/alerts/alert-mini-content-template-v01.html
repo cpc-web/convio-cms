@@ -1,0 +1,48 @@
+<style>
+
+  .current-alert {  width:100%;  }
+  .current-alert .current-alert-date {  }
+  .current-alert .current-alert-times {font-size: 18px; font-family: 'Titling Gothic FB Cond', sans-serif;}
+  h3.current-alert {color: black;}
+  .current-alert .current-alert-headline { font-weight: bold; font-size: 18px; }
+  .current-alert .current-alert-body { }
+  .current-alert ul.current-alert-details {  }
+  .current-alert li.current-alert-impacted, .current-alert li.current-alert-more-info {  }
+
+</style>
+
+.current-alert .current-alert-headline {
+    font-weight: bold; margin: 10px 0 0; font-size: 18px; font-family: 'Titling Gothic FB Cond', sans-serif;
+}
+<div class="templateRepeat">
+  <div id="alert_${itemID}" class="current-alert">
+    <h3 class="current-alert-date">
+      <t:value id="date" format="EEEEE, MMMMM d, yyyy">Fri, Dec 31, 1999</t:value>
+    </h3>
+    <h3 class="current-alert-times">  
+      <t:if test="!isNull(alert_times)" class="alert_times ">
+        ${alert_times}
+      </t:if>
+    </h3>
+    <div class="current-alert-headline">${headline}</div>
+    <t:if test="!isNull(body)">
+      <div class="current-alert-body">${body}</div>
+    </t:if>
+    <ul class="current-alert-details">
+      <li class="current-alert-impacted"><strong>Park Area(s)</strong>: ${park_area_impacted}</li>
+      <t:if test="!isNull(more_information)">
+        <li class="current-alert-more-info">
+          <strong>More Information</strong>: 
+            <a href="http://${more_information}" target="_blank">${more_information}</a>
+        </li>
+      </t:if>
+    </ul>
+  </div>
+</div>
+
+Central Park will be closed to the public from 81st Street south to 59th Street and from Central Park West east to 5th Avenue.
+
+Due to the visit of Pope Francis Central Park will be closed to the public from 81st Street south to 59th Street and from Central Park West east to 5th Avenue.
+
+
+<i class="fa fa-download"></i>

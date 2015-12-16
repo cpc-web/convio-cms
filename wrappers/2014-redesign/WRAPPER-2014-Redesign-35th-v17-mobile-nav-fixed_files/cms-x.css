@@ -1,0 +1,882 @@
+/**
+ * $Source$
+ * $Author$
+ * $Revision$
+ * $Date$
+ *
+ * X-browser dialog styles.
+ **/
+
+.yui-skin-cms .yui-dialog {
+  font-size: small;
+}
+
+.yui-skin-cms .yui-dialog .bd #bodyContainer { 
+  position: relative;
+}
+
+.yui-skin-cms .yui-dialog .bd table {
+  border-collapse: collapse;
+}
+
+.yui-skin-cms div.yui-dt-scrollable .yui-dt-hd,
+.yui-skin-cms div.yui-dt-scrollable .yui-dt-bd {
+  border: none;
+}
+
+.yui-skin-cms div.yui-dt-scrollable .yui-dt-data tr.yui-dt-last td {
+  border-bottom-color: #cbcbcb;
+}
+
+.yui-skin-cms .yui-dialog .bd td {
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.yui-skin-cms .yui-dialog .bd td.yui-dt-last,
+.yui-skin-cms .yui-dialog .bd td.yui-dt-empty,
+.yui-skin-cms .yui-dialog .bd th.yui-dt-last {
+  border-right: none;
+}
+
+.yui-skin-cms .yui-dialog .bd th {
+  text-align: left;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.yui-skin-cms .yui-dialog .bd input {
+  font-size: 14px;
+}
+
+.yui-skin-cms .yui-dialog .bd div { 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.yui-skin-cms .yui-dialog .bd .element td {
+  padding-top: 12px;
+  padding-left: 12px;
+}
+
+.yui-skin-cms .yui-dialog .bd .element th { 
+  padding-top: 12px;
+  font-weight: normal;
+  padding-right: 12px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.yui-skin-cms .yui-dialog .bd table.optionGrid td { 
+  padding: 2px;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+.yui-skin-cms .yui-dialog .bd .sectionHead {
+  display: block;
+  margin-top: 16px;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.yui-skin-cms .yui-dialog .bd .sectionFoot {
+  border-top: 1px solid black;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.yui-skin-cms .yui-dialog .bd .section { 
+  margin-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid black;
+}
+
+
+/* BUTTONS */
+
+.yui-skin-cms .yui-dialog .ft .button-group {
+  *padding-top: 40px;
+  text-align: right;
+  *clear: both;
+}
+
+.yui-skin-cms span.yui-button,
+.yui-skin-cms span.yui-button .first-child {
+	border-color: #dedede #bbb #bbb #dedede;
+	background: #f5f5f5;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.yui-skin-cms span.yui-button .first-child {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.yui-skin-cms span.yui-button button,
+.yui-skin-cms span.yui-button a {
+	padding: 2px 7px 3px;
+	*padding: 1px 10px;
+	color: #4c4c4c;
+	font-size: 12px;
+	font-weight: bold;
+	min-height: 0.5em;
+	outline: none;
+}
+
+.yui-skin-cms span.yui-button button: hover,
+.yui-skin-cms span.yui-button a: hover {
+	color: #000;
+}
+
+.yui-skin-cms div.yui-dialog .ft span.default,
+.yui-skin-cms div.yui-dialog .ft span.default .first-child {
+	border-color: #fafafa #848484 #848484 #fafafa;
+	background-color: #3E85C6;
+}
+
+.yui-skin-cms .yui-dialog .bd .rightButton {
+  width: 80px;
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
+.yui-skin-cms .yui-dialog .bd .leftButton {
+  width: 80px;
+  margin-right: 16px;
+  margin-top: 8px;
+}
+
+/* TAB MENU */
+.yui-skin-cms div.yui-navset .yui-nav,
+.yui-skin-cms div.yui-navset .yui-navset-top .yui-nav {
+	border: none;
+}
+
+.yui-skin-cms div.yui-navset .yui-content,
+.yui-skin-cms div.yui-navset .yui-navset-top .yui-content {
+  padding: 0;
+	border-color: #a3a3a3;
+}
+
+.yui-skin-cms div.yui-dt th,
+.yui-skin-cms div.yui-dt th a {
+  color: #333;
+}
+
+.yui-skin-cms div.yui-navset .yui-content {
+	background-color: #fff;
+}
+
+.yui-skin-cms .yui-dialog .bd .selected {
+  color: highlighttext;
+  background-color: highlight;
+}
+
+.yui-skin-cms .yui-dialog .bd .unselected {
+  color: black;
+  background-color: white;
+}
+
+.yui-skin-cms .yui-dialog .bd input.number { 
+  width: 40px;
+}
+
+.yui-skin-cms .yui-dialog .bd input.labelString { 
+  width: 400px;
+}
+
+.yui-skin-cms .yui-dialog .bd select { 
+  font-size: 13px;
+}
+
+.yui-skin-cms .yui-dialog .bd textarea { 
+  font-size: 13px;
+  font-family: Arial;
+}
+
+.yui-skin-cms .yui-dialog .bd div.folderDisplay { 
+  border: 2px white outset;
+  background-color: white;
+  height: 30px;
+  min-width:300px;
+  overflow: auto;
+  width: 100%;
+}
+
+.yui-skin-cms .yui-dialog .bd div.listBox { 
+  border: 2px white outset;
+  overflow: auto;
+  background-color: white;
+  height: 400px;
+  width: 400px;
+}
+
+.yui-skin-cms .yui-dialog .bd div.listBox div { 
+  padding: 2px;
+  margin: 1px;
+}
+
+.yui-skin-cms .yui-dialog .bd div.treeFrame { 
+  border: 2px white outset;
+  overflow: auto;
+  background-color: white;
+  height: 300px;
+  width: 300px;
+}
+
+.yui-skin-cms .ygtvlabel,
+.yui-skin-cms .ygtvlabel: link,
+.yui-skin-cms .ygtvlabel: visited,
+.yui-skin-cms .ygtvlabel: hover {
+  background-color: inherit;
+}
+
+.yui-skin-cms .yui-dialog .bd div.section table td { 
+  padding: 4px;
+}
+
+.yui-skin-cms .yui-dialog .bd iframe.rpc {
+  border: none;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.yui-skin-cms .yui-dialog .bd img.help { 
+  margin: 0 0 6px 20px;
+  cursor: help;
+}
+
+.yui-skin-cms .yui-dialog .bd th.disabled { 
+  color: gray;
+}
+
+.yui-skin-cms .yui-dialog .bd td.disabled { 
+  color: gray;
+}
+
+.yui-skin-cms .yui-dialog .bd td.disabled input { 
+  background-color: #EEE;
+}
+
+.yui-skin-cms .yui-dialog .bd img.disabled {
+  filter: progid: DXImageTransform.Microsoft.Alpha(opacity=20);
+  border: 0 none;
+}
+
+.yui-skin-cms .yui-dialog .bd input.disabled {
+  background-color: #EEE;
+  color: #999;
+}
+
+.yui-skin-cms .yui-dialog .bd .pageletMargins td {
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.yui-skin-cms .yui-dialog .bd .pageletMargins input {
+  width: 40px;
+}
+
+/**
+ * Inline Errors
+ */
+
+.yui-skin-cms .yui-dialog .bd .convioError {
+  font-weight: bold;
+  color: red;
+}
+
+.yui-skin-cms .yui-dialog .bd div.convioErrorsMain {
+  border: 1px solid red;
+  padding: 2px;
+  background-color: #ff9;
+
+  font-weight: bold;
+  color: black;
+}
+
+.yui-skin-cms .yui-navset .yui-content .yui-hidden {
+    display: none;
+}
+
+/* PAGINATION */
+.yui-skin-cms div.yui-pg-container {
+  margin: 0;
+}/**
+ * $Source$
+ * $Author$
+ * $Revision$
+ * $Date$
+ *
+ * X-grid styles.
+ **/
+
+.yui-skin-cms .yui-dt {
+  width: 100%;
+}
+
+.yui-skin-cms .xGrid {
+  border: 1px solid #ccc;
+}
+
+.yui-skin-cms .xGrid .yui-dt table {
+  font-size: 12px;
+  /* No scrollbar on <table> element. */
+  overflow: hidden; 
+}
+
+.yui-skin-cms .xGrid .titleStatusBarWrap {
+  background: #eee;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.yui-skin-cms .xGrid .titleBar {
+  margin: 0;
+  width: 70%;
+  float: left;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.yui-skin-cms .xGrid .statusBarWrap {
+  margin: 0;
+  margin-left: 70%;
+  width: 30%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.yui-skin-cms .xGrid .statusBar {
+  background: #9cf;
+}
+
+.yui-skin-cms .yui-dt .hd {
+  width: 100%;
+}
+
+.yui-skin-cms .yui-dt .bd {
+  width: 100%;
+}
+
+.yui-skin-cms .yui-dt tr.yui-dt-first td {
+  border-top-color: #cbcbcb;
+}
+
+/**
+ * Paginator
+ */
+
+.yui-skin-cms .xGrid .paginatorContainer {
+  min-height: 23px; // Fix paginator height for initial resize.
+}
+
+.yui-skin-cms .xGrid .yui-pg-container {
+  padding: 3px 0;
+  background: #eee;
+}
+
+.yui-skin-cms .xGrid .yui-pg-container .currentPageReport,
+.yui-skin-cms .xGrid .yui-pg-container .pageLinks {
+  float: left;
+}
+
+.yui-skin-cms .xGrid .yui-pg-container .pageSizeChooser {
+  float: right;
+}
+
+/**
+ * Toolbar 
+ */
+
+
+
+
+
+
+.yui-skin-cms .xGrid .yuimenubaritemlabel,
+.yui-skin-cms .xGrid .yuimenubaritem img {
+  border: none;
+}
+
+.yui-skin-cms .xGrid .yuimenubaritem-disabled img {
+  /* for IE */
+  filter:alpha(opacity=30);
+  /* CSS3 standard */
+  opacity:0.3;
+}
+
+.yui-skin-cms .xGrid .xGridToolbar {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  background: #eee;
+}
+
+.yui-skin-cms .xGrid .xGridToolbar .tool {
+  float: left;
+  margin-right: 20px;
+  padding: 3px;
+}
+
+.yui-skin-cms .xGrid .xGridToolbar .button:hover {
+  padding: 2px;
+  border: 1px solid;
+  border-color: #fff #aaa #aaa #fff;
+  cursor: pointer;
+}
+
+.yui-skin-cms .xGrid .xGridToolbar img {
+  border: none;
+}
+
+.yui-skin-cms .xGrid .xGridToolbar .inactive {
+  filter:alpha(opacity=30);  /* for IE */
+  opacity:0.3;  /* CSS3 standard */
+}
+
+.yui-skin-cms .xGrid .xGridToolbar .inactive:hover {
+  padding: 3px;
+  border: none;
+  cursor: default;
+}
+
+
+/**
+ * Column formatting.
+ */
+
+.yui-skin-cms .yui-dt .yui-dt-data .boolean-true {
+  text-indent: -2000px;
+  background: url('/system/icons/16x16/check.png') no-repeat center;
+}
+
+.yui-skin-cms .yui-dt .yui-dt-data .boolean-false {
+  text-indent: -2000px;
+  background: url('/system/icons/8x8/black_square.png') no-repeat center;
+
+  /* for IE */
+  filter:alpha(opacity=50);
+  /* CSS3 standard */
+  opacity:0.5;
+}
+
+
+/**
+ * Context menu.
+ */
+
+.yui-skin-cms .xGrid .yuimenuitemlabel {
+  font-size: .95em;
+  padding: 3px 5px;
+}
+
+.yui-skin-cms .xGrid .itemContextMenu-status .yuimenuitemlabel {
+  background: url("/system/icons/16x16/about.gif") no-repeat scroll 5px center transparent;
+  padding-left: 26px;
+}
+
+.yui-skin-cms .xGrid .itemContextMenu-properties .yuimenuitemlabel {
+  background: url("/system/icons/16x16/form_green.gif") no-repeat scroll 5px center transparent;
+  padding-left: 26px;
+}
+
+.yui-skin-cms .xGrid .itemContextMenu-body .yuimenuitemlabel {
+  background: url("/system/icons/16x16/document_text.gif") no-repeat scroll 5px center transparent;
+  padding-left: 26px;
+}
+
+.yui-skin-cms .xGrid .itemContextMenu-preview .yuimenuitemlabel {
+  background: url("/system/icons/16x16/document_view.gif") no-repeat scroll 5px center transparent;
+  padding-left: 26px;
+}
+
+.yui-skin-cms .xGrid .itemContextMenu-live .yuimenuitemlabel {
+  background: url("/system/icons/16x16/text_rich_colored.gif") no-repeat scroll 5px center transparent;
+  padding-left: 26px;
+}
+
+.yui-skin-cms .xGrid .folderContextMenu-explore .yuimenuitemlabel {
+  background: url("/system/icons/16x16/folder_view.gif") no-repeat scroll 5px center transparent;
+  padding-left: 26px;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+		
+/** 
+*
+* Style the yui-dt-expandablerow-trigger column 
+*
+**/
+.yui-dt-expandablerow-trigger{
+	width:18px;
+	height:22px;
+	cursor:pointer;
+}
+.yui-dt-expanded .yui-dt-expandablerow-trigger{
+	background:url("/components/x-grid/arrow_open.png") 4px 4px no-repeat;
+}
+.yui-dt-expandablerow-trigger, .yui-dt-collapsed .yui-dt-expandablerow-trigger{
+	background:url("/components/x-grid/arrow_closed.png") 4px 4px no-repeat;
+}
+.yui-dt-expanded .yui-dt-expandablerow-trigger.spinner{
+	background:url("/components/x-grid/spinner.gif") 1px 4px no-repeat;
+}
+
+/** 
+*
+* Style the expansion row
+*
+**/
+.yui-dt-expansion .yui-dt-liner{
+	padding:0;
+	border:solid 0 #bbb;
+	border-width: 0 0 2px 0;
+}
+.yui-dt-expansion .yui-dt-liner th, .yui-dt-expansion .yui-dt-liner table{
+	border:none;
+	background-color:#fff;
+}
+.yui-dt-expansion .yui-dt-liner th, .yui-dt-expansion .yui-dt-liner table th{
+	background-image:none;
+	background-color:#eee;
+}
+.yui-dt-expansion .yui-dt-liner th, .yui-dt-expansion .yui-dt-liner table td{
+	border:solid 0 #eee;
+	border-width: 0 0 1px 1px;
+}
+.yui-dt-expansion .yui-dt-liner th, .yui-dt-expansion .yui-dt-liner table td div{
+	padding:3px;
+	overflow:hidden;
+	width:100px;
+}
+.yui-dt-expansion .yui-dt-liner th, .yui-dt-expansion .yui-dt-liner table td.big div{
+	width:300px;
+}
+.yui-dt-expansion .yui-dt-liner th, .yui-dt-expansion .yui-dt-liner table td ul{
+  padding:0;
+  margin:0;
+}
+/**
+ * $Source$
+ * $Author$
+ * $Revision$
+ * $Date$
+ *
+ * Document tree.
+ **/
+
+.yui-skin-cms .folderTree {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  height: 380px;
+  max-height: 400px;
+  max-width: 400px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.yui-skin-cms .cms_ygtvfocus {
+  background-color:#c0e0e0;
+  border:none;
+}
+
+.yui-skin-cms .categoryTree {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  height: 380px;
+  max-height: 400px;
+  max-width: 400px;
+  overflow: auto;
+  padding: 10px;
+}
+
+#FolderChooserTreeDiv {
+  overflow: auto;
+  height: 500px;
+}
+/**
+ * $Source$
+ * $Author$
+ * $Revision$
+ * $Date$
+ */
+
+
+.yui-skin-cms .calendarButton {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+
+/* Clear calendar's float, using dialog inbuilt form element */
+.yui-skin-cms .calendarDialog .bd form {
+  clear:left;
+}
+
+/* Have calendar squeeze upto bd bounding box */
+.yui-skin-cms .calendarDialog .bd {
+  padding:0;
+}
+
+.yui-skin-cms .calendarDialog .hd {
+  text-align:left;
+}
+
+/* Center buttons in the footer */
+.yui-skin-cms .calendarDialog .ft .button-group {
+  text-align:center;
+}
+
+
+/* Prevent border-collapse:collapse from bleeding through in IE6, IE7 */
+.yui-skin-cms .calendarDialog #container_c.yui-overlay-hidden table {
+  *display:none;
+}
+
+/* Remove calendar's border and set padding in ems instead of px, so we can specify an width in ems for the container */
+.yui-skin-cms .calendarDialog .calendarContainer {
+  border:none;
+  padding:1em;
+}
+
+
+.yui-skin-cms .calendarDialog .calendarContainer td.calcell {
+  font-size: 11px;
+}
+/**
+  $Source$
+  $Author$
+  $Revision$
+  $Date$
+ */
+
+.yui-skin-cms .timeChooserInput {
+  width: 80px;
+}
+
+.yui-skin-cms .timeChooserContainer {
+  width: 370px;
+  vertical-align: middle;
+}
+
+.yui-skin-cms .timeChooserContainer div.timeChoice {
+  display: inline-block;
+  border: 1px solid #CCCCCC;
+  background-color: #FFFFFF;
+  height: 18px;
+  width: 18px;
+  padding: 1px;
+  margin: 1px 1px 1px 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #0000FF;
+  font-size: 11px;
+  line-height: 1.6em;
+}
+
+.yui-skin-cms .timeChooserContainer div.timeChoiceSelected {
+  display: inline-block;
+  border: 1px solid #CCCCCC;
+  background-color: #0066CC;
+  height: 18px;
+  width: 18px;
+  padding: 1px;
+  margin: 1px 1px 1px 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 11px;
+  line-height: 1.6em;
+}
+/**
+ * $Source$
+ * $Author$
+ * $Revision$
+ * $Date$
+ *
+ * X-browser draglist styles - this is for cases where we want to drag between TWO lists.
+ * Copied from (but modified heavily) http://developer.yahoo.com/yui/examples/dragdrop/dd-reorder.html
+ **/
+ 
+ 
+div.workarea { padding:10px; float:left }
+
+ul.draglist { 
+    position: relative;
+    width: 200px; 
+    height: 240px;
+    border: 1px solid #A3A3A3;
+    list-style: none;
+    margin:0;
+    padding:0;
+    overflow:auto;
+    background-color: white;
+}
+
+ul.draglist li {
+    margin: 1px;
+    cursor: move;
+    zoom: 1;
+}
+
+li.list1, li.list2 {
+    background-color: white;
+    border:none;
+}
+
+#user_actions { float: right; }
+/* Copyright (c) 2006 Yahoo! Inc. All rights reserved. */
+
+/* first or middle sibling, no children */
+.treeview-cms .ygtvtn { background: url(/components/x-dialog/chooser/tree/folders/img/tn.gif) 0 0 no-repeat; width:34px; height:22px; }
+.treeview-cms .ygtvtn .ygtvspacer { display: block; width:34px; }
+.treeview-cms .restricted .ygtvrow .ygtvtn { background: url(/components/x-dialog/chooser/tree/folders/img/tn-lock.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* first or middle sibling, collapsable */
+.treeview-cms .ygtvtm { background: url(/components/x-dialog/chooser/tree/folders/img/tm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+.treeview-cms .ygtvtm .ygtvspacer { display: block; width:34px; }
+.treeview-cms .restricted .ygtvrow .ygtvtm { background: url(/components/x-dialog/chooser/tree/folders/img/tm-lock.gif) 0 0 no-repeat; width:34px; height:22px; }
+  
+/* first or middle sibling, collapsable, hover */
+.treeview-cms .ygtvtmh { background: url(/components/x-dialog/chooser/tree/folders/img/tmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+.treeview-cms .ygtvtmh .ygtvspacer { display: block; width:34px; }
+.treeview-cms .restricted .ygtvrow .ygtvtmh { background: url(/components/x-dialog/chooser/tree/folders/img/tmh-lock.gif) 0 0 no-repeat; width:34px; height:22px; }
+  
+/* first or middle sibling, expandable */
+.treeview-cms .ygtvtp { background: url(/components/x-dialog/chooser/tree/folders/img/tp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+.treeview-cms .ygtvtp .ygtvspacer { display: block; width:34px; }
+.treeview-cms .restricted .ygtvrow .ygtvtp { background: url(/components/x-dialog/chooser/tree/folders/img/tp-lock.gif) 0 0 no-repeat; width:34px; height:22px; }
+  
+/* first or middle sibling, expandable, hover */
+.treeview-cms .ygtvtph { background: url(/components/x-dialog/chooser/tree/folders/img/tph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+.treeview-cms .ygtvtph .ygtvspacer { display: block; width:34px; }
+.treeview-cms .restricted .ygtvrow .ygtvtph { background: url(/components/x-dialog/chooser/tree/folders/img/tph-lock.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* last sibling, no children */
+.treeview-cms .ygtvln { background: url(/components/x-dialog/chooser/tree/folders/img/ln.gif) 0 0 no-repeat; width:34px; height:22px; }
+.treeview-cms .ygtvln .ygtvspacer { display: block; width:34px; }
+.treeview-cms .restricted .ygtvrow .ygtvln { background: url(/components/x-dialog/chooser/tree/folders/img/ln-lock.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* Last sibling, collapsable */
+.treeview-cms .ygtvlm { background: url(/components/x-dialog/chooser/tree/folders/img/lm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+.treeview-cms .ygtvlm .ygtvspacer { display: block; width:34px; }
+.treeview-cms .restricted .ygtvrow .ygtvlm { background: url(/components/x-dialog/chooser/tree/folders/img/lm-lock.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* Last sibling, collapsable, hover */
+.treeview-cms .ygtvlmh { background: url(/components/x-dialog/chooser/tree/folders/img/lmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+.treeview-cms .ygtvlmh .ygtvspacer { display: block; width:34px; }
+.treeview-cms .restricted .ygtvrow .ygtvlmh { background: url(/components/x-dialog/chooser/tree/folders/img/lmh-lock.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* Last sibling, expandable */
+.treeview-cms .ygtvlp { background: url(/components/x-dialog/chooser/tree/folders/img/lp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+.treeview-cms .ygtvlp .ygtvspacer { display: block; width:34px; }
+.treeview-cms .restricted .ygtvrow .ygtvlp { background: url(/components/x-dialog/chooser/tree/folders/img/lp-lock.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* Last sibling, expandable, hover */
+.treeview-cms .ygtvlph { background: url(/components/x-dialog/chooser/tree/folders/img/lph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+.treeview-cms .ygtvlph .ygtvspacer { display: block; width:34px; }
+.treeview-cms .restricted .ygtvrow .ygtvlph { background: url(/components/x-dialog/chooser/tree/folders/img/lph-lock.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* Loading icon */
+.treeview-cms .ygtvloading { background: url(/components/x-dialog/chooser/tree/folders/img/loading.gif) 0 0 no-repeat; width:16px; height:22px; }
+.treeview-cms .ygtvloading .ygtvspacer { display: block; width:16px; }
+
+/* the style for the empty cells that are used for rendering the depth 
+ * of the node */
+.treeview-cms .ygtvdepthcell { background: url(/components/x-dialog/chooser/tree/folders/img/vline.gif) 0 0 no-repeat; width:17px; height:22px; }
+.treeview-cms .ygtvdepthcell .ygtvspacer { display: block; width:17px; }
+
+.treeview-cms .ygtvblankdepthcell { width:17px; height:22px; }
+.treeview-cms .ygtvblankdepthcell .ygtvspacer { width:17px; }
+
+/* the style of the div around each node */
+.treeview-cms .ygtvitem { }  
+
+.treeview-cms .ygtvitem  table{
+    margin-bottom:0;
+}
+.treeview-cms .ygtvitem  td {
+    border:none;padding:0;
+} 
+
+
+
+/* the style of the div around each node's collection of children */
+.treeview-cms .ygtvchildren { }  
+* html .ygtvchildren { height:1%; }  
+
+/* the style of the text label in ygTextNode */
+.treeview-cms .ygtvlabel, .ygtvlabel:link, .ygtvlabel:visited, .ygtvlabel:hover { 
+	margin-left:2px;
+	text-decoration: none;
+}
+
+
+.rating {
+    cursor: pointer;
+    clear: both;
+    display: block;
+}
+
+.rating:after {
+    content: '.';
+    display: block;
+    height: 0;
+    width: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.star {
+    float: left;
+    width: 17px;
+    height: 15px;
+    overflow: hidden;
+    text-indent: -999em;
+    cursor: pointer;
+}
+
+.star,
+.star a {background: url(/system/components/rating/star.gif) no-repeat 0 0px;}
+
+.star a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: 0 0px;
+}
+
+div.rating div.on a {
+    background-position: 0 -16px;
+}
+
+div.rating div.hover a,
+div.rating div a:hover {
+    background-position: 0 -32px;
+}
+
+.ratingContainer {
+    height: 35px;
+}

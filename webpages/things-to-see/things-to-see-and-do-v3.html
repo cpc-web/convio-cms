@@ -1,0 +1,416 @@
+<style type="text/css">  
+.quadrant-map {
+    margin: 20px 25% 0;
+    width: 180px;
+}
+.tilerow {
+	column-width:16em;
+	-moz-column-width:16em;
+	-webkit-column-width:16em;
+	column-gap:0.5em;
+	-moz-column-gap:0.5em;
+	-webkit-column-gap:0.5em;  
+}
+.panel {
+	display:inline-block;
+	margin:.5em;
+	padding:0; 
+	width:97%;
+}
+.font2em {
+	font-size:2em;
+}
+
+.label {
+	font-weight:normal;
+	color:#77BB40;
+	font-size:80%;
+    padding-left:0;
+}
+
+.label-primary {
+	background-color:transparent;
+}
+
+.fixedMap {
+	position: fixed;
+	top: 30px;
+}
+
+.staticMap {
+	position: static;
+}
+
+/*Filter Menu*/
+
+.nav-filter {
+    padding-left: 8px;
+    margin-bottom: 20px;
+    margin-top:20px;
+    list-style: none outside none;
+}
+
+.nav-filter:after {
+    clear: both;
+}
+
+.nav-filter > li {		/*HERE*/
+    position: relative;
+    display: block;
+}
+
+.nav-filter > li > a {		/*HERE*/
+    position: relative;
+    display: block;
+    padding: 5px 15px;
+}
+
+.nav-filter:before, .nav-filter:after {
+    display: table;
+    content: " ";
+}
+.nav-filter:before, .nav-filter:after {
+    display: table;
+    content: " ";
+}
+
+.nav-filter > .open > a, .nav > .open > a:hover, .nav > .open > a:focus{		/*HERE*/
+    background-color:#555;
+	border-color:none;
+}
+
+.nav-tabs > li > a {		/*HERE*/
+    border-radius: 0px;
+    background-color:#555;
+    color:whitesmoke;
+    font-size:0.8em
+}
+
+.nav-tabs > li > a:hover {		/*HERE*/
+    color:whitesmoke;
+    background-color:#555;
+}
+
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {		/*HERE*/
+    color: #77BD41;
+    cursor: default;
+    background-color: #555;
+    border-width: 1px;
+    border-style: solid;
+    border-color:  white;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    margin-right:1px; 
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {		/*HERE*/
+    color: #77BD41;
+    cursor: default;
+    background-color: #555;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    margin-right:1px; 
+}
+
+/*Filter Box*/
+
+.panel-body {
+    padding: 0;
+}
+
+.panel-body h4 {
+    padding: 0 10px 5px 15px;
+    margin-top:-10px;
+}
+
+.panel-body p {
+    padding: 0 10px 5px 15px;
+    margin-top:-10px;
+}
+
+.filter img {
+    margin-left:-10px;
+}
+
+/*PopUp*/
+
+.btn-primary  {
+	background: #79bf43;
+	background-image: -webkit-linear-gradient(top, #79bf43, #69962e);
+	background-image: -moz-linear-gradient(top, #79bf43, #69962e);
+	background-image: -ms-linear-gradient(top, #79bf43, #69962e);
+	background-image: -o-linear-gradient(top, #79bf43, #69962e);
+	background-image: linear-gradient(to bottom, #79bf43, #69962e);
+	-webkit-border-radius: 19;
+	-moz-border-radius: 19;
+	border-radius: 19px;
+	-webkit-box-shadow: 2px 2px 2px #666666;
+	-moz-box-shadow: 2px 2px 2px #666666;
+	box-shadow: 2px 2px 2px #666666;
+	color: #ffffff !important;
+	font-size: 12px;
+	padding: 8px 20px 8px 20px !important;
+	border: solid #79bf43 0px;
+	text-decoration: none;
+	text-transform:uppercase;
+	text-align:center;
+	margin-left:15px;
+	margin-right:15px
+}
+
+.btn-primary :hover {
+	background: #8ad150;
+	background-image: -webkit-linear-gradient(top, #8ad150, #69962e);
+	background-image: -moz-linear-gradient(top, #8ad150, #69962e);
+	background-image: -ms-linear-gradient(top, #8ad150, #69962e);
+	background-image: -o-linear-gradient(top, #8ad150, #69962e);
+	background-image: linear-gradient(to bottom, #8ad150, #69962e);
+	text-decoration: none;
+	color: #ffffff;
+	text-transform:uppercase;
+}
+
+.modal-dialog {
+    width: 500px;
+    padding:0;
+}
+
+.modal-body {
+    position: relative;
+    padding: 0;
+}
+
+.table td {
+    padding-left:20px !important;
+}
+.modal-body p {
+    padding:20px 20px 0 20px;
+}
+
+.modal-body h4 {
+    padding:20px 20px 0 20px;
+    color: #77BD42;
+    font-family: 'Titling Gothic FB Narr',sans-serif;
+    margin-top:-25px;
+}
+
+.modal-header {
+    min-height: 16.4286px;
+    padding: 6px;
+    border:none;
+    top: 0;
+    position: relative;
+    z-index: 999;
+    float: right;
+	background-color: #FFFFFF;
+}
+
+.menu2 > li > a {		/*HERE*/
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+	font-size: 14px;
+    line-height: 1.42857;
+    color: whitesmoke;
+    white-space: nowrap;
+    background-color:#555;
+}
+
+.menu2 > li > a:hover, .menu2 > li > a:focus {		/*HERE*/
+    color: #79bf43;
+    text-decoration: none;
+    background-color:#555;
+}
+
+@media(max-width:767px) {
+	.nav-tabs > li {		/*HERE*/
+		margin-bottom: 10px;
+		width: 50%;
+	}
+}
+
+</style>
+
+<div class="templateComponent" id="convio-content-541968598" style="display: inline;"></div>
+<script type="text/javascript">// <![CDATA[
+function filterByHref( filterHash ) {
+	var filterHref = filterHash.match(/#[A-Za-z]+_[A-Za-z0-9_\-]+$/);
+	if (filterHref && filterHref.length == 1) {
+		jQuery('#attraction-tabs a.filter.'+filterHref[0].slice(1)).click();
+		return true;
+	} else {
+		console.log('filterByHref could not retrieve #filterType_filterName from: '+filterHash);
+		return false;
+	}
+}
+function filterAttractions( filterType, filterName ) {
+	if (filterType && filterName) {
+		jQuery('div.panel.attraction').hide();
+		jQuery('div.panel.attraction.'+filterType+'_'+filterName).show();
+		if (typeof filterFeature == 'function') {
+			if (filterType == 'feature') { filterFeature(filterName); }
+			else { filterFeature(); }
+		}
+		if (typeof filterWhat == 'function') {
+			if (filterType == 'what') { filterWhat(filterName); }
+			else { filterWhat(); }
+		}
+		if (typeof filterWhom == 'function') {
+			if (filterType == 'whom') { filterWhom(filterName); }
+			else { filterWhom(); }
+		}
+		if (typeof filterWhere == 'function') {
+			if (filterType == 'where') { filterWhere(filterName); }
+			else { filterWhere(); }
+		}
+		return true;
+	} else {
+		console.log('filterAttractions called with filterType="'+filterType+'", filterName="'+filterName+'".');
+		return false;
+	}
+}
+/*
+function filterWhere( filterName ) {
+	jQuery('img.quadrant-map').hide();
+	if (filterName && jQuery('img.quadrant-map.where_'+filterName).length > 0) {
+		jQuery('img.quadrant-map.where_'+filterName).show();
+	} else {
+		jQuery('img.quadrant-map.where_all').show();		
+	}
+}
+function setMapLocation() {
+	var containerWidth = jQuery('.container').width();
+	console.log('container width: ',containerWidth);
+	var extraSpace = ((jQuery(window).width() - containerWidth) / 2) + 15;
+	console.log('extra space: ',extraSpace);
+	var columnWidth = jQuery('#mapWrapper').width();
+	var styles = {
+		right: extraSpace,
+		width: ''+columnWidth+'px'
+	};
+	jQuery('#mapDiv').css(styles);
+}
+*/
+
+jQuery(function() {
+	jQuery('#attraction-panels a.filter').click(function() {
+		filterByHref(this.href);
+		var tParent = jQuery(this).parentsUntil('.modal').last()[0];
+		if (tParent.tagName != 'HTML') {
+			jQuery(tParent).parent('.modal').modal('hide');
+		}
+		return true;
+	});
+	if (window.location && window.location.hash) {
+		filterByHref(window.location.hash);
+	} else {
+		filterAttractions('feature','featured');
+	}
+	/*
+	setMapLocation();
+	window.onresize = function(){ setMapLocation();}
+	
+	jQuery(window).bind('scroll', function() {
+		var mapHeight = jQuery( window ).height() - 300;
+		if (jQuery(window).scrollTop() > mapHeight) {
+			jQuery('#mapDiv').removeClass('staticMap');
+			jQuery('#mapDiv').addClass('fixedMap');
+		}
+		else {
+			jQuery('#mapDiv').removeClass('fixedMap');
+			jQuery('#mapDiv').addClass('staticMap');
+		}
+	});
+	*/
+});
+// ]]></script>
+<div class="row">
+<div class="col-xs-12">
+<p>There's always something to see or do in Central Park! </p>
+<p>Filter the list of things to see and do by featured attraction, type of attraction, audience, and general location in the Park using the dropdown lists below.</p>
+</div>
+<!-- /.col-xs-12 --></div>
+<!-- /.row -->
+<div class="row">
+<div class="col-xs-12"><!--tabs-->
+<ul class="nav nav-filter nav-tabs" id="attraction-tabs">
+<li class="active dropdown"><a class="dropdown-toggle" href="#" id="featureDrop" data-toggle="dropdown"><span class="hidden-xs font2em">Featured<strong class="caret"></strong></span><span class="visible-xs"> Featured <strong class="caret"></strong></span></a>
+<ul class="dropdown-menu menu2">
+<li><a class="filter feature feature_featured" href="#feature_featured" onclick="return filterAttractions('feature','featured');" tabindex="-1" data-toggle="tab">Featured Attractions</a></li>
+<li><a class="filter feature feature_all" href="#feature_all" onclick="return filterAttractions('feature','all');" tabindex="-1" data-toggle="tab">All Attractions</a></li>
+<li><a class="filter feature feature_restroom" href="#feature_restroom" onclick="return filterAttractions('feature','restroom');" tabindex="-1" data-toggle="tab">Restrooms</a></li>
+</ul>
+</li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" id="whatDrop" data-toggle="dropdown"><span class="hidden-xs font2em">What <strong class="caret"></strong></span><span class="visible-xs">What <strong class="caret"></strong></span></a>
+<ul class="dropdown-menu menu2"><t:data name="attraction-type" class="categories" parent="/attraction-type"></t:data><t:list id="attraction-type">
+<li><a class="filter what what_${name}" href="#what_${name}" onclick="return filterAttractions('what','${name}');" tabindex="-1" data-toggle="tab">${label}</a></li>
+</t:list></ul>
+</li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" id="whomDrop" data-toggle="dropdown"><span class="hidden-xs font2em">For Whom <strong class="caret"></strong></span><span class="visible-xs">Who <strong class="caret"></strong></span></a>
+<ul class="dropdown-menu menu2"><t:data name="audience" class="categories" parent="/audience"></t:data><t:list id="audience">
+<li><a class="filter whom whom_${name}" href="#whom_${name}" onclick="return filterAttractions('whom','${name}');" tabindex="-1" data-toggle="tab">${label}</a></li>
+</t:list></ul>
+</li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" id="whereDrop" data-toggle="dropdown"><span class="hidden-xs font2em">Where/Near <strong class="caret"></strong></span><span class="visible-xs">Where <strong class="caret"></strong></span></a>
+<ul class="dropdown-menu menu2"><t:data name="park-area" class="categories" parent="/park-area"></t:data><t:list id="park-area">
+<li><a class="filter where where_${name}" href="#where_${name}" onclick="return filterAttractions('where','${name}');" tabindex="-1" data-toggle="tab">${label}</a></li>
+</t:list></ul>
+</li>
+</ul>
+<!--end tabs--></div>
+<!-- /.col-xs-12 --></div>
+<!-- /.row -->
+<div class="row"><!-- main content -->
+<div class="col-xs-12"><!-- attraction panes -->
+<div class="tab-content">
+<div class="tab-pane active">
+<div class="tilerow" id="attraction-panels">
+<div class="templateComponent" id="templatelist-541968599" style="display: inline;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- /.col-xs-12 --> <!--div class="col-xs-12 col-md-4" id="mapWrapper"--><!-- map --> <!--div id="mapDiv">
+				<img align="right" class="img-responsive quadrant-map where_all" src="http://www.centralparknyc.org/assets/images/2014/maps/area-map-all.jpg">
+				<t:data name="park-area" class="categories" parent="/park-area"></t:data> 
+				<t:list id="park-area"><img align="right" class="img-responsive quadrant-map where_${name}" src="http://www.centralparknyc.org/assets/images/2014/maps/area-map-${name}.jpg" style="display:none;"></t:list>
+			</div--><!-- /#mapDiv --> <!--/div--><!-- /#mapWrapper --></div>
+<!-- /.row -->
+
+
+
+<!-- OLD CODE -->
+<p></p>
+<!--style type="text/css">
+ul.nobullet {
+    list-style-type: none;
+    margin: 1em 0 0;
+    padding: 0;
+}
+ul.nobullet li {
+    display: block;
+    margin: 0 0 0.75em;
+}
+ul.nobullet img.left {
+    float: left;
+    margin: 0.25em 0.5em auto 0;
+}
+ul#attractions.nobullet div.content {
+    width: 500px;
+}
+</style>
+<p>To filter the list of attractions by type, choose from the dropdown lists below.</p>
+<div class="templateComponent" id="filter-criteria-506670872" style="display: inline;"></div>
+<div style="display: inline;" class="templateComponent" id="templatelist-506670873"></div>
+
+<p> </p>
+<p> </p-->

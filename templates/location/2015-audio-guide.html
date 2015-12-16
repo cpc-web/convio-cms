@@ -1,0 +1,187 @@
+<!-- AUDIOGUIDE ATTRACTION TEMPLATE v1 - based on 2014 full responsive - 15 Apr 2015 -->
+ 
+ <style type="text/css"> /*This style has to be in nav.css */
+
+	#subnav li { position: relative; }
+	#subnav li ul { display: none; position: absolute; left: 60%; top: 0;  width: 100%; background-color: #666666; z-index: 1000; padding: 10px; border: 1px solid #777777; }
+	#subnav li ul:after, #subnav li ul:before { right: 100%; top: 18px; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+	#subnav li ul:after { border-color: rgba(102, 102, 102, 0); border-right-color: #666666; border-width: 9px; margin-top: -9px; }
+	#subnav li ul:before { border-color: rgba(204, 204, 204, 0); border-right-color: #777777; border-width: 11px; margin-top: -11px; }
+	#subnav li:hover ul { display: block; }
+	.dropdownShare:hover .dropdown-menu-share { display: block; }
+	.dropdown-menu-share { min-width: 180px; margin: 0; }
+	
+	.sectionToggle { 
+		left: 30%;
+		width: 40%;
+		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		z-index: 1000;
+	}
+	
+	@media(max-width:767px) {
+		.left-nav {
+			min-height: 30px;
+			padding: 0px;
+			width: 100%;
+		}
+		.secondnav { visibility: visible; }
+		.top-image { visibility: hidden; height: 55px; }
+	}
+	
+.audioBackground {
+	background-color: #DFECCD; 
+	border-radius: 5px; 
+	margin: 0px auto 20px;
+	padding: 20px;  
+       border: 1px solid #68b247;
+}
+
+.audioBackgroundText {
+	font-size: 12px; 
+	text-align: center; 
+	padding: 12px 5px 0 5px;
+}
+</style>
+
+<div id="rdURL" style="display: none;">${redirect_url}</div>
+<script type="text/javascript">
+	var element = document.getElementById('rdURL');
+	// innerText for IE, textContent for other browsers
+	var text = element.innerText || element.textContent;
+	if ( text != '') { window.location=text; }
+</script>
+
+ 	<!-- Top Image	================================================== -->
+    <div class="top-image">
+        <t:if test="top_image.length > 0">
+		<img id="top_image" alt="Top Image" class="img-responsive hidden" src="${top_image.url}" />
+	</t:if><t:else>
+		<t:set id="randomTopImg" value="random(5)+1" />
+		<img id="top_image" alt="Top Image" class="img-responsive hidden" src="http://cpc.convio.net/redesign/img/header/insidepages${randomTopImg}_2014.jpg" />
+	</t:else>
+	<script type="text/javascript">
+		jQuery(document).ready(function() { jQuery('#top_image').removeClass('hidden'); });
+	</script>
+    </div>
+    <!-- /.top-image -->
+	<div class="sectionToggle">
+		<button data-target=".left-nav" data-toggle="collapse" class="navbar-toggle knockout hidden-md hidden-lg"><span id="breadLink">Placeholder</span><span class="caret"></span></button>
+	</div>
+
+    <!--- /////////// EVERYTHING ABOVE THIS POINT IS COMMON TO ALL INTERIOR TEMPLATES ////////////// -->
+
+    <div class="main-body">
+        <div class="container">
+            <div class="row two-column-content">
+                <!-- all page content -->
+                <div class="col-md-3 left-nav knockout collapse navbar-collapse"> 
+					<!-- begin section nav -->
+					<div style="display: inline;" class="templateComponent" id="sectionNavigation-497998852"></div>
+
+<!--div class=templateComponent id="sectionNavigation-167468350" style="DISPLAY: inline"></div-->
+					<!-- end section nav -->
+                </div>
+                <!-- /.left-nav -->
+
+                <div class="col-md-9 right-content">
+                    <div class="row content-utilities" id="">
+                        <div class="col-md-9 col-md-offset-1">
+							<div id="breadcrumbs" class="hidden-xs">
+								<t:include id="breadcrumb-167468353" />
+							</div>
+                        </div>
+
+                        <div class="col-md-2">	
+							<div class="dropdownShare">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								SHARE <span class="glyphicon glyphicon-share"></span>
+							</a>
+							<ul class="dropdown-menu-share">
+								<li>
+									<p>Share On <a href="https://www.facebook.com/sharer/sharer.php?u=${url}"><img src="http://cpc.convio.net/redesign/img/cpc/facebook.png" alt="Facebook"></a>
+									<a href="https://twitter.com/share"><img src="http://cpc.convio.net/redesign/img/cpc/twitter.png" alt="Twitter"/></a>
+									<a href="https://plus.google.com/share?url=${url}" onclick="javascript:window.open(this.href,
+									  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cpc.convio.net/redesign/img/cpc/gplus.png" alt="Google +"/></a>
+									<a  href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-shape="round" ><img src="http://cpc.convio.net/redesign/img/cpc/pinterest.png" alt="Pinterest" style="margin-top:5px;"/></a> </p>
+									<p>Share by Email:
+									<input type="text" name="email" value="Your email here" class="emailShareInput"></p>
+								</li>
+							</ul>
+                        </div>
+
+                    </div>
+                    <!-- /.row #content-utilities <span class="caret"></span>-->
+
+
+                    <div class="row" id="main-content">
+                        <div class="col-md-11 col-md-offset-1">
+                            <h2 class="titleSection">${title}</h2>
+
+						<hr class="lineInside"/>
+						<!-- copied from old attractions template - restyle -->
+						<div id="left_box">
+						  <div class="left_wrapper">
+							<t:if test="large.length > 0">
+							  <t:list id="large"><center><img class="img-responsive" src="${url}" alt="${alt_text}" /></center><t:if test="description != null"><div class="caption">${description}</div></t:if></t:list>
+							</t:if>
+							<p>&nbsp;</p>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="audioBackground">
+										<iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${audio_id}&amp;color=68b247&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+										<p class="audioBackgroundText">${audio_guide_description}</p>
+									</div>	
+								</div>
+							</div>
+							${body}
+							<!-- END left side content -->
+						  </div>
+						</div>
+						<div id="right_column">
+						<t:if test="location_text != null"><div class="right_box_flex"><h2 class="right_box_headline">Location</h2> ${location_text} <p><strong><a href="http://www.centralparknyc.org/maps/index.html?attraction=${itemid}">&raquo; Map It</a></p></strong></div></t:if>
+						<t:if test="details != null"><div class="right_box_flex"><h2 class="right_box_headline">Details</h2> ${details} </div></t:if>
+						<!--photo gallery?--><DIV class=templateComponent id=templatelist-69673107 style="DISPLAY: inline"></DIV>
+						<t:if test="related_links.length > 0">
+						<div class="right_box_flex"><h2 class="right_box_headline">Related Links</h2><ul>
+						<t:list id="related_links">
+						<li><a href="${url}"> ${title}</a></li>
+						</t:list></ul>
+						</div>
+						</t:if>
+						<t:if test="related_multimedia.length > 0">
+						<div class="right_box_flex"><h2 class="right_box_headline">Multimedia</h2><ul>
+						<t:list id="related_multimedia">
+						<li><a href="${url}"> ${title}</a></li>
+						</t:list></ul>
+						</div>
+						</t:if>
+						<t:if test="photo_gallery.length > 0">
+						<div class="right_box_flex"><h2 class="right_box_headline">Photo Gallery</h2>
+						<t:list id="photo_gallery">
+						<a href="${url}" class="title">${title}</a>
+						<t:if test="thumb.length > 0"><a href="${url}"><img src="${thumb.url}" alt="${thumb.alt_txt}" /></a></t:if><t:if test="description != null"><p>${description}</p></t:if>
+						</t:list>
+						</div>
+						</t:if>
+						</div><!-- END old template-->
+					</div><!-- /.col-md-11 col-md-offset-1a-->
+                    </div><!-- /.row #main-content -->
+                </div><!-- /.right-content-->
+            </div><!-- /.row two-column-content -->
+        </div><!-- /.container -->
+    </div><!-- /.MainBody -->
+	
+	<script type="text/javascript">// <![CDATA[
+		(function($){	
+			$(document).ready(function() {
+				var breadFolder = $('a.breadcrumb:eq(1)').text();
+				if(breadFolder == 'Things to See and Do') {
+					$('#breadLink').text('See & Do');
+				} else {
+					$('#breadLink').text(breadFolder);
+				}
+			});
+		})(jQuery);
+	// ]]></script>

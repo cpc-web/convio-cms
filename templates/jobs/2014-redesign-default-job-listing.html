@@ -1,0 +1,113 @@
+<!-- DEFAULT JOB PAGE TEMPLATE - based on page template v3 -->
+<!-- top image, sidebar with nav, breadcrumbs, slideshow in main content area -->
+ 
+ <style type="text/css"> /*This style has to be in nav.css */
+.breadcrumb {background-color: #FFFFFF;}
+#subnav li {position: relative;}
+#subnav li ul {display: none;}
+#subnav li:hover ul {display: block;}
+</style>
+
+ 	<!-- Top Image	================================================== -->
+    <div class="top-image">
+        <t:if test="top_image.length > 0">
+		<img id="top_image" alt="Top Image" class="img-responsive hidden" src="${top_image.url}" />
+	</t:if><t:else>
+		<t:set id="randomTopImg" value="random(5)+1" />
+		<img id="top_image" alt="Top Image" class="img-responsive hidden" src="http://cpc.convio.net/redesign/img/header/insidepages${randomTopImg}_2014.jpg" />
+	</t:else>
+	<script type="text/javascript">
+		jQuery(document).ready(function() { jQuery('#top_image').removeClass('hidden'); });
+	</script>
+    </div>
+    <!-- /.top-image -->
+<!-- NEXT: change this to <t:value id="top-image"></t:value> OR random from /redesign/img/header/insidepages5_2014.jpg -->
+
+    <!--- /////////// EVERYTHING ABOVE THIS POINT IS COMMON TO ALL INTERIOR TEMPLATES ////////////// -->
+
+    <div class="main-body">
+        <div class="container">
+            <div class="row two-column-content">
+                <!-- all page content -->
+                <div class="col-md-3 left-nav knockout"> 
+					<!-- begin section nav -->
+					<div style="display: inline;" class="templateComponent" id="sectionNavigation-497998852"></div>
+
+<!--div class=templateComponent id="sectionNavigation-167468350" style="DISPLAY: inline"></div-->
+					<!-- end section nav -->
+                </div>
+                <!-- /.left-nav -->
+
+                <div class="col-md-9 right-content">
+                    <div class="row content-utilities" id="">
+                        <div class="col-md-9 col-md-offset-1">
+                            <!--p>HOME \ EXPLORE \<span style="color:#79bf43;">TOURS</span>
+                            </p-->
+							<t:if test="path != '/'">
+                        		<div id="breadcrumbs">
+									<t:include id="breadcrumb-167468353" />
+								</div>
+							</t:if>
+                        </div>
+
+                        <div class="col-md-2">	
+						
+					     <div class="dropdownShare">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							 SHARE <span class="glyphicon glyphicon-share"></span>
+							</a>
+							<ul class="dropdown-menu-share">
+                             <li>
+
+							<p>Follow Us <a href="https://www.facebook.com/sharer/sharer.php?u=<url>"><img src="http://cpc.convio.net/redesign/img/cpc/facebook.png" alt="Facebook"></a>
+							<a href="https://twitter.com/share"><img src="http://cpc.convio.net/redesign/img/cpc/twitter.png" alt="Twitter"/></a>
+							<a href="https://plus.google.com/share?url={URL}" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cpc.convio.net/redesign/img/cpc/gplus.png" alt="Google +"/></a>
+							<a  href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-shape="round" ><img src="http://cpc.convio.net/redesign/img/cpc/pinterest.png" alt="Pinterest"/></a>
+								</p>
+
+							 <p>Share by Email:
+	
+             				 <input type="text" name="email" value="Your email here" class="emailShareInput"></p>
+						     </li>
+							</ul>
+						  </div>
+
+
+                        </div>
+
+                    </div>
+                    <!-- /.row #content-utilities <span class="caret"></span>-->
+
+
+                    <div class="row" id="main-content">
+                        <div class="col-md-11 col-md-offset-1">
+                            <h2 class="titleSection">${title}</h2>
+<hr class="lineInside"/>
+<p>For more information, or to apply for this job, <a href="${job_url}">click here</a>.</p>
+<p><strong>Job Summary:</strong><br /> ${description}</p>
+<p><strong>Job Description:</strong><br /> ${body}</p>
+<p>For more information, or to apply for this job, <a href="${job_url}">click here</a>.</p>
+<p></p>
+<p></p>
+<p><strong>Safety Requirements</strong></p>
+<p>Establishment and maintenance of a safe work environment is the shared responsibility of this organization and employees at every level. The Conservancy will make every effort to assure a safe environment and be in compliance with federal, state, and local safety regulations.&nbsp; Employees are expected to obey safety rules and to exercise caution in all their work activities.&nbsp; Accordingly, employees should be aware of any hazards, which could cause an injury or accident (e.g., spills, obstacles in walkways).&nbsp; If an employee discovers a potential dangerous condition, he/she should alert other employees and notify his/her supervisor immediately.</p>
+<p>&nbsp;</p>
+<p><strong>Disclaimer</strong></p>
+<p>The above statements are intended to describe the general nature and level of work being performed by people assigned to this classification.&nbsp; They are not to be construed as an exhaustive list of all responsibilities, duties, and skills required of personnel so classified.&nbsp; All personnel may be required to perform duties outside of their normal responsibilities from time to time, as needed</p>
+<br />
+<p></p>
+</div>
+                        </div>
+                        <!-- /.col-md-11 col-md-offset-1a-->
+                    </div>
+                    <!-- /.row #main-content -->
+
+                </div>
+                <!-- /.right-content-->
+            </div>
+            <!-- /.row two-column-content -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.MainBody -->

@@ -1,0 +1,63 @@
+ <!-- DEFAULT SHOP PAGE TEMPLATE v2 -->
+ 
+ <style type="text/css">
+	.scaption {color:#000000; position:absolute; top:350px; height:auto; z-index:100;}
+	.lpslides {height:420px;}
+	#slidenav{z-index:200; position:absolute; top:320px;}
+	ul#lpslideshow, ul#lpslideshow li {height:420px ;}
+	.top-image { min-height: 180px; }
+	.breadcrumb {background-color: #FFFFFF;}
+	#subnav li { position: relative; }
+	#subnav li ul { display: none; position: absolute; left: 60%; top: 0;  width: 100%; background-color: #666666; z-index: 1000; padding: 10px; border: 1px solid #777777; }
+	#subnav li ul:after, #subnav li ul:before { right: 100%; top: 18px; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+	#subnav li ul:after { border-color: rgba(102, 102, 102, 0); border-right-color: #666666; border-width: 9px; margin-top: -9px; }
+	#subnav li ul:before { border-color: rgba(204, 204, 204, 0); border-right-color: #777777; border-width: 11px; margin-top: -11px; }
+	#subnav li:hover ul { display: block; }
+	.rowShop {
+	  margin-right: 0px;
+	  margin-left: 0px;
+	  margin-top:40px;
+	}
+
+	@media(max-width:767px) {
+		.left-nav {
+			min-height: 30px;
+			padding: 0px;
+			width: 100%;
+		}
+		.secondnav { visibility: visible; }
+		.top-image { visibility: hidden; height: 15px; min-height: 15px; }
+	}
+
+	.sectionToggle { 
+		left: 30%;
+		width: 40%;
+		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		z-index: 1000;
+	}
+</style>
+
+
+
+<div class="top-image"></div>
+
+<div class="sectionToggle">
+	<button data-target=".left-nav" data-toggle="collapse" class="navbar-toggle knockout hidden-md hidden-lg"><span id="breadLink">Shop</span><span class="caret"></span></button>
+</div>
+
+
+<div class="container">
+
+	<div class="rowShop two-column-content">
+                <!-- all page content -->
+                <div class="col-md-3 left-nav knockout collapse navbar-collapse"> 
+					<!-- begin section nav -->
+					<div style="display: inline;" class="templateComponent" id="sectionNavigation-497998852"></div>
+
+<!--div class=templateComponent id="sectionNavigation-167468350" style="DISPLAY: inline"></div-->
+					<!-- end section nav -->
+                </div><!-- /.left-nav -->
+<t:value id="body"></t:value>
+</div>

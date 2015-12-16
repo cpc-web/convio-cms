@@ -1,0 +1,269 @@
+.btnSignUpLightbox {
+  height: 34px;
+  border-radius: 5px;
+  background-color: #e20034;
+  border: 1px solid #e20034;
+  box-shadow: 0 1px 0 #666;
+  color: #fff;
+  font-size: 13px;
+  padding: 8px 20px;
+  font-weight: bold;
+}
+
+button.btn.lightbox {
+  background-color: #e20023;
+  color: white;
+  font-weight: 700;
+  padding: 5px 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 0 0 rgba(0,0,0,.75);
+     -moz-box-shadow: 0 1px 0 0 rgba(0,0,0,.75);
+          box-shadow: 0 1px 0 0 rgba(0,0,0,.75);
+  margin-top: 10px;
+}
+
+.captureCopy {
+  margin-top: 68px;
+  background-color: white;
+  height: 114px;
+  padding: 5px;
+  padding-top: 10px;
+}
+
+.captureCopy h4 {
+  text-align: left;
+  margin-top: 1px;
+  margin-bottom: 10px;
+  font-family: 'Titling Gothic FB Narr', sans-serif;
+}
+
+.captureCopyHeading {
+  text-align: center;
+  padding-top: 0;
+  color: #77bd42;
+}
+
+#captureModal .modal-dialog {
+  max-width: 519px;
+  height: auto;
+}
+
+.closeModal {
+  float: right;
+  top: -13px;
+  right: -7px;
+  z-index: 50;
+  position: absolute;
+  padding-right: -15px;
+  padding-top: 5px;
+}
+
+.closeModal img {
+  height: 25px;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+}
+
+form#lbox_register_form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+h2#myModalLabel {
+  padding: 10px;
+  text-align: center;
+  margin-top: 0;
+}
+
+input#cons_email {
+  float: left;
+  margin-left: 15px;
+}
+
+#lbox_register_form input {
+  width: 34%;
+  height: 34px;
+  border-radius: 5px;
+  padding: 0 0 0 10px;
+  position: relative;
+  border: 1px solid #b7b7b7;
+  margin: 5px 7px 0 0;
+}
+
+
+
+#lbox_register_form label {
+  background-color: #fff;
+}
+
+.linkCopy {
+  left: 57px;
+}
+
+.modal {
+  overflow-y: hidden;
+  outline: none;
+}
+
+.modal-backdrop.in {
+  opacity: .7;
+  filter: alpha(opacity=50);
+}
+
+.modal-body {
+  position: relative;
+  padding: 0;
+  margin: 55px 0 0;
+  border: none;
+  text-align: center;
+  height: 315px;
+}
+
+.modal-content {
+  border: 10px solid white;
+  background: white url('http://cpc.convio.net/images/mall-700px.jpg');
+  height: 363px;
+  background-size: 497px;
+  background-position: 0 300%;
+}
+
+.modal-footer {
+  border: medium none;
+  background-color: white;
+  padding: 0 20px 10px 10px;
+  margin: 0 10px 10px 10px;
+  border: none;
+}
+
+.modal-header {
+  margin: 0;
+  padding: 15px;
+  border-bottom: none;
+}
+
+.mobile-lightbox-image {
+  padding: 2px 7px 2px 5px;
+}
+
+
+@media(max-width:767px) {
+  .btnSignUpLightbox {
+    width: 100%;
+    margin-top: 10px;
+  }
+  button.btn.lightbox {
+    margin-top: 0;
+  }
+
+  #captureModal .modal-dialog {
+    max-width: 85%;
+  }
+
+  .captureCopy {
+    margin-top: 12px;
+    background-color: white;
+    height: 150px;
+    padding: 0 5px 10px;
+    border-radius: 2px;
+  }
+
+  .captureCopy h4 {
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    font-size: 18px;
+  }
+
+  #lbox_register_form input {
+    width: 100%;
+  }
+  .modal-body {
+    margin: 0;
+    height: 0;
+  }
+
+  .modal-content {
+    border: 5px solid white;
+    background: white;
+    height: 410px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .modal-header {
+    text-align: center;
+    border-bottom: none;
+    padding: 5px;
+    background: white url('http://cpc.convio.net/images/mall-700px.jpg') center center / cover;
+    height: 175px;
+    margin: 0;
+  }
+
+  .modal-title-mobile {
+    display: inline;
+    font-size: 30px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-family: 'Titling Gothic FB Narr', sans-serif;
+    text-shadow: 2px 2px 1px #636466;
+    line-height: 1.1;
+  }
+
+  .modal-title {
+    display: none;
+  }
+
+  .modal-title-col {
+    margin-top: 60px;
+  }
+}
+
+@media(min-width:768px) {
+  .modal-title {
+    display: inline;
+    font-size: 35px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-family: 'Titling Gothic FB Narr', sans-serif;
+    text-shadow: 2px 2px 1px #636466;
+    line-height: 1.1;
+    margin-top: 33px;
+    text-align: center;
+  }
+
+  .modal-title-mobile {
+    display: none;
+  }
+
+
+  .mobile-lightbox-image {
+    display: none;
+  }
+}
+
+@media(max-width: 367px) { 
+    .modal-title-col {
+    margin-top: 40px !important;
+  }
+}
+
+@media (device-height: 480px) {
+  .mobile-lightbox-image {
+    display: none;
+  }
+}
+
+@media(max-width:330px) {
+  .captureCopy h4 {
+    font-size: 12px;
+  }
+
+  .modal-content {
+    height: 375px;
+  }
+}

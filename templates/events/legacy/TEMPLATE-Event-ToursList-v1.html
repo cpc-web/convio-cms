@@ -1,0 +1,8 @@
+<div class="templateRepeat">
+		<div class="eventXML" id=${itemID}><Event><id>${itemID}</id><calendar_id>${calendar_id}</calendar_id><name><t:if test="cancelled == 'cancelled'">CANCELLED: </t:if>${title}</name><time>${start_time} to ${end_time}</time><date><t:value id="date" format="EEE, MMM d, yyyy">Fri, Dec 31, 1999</t:value></date><parent>${parent_event.itemID}</parent><type><t:if test="parent_event.length > 0">${parent_event.event_type}</t:if><t:else>${event_type}</t:else></type><ticketed>${ticketed_event_type}</ticketed><cancel><t:value id="cancelled"></t:value></cancel><url>${url}</url></Event></div>
+</div>
+
+<!-- PROTOTYPE for v2: -->
+<div class="templateRepeat">
+		<div class="eventXML" id=${itemID}><Event><id>${itemID}</id><name><t:if test="cancelled == 'cancelled'">CANCELLED: </t:if>${title}</name><time><t:if test="start_time.length > 0">${start_time}</t:if><t:else>${parent_event.start_time}</t:else> to <t:if test="end_time.length > 0">${end_time}</t:if><t:else>${parent_event.end_time}</t:else></time><date><t:value id="date" format="EEE, MMM d, yyyy">Fri, Dec 31, 1999</t:value></date><parent>${parent_event.itemID}</parent><type><t:if test="event_type.length > 0">${event_type}</t:if><t:else>${parent_event.event_type}</t:else></type><ticketed>${ticketed_event_type}</ticketed><cancel><t:value id="cancelled"></t:value></cancel><url>${url}</url></Event></div>
+</div>

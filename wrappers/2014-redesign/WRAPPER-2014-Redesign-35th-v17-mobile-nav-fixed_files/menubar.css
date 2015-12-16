@@ -1,0 +1,658 @@
+/**
+ * $Source$
+ * $Author$
+ * $Revision$
+ * $Date$
+ *
+ * Admin wrapper styles.
+ **/
+
+#cmsMasthead a, #cmsMasthead a:visited {
+  color: #0043ce;
+}
+
+#cmsMasthead img {
+  border: 0;
+}
+
+
+
+
+#cmsMasthead {
+  background: url("/admin/components/header/assets/masthead_bg.png") repeat-x scroll 0 0 transparent;
+  clear: both;
+  height: 74px;
+  min-width: 650px;
+}
+
+#cmsMasthead img.logo {
+  border: 0 none;
+  float: left;
+  height: 40px;
+  margin: 17px;
+  width: 126px;
+}
+
+#cmsMasthead .right {
+  float: right;
+  padding: 5px 17px 0 0;
+  text-align: right;
+}
+
+#cmsMasthead img.convioLogo {
+  border: medium none;
+  padding-left: 20px;
+  padding-top: 24px;
+}
+
+#cmsMasthead .right .links {
+  border-collapse: separate;
+  width: 100%;
+}
+
+#cmsMasthead .right .links td {
+  vertical-align: middle;
+}
+
+#cmsMasthead .right .links .link {
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+#cmsMasthead .right .links .divider {
+  color: #999999;
+  padding: 0 4px;
+}
+
+#cmsMasthead .searchBox {
+  padding: 0;
+  width: 147px;
+}
+
+#cmsMasthead .searchBox fieldset {
+  border: 0 none;
+  float: left;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 147px;
+}
+
+#cmsMasthead .searchBox fieldset .searchInput {
+  background: url("/admin/components/header/assets/cms_search_input_bg.png") no-repeat transparent;
+  border: 0 none;
+  color: #797979;
+  float: left;
+  height: 16px;
+  padding: 3px 3px 3px 12px;
+  width: 103px;
+}
+
+#cmsMasthead .searchBox fieldset .searchButton {
+  outline: none;
+  vertical-align: middle;
+}
+
+#cmsMasthead a.menuLink {
+  background-color: transparent;
+  background-image: url('/admin/components/header/assets/grey-arrow.png');
+  background-position: right 50%;
+  background-repeat: no-repeat;
+  padding-right: 12px;
+}
+
+#cmsMasthead .nav-context-menu .bd {
+  border: 1px solid #4799e3;
+}
+
+#cmsMasthead .nav-context-menu ul {
+  padding: 0;
+}
+
+#cmsMasthead .nav-context-menu ul li.yuimenuitem {
+  text-align: left;
+}
+
+#cmsMasthead .nav-context-menu ul li.yuimenuitem .yuimenuitemlabel {
+  color: #0043ce;
+  line-height: 26px;
+  outline: none;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+
+#cmsMasthead .nav-context-menu ul li.yuimenuitem .yuimenuitemlabel-selected {
+  background: url("/admin/components/header/assets/menu-hover-bg.png") repeat-x transparent;
+  color: #000000;
+}
+
+#cmsMasthead .websiteInfo {
+  border-collapse: separate;
+  padding: 5px 0;
+  text-align: right;
+}
+
+#cmsMasthead .websiteInfo td {
+  vertical-align: middle;
+}
+
+#cmsMasthead .websiteInfo #websiteSwitcher {
+  font-size: 14px;
+  padding-right: 15px;
+  text-align: left;
+}
+
+#cmsMasthead .productSwitcher {
+}
+
+#cmsMasthead .productSwitcher .yuimenu .bd {
+  border: 1px solid #4799e3;
+  width: 126px;
+}
+
+#cmsMasthead .productSwitcher ul {
+  padding: 0;
+}
+
+#cmsMasthead .productSwitcher ul li.yuimenuitem {
+  text-align: left;
+}
+
+#cmsMasthead .productSwitcher ul li.yuimenuitem .yuimenuitemlabel {
+  color: #0043ce;
+  line-height: 28px;
+  outline: none;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+
+#cmsMasthead .productSwitcher ul li.yuimenuitem-selected .yuimenuitemlabel {
+  background: url("/admin/components/header/assets/menu-hover-bg.png") repeat-x transparent;
+  color: #000000;
+}
+
+#productSwitcherButton {
+  background: none;
+  border: none;
+  margin: 0 -10px 0 0;
+  outline: none;
+}
+
+#productSwitcherButton .first-child {
+  background: none;
+  border: none;
+  margin: 0;
+  outline: none;
+}
+
+#productSwitcherButton button {
+  background: url("/admin/components/header/assets/product_switcher.png") no-repeat transparent;
+  background-position: 0 50%;
+  color: #FFFFFF;
+  font-weight: normal;
+  line-height: 18px;
+  outline: none;
+  text-align: left;
+  padding-left: 10px;
+  width: 131px;
+}
+
+#cmsMessageContainer {
+  background-color: #ff8;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 5px;
+  padding: 2px 8px;
+}
+
+#cmsToolbar {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 0 none;
+  border-bottom: 1px solid #999999;
+  clear: both;
+  min-width: 600px;
+  padding-right: 20px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#cmsToolbar tr {
+  margin: 0;
+  padding: 0;
+}
+
+#cmsToolbar tr td {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+#cmsToolbar .actions {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+#cmsToolbar .actions .button {
+  display: inline;
+  outline: none;
+}
+
+#cmsToolbar .actions .button a {
+  outline: none;
+}
+
+#cmsToolbar .actions .button img:hover {
+  background-color: #e9eff8;
+}
+
+/**
+ * Create content dialog.
+ */
+
+.yui-skin-cms #createContentForm .folderTreeContainer {
+  background-color:white;
+  border:2px white outset;
+  height:300px;
+  margin-top:4px;
+  overflow:auto;
+  padding:4px;
+  width:300px;
+}
+
+.yui-skin-cms #createContentForm select#typeChooser {
+  background-repeat: no-repeat;
+  margin: 6px;
+  padding-left: 19px;
+  width: 200px;
+}
+
+.yui-skin-cms #createContentForm select#typeChooser option {
+  margin: 6px;
+  padding-left: 19px;
+}
+
+.yui-skin-cms #createContentForm select#typeChooser .page {
+  background: url('/assets/icons/16x16/page.gif') no-repeat;
+}
+
+.yui-skin-cms #createContentForm select#typeChooser .file {
+  background: url('/assets/icons/16x16/file.gif') no-repeat;
+}
+
+.yui-skin-cms #createContentForm select#typeChooser .image {
+  background: url('/assets/icons/16x16/image.gif') no-repeat;
+}
+
+.yui-skin-cms #createContentForm select#typeChooser .xml {
+  background: url('/assets/icons/16x16/xml.gif') no-repeat;
+}
+
+
+#cmsMenubar {}
+
+#navmenu {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 0 none;
+  padding: 0;
+  z-index: 9999;
+}
+
+#navmenu .bd {
+  background-color: #ffffff;
+  border: none;
+}
+
+#navmenu .bd .hd, #navmenu .bd .bd, #navmenu .bd .ft {
+  background-color: #ffffff;
+  border: 1px solid #4799e3;
+  min-width: 200px;
+}
+
+#navmenu .bd .hd {
+  border-bottom: none;
+}
+
+#navmenu .bd .ft {
+  border-top: none;
+}
+
+#navmenu ul {
+  padding: 0;
+}
+
+#navmenu .yuimenuitem img {
+  border: none;
+}
+
+#navmenu .divider-top {
+  border-top: 1px solid #cccccc;
+}
+
+#navmenu .divider-bottom {
+  border-bottom: 1px solid #cccccc;
+}
+
+#navmenu ul li.yuimenubaritem {
+  background: none;
+  font: 14px Tahoma;
+  margin: 0 3px;
+  padding: 0 5px 0 0;
+  z-index: 100;
+}
+
+#navmenu ul li.yuimenubaritem .yuimenubaritemlabel {
+  background-color: transparent;
+  background-image: none;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border: 0 none;
+  color: #4799e3;
+  font-weight: normal;
+  line-height: 33px;
+  outline: none;
+  padding: 0 15px 0 10px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+#navmenu ul li.yuimenubaritem-hassubmenu .yuimenubaritemlabel {
+  background-image: url("/admin/components/header/assets/blue_arrow.png");
+}
+
+#navmenu ul li.cmsmenubaritem-active {
+  background: url('/admin/components/header/assets/current_state_bg.png') repeat-x transparent;
+  border: 1px solid #cadceb;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+#navmenu ul li.yuimenubaritem-selected {
+  background: url("/admin/components/header/assets/blue-hover-bg.png") repeat-x transparent;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+#navmenu ul li.yuimenubaritem-selected .yuimenubaritemlabel {
+  background-image: none;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#navmenu ul li.yuimenubaritem-hassubmenu-selected .yuimenubaritemlabel {
+  background-image: url("/admin/components/header/assets/white_arrow.png");
+}
+
+
+/**
+ * Main menu.
+ */
+
+#navmenu .yuimenuitem .yuimenuitemlabel {
+  color: #0043ce;
+  outline: 0 none;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  white-space: normal;
+}
+
+#navmenu .yuimenuitem-hassubmenu {
+  background-image: url("/admin/components/header/assets/submenu-arrow-blue.png");
+  background-position: 98% 50%;
+  background-color: transparent;
+}
+
+#navmenu .yuimenuitem-hassubmenu-selected {
+  background-image: url("/admin/components/header/assets/submenu-arrow-black.png");
+}
+
+
+#navmenu .yuimenuitem-selected {
+  background-color: #fdf0ae;
+}
+
+#navmenu .yuimenuitemlabel-selected {
+  color: #000000;
+}
+
+#navmenu .yuimenuitem .yuimenuitemlabel-selected {
+  color: #000000;
+}
+ 
+#navmenu .inactive .yuimenuitemlabel {
+  color: #666;
+  font-style: italic;
+}
+
+#navmenu .yuimenuitem a:active {
+  outline: 0 none;
+}
+
+#navmenu .yuimenuitem-hassubmenu .yuimenuitemlabel {
+  padding-right: 12px;
+}
+
+
+/**
+ * Menu items.
+ */
+  
+#navmenu .yuimenuitem {
+  font-weight: normal;
+}
+
+#navmenu .bold .yuimenuitemlabel {
+  font-weight: bold;
+}
+
+#navmenu .home .yuimenuitemlabel {
+  padding-left: 30px;
+  background: url(/assets/icons/16x16/home.gif) 8px center no-repeat;
+}
+
+#navmenu .folder .yuimenuitemlabel {
+  padding-left: 30px;
+  background: url(/assets/icons/16x16/folder.gif) 8px center no-repeat;
+}
+
+#navmenu .add2 .yuimenuitemlabel {
+  padding-left: 30px;
+  background: url(/system/icons/16x16/add2.gif) 8px center no-repeat;
+}
+
+#navmenu .page .yuimenuitemlabel {
+  padding-left: 30px;
+  background: url(/assets/icons/16x16/page.gif) 8px center no-repeat;
+}
+
+#navmenu .post .yuimenuitemlabel {
+  padding-left: 30px;
+  background: url(/assets/icons/16x16/post.gif) 8px center no-repeat;
+}
+
+#navmenu .file .yuimenuitemlabel {
+  padding-left: 30px;
+  background: url(/assets/icons/16x16/file.gif) 8px center no-repeat;
+}
+
+#navmenu .image .yuimenuitemlabel {
+  padding-left: 30px;
+  background: url(/assets/icons/16x16/image.gif) 8px center no-repeat;
+}
+
+#navmenu .xml .yuimenuitemlabel {
+  padding-left: 30px;
+  background: url(/assets/icons/16x16/xml.gif) 8px center no-repeat;
+}
+
+#navmenu .lock .yuimenuitemlabel {
+  padding-left: 30px;
+  background: url(/assets/icons/16x16/lock.gif) 8px center no-repeat;
+}
+
+#navmenu .xls .yuimenuitemlabel {
+  padding-left: 30px;
+  background: url(/assets/icons/16x16/xls.gif) 8px center no-repeat;
+}
+
+#navmenu .text .yuimenuitemlabel {
+  padding-left: 10px;
+  background: none;
+}
+
+#navmenu .inactive .yuimenuitemlabel {
+  padding-left: 10px;
+  color: #666;
+  font-weight: normal;
+  font-style: italic;
+  background: none;
+}
+
+#navmenu .yuimenuitem-selected.inactive {
+  background: none;
+}
+
+
+  .yui-skin-cms #websiteChooserMenu {
+    min-width: 300px;
+  }
+
+  .yui-skin-cms #websiteChooserMenu .topscrollbar, .yui-skin-cms #websiteChooserMenu .bottomscrollbar {
+    border: 1px solid #aaaaaa;
+  }
+
+  .yui-skin-cms #websiteChooserMenu .bd {
+    border: 1px solid #aaaaaa;
+    padding: 5px;
+  }
+
+  .yui-skin-cms #websiteChooserMenu .bd h2 {
+    border-bottom: 1px solid #cccccc;
+    font-size: 16px;
+    margin: 5px 10px -5px 5px;
+    padding-bottom: 5px;
+  }
+
+  .yui-skin-cms #websiteChooserMenu .bd ul {
+    border: 0;
+    padding: 3px 0 0;
+  }
+
+  .yui-skin-cms #websiteChooserMenu .bd ul li {
+    background: url("/system/assets/dashboard/menu-arrow_gold.png") no-repeat scroll 0 3px transparent;
+    line-height: 15px;
+    margin: 10px 5px;
+    padding-left: 15px;
+  }
+
+  .yui-skin-cms #websiteChooserMenu .bd ul li .yuimenuitemlabel {
+    color: #0043ce;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+    padding: 0;
+  }
+
+  .yui-skin-cms #websiteChooserMenu .bd ul li .yuimenuitemlabel:hover {
+    color: orange;
+  }
+
+  .yui-skin-cms #websiteChooserMenu .bd ul li .websiteLabel {
+    color: #808080;
+    font-size: 11px;
+  }
+
+  .yui-skin-cms #websiteChooserMenu .yui-menu-shadow-visible {
+    left: 3px;
+    top: 5px;
+    background-color: #00000;
+    margin: -1px;
+    opacity: 0.4;
+    position: absolute;
+    visibility: visible;
+  }
+
+
+.yui-skin-cms #websiteChooserPanel .hd {
+  background: none repeat scroll 0 0 #ffffff;
+  min-height: 0%;
+}
+
+.yui-skin-cms #websiteChooserPanel .bd {
+  background-color: #ffffff;
+  max-height: 480px;
+  min-height: 0%;
+  overflow: auto;
+  padding-left: 30px;
+  text-align: center;
+}
+
+.yui-skin-cms #websiteChooserPanel .bd table.websitesGrid {
+}
+
+.yui-skin-cms #websiteChooserPanel .bd table.websitesGrid tr td {
+  padding-right: 10px;
+  white-space: nowrap;
+  width: 200px;
+  vertical-align: top;
+}
+
+.yui-skin-cms #websiteChooserPanel .bd .website {
+  padding: 5px 0;
+  text-align: left;
+}
+
+.yui-skin-cms #websiteChooserPanel .bd .website a {
+  background: url("/system/assets/dashboard/menu-arrow_gold.png") no-repeat scroll 0 3px transparent;
+  line-height: 15px;
+  color: #0043ce;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+  padding: 0 0 0 12px;
+  text-decoration: none;
+}
+
+.yui-skin-cms #websiteChooserPanel .bd .website a:hover {
+  color: orange;
+}
+
+.yui-skin-cms #websiteChooserPanel .bd .website .websiteLabel {
+  color: #808080;
+  font-size: 11px;
+  padding-left: 12px;
+}
+
+
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/*
+p.HeaderLinks {
+  margin: 0;
+}
+
+.HeaderLinks {
+ 	font: 13px Tahoma, sans-serif;
+}
+
+.HeaderLinks a, .HeaderBreadcrumbs a {
+  color: #00f;
+}
+
+.HeaderBreadcrumbs {
+ 	font: 14px Tahoma, sans-serif;
+}
+*/

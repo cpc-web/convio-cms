@@ -1,0 +1,92 @@
+/* general button styles */
+.cpc-test {
+  /* hero image button styles */
+  /* middle row button styles */
+  /* featured content button styles */ }
+  .cpc-test .btn-cpc {
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    padding-left: .5em;
+    background: #68b246;
+    overflow: hidden;
+    padding: 0 0 0 1em;
+    height: 36px;
+    box-shadow: 0px 1px 0px 0px #666;
+    -webkit-box-shadow: 0px 1px 0px 0px #666;
+    -moz-box-shadow: 0px 1px 0px 0px #666;
+    margin: 0 auto;
+    border: none;
+    font-family: 'Titling Gothic FB Cond';
+    line-height: 2.3;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    transition: background .4s ease;
+    -webkit-transition: background .4s ease;
+    -moz-transition: background .4s ease;
+    -o-transition: background .4s ease; }
+@-moz-document url-prefix() {
+  .cpc-test .btn-cpc {
+    height: 37px; } }
+  .cpc-test .btn-cpc:hover {
+    background: #499529;
+    color: white;
+    text-decoration: none;
+    transition: background .4s ease;
+    -webkit-transition: background .4s ease;
+    -moz-transition: background .4s ease;
+    -o-transition: background .4s ease; }
+  .cpc-test .btn-cpc a {
+    color: white;
+    text-decoration: none; }
+  .cpc-test .btn-cpc a:hover, .cpc-test a:visited, .cpc-test a:focus {
+    color: white;
+    color: white;
+    text-decoration: none; }
+  .cpc-test .button-arrow {
+    background-color: #499529;
+    padding: 20px;
+    line-height: 2;
+    height: 37px;
+    margin-left: 15px; }
+  .cpc-test .btn-hero {
+    margin-top: 10px; }
+  .cpc-test .btn-mid-cta {
+    margin-right: 20px; }
+  .cpc-test .btn-mid-cta-02 {
+    margin-top: 38px; }
+  .cpc-test .btn-inner-content {
+    float: right;
+    margin-top: 35px; }
+  .cpc-test .button-arrow-mid-01 {
+    margin-left: 11px; }
+  .cpc-test .button-arrow-mid-01-active {
+    margin-left: 205px; }
+  .cpc-test .button-arrow-mid-02 {
+    margin-left: 108px; }
+  .cpc-test .button-arrow-mid-03 {
+    margin-left: 157px; }
+  .cpc-test .btn-mid-email {
+    margin-top: 45px; }
+  .cpc-test .btn-mid-join {
+    margin-top: 26px; }
+  .cpc-test .button-row {
+    margin-top: 29px; }
+  .cpc-test .btn-mid-support {
+    display: inline-block;
+    background-color: #FFA500;
+    color: #FFF;
+    border-radius: 2px;
+    min-width: 87px;
+    text-align: center;
+    margin: 0px 20px 20px 0px;
+    box-shadow: 0px 1px 0px #666;
+    border: 0px none;
+    font-family: "Titling Gothic FB Cond";
+    font-size: 18px;
+    height: 36px; }
+  .cpc-test .btn-featured {
+    margin-top: 105px; }
+
+/*# sourceMappingURL=buttons-v12.css.map */

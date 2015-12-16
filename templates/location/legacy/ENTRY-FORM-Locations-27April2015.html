@@ -1,0 +1,190 @@
+<!-- NOTE: This is the HTML code for the CMS CONTENT TYPE ENTRY FORM - NOT for a display template nor piece of content -->
+<!-- CHECK WITH A LUMINATE CMS ENGINEER UNLESS YOU ARE SURE WHAT YOU ARE DOING! -->
+<!-- Bo Bell/CPC, 27 April 2015 - REMOVED "Details" field in an attempt to get extra file data out of CMS interface at the suggestion of LO Support - case #00585875 -->
+<table cellpadding="4" style="margin-top: 1em; width: 1117px; height: 1652px;">
+<tbody>
+<tr class="formWidgetRow" id="row-form-title">
+<td class="formWidgetLabelCell"><strong>Title<span style="color: #ff0000;">*</span></strong></td>
+<td class="formWidgetCell"><input id="form-title" name="title" size="60" type="text" validation="type:text;required:true;baseProperty:true" /></td>
+</tr>
+<tr>
+<td><strong>File Name</strong>&nbsp;</td>
+<td><input name="filename" size="30" type="text" validation="type:filename;baseProperty:true" />.html&nbsp;</td>
+</tr>
+<tr>
+<td>Redirect URL</td>
+<td><input id="redirect_url" name="redirect_url" size="60" title="Redirect URL" type="text" uniqueid="631480901" value="" validation="type:text" /></td>
+</tr>
+<tr class="formWidgetRow" id="row-form-description">
+<td class="formWidgetLabelCell"><strong>Description</strong></td>
+<td class="formWidgetCell"><textarea cols="60" id="form-description" name="description" rows="4" validation="type:text;baseProperty:true"></textarea></td>
+</tr>
+<tr class="formWidgetRow" id="row-form-filename">
+<td class="formWidgetLabelCell"><strong>Meta Keywords</strong></td>
+<td class="formWidgetCell"><textarea cols="60" name="metakeywords" rows="3" title="Meta Keywords" uniqueid="69460217" validation="type:text">Central Park, New York, parks, recreation, strawberry fields, imagine, john lennon, carousel</textarea></td>
+</tr>
+<tr>
+<td><strong>Location<span style="color: #ff0000;">*</span></strong></td>
+<td>
+<div class="geolocator"><input name="location" style="display: none;" title="Location" type="text" uniqueid="69460218" value="" validation="type:location;width:500;height:300;zoom:13;helpText:Type in address in field below, or click on map to set a marker.;buttonLabel:Set Location" /></div>
+</td>
+</tr>
+<tr>
+<td><strong>Map Link <span style="color: #ff0000;">(NOT USED 2015)</span><br /></strong></td>
+<td><input name="map_link" size="60" title="Map Link" type="text" uniqueid="69460219" validation="type:text" /></td>
+</tr>
+<tr>
+<td><strong>Featured Attraction<span style="color: #ff0000;">*</span></strong></td>
+<td><select model="categories;categoryID=69166374" name="featured_attraction" title="Featured Attraction*" uniqueid="69460220" validation="type:string;required:true">loading...</select>&nbsp;</td>
+</tr>
+<tr>
+<td><strong>Interest </strong><br /><strong><span style="color: #ff0000;">(NOT USED 2015)</span></strong></td>
+<td><select id="interest" model="categories;categoryID=67480800" multiple="multiple" name="interest" title="Interest" uniqueid="69460221" validation="type:stringarray;multiple:true">loading...</select></td>
+</tr>
+<tr>
+<td><strong>Park Area</strong><strong><span style="color: #ff0000;">*</span></strong></td>
+<td>
+<div class="category-chooser"><select id="park_area" model="categories;categoryID=529004951" name="park_area" title="Park Area" uniqueid="529005899" validation="type:string;required:true">loading...</select></div>
+</td>
+</tr>
+<tr>
+<td><strong>Audience</strong></td>
+<td>
+<div class="category-chooser"><select id="audience" model="categories;categoryID=529006988" multiple="multiple" name="audience" title="Audience" uniqueid="529011825" validation="type:stringarray;multiple:true">loading...</select></div>
+</td>
+</tr>
+<tr>
+<td><strong>Park Quadrant </strong><strong><span style="color: #ff0000;">(NOT USED 2015)</span></strong></td>
+<td><select id="park_quadrant" model="categories;categoryID=67480273" name="park_quadrant" title="Park Quadrant" uniqueid="69460222" validation="type:string">loading...</select></td>
+</tr>
+<tr>
+<td><strong><span style="color: #ff0000;"><span style="color: #000000;">Map Feature</span>*</span></strong></td>
+<td><select id="map_feature" model="categories;categoryID=67480352" multiple="multiple" name="map_feature" size="11" title="Map Feature" uniqueid="69462111" validation="type:stringarray;required:true;multiple:true">loading...</select></td>
+</tr>
+<tr>
+<td>Attraction Type</td>
+<td>
+<div class="category-chooser"><select id="attraction_type" model="categories;categoryID=67480352" name="attraction_type" title="Attraction Type" uniqueid="530680358" validation="type:string">loading...</select></div>
+</td>
+</tr>
+<tr>
+<td><strong>Perk Type </strong><br /><strong><span style="color: #ff0000;">(NOT USED 2015)</span></strong></td>
+<td><select model="categories;categoryID=67483816" name="perk_type" title="Perk Type" uniqueid="69463745" validation="type:string">loading...</select></td>
+</tr>
+<tr></tr>
+<tr class="formWidgetRow" id="row-form-is_visible">
+<td class="formWidgetLabelCell"><strong>Is visible on mobile?</strong></td>
+<td class="formWidgetCell">&nbsp;<select id="is_visible" model="categories;categoryID=600201735" name="is_visible" title="Is Visible" uniqueid="600212731" validation="type:string">loading...</select></td>
+</tr>
+<tr class="formWidgetRow" id="row-form-filterid">
+<td class="formWidgetLabelCell"><strong>Mobile Filter Group</strong></td>
+<td class="formWidgetCell"><select id="filter_group" model="items;filterID=599988676" name="filter_group" title="FilterGroup" uniqueid="600214654" validation="type:string">loading...</select></td>
+</tr>
+<tr class="formWidgetRow" id="row-form-is_photoop">
+<td class="formWidgetLabelCell"><strong>Is photo-op?</strong></td>
+<td class="formWidgetCell"><select id="is_photoop" model="categories;categoryID=600201735" name="is_photoop" title="IsPhotoOp" uniqueid="600206430" validation="type:string">loading...</select></td>
+</tr>
+<tr class="formWidgetRow" id="row-form-top_location">
+<td class="formWidgetLabelCell"><strong>Is top location?</strong></td>
+<td class="formWidgetCell"><select id="top_location" model="categories;categoryID=600201735" name="top_location" title="IsTopLocation" uniqueid="600206431" validation="type:string">loading...</select></td>
+</tr>
+<tr class="formWidgetRow" id="row-form-audio_url">
+<td class="formWidgetLabelCell"><strong>Audio Guide Sound Cloud ID</strong></td>
+<td class="formWidgetCell"><input id="audio_id" name="audio_id" size="20" title="AudioId" type="text" uniqueid="600206432" value="" validation="type:text" /></td>
+</tr>
+<tr class="formWidgetRow" id="row-form-audio_name">
+<td class="formWidgetLabelCell"><strong>Audio Guide Custom Name</strong></td>
+<td class="formWidgetCell"><input id="audio_name" name="audio_name" size="20" title="AudioGuideName" type="text" uniqueid="600206433" value="" validation="type:text" /></td>
+</tr>
+<tr class="formWidgetRow">
+<td class="formWidgetLabelCell"><strong>Audio Guide Description</strong></td>
+<td class="formWidgetCell"><textarea cols="20" id="audio_guide_description" name="audio_guide_description" rows="2" title="Audio Guide Description" uniqueid="628293758" validation="type:text"></textarea></td>
+</tr>
+<tr class="formWidgetRow" id="row-form-mobile_small_image_path">
+<td class="formWidgetLabelCell"><strong>Mobile Small Image Path</strong></td>
+<td class="formWidgetCell"><input id="mobile_small_image_path" name="mobile_small_image_path" size="100" title="mobile_small_image_path" type="text" uniqueid="602166256" value="" validation="type:text" /></td>
+</tr>
+<tr class="formWidgetRow" id="row-form-mobile_large_image_path">
+<td class="formWidgetLabelCell"><strong>Mobile Large Image Path</strong></td>
+<td class="formWidgetCell"><input id="mobile_large_image_path" name="mobile_large_image_path" size="100" title="mobile_large_image_path" type="text" uniqueid="602166257" value="" validation="type:text" /></td>
+</tr>
+<tr class="formWidgetRow" id="row-form-mobile_thumbnail_image_path">
+<td class="formWidgetLabelCell"><strong>Mobile Thumbnail Image Path</strong></td>
+<td class="formWidgetCell"><input id="mobile_thumb_image_path" name="mobile_thumb_image_path" size="100" title="mobile_thumb_image_path" type="text" uniqueid="602166258" value="" validation="type:text" /></td>
+</tr>
+<tr>
+<td><strong>Thumbnail Image<br /></strong>Select a thumbnail image that will be displayed next to this item in dynamic lists<br />Image dimensions: 125x125px</td>
+<td>
+<div class="image-chooser"><select model="items;filterID=69702140" name="thumb" title="Thumbnail Image" uniqueid="69463747" validation="type:string">loading...</select></div>
+</td>
+</tr>
+<tr>
+<td><strong>Small Image</strong><br />Image dimensions: 200x150px</td>
+<td>
+<div class="image-chooser"><select id="small" model="items;filterID=69702140" name="small" title="Small Image" uniqueid="128679070" validation="type:string">loading...</select></div>
+</td>
+</tr>
+<tr>
+<td><strong>Medium Image<br /></strong>Image dimensions: 400x200px</td>
+<td>
+<div class="image-chooser"><select id="medium" model="items;filterID=69702140" name="medium" title="Medium Image" uniqueid="128679069" validation="type:string">loading...</select></div>
+</td>
+</tr>
+<tr>
+<td><strong>Large Image<br /></strong>Select an image that will be displayed in the body of the attraction<br />Image dimensions: 500x350px</td>
+<td>
+<div class="image-chooser"><select id="large" model="items;filterID=69702140" name="large" title="Image" uniqueid="69463746" validation="type:string">loading...</select></div>
+</td>
+</tr>
+<tr>
+<td><strong>Top Image</strong></td>
+<td>
+<div class="image-chooser"><select id="top_image" model="items;filterID=69702140" name="top_image" title="Top Image" uniqueid="542709325" validation="type:string">loading...</select></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><strong>Location</strong> &nbsp;</td>
+<td>
+<div class="frontleaf-editor" id="location_text" name="location_text" title="Location Text" validation="type:text;config:basicwithchoosers" height="250" uniqueid="69464540"><textarea name="location_text" uniqueid="69464540" validation="type:text;config:basicwithchoosers"></textarea></div>
+</td>
+</tr>
+<tr>
+<td><strong>Contact </strong><br /><strong><span style="color: #ff0000;">(NOT USED 2015)</span></strong></td>
+<td><input name="contact" size="60" title="Contact" type="text" uniqueid="69469247" validation="type:text" /></td>
+</tr>
+<tr>
+<td><strong>Website </strong><br /><strong style="color: #ff0000;"><span style="color: #ff0000;">(NOT USED 2015)</span></strong></td>
+<td><input name="website" size="70" title="Website" type="text" uniqueid="69469248" validation="type:text" /></td>
+</tr>
+<tr>
+<td>Restroom</td>
+<td><select id="restroom" name="restroom" title="Restroom" uniqueid="503096919" validation="type:string"><option label="Yes" value="yes">Yes</option><option label="No" value="no">No</option></select></td>
+</tr>
+<tr>
+<td><strong>Photo Gallery </strong><br /><strong><span style="color: #ff0000;">(NOT USED 2015)</span></strong></td>
+<td>
+<div class="related-item-chooser"><select model="items;filterID=69674100" name="photo_gallery" title="Photo Gallery" uniqueid="98670182" validation="type:string">loading...</select></div>
+</td>
+</tr>
+<tr>
+<td><strong>Related Links </strong><br /><strong><span style="color: #ff0000;">(NOT USED 2015)</span></strong></td>
+<td>
+<div class="related-item-chooser"><select model="items;filterID=67785870" name="related_links" title="Related Links" uniqueid="69469250" validation="type:string">loading...</select></div>
+</td>
+</tr>
+<tr>
+<td><strong>Related Multimedia </strong><br /><strong><span style="color: #ff0000;">(NOT USED 2015)</span></strong></td>
+<td>
+<div class="related-item-chooser"><select model="items;filterID=69164401" name="related_multimedia" title="Related Multimedia" uniqueid="69469251" validation="type:string">loading...</select></div>
+</td>
+</tr>
+<tr class="formWidgetRow" id="row-form-template">
+<td class="formWidgetLabelCell"><strong>Template </strong></td>
+<td class="formWidgetCell"><select model="templates" name="template" title="Template" validation="type:string;baseProperty:true"></select></td>
+</tr>
+<tr class="formWidgetRow" id="row-form-page_wrapper">
+<td class="formWidgetLabelCell"><strong>Page Wrapper</strong></td>
+<td class="formWidgetCell"><select model="wrappers" name="page_wrapper" title="Page Wrapper" validation="type:string;baseProperty:true"></select></td>
+</tr>
+</tbody>
+</table>

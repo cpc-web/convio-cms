@@ -1,0 +1,7 @@
+<div class="templateRepeat"><t:set id="speciesClass" value="'species species_all'"></t:set> <t:if test="popular_families.length &gt; 0"> <t:list id="popular_families"> <t:set id="speciesClass" value="concat(speciesClass, concat(' popular_', name))"></t:set> </t:list> </t:if> <t:if test="tree_attributes.length &gt; 0"> <t:list id="tree_attributes"> <t:set id="speciesClass" value="concat(speciesClass, concat(' attribute_', name))"></t:set> </t:list> </t:if> <t:if test="park_area.length &gt; 0"> <t:list id="park_area"> <t:set id="speciesClass" value="concat(speciesClass, concat(' where_', name))"></t:set> </t:list> </t:if>
+<div class="panel panel-default ${speciesClass}">
+<div class="panel-body"><t:if test="large.length &gt; 0"> <a href="${url}"> <img class="img-responsive" src="${large.url}" /> </a> <br /> </t:if>
+<h4 class="species-title">${common_name}<br /><em>${scientific_name}</em></h4>
+</div>
+</div>
+</div>
