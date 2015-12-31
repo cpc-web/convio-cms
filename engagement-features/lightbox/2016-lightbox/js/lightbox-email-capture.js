@@ -47,6 +47,7 @@
               submittedFlag = true;
               submitOptimizelyEvent('email_signup_lightbox');
               ga('send', 'event', 'Email Sign-up', 'Email Sign-up', 'email_signup_lightbox');
+              $('#captureModal').modal('hide');
 
             } else {
               $('#formSubmit').show();
@@ -90,7 +91,7 @@
       
       $('#lbox_register_form').attr('action', 'javascript:void(0);');
       $('.closeModal').click(function() {
-        $('#captureModal').modal('hide')
+        $('#captureModal').modal('hide');
       });
     });
   });
