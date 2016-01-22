@@ -1,20 +1,20 @@
 /*///////////////////////////////////////////*/
 /*//////////// ALL SCREENS //////////////////*/
 /*//////////////////////////////////////////*/
-#captureModal.modal .close {
+.modal .close {
   opacity: inherit;
 }
 
-#captureModal.modal .close:hover {
+.modal .close:hover {
   opacity: inherit;
 }
 
-#captureModal.modal .modal-footer {
+.modal .modal-footer {
   border-top: 0;
   padding: 0 20px;
 }
 
-#captureModal.modal .modal-header {
+.modal .modal-header {
   border-bottom: 0;
 }
 
@@ -22,7 +22,7 @@
 /*/////////////// DESKTOP ///////////////////*/
 /*///////////////////////////////////////////*/
 @media only screen and (min-width: 768px) {
-  #captureModal.modal .btnSignUpLightbox {
+  .modal .btnSignUpLightbox {
     width: 23%;
     height: 39px;
     background-color: #e20034;
@@ -39,11 +39,11 @@
     line-height: 2;
   }
 
-  #captureModal.fade.in {
+  .fade.in {
     background-color: rgba(0, 0, 0, .7);
   }
 
-  #captureModal.modal input {
+  .modal input {
     width: 36%;
     height: 40px;
     border-radius: 5px;
@@ -52,13 +52,13 @@
     margin-right: 5px;
   }
 
-  #captureModal.modal .modal-content {
+  .modal .modal-content {
     background-size: 500px;
     max-width: 500px;
     margin: 0 auto;
   }
-
-  #captureModal.modal .modal-footer {
+  
+  .modal .modal-footer {
     color: #636466;
     font-size: 18px;
     font-weight: normal;
@@ -69,7 +69,7 @@
     margin-top: 0;
   }
 
-  #captureModal.modal .modal-header {
+  .modal .modal-header {
     background: white url('http://cpc.convio.net/images/fall-2015/central-park-mall-in-winter.jpg');
     border: 10px solid white;
     height: 300px;
@@ -77,12 +77,12 @@
     padding: 15px 15px 0;
   }
 
-  #captureModal.modal .modal-header .close {
+  .modal .modal-header .close {
     margin-top: -20px;
-    margin-right: -20px;
+    margin-right: -10px;
   }
 
-  #captureModal.modal .modal-title {
+  .modal .modal-title {
     margin: 0;
     text-align: center;
     font-size: 40px;
@@ -95,8 +95,10 @@
             text-shadow: 1px 2px 1px black;
   }
 
-  #captureModal.modal .sign-up-row {
-    margin: 5px -3px;
+  .modal .sign-up-row {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
   }
 }
 /*///////////////////////////////////////////*/
@@ -109,7 +111,7 @@
 /*/////////////// MOBILE ////////////////////*/
 /*///////////////////////////////////////////*/
 @media only screen and (max-width: 767px) {
-  #captureModal.modal .bottom-link {
+  .modal .bottom-link {
     margin-top: 20px;
     text-align: center;
     font-size: 14px;
@@ -121,12 +123,12 @@
     text-shadow: none;
   }
 
-  #captureModal.modal .bottom-link:hover, .modal .bottom-link:focus {
+  .modal .bottom-link:hover, .modal .bottom-link:focus {
     color: #636466;
     text-decoration: none;
   }
 
-  #captureModal.modal .btnSignUpLightbox {
+  .modal .btnSignUpLightbox {
     width: 100%;
     height: 50px;
     background-color: #e20034;
@@ -142,11 +144,11 @@
             box-shadow: 0 1px 0 #666666;
   }
 
-  #captureModal.fade.in {
+  .fade.in {
     background-color: rgba(255, 255, 255, .9);
   }
 
-  #captureModal.modal input {
+  .modal input {
     width: 100%;
     margin-bottom: 20px;
     height: 50px;
@@ -157,7 +159,7 @@
     border: 1px solid #A3A4A2;
   }
 
-  #captureModal.modal .modal-content {
+  .modal .modal-content {
     background-color: transparent;
     border-radius: 0;
     outline: 0;
@@ -168,11 +170,11 @@
     margin: 0 auto;
   }
 
-  #captureModal.modal .modal-dialog {
+  .modal .modal-dialog {
     margin: 0;
   }
 
-  #captureModal.modal .modal-footer {
+  .modal .modal-footer {
     font-size: 18px;
     color: white;
     text-align: center;
@@ -183,11 +185,11 @@
     padding: 5px 30px;
   }
 
-  #captureModal.modal .modal-header {
+  .modal .modal-header {
     padding: 0 15px;
   }
 
-  #captureModal.modal .modal-header .close {
+  .modal .modal-header .close {
     margin-top: 0;
     margin-right: 20px;
     font-size: 50px;
@@ -199,7 +201,7 @@
     color: #636466;
   }
 
-  #captureModal.modal .modal-title {
+  .modal .modal-title {
     font-size: 30px;
     color: #636466;
     font-family: 'Titling Gothic FB Cond', sans-serif;
@@ -211,7 +213,7 @@
     padding: 0 20px;
   }
 
-  #captureModal.modal .sign-up-row {
+  .modal .sign-up-row {
     margin-top: 10px;
   }
 }
@@ -220,23 +222,22 @@
 /*///////////////////////////////////////////*/
 
 /*///////////////////////////////////////////*/
-/*/////////// LARGER SCREENS ////////////////*/
+/*///////// LARGER/TABLET SCREENS ///////////*/
 /*///////////////////////////////////////////*/
 @media only screen and (min-width: 550px) and (max-width: 767px) {
-  #captureModal.modal .sign-up-row {
+  .modal .sign-up-row {
     margin: 10px 20px;
   }
 }
 /*///////////////////////////////////////////*/
-/*/////////// END IPHONE 4/5 ////////////////*/
+/*/////// END LARGER/TABLET SCREENS /////////*/
 /*///////////////////////////////////////////*/
-
 
 /*///////////////////////////////////////////*/
 /*///////////// IPHONE 4/5 //////////////////*/
 /*///////////////////////////////////////////*/
 @media only screen and (max-width: 330px) {
-  #captureModal.modal .modal-title {
+  .modal .modal-title {
     font-size: 25px;
     padding: 0 5px;
   }
