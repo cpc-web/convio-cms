@@ -1,0 +1,588 @@
+<!-- feb 29 2016 updates to tours with tab structure -->
+<link href="http://cpc.convio.net/cpc-eventix/tours-2015.css" rel="stylesheet" type="text/css" />
+<div id="urid" style="display: none">${param.urid}</div>
+<!-- LOAD all parent and child events first -->
+<div id="parentXML" style="display: none;">
+  <!-- FILTER "Parent Events - Tours" where type = Tours; template: Tours Listing -->
+  <div class="templateComponent" id="templatelist-716268895" style="display: inline;"></div>
+</div>
+<div id="eventXML" style="display: none;">
+  <!-- FILTER "#Events, App Feed, next 12 weeks" where date = 12 weeks incl today; template: All-tour page display list -->
+  <div class="templateComponent" id="templatelist-716268896" style="display: inline;"></div>
+</div>
+<div id="parentPopovers" style="display: none;"></div>
+<div id="landingTour" style="display: none;"></div>
+<div id="landingParent" style="display: none;"></div>
+<div id="vcStaff" style="display: none;"></div>
+<div id="isAnon" style="display: none;">true</div>
+<div id="isMember" style="display: none;">no</div>
+
+<!-- <div class="tours-container"> -->
+<div class="tours-container">
+  <div id="topCopy">
+    <p>
+      Learn the story of the Park's history, design, and ecology, and get an insider's look at the world's greatest urban park.  Plus, Official Central Park Tours are the only tours that help support the care of Central Park!
+    </p>
+    <p>
+      Groups of seven or more must schedule a <a href="/preview!www.centralparknyc.org/tours#custom_tours_tab">Group Tour</a>.
+    </p>
+  <!--   <p>
+      Receive discounts on ticketed tours and access to members-only tours: <a href="https://secure2.convio.net/cpc/site/SPageServer?pagename=membership&amp;s_src=website&amp;s_subsrc=RD_guided_tours" target="_blank" class="btn btn-primary">Become a member of the Conservancy</a>
+    </p> -->
+     <p>
+      <strong>Receive discounts on ticketed tours and access to members-only tours by <a href="https://secure2.convio.net/cpc/site/SPageServer?pagename=membership&amp;s_src=website&amp;s_subsrc=RD_guided_tours" target="_blank">becoming a member of the Conservancy</a></strong>.
+    </p>
+   <!--  <p>
+      Space is limited; advance registration suggested for ticketed tours. Groups of seven or more must schedule a <a href="/preview!www.centralparknyc.org/2014/tours/guided-tours/custom-tours.html">Group Tour</a>.
+    </p> -->
+  </div>
+  <div class="row">
+    <div class="col-xs-12"><!--tabs-->
+      <ul class="nav nav-filter nav-tabs" id="guided_tours_tabs" role="tablist">
+        <li class="active li-100" role="presentation">
+          <a href="#guided_tours_tab" id="guided_tab_link" aria-controls="guided_tours_tab" role="tab" data-toggle="tab">
+            <span class="hidden-xs font2em">Guided Tours&nbsp;&nbsp;<i class="fa fa-caret-down"></i></span>
+            <span class="visible-xs xs-text">Guided Tours&nbsp;&nbsp;<i class="fa fa-caret-down"></i></span>
+          </a>
+        </li>
+        <li class="li-100" role="presentation">
+          <a href="#schedule_tours_tab" id="schedule_tab_link" aria-controls="schedule_tours_tab" role="tab" data-toggle="tab">
+            <span class="hidden-xs font2em">Schedule&nbsp;&nbsp;<i class="fa fa-caret-down"></i></span>
+            <span class="visible-xs xs-text">Schedule&nbsp;&nbsp;<i class="fa fa-caret-down"></i></span>
+          </a>
+        </li>
+        <li class="li-100" role="presentation">
+          <a href="#custom_tours_tab" id="custom_tab_link" aria-controls="custom_tours_tab" role="tab" data-toggle="tab">
+            <span class="hidden-xs font2em">Custom and Group&nbsp;&nbsp;<i class="fa fa-caret-down"></i></span>
+            <span class="visible-xs xs-text">Custom and Group Tours&nbsp;&nbsp;<i class="fa fa-caret-down"></i></span>
+          </a>
+        </li>
+        <li class="li-100" role="presentation">
+          <a href="#self_tours_tab" id="self_tab_link" aria-controls="self_tours_tab" role="tab" data-toggle="tab">
+            <span class="hidden-xs font2em">Self-Guided&nbsp;&nbsp;<i class="fa fa-caret-down"></i></span>
+            <span class="visible-xs xs-text">Self-Guided Tours&nbsp;&nbsp;<i class="fa fa-caret-down"></i></span>
+          </a>
+        </li>
+        <li class="search-tab li-100">
+          <form role="search" class="navbar-form navbar-left"><div class="form-group"><input id="guided_tours_search" type="search" class="form-control" placeholder="Search" value="" onkeyup="filterTours('search',this.value);" data-toggle="tab"></form>
+        </li>
+      </ul>
+    </div><!--end tabs-->
+  </div><!-- /.row -->
+
+
+  <div class="row"><!-- main content -->
+    <div class="col-xs-12"><!-- attraction panes -->
+      <div class="tab-content">
+        <div id="guided_tours_tab" class="tab-pane active" role="tabpanel">
+          <p class="tab-intro-text">
+            Have questions or need more information?  View our <a href="/preview!www.centralparknyc.org/tours/tour-policies.html" target="_blank">Tour Policies</a> and <a href="/preview!www.centralparknyc.org/tours/tour-faq.html" target="_blank">FAQ</a>.
+          </p>
+          <div class="tilerow" id="guided_tour_panels"></div>
+        </div> <!-- /.guided_tours_tab -->
+        <div id="schedule_tours_tab" class="tab-pane" role="tabpanel">
+          <p class="tab-intro-text">
+            <strong>
+              See upcoming Guided Tours below or download a schedule:&nbsp;
+              <a href="/preview!www.centralparknyc.org/assets/pdfs/tours/Tours_JanFeb_Listing_2016.pdf" target="_blank"><i class="fa fa-download"></i>&nbsp;&nbsp;January and February 2016 Schedule</a>
+            </strong>  
+          </p>
+        <div id="tourListHorizontal" style="margin-top: 20px;"></div>
+        <div class="btnDates showMore">See More Dates &gt;</div>
+        <div id="cancelled" style="float: left; width: 250px; display: none;">
+          <h2>SORRY, THIS TOUR IS CANCELLED.</h2>
+          <br /><br /><br />
+        </div>
+        <div id="soldOut" style="float: left; width: 250px; display: none;">
+          <h2>SORRY, THIS TOUR IS SOLD OUT.</h2>
+        </div>
+      </div> <!-- /.schedule_tours_tab -->
+
+      <!-- custom tours tab -->
+      <div id="custom_tours_tab" class="tab-pane" role="tabpanel"> 
+        <p class="tab-intro-text">Central Park Conservancy offers one-of-a-kind, private walking tours of the world's greatest urban park. Whether you're visiting New York or are a local resident, see the City's backyard from a new perspective through a custom tour designed to suit your interest and schedule.  Gift certificates available.</p>
+        <p>For questions, contact us at: <a href="mailto:tours@centralparknyc.org">tours@centralparknyc.org</a> or <b>212.360.2726</b>.</p>
+        <p>
+          <a id="custom-tours-info">
+            Interested? Here's how to book a tour&nbsp;&nbsp;<i class="fa fa-custom-tours fa-custom-right fa-caret-right"></i> <i class="fa fa-custom-tours fa-custom-down fa-caret-down"></i>
+          </a>
+        </p>
+        <div id="more-info-custom-tours">
+          <p><strong>Custom Tour Hours:</strong><br/>Custom tours are available seven days per week, 9:00 am - 6:00 pm (9:00 am - 3:00 pm during winter months), based on availability.</p>
+          <p><strong>Booking and Payment:</strong><br/>Please submit a <a href="/preview!www.centralparknyc.org/tours/custom-tours-request.html" target="_blank">Booking Request</a> to schedule a custom tour. A Central Park Conservancy staff member will contact you within 3 business days to customize and schedule your tour. Full payment is required at the time of booking confirmation. We accept American Express, MasterCard, and Visa.</p>
+          <p><strong>Cancellation Policy for Custom Tours:</strong><br/>Tours take place rain or shine, however, they may be cancelled in the case of <a href="/preview!www.centralparknyc.org/tours/tour-policies.html" target="_blank">extreme weather conditions</a>. In the event of an extreme weather cancellation, the tour may be rescheduled or refunded.</p>
+          <p>Payments are non-refundable if customer cancels after the tour has been confirmed.</p>
+        </div>
+        <div class="row">
+          <!-- custom walking tours -->
+          <div class="col-md-6 col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4>Custom Walking Tours</h4>
+                <p>
+                  <img src="/preview!www.centralparknyc.org/assets/images/2014/tours/custom-tour-central-park-conservancy.jpg" class="img-responsive self-guided-img" alt="Central Park App">
+                </p>
+                <p>
+                  Our most popular option, these walking tours cover a variety of topics and Park sites.  Learn the inside scoop on the Park's history and design, landscape architecture, most popular sites, and many other features that make Central Park so unique.
+                  <ul>
+                    <li>Tours available throughout the year; weekdays and weekends</li>
+                    <li>Up to 90 minutes: starting at $150</li>
+                    <li>Up to 120 minutes: starting at $200</li>
+                    <li>Available to individuals and groups up to 40 people</li>
+                    <li>Discount available for seniors, students, not-for-profit organizations, and members of Central Park Conservancy</li>
+                    <li>Please request your tour at least 3 weeks in advance</li>
+                  </ul>
+                </p>
+                <p class="text-center">
+                  <a href="/preview!www.centralparknyc.org/tours/custom-tours-request.html" class="btn btn-primary" type="button" target="_blank">Book a Custom Tour</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- historian tours -->
+          <div class="col-md-6 col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4>Tour with Central Park Conservancy Historian and Photographer</h4>
+                <p>
+                  <img src="/preview!www.centralparknyc.org/assets/images/2014/tours/custom-tour-historian-central-park-conservancy.jpg" class="img-responsive self-guided-img" alt="Central Park App">
+                </p>
+                <p>
+                  Learn stories and secrets from the Park's amazing history, and appreciate some little-known landscapes and sculptures on this tour with Sara Cedar Miller, Central Park Conservancy's official historian and photographer for thirty years.
+                </p>
+                <p>
+                  Sara's work has been featured in publications and television around the world.  Her bestselling books include <i>Central Park, An American Masterpiece</i>; <i>Seeing Central Park</i>; and <i>Strawberry Fields</i>.  You will receive one of these as a thank you for taking Sara's custom tour.
+                  <ul>
+                    <li>Driving or walking tours throughout the year; weekdays only</li>
+                    <li>Up to 60 minutes: starting at $500</li>
+                    <li>Up to 90 minutes: starting at $750</li>
+                    <li>Up to 2 hours: starting at $1000</li>
+                    <li>Walking tours available for individuals and groups of up to 20 people</li>
+                    <li>Driving tours available for individuals and groups up to 6 people</li>
+                    <li>Please request your tour at least 3 weeks in advance</li>
+                  </ul>
+                </p>
+                <p class="text-center">
+                  <a href="/preview!www.centralparknyc.org/tours/custom-tours-request.html" class="btn btn-primary" type="button" target="_blank">Book a Custom Tour</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- conservatory garden tours -->
+          <div class="col-md-6 col-xs-12" id="cons-garden">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4>Conservatory Garden Tour with Garden Curators</h4>
+                <p>
+                  <img src="/preview!www.centralparknyc.org/assets/images/2014/tours/custom-tour-conservatory-garden.jpg" class="img-responsive self-guided-img" alt="Conservatory Garden Custom Tour at Central Park">
+                </p>
+                <p>
+                  Tour the Park's only formal garden, known for its extraordinary floral displays, through the eyes of its curator and director Diane Schaub, and her experienced staff.
+                </p>
+                <p>
+                  With over twenty years of experience managing and designing for the Garden, Diane offers a singular perspective on its history and design, as well as some of the special plantings found in this six-acre urban gem.  Hundreds of annual and perennial varieties, eighty-year old crabapple all&eacute;es, and exceptional fountain sculptures are among the Garden's treasures.
+                  <ul>
+                    <li>Tours available April through November; weekdays only</li>
+                    <li>Up to 90 minutes: starting at $250.00</li>
+                    <li>Available for individuals and groups up to 40 people</li>
+                    <li>Discounts available for seniors, students, not-for-profit organizations, and members of Central Park Conservancy</li>
+                    <li>Please request your tour at least 3 weeks in advance</li>
+                  </ul>
+                </p>
+                <p class="text-center">
+                  <a href="/preview!www.centralparknyc.org/tours/custom-tours-request.html" class="btn btn-primary" type="button" target="_blank">Book a Custom Tour</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+      <!-- /custom tours tab -->
+
+      <div id="self_tours_tab" class="tab-pane" role="tabpanel">
+        <p class="tab-intro-text">See Central Park on your own schedule with these self-guided tours highlighting the Park's history, design, ecology, and horticulture.</p>
+        <div class="row">
+          <div id="walking_tours_info" class="col-md-6 col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h4>Walking Tours</h4>
+                <p>
+                 <img src="/preview!www.centralparknyc.org/assets/images/2014/tours/walking-tour-central-park.jpg" class="img-responsive self-guided-img" alt="Central Park App">
+                </p>
+                <p>If you are unable to join one of our scheduled tours, you might be interested in one of our downloadable, self-guided tours described below. Each tour will take you to the most visited and the most popular sites in Central Park. Select your language below to download PDF guides for each tour.<br><br></p>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-10 col-md-9"><p><strong>North End Tour</strong><br>Features the Conservatory Garden, Harlem Meer, Fort Clinton, and the Charles A. Dana Discovery Center.</p>
+                </div>
+                <div class="col-xs-12 col-sm-2 col-md-3">
+                  <p class="text-center">
+                    <a class="download-pdf" onclick="ga('send', 'event', 'PDFmaps', 'Download', 'NorthEnd-En', {'nonInteraction': 1});" href="/preview!www.centralparknyc.org/assets/pdfs/maps/selftour-north2.pdf" target="_blank" >English</a></br>
+                    <a class="download-pdf" onclick="ga('send', 'event', 'PDFmaps', 'Download', 'NorthEnd-Es', {'nonInteraction': 1});" href="/preview!www.centralparknyc.org/assets/pdfs/maps/selftour-north-spanish.pdf" target="_blank" >Espa&ntilde;ol</a></br>
+                    <a class="download-pdf" onclick="ga('send', 'event', 'PDFmaps', 'Download', 'NorthEnd-Fr', {'nonInteraction': 1});" href="/preview!www.centralparknyc.org/assets/pdfs/maps/selftour-north-french.pdf" target="_blank" >Fran&ccedil;ais</a></br>
+                  </p>
+                </div>
+                <div class="col-xs-12 clearfix"><hr></div>
+                <div class="col-xs-12 col-sm-10 col-md-9"><p><strong>Mid-Park Tour</strong><br>Did you know that there really are turtles in Turtle Pond?  Or that Belvedere Castle has been a weather center since 1919?</p></div>
+                <div class="col-xs-12 col-sm-2 col-md-3">
+                  <p class="text-center">
+                    <a class="download-pdf" onclick="ga('send', 'event', 'PDFmaps', 'Download', 'Middle-En', {'nonInteraction': 1});" href="/preview!www.centralparknyc.org/assets/pdfs/maps/selftour-middle.pdf" target="_blank">English</a></br>
+                    <a class="download-pdf" onclick="ga('send', 'event', 'PDFmaps', 'Download', 'Middle-Es', {'nonInteraction': 1});" href="/preview!www.centralparknyc.org/assets/pdfs/maps/selftour-middle-spanish.pdf" target="_blank">Espa&ntilde;ol</a></br>
+                    <a class="download-pdf" onclick="ga('send', 'event', 'PDFmaps', 'Download', 'Middle-Fr', {'nonInteraction': 1});" href="/preview!www.centralparknyc.org/assets/pdfs/maps/selftour-middle-french.pdf" target="_blank">Fran&ccedil;ais</a></br>
+                  </p>
+                </div>
+                <div class="col-xs-12 clearfix"><hr></div>
+                <div class="col-xs-12 col-sm-10 col-md-9"><p><strong>South End Tour</strong><br>Features the Dairy, Chess and Checkers House, Wollman Rink, the Pond and Hallett Nature Sanctuary.</p></div>
+                <div class="col-xs-12 col-sm-2 col-md-3">
+                  <p class="text-center">
+                    <a class="download-pdf" onclick="ga('send', 'event', 'PDFmaps', 'Download', 'South-En', {'nonInteraction': 1});" href="/preview!www.centralparknyc.org/assets/pdfs/maps/selftour-south.pdf" target="_blank">English</a></br>
+                    <a class="download-pdf" onclick="ga('send', 'event', 'PDFmaps', 'Download', 'South-Es', {'nonInteraction': 1});" href="/preview!www.centralparknyc.org/assets/pdfs/maps/selftour-south-spanish.pdf" target="_blank">Espa&ntilde;ol</a></br>
+                    <a class="download-pdf" onclick="ga('send', 'event', 'PDFmaps', 'Download', 'South-Fr', {'nonInteraction': 1});" href="/preview!www.centralparknyc.org/assets/pdfs/maps/selftour-south-french.pdf" target="_blank">Fran&ccedil;ais</a></br>
+                  </p>
+                </div>
+                <div class="col-xs-12 clearfix"><hr></div>
+                <div class="col-xs-12 col-sm-9 col-md-8"><p><strong>Woodland Tour</strong><br>Get a taste of the Adirondacks without leaving New York City.</p></div>
+                <div class="col-xs-12 col-sm-3 col-md-4">
+                  <p class="text-center">
+                    <a class="download-pdf" onclick="ga('send', 'event', 'PDFmaps', 'Download', 'NorthWoods', 'opt_value', {'nonInteraction': 1});" href="/preview!www.centralparknyc.org/assets/pdfs/maps/north-woods-self-guided-tour.pdf" target="_blank" >The North Woods</a></br>
+                    <a class="download-pdf" onclick="ga('send', 'event', 'PDFmaps', 'Download', 'TheRamble', {'nonInteraction': 1});" href="/preview!www.centralparknyc.org/assets/pdfs/maps/ramble-self-guided-tour.pdf" target="_blank">The Ramble</a></br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+        <div id="central_park_app_info" class="col-md-6 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h4>Central Park App</h4>
+              <p>
+                <img src="/preview!www.centralparknyc.org/assets/images/2014/tours/central-park-app.jpg" class="img-responsive self-guided-img" alt="Central Park App">Enjoy a complete guide to the Park in the palm of your hand. Use our app to find out what events are happening in the Park, plan a visit, and browse or search over 200 things to see in the Park. The Central Park App features include:
+              </p>
+              <p>
+                Enjoy a complete guide to the Park in the palm of your hand. Use our GPS-enabled app to navigate your way, find out what events are happening, and learn about more than 200 things to see in the Park. Other features include celebrity audio tours, social media integration, and featured souvenirs. 
+              </p>
+              <p class="text-center"><a class="appstore-button" target="_blank" href="https://itunes.apple.com/us/app/central-park/id396515130"><img alt="iTunes appstore button" src="/preview!www.centralparknyc.org/assets/images/images-without-section/appstore-button.png"></a>&nbsp;&nbsp;&nbsp;<a class="appstore-button" target="_blank" href="https://play.google.com/store/apps/details?id=com.cpc.centralpark"><img alt="Android googleplay market button" src="/preview!www.centralparknyc.org/assets/images/images-without-section/googleplay-button.png"></a></p>
+            </div>
+          </div>
+        </div>
+        <div id="central_park_tree_walk" class="col-md-6 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h4>Tree Walks</h4>
+              <p>
+                <img src="/preview!www.centralparknyc.org/assets/images/2014/tours/conservatory-water-tree-walk.jpg" class="img-responsive self-guided-img" alt="Central Park Tree Walks and Tree Guides">
+              </p>
+              <p>
+               Wander at your own pace along six scenic routes that highlight scores of trees, each marked with identification plaques on the trunk or on a nearby sign in the ground.
+              </p>  
+              <p class="text-center"><a class="btn btn-lg btn-primary" href="/preview!www.centralparknyc.org/tree-guide/#tree-walk-tab">View Tree Walks</a></p>
+            </div>
+          </div>
+        </div>
+        <div id="celebrity_audio_guide_info" class="col-md-6 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h4>Celebrity Audio Guide</h4>
+              <p>
+                <img src="/preview!www.centralparknyc.org/assets/images/2014/tours/celebrity-audio-guide.jpg" class="img-responsive self-guided-img" alt="Central Park Conservancy Celebrity Audio Guide">
+              </p>
+              <p>
+                On your next walk through Central Park, access our Audio Guide featuring <strong>commentary by New York's most famous celebrities</strong>.  This audio guide is also integrated in the <a href="/preview!www.centralparknyc.org/tours/self-guided/mobile-app.html">Official Central Park App</a>.
+              </p>  
+              <p class="text-center"><a class="btn btn-lg btn-primary" href="/preview!www.centralparknyc.org/tours/self-guided/audio-guide.html">Listen to Audio Guide</a></p>
+            </div>
+          </div>
+        </div>
+        <div id="virtual_tour_info" class="col-md-6 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h4>Virtual Tour</h4>
+              <p>
+               <img src="/preview!www.centralparknyc.org/assets/images/2014/tours/virtual-tour-central-park.jpg" class="img-responsive self-guided-img" alt="Central Park App">
+              </p>
+             <p>
+                Visit Central Park, wherever you are, with this guided, virtual walk that starts at West 72nd Street, and takes you through the heart of the Park. Compatible with desktops, tablets, and smartphones; no download needed. For best experience, use Firefox or Google Chrome.
+              </p>  
+              <p class="text-center"><a class="btn btn-lg btn-primary" href="http://www.youvisit.com/tour/centralpark?pl=v">Start Virtual Tour</a> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /main content -->
+</div>
+<div id="guided_tour_panel_template" style="display:none;">
+  <div class="panel panel-default guided-tour-panel">
+    <div class="panel-body">
+      <h4 class="guided-tour-parent-name">
+        <a class="guided-tour-parent-link" href="#" target="_blank"></a>
+      </h4>
+      <a class="guided-tour-parent-link" href="#" target="_blank">
+        <img class="img-responsive guided-tour-image" src="">
+      </a>
+      <p class="guided-tour-description"></p>
+      <p class="guided-tour-near"><span class="guided-tour-label">Near:&nbsp;</span></p>
+      <p class="guided-tour-highlights"><span class="guided-tour-label">Highlights:&nbsp;</span></p>
+      <div class="guided-tour-dates">
+        <span class="guided-tour-label">Upcoming Dates &amp; Times:&nbsp;</span><br/>
+        <div class="guided-tour-dates-table"></div>
+      </div>
+      <p class="text-center">
+        <a href="#" class="btn btn-primary guided-tour-parent-link" type="button" target="_blank">More Info</a>
+      </p>
+    </div>
+  </div>
+</div>
+<div id="guided_tour_dates_template" style="display:none;">
+  <div class="guided-tour-date-row">
+    <a class="guided-tour-date-link" href="#" target="_blank"></a>
+  </div>
+</div>
+<script type="text/javascript">// <![CDATA[
+jQuery.noConflict();
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+if(  document.addEventListener  ) {
+  //alert("you got IE9 or greater");
+  var dunny = 0;
+  //window.location='http://www.centralparknyc.org/visit/tours/guided-tours/guided-tours-info.html';
+} else {
+  window.location='http://www.centralparknyc.org/visit/tours/guided-tours/guided-tours-info.html';
+}
+function filterTours( filterType, filterName ) {
+  if (filterType && filterType == 'search' && typeof filterSearch == 'function') {
+    jQuery('#guided_tour_panels div.panel.guided-tour-panel').hide();
+    filterSearch(filterName);
+    return true;
+  } else {
+    console.log('filterTours called with filterType="'+filterType+'", filterName="'+filterName+'".');
+    return false;
+  }
+}
+function filterSearch(filterText) {
+  if (filterText) {
+    var filterTest = new RegExp(filterText, 'i');
+    jQuery('#guided_tour_panels div.panel.guided-tour-panel div.panel-body').each(function() {
+      if (jQuery(this).children('h4.guided-tour-parent-name').children('a.guided-tour-parent-link')[0].innerHTML.match(filterTest) || jQuery(this).children('p.guided-tour-description')[0].innerHTML.match(filterTest)) {
+        jQuery(this).parent('div.panel.guided-tour-panel').show();
+      }
+    });
+  } else {
+    jQuery('#guided_tour_panels div.panel.guided-tour-panel').show();
+  }
+}
+function showMore() {
+  jQuery('#tourListHorizontal div.hidden').each(function(index) {
+    if(index < 10) {
+      jQuery(this).removeClass('hidden').addClass('show');
+    }
+  });
+}
+(function($) {
+  // hide the "search" tab if not on the guided_tours_tab
+  $('#guided_tours_tabs a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+    if ($(e.target).attr('id') == "guided_tab_link") {
+      $('#guided_tours_tabs .search-tab').show();
+    } else {
+      $('#guided_tours_tabs .search-tab').hide();
+    }
+  });
+
+  // add href to url - for marketing landing pages, etc
+  $(function(){
+    var hash = window.location.hash;
+    hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+    $('.nav-tabs a').click(function (e) {
+      $(this).tab('show');
+      var scrollmem = $('body').scrollTop();
+      window.location.hash = this.hash;
+      $('html,body').scrollTop(scrollmem);
+    });
+  });
+
+  function initEvents() {
+    window.parentEvents = [];
+    var parentEventElems = $('#parentXML').find('event');
+    // create array of parent events
+    parentEventElems.each(function(index) {
+      var mylites = $(this).find('highlights').html().toString();
+      var myslice = mylites.slice(0,-7);
+      //console.log('raw: ',mylites,' - sliced: ',myslice);
+      parentEvents.push({
+        'id':    $(this).find('id').text(),
+        'name':  $(this).find('name:first').text(),
+        'img':   $(this).find('imgurl').text(),
+        'near':   $(this).find('near').html(),
+        'hilites':   myslice,
+        'url':   $(this).find('url').text() || '#',
+        'desc':  $(this).find('short_description').html(),
+        'categories': $(this).find('categories:first').find('category'),
+        'location': $(this).find('location').html(),
+        'children': []
+      });
+    });
+    var childEventElems = $('#eventXML').find('event');
+    var allTours = [];
+    // add child events to parents
+    childEventElems.each(function(index) {
+      var childEvent = {
+        'id':    $(this).find('id').text(),
+        'name':  $(this).find('name:first').text(),
+        'url':   $(this).find('url').text(),
+        'date':  $(this).find('date').text(),
+        'time':  $(this).find('time').text(),
+        'start': new Date($(this).find('date').text()+' '+$(this).find('time').text().split(' to ')[0]),
+        'type':  $(this).find('type').text(),
+        'cost':  $(this).find('ticketed').text(),
+        'parent': $(this).find('parent').text()
+      };
+      for (var o=0; o<parentEvents.length; o++) {
+        if (parentEvents[o].id && parentEvents[o].id == childEvent.parent) {
+          childEvent.parentName = parentEvents[o].name;
+          parentEvents[o].children.push(childEvent);
+        }
+      };
+      if (childEvent.type == 'Tours') {
+        var myTS = Date.parse(childEvent.date+" "+childEvent.time.split(' to ')[0]);
+        if (isNaN(myTS) == false) {
+          var myStartTime = new Date(myTS);
+        } else {
+          var myTS = Date.parse(childEvent.date);
+          if (isNaN(myTS) == false) {
+            var myStartTime = new Date(myTS);
+          } else {
+            var myStartTime = new Date(childEvent.date+" "+childEvent.time.split(' to ')[0]);
+          }
+        }
+        var myUrid = $('#urid').text();
+        if (myUrid) {
+          childEvent.url += '?s_src=mobileAd&s_subsrc='+myUrid;
+        }
+        var clas = (index % 2) == 0 ? 'odd' : 'even';
+        var hideclas = index < 12 ? 'show' : 'hidden';
+        var myRow = '<div class="row lineTours '+hideclas+' '+clas+'"><div style="display: none;">Event ID: '+childEvent.id+'</div><div class="col-md-2 dateColumn" id="dateRow'+childEvent.id+'">' + childEvent.date + '<br />'+childEvent.time+'</div><div class="col-md-3 nameColumn h4">'+(childEvent.parentName ? childEvent.parentName : childEvent.name)+'</div><div class="col-md-2"><a href="'+childEvent.url+'">';
+        if (childEvent.cost == 'Ticketed') {
+          myRow += '<div class="btnPurchase purchaseTix" data-event-id="'+childEvent.id+'" data-contentwrapper="#popoverID'+childEvent.parent+'" data-toggle="popover">Info and Tickets</div></a></div></div>';
+        } else {
+          myRow += '<div class="btnMore moreInfo" data-event-id="'+childEvent.id+'" data-contentwrapper="#popoverID'+childEvent.parent+'" data-toggle="popover">More Info</div></a></div></div>';
+        }
+        allTours.push({ "date": myStartTime, "row": myRow });
+      }
+    });
+    // sort allTours and add to #tourListHorizontal
+    allTours.sort(function(a,b) { if (a.date && b.date) { if (a.date > b.date) return 1; else return -1; } else { return 0; } });
+    $(allTours).each(function() {
+      $('#tourListHorizontal').append(this.row);
+    });
+    // sort parentEvents alphabetically by name
+    parentEvents.sort(function(a,b) {
+      if (a.name && b.name && a.name != b.name) return (a.name < b.name ? -1 : 1);
+      else return parseInt(a.id) - parseInt(b.id);
+    });
+    // iterate through parentEvents to create a "panel" from the template and append it to #guided_tour_panels
+    for (var p=0; p<parentEvents.length; p++) {
+      var newParent = $('#guided_tour_panel_template div.guided-tour-panel').clone();
+      newParent.attr('id', 'guided_tour_parent_'+parentEvents[p].id);
+      newParent.find('.guided-tour-parent-name .guided-tour-parent-link').text(parentEvents[p].name);
+      newParent.find('.guided-tour-parent-link').attr('href', parentEvents[p].url);
+      newParent.find('.guided-tour-image').attr('src', parentEvents[p].img);
+      newParent.find('.guided-tour-description').html(parentEvents[p].desc);
+      if (parentEvents[p].near && parentEvents[p].near.length > 0) {
+        newParent.find('.guided-tour-near').append(parentEvents[p].near);
+      } else {
+        newParent.find('.guided-tour-near').hide();
+      }
+      if (parentEvents[p].hilites && parentEvents[p].hilites.length > 0) {
+        newParent.find('.guided-tour-highlights').append(parentEvents[p].hilites);
+      } else {
+        newParent.find('.guided-tour-highlights').hide();
+      }
+      parentEvents[p].children.sort(function(a,b) {
+        if (a.start && b.start && a.start != b.start) {
+          return (a.start < b.start ? -1 : 1);
+        } else if (a.name && b.name && a.name != b.name) {
+          return (a.name < b.name ? -1 : 1);
+        } else return parseInt(a.id) - parseInt(b.id);
+      });
+      if (parentEvents[p].children.length > 0) {
+        //newParent.find('.guided-tour-cost').append(parentEvents[p].children[0].cost);
+        for (var c=0; c<parentEvents[p].children.length; c++) {
+          var childRow = $('#guided_tour_dates_template .guided-tour-date-row').clone();
+          childRow.find('.guided-tour-date-link').attr('href',parentEvents[p].children[c].url);
+          childRow.find('.guided-tour-date-link').text(parentEvents[p].children[c].date + ' - ' + parentEvents[p].children[c].time);
+          if (c > 2) childRow.addClass('hidden');
+          newParent.find('.guided-tour-dates .guided-tour-dates-table').append(childRow);
+        }
+      } else {
+        newParent.addClass('hidden');
+      }
+      $('#guided_tour_panels').append(newParent);
+      $('#parentPopovers').append('<div class="popoverHide" id="popoverID'+parentEvents[p].id+'"><img class="popImage" src="'+parentEvents[p].img+'" /><p><b>'+parentEvents[p].name+'</b><br />Location: '+parentEvents[p].location+'<br /><br />'+parentEvents[p].desc+'</div>');
+    }
+  }
+  
+  ////////////////////////////// END TICKET APP METHODS /////////////////////////
+  
+  // function setUrid(urid) {
+  //  $.ajax({
+  //    url: window.location+'&s_urid='+urid,
+  //    success: function(data, textStatus, jqxhr){
+  //      console.log('ajax sesh variable success...');
+  //      console.log(data.responseText);
+  //      console.log(textStatus);
+  //      console.log(jqxhr);
+  //    },
+  //    error: function(data, textStatus, jqxhr){
+  //      console.log('ajax sesh variable failure...');
+  //      console.log(data.responseText);
+  //      console.log(textStatus);
+  //      console.log(jqxhr);
+  //    }
+  //  });
+  //  setCookie('CPC_mobilead',urid);
+  // }
+  
+  /* onload */
+  $(function() {
+    myUrid = $('#urid').text();
+    if (myUrid) { 
+      setUrid(myUrid);
+    }
+    initEvents();
+    $('.showMore').click(showMore);
+    
+    //  ========  POPOVER CONTROL for event details display *********************
+    $('*[data-toggle="popover"]').popover({
+      container: 'body',
+      placement: 'auto top',
+      trigger: 'hover',
+      html: 'true',
+      delay: {show: 50, hide: 300},
+      content:function(){
+        return $($(this).data('contentwrapper')).html();
+      }
+    });
+
+    $('#custom-tours-info').on('click', function(){
+      $('#more-info-custom-tours').slideToggle();
+      $('.fa-custom-tours').toggle();
+    });
+
+
+  });
+})(jQuery);
+// ]]></script>
+
+
+<script type="text/javascript">// <![CDATA[
+  (function($){ 
+    $(document).ready(function() {
+      var breadFolder = $('a.breadcrumb:eq(1)').text();
+      if(breadFolder == 'Things to See and Do') {
+        $('#breadLink').text('See & Do');
+      } else {
+        $('#breadLink').text(breadFolder);
+      }
+    });
+  })(jQuery);
+// ]]></script>

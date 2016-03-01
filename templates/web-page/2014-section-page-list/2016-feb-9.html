@@ -1,6 +1,6 @@
-<!-- DEFAULT PAGE TEMPLATE v9 - 11Sept2014 -->
+<!-- DEFAULT SECTION PAGE TEMPLATE v6 -->
 <!-- top image, sidebar with nav, breadcrumbs, slideshow in main content area -->
-<!-- fixed top image modern art -->
+<!-- ADD jQuery cycle for slideshow functionality -->
  
  <style type="text/css"> /*This style has to be in nav.css */
 	.scaption {
@@ -9,37 +9,38 @@
 		z-index:100;
 		padding: 0 20px;
 	}
-	
-	.sectionToggle { 
-		left: 30%;
-		width: 40%;
-		margin: 0 auto;
-		position: absolute;
-		top: 0;
-		z-index: 1000;
+	.lpslides { 
+        height:380px; 
+        width:750px !important; 
+        background-color:gray; 
+        margin: 0px 15px 50px 15px;
+       }
+	.lpslides img{ 
+        margin: 0px;
+       }
+
+	#slidenav {
+		z-index:200; 
+        position:relative;
+		top:-30px;
+        right:0px;
+        float:right;
+		background-color: #000000;
 	}
+
+	#slidenav a { color: #FFFFFF; margin: 0 5px; }
+	#slidenav a:hover { color:#77bd42; margin: 0 5px; }
+	ul#lpslideshow { height:380px; }
+	ul#lpslideshow li { height:380px; list-style-type: none; }
+
 	#subnav li { position: relative; }
 	#subnav li ul { display: none; position: absolute; left: 60%; top: 0;  width: 100%; background-color: #666666; z-index: 1000; padding: 10px; border: 1px solid #777777; }
 	#subnav li ul:after, #subnav li ul:before { right: 100%; top: 18px; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
 	#subnav li ul:after { border-color: rgba(102, 102, 102, 0); border-right-color: #666666; border-width: 9px; margin-top: -9px; }
-	#subnav li ul:before { border-color: rgba(å204, 204, 204, 0); border-right-color: #777777; border-width: 11px; margin-top: -11px; }
+	#subnav li ul:before { border-color: rgba(204, 204, 204, 0); border-right-color: #777777; border-width: 11px; margin-top: -11px; }
 	#subnav li:hover ul { display: block; }
-	.imageSection { margin-bottom: 15px; }
-
 	.dropdownShare:hover .dropdown-menu-share { display: block; }
 	.dropdown-menu-share { min-width: 180px; margin: 0; }
-	a.carousel-control, a.carousel-control, a.carousel-control:link { color: #ffffff; }
-	.carousel-indicators { 
-		margin-left: 0;
-		padding-left: 6px;
-		padding-right: 6px;
-		background-color: #000000;
-		width: auto;
-		bottom: 0;
-		left: auto;
-		right: 0;
-	}
-	.img-responsive { max-width: 100%; }
 	
 	@media(max-width:767px) {
 		.left-nav {
@@ -50,8 +51,8 @@
 		.secondnav { visibility: visible; }
 		.top-image { visibility: hidden; height: 55px; }
 	}
+	
 </style>
-
 
  	<!-- Top Image	================================================== -->
     <div class="top-image">
@@ -66,10 +67,7 @@
 	</script>
     </div>
     <!-- /.top-image -->
-
-	<div class="sectionToggle">
-		<button data-target=".left-nav" data-toggle="collapse" class="navbar-toggle knockout hidden-md hidden-lg"><span id="breadLink">Placeholder</span><span class="caret"></span></button>
-	</div>
+<!-- NEXT: change this to <t:value id="top-image"></t:value> OR random from /redesign/img/header/insidepages5_2014.jpg -->
 
     <!--- /////////// EVERYTHING ABOVE THIS POINT IS COMMON TO ALL INTERIOR TEMPLATES ////////////// -->
 
@@ -77,16 +75,14 @@
         <div class="container">
             <div class="row two-column-content">
                 <!-- all page content -->
-                <div class="col-sm-3 left-nav knockout collapse navbar-collapse"> 
+                <div class="col-md-3 left-nav knockout collapse navbar-collapse"> 
 					<!-- begin section nav -->
 					<div style="display: inline;" class="templateComponent" id="sectionNavigation-497998852"></div>
-
-<!--div class=templateComponent id="sectionNavigation-167468350" style="DISPLAY: inline"></div-->
 					<!-- end section nav -->
                 </div>
                 <!-- /.left-nav -->
 
-                <div class="col-sm-9 right-content">
+                <div class="col-md-9 right-content">
                     <div class="row content-utilities" id="">
                         <div class="col-md-9 col-md-offset-1">
 							<div id="breadcrumbs" class="hidden-xs">
@@ -94,7 +90,7 @@
 							</div>
                         </div>
 
-                        <div class="col-md-2">	
+                    <div class="col-md-2">	
 							<div class="dropdownShare" style="float:right;">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 								SHARE <span class="glyphicon glyphicon-share"></span>
@@ -106,29 +102,38 @@
 									<a href="https://plus.google.com/share?url=${url}" onclick="javascript:window.open(this.href,
 									  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cpc.convio.net/redesign/img/cpc/gplus.png" alt="Google +"/></a>
 									<a  href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-shape="round" ><img src="http://cpc.convio.net/redesign/img/cpc/pinterest.png" alt="Pinterest" style="margin-top:5px;"/></a> </p>
+									<!--<p>Share by Email:
+									<input type="text" name="email" value="Your email here" class="emailShareInput"></p>-->
 								</li>
 							</ul>
                         </div>
 
                     </div>
-                    <!-- /.row #content-utilities <span class="caret"></span>-->
+				<!-- /.row #content-utilities <span class="caret"></span>-->
 
 
                     <div class="row" id="main-content">
                         <div class="col-md-11 col-md-offset-1">
                             <h1 class="titleSection">${title}</h1>
-
-						<hr class="lineInside"/>
-							<div class="imageSection">
-								<!-- BEGIN Slideshow - if content exists in CMS -->
-								<t:if test="slides.length > 0">
-									<div class="row">
-										<div class="col-md-12 col-xs-12">
-											<div id="page-carousel" class="carousel slide" data-ride="carousel">
-												<ol class="carousel-indicators">
-												</ol>
-												<div class="carousel-inner">
-													<t:list id="slides">
+							<hr class="lineInside"/>
+                            <!-- BEGIN Slideshow - if content exists in CMS -->
+                            <t:if test="slides.length > 0">
+                            	<t:if test="slides.length > 1">
+									<script type="text/javascript" src="http://cpc.convio.net/js/jquery-cycle-min.js"></script>
+									<script type="text/javascript">
+										(function($){
+											$(document).ready(function() {
+												$('#lpslideshow').cycle({fx: 'fade', pager: '#slidenav', pause: 1, speed: 600, timeout: 5000, cleartype:  true, cleartypeNoBg:  true });
+											});
+										})(jQuery);
+									</script>
+								</t:if>
+								<div class="row">
+									<div class="col-md-12 col-xs-12">
+										<div class="lpslides">
+											<ul id="lpslideshow" class="clearfix">
+												<t:list id="slides">
+													<li>
 														<t:list id="new_window">
 															<t:if test="name == 'no'">
 																<t:set id="nwin" value="'0'" />
@@ -137,48 +142,43 @@
 																<t:set id="nwin" value="'1'" />
 															</t:if>
 														</t:list>
-														<div class="item slideimg">
-															<t:if test="isNull(link_url)"><img class="img-responsive" src="${url}" alt="${alt_txt}" /></t:if>
-															<t:if test="!isNull(link_url) && nwin == '1'"><a href="${link_url}" target="_blank"><img "img-responsive" src="${url}" alt="${alt_text}" /></a></t:if>
-															<t:if test="link_url != null && nwin == '0'"><a href="${link_url}"><img "img-responsive" src="${url}" alt="${alt_text}" /></a></t:if>
-															<t:if test="!isNull(description)"><div class="scaption">${description}</div></t:if>
-														</div>
-													</t:list>
-												</div>
-												<a class="left carousel-control" href="#page-carousel" role="button" data-slide="prev">
-													<span class="glyphicon glyphicon-chevron-left"></span>
-												</a>
-												<a class="right carousel-control" href="#page-carousel" role="button" data-slide="next">
-													<span class="glyphicon glyphicon-chevron-right"></span>
-												</a>
-											</div>
-											
-											<script type="text/javascript">// <![CDATA[
-												(function($){
-													$('.slideimg').each(function(index) {
-														var first = '' + ((index == 0) ? 'active' : '' );
-														$(this).addClass(first);
-														$('.carousel-indicators').append('<li data-target="#page-carousel" class="'+first+'" data-slide-to="'+index+'"></li>');
-													});
-												})(jQuery);
-											// ]]></script>
+														<t:if test="isNull(link_url)"><img src="${url}" alt="${alt_txt}" /></t:if>
+														<t:if test="!isNull(link_url) && nwin == '1'"><a href="${link_url}" target="_blank"><img src="${url}" alt="${alt_text}" /></a></t:if>
+														<t:if test="link_url != null && nwin == '0'"><a href="${link_url}"><img src="${url}" alt="${alt_text}" /></a></t:if>
+														<t:if test="!isNull(description)"><div class="scaption">${description}</div></t:if>
+													</li>
+												</t:list>
+											</ul>
+											<div id="slidenav"></div>
 										</div>
 									</div>
-								</t:if><!-- END slideshow -->
-							
-								<t:else><!-- large image -->
-									<t:if test="large.length > 0">
-										<img class="img-responsive" src="${large.url}" />
-									</t:if>
-								</t:else><!-- END large image -->
-							</div><!-- /.imageSection -->
+								</div>
+							</t:if><!-- END slideshow -->
 							${body}
-                        </div><!-- /.col-md-11 col-md-offset-1a-->
-                    </div><!-- /.row #main-content -->
-                </div><!-- /.right-content-->
-            </div><!-- /.row two-column-content -->
-        </div><!-- /.container -->
-    </div><!-- /.MainBody -->
+							<!-- CENTER FEATURES - LIST -->
+							<t:if test="related_links.length > 0"><div class="lpfeatures clearfix">
+								<t:list id="related_links"><div class="row clearfix">
+									<t:if test="type == 'Link'"><a href="${link_url}" class="title"></t:if><t:else><a href="${url}"></t:else>
+										<t:if test="thumb.length > 0"><t:list id="thumb"><img src="${url}" alt="${alt_text}" width="${imagewidth}" height="${imageheight}" /></t:list></t:if>
+										<h3>${title}</h3>
+										${description}
+									</a>
+								</div></t:list>
+							</div></t:if>
+							<!-- END CENTER FEATURES - LIST -->
+                        </div>
+                        <!-- /.col-md-11 col-md-offset-1a-->
+                    </div>
+                    <!-- /.row #main-content -->
+
+                </div>
+                <!-- /.right-content-->
+            </div>
+            <!-- /.row two-column-content -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.MainBody -->
 	
 	<script type="text/javascript">// <![CDATA[
 		(function($){	
