@@ -1,0 +1,171 @@
+<!-- removed top image from template -->
+<style type="text/css"><!--
+/*This style has to be in nav.css */
+
+#subnav li { position: relative; }
+#subnav li ul { display: none; position: absolute; left: 60%; top: 0;  width: 100%; background-color: #666666; z-index: 1000; padding: 10px; border: 1px solid #777777; }
+#subnav li ul:after, #subnav li ul:before { right: 100%; top: 18px; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+#subnav li ul:after { border-color: rgba(102, 102, 102, 0); border-right-color: #666666; border-width: 9px; margin-top: -9px; }
+#subnav li ul:before { border-color: rgba(204, 204, 204, 0); border-right-color: #777777; border-width: 11px; margin-top: -11px; }
+#subnav li:hover ul { display: block; }
+.dropdownShare:hover .dropdown-menu-share { display: block; }
+.dropdown-menu-share { min-width: 180px; margin: 0; }
+
+.left-nav.collapse {
+display: none !important;
+}
+.photo_credit {
+margin-top: 30px;
+}
+.properties {
+border-collapse: collapse;
+margin: 40px 0;
+}
+.properties td:first-child {
+font-weight: bold;
+width: 120px;
+}
+
+@media(max-width:767px) {
+.left-nav {
+min-height: 30px;
+padding: 0px;
+width: 100%;
+}
+.secondnav { visibility: visible; }
+.top-image { visibility: hidden; height: 55px; }
+}
+
+
+.tree-location { 
+background-color: #D1D3D4;
+margin: 10px auto;
+max-width: 500px;
+padding: 10px;
+}
+
+.imgdisplay {
+margin-bottom: 30px;
+}
+
+.desc {
+margin-bottom: 30px;
+}
+
+.attributes, .attribute {
+margin-top: 15px;
+}
+.attribute img {
+margin-right: 10px;
+margin-top: 4px;
+max-width: 25%;
+}
+.attribute h3 {
+margin-top: 0;
+}
+
+@media screen and (max-width: 767px) {
+.attribute img {
+max-width: 35%;  
+}
+}
+--></style>
+<div id="rdURL" style="display: none;">${redirect_url}</div>
+<script type="text/javascript">// <![CDATA[
+  var element = document.getElementById('rdURL');
+  // innerText for IE, textContent for other browsers
+  var text = element.innerText || element.textContent;
+  if ( text != '') { window.location=text; }
+// ]]></script>
+
+<!--- /////////// EVERYTHING ABOVE THIS POINT IS COMMON TO ALL INTERIOR TEMPLATES ////////////// -->
+<div class="main-body">
+<div class="container">
+<div class="row two-column-content"><!-- all page content -->
+<div class="col-md-3 left-nav knockout collapse navbar-collapse"><!-- begin section nav -->
+<div class="templateComponent" id="sectionNavigation-497998852" style="display: inline;"></div>
+<!-- end section nav --></div>
+<!-- /.left-nav -->
+<div class="col-md-9 right-content">
+<div class="row content-utilities" id="">
+<div class="col-md-9 col-md-offset-1">
+<div class="hidden-xs" id="breadcrumbs"><t:include id="breadcrumb-167468353"></t:include></div>
+</div>
+</div>
+<div class="col-md-2">
+<div class="dropdownShare"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> SHARE <span class="glyphicon glyphicon-share"></span> </a>
+<ul class="dropdown-menu-share">
+<li>
+<p>Share On <a href="https://www.facebook.com/sharer/sharer.php?u=${url}"> <img alt="Facebook" src="http://cpc.convio.net/redesign/img/cpc/facebook.png" /> </a> <a href="https://twitter.com/share"> <img alt="Twitter" src="http://cpc.convio.net/redesign/img/cpc/twitter.png" /> </a> <a href="https://plus.google.com/share?url=${url}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"> <img alt="Google +" src="http://cpc.convio.net/redesign/img/cpc/gplus.png" /> </a> <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-shape="round"> <img alt="Pinterest" src="http://cpc.convio.net/redesign/img/cpc/pinterest.png" style="margin-top: 5px;" /> </a></p>
+<p>Share by Email:</p>
+<input class="emailShareInput" name="email" type="text" value="Your email here" /></li>
+</ul>
+</div>
+</div>
+<!-- /.row #content-utilities <span class="caret"></span>-->
+<div class="row" id="main-content">
+<div class="col-md-11 col-md-offset-1">
+<h2 class="titleSection">${title}</h2>
+<hr class="lineInside" /><!-- copied from old attractions template - restyle -->
+<div class="row">
+<div class="col-sm-12 col-xs-12"><!-- main column -->
+<div class="imgdisplay"><img alt="${title}" class="img-responsive" src="${large.url}" />
+</div>
+<!-- Tree Species Specific Info -->${body}
+<p class="desc"></p>
+<p><strong>Common Name:</strong> ${common_name}</p>
+<p><strong>Scientific Name:</strong> <em>${scientific_name}</em></p>
+<p><strong>Origin:</strong> ${origin}</p>
+<p><strong>Family:</strong> ${family}</p>
+<p><strong>Size:</strong> ${size_range}</p>
+<p><strong>Form:</strong> ${form}</p>
+<p><strong>Culture:</strong> ${culture}</p>
+</div>
+</div>
+<div class="row attributes">
+<div class="col-xs-12 attribute">
+<h3><t:value id="leaves_title"></t:value></h3>
+<img class="pull-left" src="${leaves_image.url}" />
+<p><t:value id="leaves_description"></t:value></p>
+</div>
+<div class="col-xs-12 attribute">
+<h3><t:value id="flower_title"></t:value></h3>
+<img class="pull-left" src="${flower_image.url}" />
+<p><t:value id="flower_description"></t:value></p>
+</div>
+<div class="col-xs-12 attribute">
+<h3><t:value id="fruit_title"></t:value></h3>
+<img class="pull-left" src="${fruit_image.url}" />
+<p><t:value id="fruit_description"></t:value></p>
+</div>
+<div class="col-xs-12 attribute">
+<h3><t:value id="bark_title"></t:value></h3>
+<img class="pull-left" src="${bark_image.url}" />
+<p><t:value id="bark_description"></t:value></p>
+</div>
+</div>
+<div class="photo_credit">${photo_credits}</div>
+</div>
+</div>
+<!--/main content--></div>
+</div>
+</div>
+</div>
+<!-- /container -->
+
+<!-- END old template--><!-- /.col-md-11 col-md-offset-1a--><!-- /.row #main-content --><!-- /.right-content--><!-- /.row two-column-content --><!-- /.container --><!-- /.MainBody -->
+
+<script type="text/javascript">// <![CDATA[
+    (function($){ 
+      $(document).ready(function() {
+        var breadFolder = $('a.breadcrumb:eq(1)').text();
+        if(breadFolder == 'Things to See and Do') {
+          $('#breadLink').text('See & Do');
+        } else {
+          $('#breadLink').text(breadFolder);
+        }
+      });
+    })(jQuery);
+// ]]></script>
+
+<!-- /main body -->

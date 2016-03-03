@@ -1,3 +1,4 @@
+<!-- remove top image -->
 <!-- fixed slideshow gray on side  -->
 <style type="text/css"> /*This style has to be in nav.css */
 .scaption {
@@ -99,18 +100,7 @@ height: 55px;
 }
 </style>
 <!-- Top Image  ================================================== -->
-<div class="top-image">
-  <t:if test="top_image.length > 0">
-    <img id="top_image" alt="Top Image" class="img-responsive hidden" src="${top_image.url}" />
-  </t:if>
-  <t:else>
-    <t:set id="randomTopImg" value="random(5)+1" />
-      <img id="top_image" alt="Top Image" class="img-responsive hidden" src="http://cpc.convio.net/redesign/img/header/insidepages${randomTopImg}_2014.jpg" />
-  </t:else>
-  <script type="text/javascript">
-  jQuery(document).ready(function() { jQuery('#top_image').removeClass('hidden'); });
-  </script>
-</div>
+
 <!-- /.top-image -->
 
 <div class="sectionToggle">
