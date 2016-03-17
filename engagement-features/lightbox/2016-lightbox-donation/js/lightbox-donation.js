@@ -10,7 +10,7 @@
       $('#captureModal').modal('show').on('hidden.bs.modal', function () {
         if (!submittedFlag) {
           console.log('fired close function form NOT submitted...');
-          setCookie("cpc-2016", "close", 30);
+          setCookie("cpc-2016", "close", 1);
         } else {
           console.log('fired close function WITH form submitted...');
         }
