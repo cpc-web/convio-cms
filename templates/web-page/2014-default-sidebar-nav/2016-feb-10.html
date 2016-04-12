@@ -1,4 +1,4 @@
-<!-- DEFAULT PAGE TEMPLATE v9 - 11Sept2014 -->
+<!-- DEFAULT PAGE TEMPLATE  Feb 2016 - wrapper refresh -->
 <!-- top image, sidebar with nav, breadcrumbs, slideshow in main content area -->
 <!-- fixed top image modern art -->
  
@@ -22,7 +22,7 @@
 	#subnav li ul { display: none; position: absolute; left: 60%; top: 0;  width: 100%; background-color: #666666; z-index: 1000; padding: 10px; border: 1px solid #777777; }
 	#subnav li ul:after, #subnav li ul:before { right: 100%; top: 18px; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
 	#subnav li ul:after { border-color: rgba(102, 102, 102, 0); border-right-color: #666666; border-width: 9px; margin-top: -9px; }
-	#subnav li ul:before { border-color: rgba(å204, 204, 204, 0); border-right-color: #777777; border-width: 11px; margin-top: -11px; }
+	#subnav li ul:before { border-color: rgba(204, 204, 204, 0); border-right-color: #777777; border-width: 11px; margin-top: -11px; }
 	#subnav li:hover ul { display: block; }
 	.imageSection { margin-bottom: 15px; }
 
@@ -52,25 +52,6 @@
 	}
 </style>
 
-
- 	<!-- Top Image	================================================== -->
-    <div class="top-image">
-        <t:if test="top_image.length > 0">
-		<img id="top_image" alt="Top Image" class="img-responsive hidden" src="${top_image.url}" />
-	</t:if><t:else>
-		<t:set id="randomTopImg" value="random(5)+1" />
-		<img id="top_image" alt="Top Image" class="img-responsive hidden" src="http://cpc.convio.net/redesign/img/header/insidepages${randomTopImg}_2014.jpg" />
-	</t:else>
-	<script type="text/javascript">
-		jQuery(document).ready(function() { jQuery('#top_image').removeClass('hidden'); });
-	</script>
-    </div>
-    <!-- /.top-image -->
-
-	<div class="sectionToggle">
-		<button data-target=".left-nav" data-toggle="collapse" class="navbar-toggle knockout hidden-md hidden-lg"><span id="breadLink">Placeholder</span><span class="caret"></span></button>
-	</div>
-
     <!--- /////////// EVERYTHING ABOVE THIS POINT IS COMMON TO ALL INTERIOR TEMPLATES ////////////// -->
 
     <div class="main-body">
@@ -80,8 +61,6 @@
                 <div class="col-sm-3 left-nav knockout collapse navbar-collapse"> 
 					<!-- begin section nav -->
 					<div style="display: inline;" class="templateComponent" id="sectionNavigation-497998852"></div>
-
-<!--div class=templateComponent id="sectionNavigation-167468350" style="DISPLAY: inline"></div-->
 					<!-- end section nav -->
                 </div>
                 <!-- /.left-nav -->

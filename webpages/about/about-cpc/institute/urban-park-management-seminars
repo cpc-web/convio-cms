@@ -1,0 +1,182 @@
+<style>
+.bottom {
+  margin-top: 15px;
+}
+hr{
+  margin-bottom: 0;
+}
+.iframe-class {
+  border: 2px solid #68b247;
+  border-radius: 2px;
+  padding: 1em;
+  background-color: #f7f7f7;
+  margin-top: 1.5em;
+}
+input.btn.btn-primary.col-xs-12.col-sm-3.col-md-3 {
+  width: 100%;
+  margin-bottom: 1em;
+}
+.sem-btn {
+  color: #ffffff;
+  font-size: 16px;
+  border: solid #79bf43 0px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: 'Titling Gothic FB Cond', sans-serif;
+  border-radius: 2px;
+  background-color: #77BA59;
+  background-image: -webkit-linear-gradient(#77BA59, #548E39);
+  background-image: linear-gradient(#77BA59, #548E39);
+  height: 41px;
+  width: 100px;
+  vertical-align: middle;
+  margin-top: .5em;
+  min-width: 125px;
+}
+.sem-btn:hover, .sem-btn:active, .sem-btn:focus {
+  color: white;
+}
+.sem-date {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.sem-tix {
+  display: none;
+}
+</style>
+
+<!-- seminar 03 -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="sem-title">
+      <h3>Central Park Conservancy&rsquo;s Tree Care Program: Systems and Strategies</h3>
+    </div>
+    <div class="sem-date">
+      Thursday March 31, 2016 - 08:00 AM EST
+    </div>
+    <div class="sem-staff">
+      Russell Fredericks, Chief of Operations</br>
+      Joshua Galiley, Tree Crew Supervisor</br>
+    </div>
+    <button class="sem-btn btn" id="sem-03">Register Now</button>
+    <div class="sem-tix" id="sem-03-tix">
+      <iframe class='iframe-class' width='100%' height='600px' src='https://centralparkconservancy.thundertix.com/orders/new?performance_id=1593667' frameborder='0' scrolling='auto' marginheight='0' marginwidth='0' allowtransparency='true'></iframe>
+    </div>
+    <hr>
+  </div>
+</div>
+
+<!-- seminar 04 -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="sem-title">
+      <h3>Building a Strong Corporate Development Program</h3>
+    </div>
+    <div class="sem-date">
+      Thursday April 07, 2016 - 04:00 PM EST
+    </div>
+    <div class="sem-staff">
+      Katherine King, Director of Corporate Development
+    </div>
+    <button class="sem-btn btn" id="sem-04">Register Now</button>
+    <div class="sem-tix" id="sem-04-tix">
+      <iframe class='iframe-class' width='100%' height='600px' src='https://centralparkconservancy.thundertix.com/orders/new?performance_id=1593669' frameborder='0' scrolling='auto' marginheight='0' marginwidth='0' allowtransparency='true'></iframe>
+    </div>
+    <hr>
+  </div>
+</div>
+
+<!-- seminar 05 -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="sem-title">
+      <h3>Adopt-a-Bench, Endow-a-Tree: Raising Funds for Park Maintenance</h3>
+    </div>
+    <div class="sem-date">
+      Thursday April 21, 2016 - 04:00 PM EST
+    </div>
+    <div class="sem-staff">
+      Caitlin LaMorte, Development Manager of the Women&rsquo;s Committee
+    </div>
+    <button class="sem-btn btn" id="sem-05">Register Now</button>
+    <div class="sem-tix" id="sem-05-tix">
+      <iframe class='iframe-class' width='100%' height='600px' src='https://centralparkconservancy.thundertix.com/orders/new?performance_id=1593671' frameborder='0' scrolling='auto' marginheight='0' marginwidth='0' allowtransparency='true'></iframe>
+    </div>
+    <hr>
+  </div>
+</div>
+
+<!-- seminar 06 -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="sem-title">
+      <h3>A Walk in Shakespeare Garden: Designing and Caring for Horticultural Landscapes*</h3>
+    </div>
+    <div class="sem-date">
+      Thursday May 05, 2016 - 08:00 AM EST
+    </div>
+    <div class="sem-staff">
+      Larry Boes, Senior Zone Gardener
+    </div>
+    <button class="sem-btn btn" id="sem-06">Register Now</button>
+    <div class="sem-tix" id="sem-06-tix">
+      <iframe class='iframe-class' width='100%' height='600px' src='https://centralparkconservancy.thundertix.com/orders/new?performance_id=1593673' frameborder='0' scrolling='auto' marginheight='0' marginwidth='0' allowtransparency='true'></iframe>
+    </div>
+    <hr>
+  </div>
+</div>
+
+<!-- seminar 07 -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="sem-title">
+      <h3>Conserving the Natural Areas of New York City: A Conversation with the Natural Areas Conservancy</h3>
+    </div>
+    <div class="sem-date">
+      Thursday May 19, 2016 - 04:00 PM EST
+    </div>
+    <div class="sem-staff">
+      Natural Areas Conservancy staff</br>
+      John-Paul Catusco, Woodlands Manager
+    </div>
+    <button class="sem-btn btn" id="sem-07">Register Now</button>
+    <div class="sem-tix" id="sem-07-tix">
+      <iframe class='iframe-class' width='100%' height='600px' src='https://centralparkconservancy.thundertix.com/orders/new?performance_id=1593675' frameborder='0' scrolling='auto' marginheight='0' marginwidth='0' allowtransparency='true'></iframe>
+    </div>
+    <hr>
+  </div>
+</div>
+
+<!-- seminar 08 -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="sem-title">
+      <h3>A Zone Management Walking Tour: Caring for a Central Park Zone*</h3>
+    </div>
+    <div class="sem-date">
+      Thursday June 02, 2016 - 08:00 AM EST
+    </div>
+    <div class="sem-staff">
+      Conservancy Operations staff
+    </div>
+    <button class="sem-btn btn" id="sem-08">Register Now</button>
+    <div class="sem-tix" id="sem-08-tix">
+      <iframe class='iframe-class' width='100%' height='600px' src='https://centralparkconservancy.thundertix.com/orders/new?performance_id=1593677' frameborder='0' scrolling='auto' marginheight='0' marginwidth='0' allowtransparency='true'></iframe>
+    </div>
+    <hr>
+  </div>
+</div>
+
+<div class="row bottom">
+  <p>*Seminar will take place in the Park. You will receive a confirmation email with the meeting location for the Seminar in advance.</p>
+</div>
+<script>
+(function($){
+  $('.sem-btn').on("click", function(){
+    var mySemId = $(this).attr('id');
+    var mySem = "#" + mySemId + "-tix";
+    $(mySem).fadeToggle();
+  });
+})(jQuery);
+</script>

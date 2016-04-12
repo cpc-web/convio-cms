@@ -1,0 +1,121 @@
+<!-- PARENT EVENT FREE page - full display template - based on event full 2015 v6 (new tour interface) - 1 May 2015 -->
+<!-- Mary Edits June 2015 -->
+<link href="http://cpc.convio.net/cpc-eventix/tourpage_styles.css" rel="stylesheet" type="text/css" /> <link href="http://cpc.convio.net/site/PageServer?pagename=event_tix_styles&amp;pgwrap=n" rel="stylesheet" type="text/css" />
+<div id="eventXML" style="display: none;"><!-- FILTER "#Events - Tours for parent event pages" where type = tour && date = 6 weeks incl today; template: All-tour page display list -->
+<div class="templateComponent" id="templatelist-634917137" style="display: inline;"></div>
+</div>
+<div id="thisID" style="display: none;">${id}</div>
+
+
+<!--- /////////// EVERYTHING ABOVE THIS POINT IS COMMON TO ALL INTERIOR TEMPLATES ////////////// -->
+<div id="ieBug" style="display: none;">false</div>
+<div class="main-body">
+<div class="container">
+<div class="row">
+<div class="col-sm-2 col-sm-offset-10 utilityRow" id="share">
+<div class="dropdownShare" style="float: right;"><a class="dropdown-toggle" href="#" data-toggle="dropdown"> SHARE <span class="glyphicon glyphicon-share"></span> </a>
+<ul class="dropdown-menu-share">
+<li>
+<p>Share On <a href="https://www.facebook.com/sharer/sharer.php?u=${url}"><img alt="Facebook" src="http://cpc.convio.net/redesign/img/cpc/facebook.png" /></a> <a href="https://twitter.com/share"><img alt="Twitter" src="http://cpc.convio.net/redesign/img/cpc/twitter.png" /></a> <a href="https://plus.google.com/share?url=${url}" onclick="javascript:window.open(this.href,
+                  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img alt="Google +" src="http://cpc.convio.net/redesign/img/cpc/gplus.png" /></a> <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-shape="round"><img alt="Pinterest" src="http://cpc.convio.net/redesign/img/cpc/pinterest.png" style="margin-top: 5px;" /></a></p>
+<!--<p>Share by Email:
+                <input type="text" name="email" value="Your email here" class="emailShareInput"></p>--></li>
+</ul>
+</div>
+</div>
+<!-- .col-sm-2 --></div>
+<!-- .row -->
+<div class="row">
+  <div class="col-sm-6 col-xs-12 eventContent">
+    <div id="rdURL" style="display: none;">${redirect_url}</div>
+    <script type="text/javascript">// <![CDATA[
+                var element = document.getElementById('rdURL');
+                // innerText for IE, textContent for other browsers
+                var text = element.innerText || element.textContent;
+                if ( text != '') { window.location=text; }
+              
+    // ]]></script>
+    <div class="mainImageEvent" id="mainImage" class="img-responsive">${image}</div>
+    </div>  
+  <!-- .eventContent -->
+  <div class="col-sm-6 col-xs-12 myTix">
+    <h1 class="headlineEvent">${title}</h1>
+    <div id="eventLocation">
+      Location: <a href="${related_location.url}"><span id="eventLocationName">${location}</span></a>
+    </div>
+    <br />
+    <p>${body}</p>
+  </div>
+  <div id="eventTicketed" style="display: none;">${ticketed_event_type}</div>
+    <div id="thunderID" style="display: none;">${thundertix_id}</div>
+  <div class="col-xs-12">
+    <div id="tixSection" style="display: none;">
+      <p>Purchase tickets below.<br /><strong>Central Park Conservancy Members:</strong> use your discount code in the "Coupons" section when you check out.<br />Not a member? <a href="https://secure2.convio.net/cpc/site/SPageServer?pagename=membership&amp;s_src=website&amp;s_subsrc=tour_tix_purchase_membership_ask" target="_blank">Join Today!</a></p>
+      <p class="smalltext"><em class="fa fa-lock"></em>&nbsp;&nbsp; E-commerce transaction performed over secure network via <a href="http://www.thundertix.com" target="_blank">Thundertix</a></p>
+      <div id="tixInterface">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<!--col-sm-6--></div>
+<!-- .row --></div>
+<!-- .main-body --></div>
+<!-- .container -->
+<p></p>
+<!--script type="text/javascript">
+  function isSecure() {
+    return false;
+  }
+</script-->
+<p></p>
+<!--script src="http://support.centralparknyc.org/site/PageNavigator/ticket_security.html?pgwrap=n"></script-->
+<script type="text/javascript">// <![CDATA[
+(function($) {
+  $(function() {
+    // create Date object for current time and compare to 
+    /*var nowDate = new Date();
+    var utc = nowDate.getTime() + (nowDate.getTimezoneOffset() * 60000);
+    var nowDateNYC = new Date(utc - 14400000);
+    var myDate = $('#eventDateForm').text().toString();
+    var myTime = $('#eventStartTime').text().toString();
+    var startString = myDate.concat(' ').concat(myTime);
+    var myStart = Date.parse(startString);
+    //alert('now : '+nowDate+' now raw: '+Date.parse(nowDate).toString()+' now timezone adjusted: '+nowDateNYC+' now timezone adjusted raw: '+Date.parse(nowDateNYC).toString()+' event date: '+startString+' raw event date: '+myStart);
+    if (myStart < nowDate) {
+      $('#startPast').show();
+      $('#memDonWrap').hide();
+    } */
+    var myTicketed = $('#eventTicketed').text();
+    console.log('myTicketed:',myTicketed);
+    if (myTicketed == 'Ticketed' || myTicketed == 'RSVP') {
+      var frameID = $('#thunderID').text();
+      //console.log('frameID:',frameID);
+      var frameSource = '<iframe class="iframe-class" width="100%" height="600px" frameborder="0" scrolling="auto" src="https://centralparkconservancy.thundertix.com/events/'+frameID+'/performances" marginheight="0" marginwidth="0" allowtransparency="true"></iframe>';
+      $('#tixSection').show()
+      $('#tixInterface').html(frameSource);
+    } else {
+      var anyEvents = false;
+      var myID = $('#thisID').text();
+      var childEventElems = $('#eventXML').find('event');
+      var eventDates = '<div><h2>UPCOMING DATES:</h2><br />';
+      // add child events to parents
+      childEventElems.each(function(index) {
+        var thisParentID = parseInt($(this).find('parent').text());
+        if ( myID == thisParentID) {
+          anyEvents = true;
+          var myUrl = $(this).find('url').text();
+          var myDate = $(this).find('date').text();
+          var myStart = new Date($(this).find('date').text()+' '+$(this).find('time').text().split(' to ')[0]);
+          var childEvent = '<a href="'+myUrl+'">'+myDate+' '+myStart+'</a><br />';
+          eventDates += childEvent;
+        }
+      });
+      if (anyEvents) {
+        eventDates += '</div>';
+      } else {
+        eventDates += 'No Upcoming Dates</div>';
+      }
+      $('#tixInterface').html(eventDates);
+    }
+  });
+})(jQuery);
+// ]]></script>f

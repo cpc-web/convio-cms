@@ -1,0 +1,436 @@
+body {
+background-color: white;
+font-family: 'Titling Gothic FB Narr', sans-serif;
+color: #333;
+font-size: 16px; 
+}
+.btn {
+color: #ffffff;
+font-size: 16px;
+border: solid #79bf43 0px;
+text-decoration: none;
+text-align: center;
+letter-spacing: 2px;
+font-family: 'Titling Gothic FB Cond', sans-serif;
+border-radius: 2px;
+background-color: #77BA59;
+background-image: -webkit-linear-gradient(#77BA59, #548E39);
+background-image: linear-gradient(#77BA59, #548E39);
+height: 41px;
+width: 30%;
+}
+.btn:link {
+color: white;
+text-decoration: none;
+}`
+.btn:visited {
+color: white;
+text-decoration: none;
+}
+.btn:focus {
+color: white;
+text-decoration: none;
+}
+.btn:hover {
+color: white;
+text-decoration: none;
+background-color: #68b247;
+background-image: -webkit-linear-gradient(#68b247, #406A2B);
+background-image: linear-gradient(#68b247, #406A2B);
+}
+.btn:active {
+color: white;
+text-decoration: none;
+}
+.btn-hero-donation {
+background-color: #E20034;
+background-image: -webkit-linear-gradient(#E20034, #B4002A);
+background-image: linear-gradient(#E20034, #B4002A);  
+}
+.btn-hero-donation:hover {
+background-color: #E20034;
+background-image: -webkit-linear-gradient(#E20034, #860020);
+background-image: linear-gradient(#E20034, #860020);
+}
+.btn-donation {
+background-color: #E20034;
+background-image: -webkit-linear-gradient(#E20034, #B4002A);
+background-image: linear-gradient(#E20034, #B4002A);
+width: 120px;
+}
+.btn-donation:hover {
+background-color: #E20034;
+background-image: -webkit-linear-gradient(#E20034, #860020);
+background-image: linear-gradient(#E20034, #860020);
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+padding-right: 0;
+padding-left: 0; 
+}
+.container {
+padding-left: 0;
+padding-right: 0;
+max-width: 100%; 
+}
+.followus-midpage {
+color: white;
+padding: 10px 0;
+display: table;
+width: 100%; 
+background-color: #A3A4A2;
+height: 55px;
+}
+.followus-midpage .fa-social-midpage {
+font-size: 22px; 
+}
+.followus-midpage a:link {
+color: white !important;
+text-decoration: none !important; 
+}
+.followus-midpage a:visited {
+color: white !important;
+text-decoration: none !important; 
+}
+.followus-midpage a:focus {
+color: white !important;
+text-decoration: none !important; 
+}
+.followus-midpage a:hover {
+color: #A4D28F !important;
+text-decoration: none !important; 
+}
+.followus-midpage a:active {
+color: white !important;
+text-decoration: none !important; 
+}
+.followus-midpage li {
+display: table-cell;
+text-align: center;
+line-height: 1.8;
+float: left;
+width: 20%;
+font-size: 20px;
+font-family: 'Titling Gothic FB Cond'; 
+}
+@media (max-width: 767px) {
+.followus-midpage li {
+width: 90%;
+margin-bottom: 20px; 
+} 
+}
+.followus-midpage ul {
+list-style: none; 
+} 
+form {
+margin-bottom: 0;
+}
+.hero {
+margin-bottom: 2em;
+background: url("http://cpc.convio.net/images/homepage/spring-guide-hero.jpg") no-repeat center;
+height: 250px;
+max-width: 100%; 
+}
+@media screen and (max-width: 767px) {
+.hero {
+margin-bottom: 0;
+height: 200px;
+background-size: 900px;
+background: url("http://cpc.convio.net/images/homepage/spring-guide-hero.jpg") no-repeat right;
+}
+}
+.hero .btn {
+margin-top: .2em;
+width: 80%;
+font-size: 18px; 
+}
+.hero .large-text {
+font-size: 30px;
+font-family: "Titling Gothic FB Cond", sans-serif;
+line-height: 1.1;
+margin-bottom: 5px; 
+}
+.hero .text {
+color: white;
+text-align: center;
+position: relative;
+}
+.hero .text-background {
+background-color: rgba(0, 0, 0, 0.6);
+width: 40%;
+height: 100%;
+padding: 1.2em;  
+}
+@media screen and (max-width: 1008px) {
+.hero .text-background {
+width: 50%;
+}  
+}
+@media screen and (max-width: 767px) {
+.hero .text-background {
+display: none;
+}  
+}
+.hero-mobile {
+background-color: #F7F7F7;
+text-align: center;
+padding: 1em;
+margin-bottom: 1em;  
+color: #636466; 
+}
+.hero-mobile .btn {
+width: 50%;
+margin-top: .5em;
+}
+.hero-mobile .large-text {
+font-size: 28px;
+line-height: 1.2;
+font-family: "Titling Gothic FB Cond", sans-serif; 
+}
+.homepage-container {
+margin: 0 auto;
+max-width: 1170px;
+}
+@media screen and (max-width: 991px) {
+.homepage-container {
+margin: 0 .5em;  
+}  
+}
+.homepage-container a {
+text-decoration: underline;
+color: #68B247; 
+}
+.homepage-container a:hover {
+color: #68B247;
+text-decoration: underline; 
+}
+.homepage-container a:focus {
+color: #68B247;
+text-decoration: underline; 
+}
+.homepage-container a:active {
+color: #68B247;
+text-decoration: underline; 
+}
+.homepage-container a:visited {
+color: #68B247;
+text-decoration: underline; 
+}
+.row {
+margin-left: 0;
+margin-right: 0; 
+clear: both;
+}
+
+/* Homepage tagline box */
+.row-new {
+  margin: 0 auto;
+  background: #f7f7f7;
+  color: #636466;
+  font-family: 'Titling Gothic FB Cond', sans-serif;
+  text-align: center;
+  padding: 0;
+}
+
+.row-new span {
+  display: block;
+  margin: 8px 0;
+}
+
+.tagline-header {
+  font-size: 32px;
+}
+
+.tagline-copy {
+  font-size: 18px;
+}
+
+.tagline-link {
+  font-size: 24px;
+}
+
+.tagline-link a {
+  color: #68b247;
+}
+
+.row-arrow {
+  width: 100%;
+  height: 20px;
+  margin-top: -2px;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.tagline-arrow {
+  width: 155px;
+  height: 20px;
+  margin: 0 auto;
+  padding: 0;
+  top: -2px;
+  position: relative;
+}
+
+@media(max-width:1214px) {
+  .header-slogan { display: none; }
+}
+
+@media(max-width:767px) {
+  .header-slogan { display: none; }
+  .row-new { display: none; }
+  .row-arrow { display: none; }
+}
+
+/* begin row01 -- bottom margin*/
+.row01 {
+margin-bottom: 2em;
+}
+@media screen and (max-width: 991px ) {
+.row01 {
+margin-bottom: 0;
+}  
+}
+/* apply height and light gray border to boxes 01, 02, and 03*/
+.row01-box {
+max-width: 400px;
+height: 265px;
+border: 1px solid lightgray; 
+border-radius: 2px; 
+margin: 0 auto;
+}
+@media screen and (max-width: 991px ) {
+.row01-box {
+margin-bottom: 2em;
+}
+}
+.row01-box-text {
+padding: .5em 1em 0;
+}
+.row01-box02-email {
+width: 100%;
+border: 1px solid lightgray;
+height: 43px;
+border-radius: 2px;
+margin-top: .4em;
+}
+.row01-box02-email .btn {
+float: right;
+height: 43px;
+top: -1px;
+position: relative;
+border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;
+min-width: 30%;
+}
+.row01-box02-email input {
+height: 41px;
+width: 70%;
+border: 0;
+padding-left: .5em;
+}
+.row01-box03-ctatext {
+position: relative;
+top: 50%;
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+text-align: center;
+padding: 0 1em;
+}
+/* apply white border that seaparates boxes to box01 and box02 */
+.row01-right-border {
+border-right: 1em solid white;  
+}
+@media screen and (max-width: 991px ) {
+.row01-right-border {
+border-right: 0;
+}
+}
+/* begin row 02 -- apply margin-bottom */
+.row02 {
+margin-bottom: 2em;
+}
+/* begin row 03 apply margin-bottom */
+.row03-box {
+height: 250px;
+border: 1px solid lightgray; 
+border-radius: 2px; 
+margin: 0 auto;
+}
+@media screen and (max-width: 991px) {
+.row03-box {
+max-width: 400px;
+}
+}
+@media screen and (max-width: 767px) {
+.row03-box {
+max-width: 400px;
+height: 275px;
+}
+}
+@media screen and (max-width: 991px) {
+.cta-04 {
+margin-bottom: 2em;
+}
+}
+.row03 .cta-04 .ctatext {
+text-align: right;
+width: 57%;
+float: right;
+padding-right: 1em;
+}
+.row03 .cta-04 {
+background: url("http://cpc.convio.net/images/homepage/crocus-snow-globe.jpg") no-repeat center;
+background-size: 570px;
+border-radius: 2px; 
+}
+.row03 .cta-05 .cta-text {
+padding: .3em 1em;
+}
+.row03 .cta-05 img {
+height: 110px;
+width: 100%;
+}
+.row03-right-border {
+border-right: 1em solid white;  
+}
+@media screen and (max-width: 991px) {
+.row03-right-border {
+border-right: none;  
+}
+}
+.text-link {
+margin-bottom: 1em;
+}
+.text-link a:link {
+color: #333;
+text-decoration: none; 
+font-size: 15px;
+}
+.text-link a:visited {
+color: #333;
+}
+.text-link a:hover {
+color: #333;
+}
+.text-link a:focus {
+color: #333;
+}
+.text-link a:active {
+color: #333;
+}
+.title-link {
+font-size: 1.3em;
+font-family: 'Titling Gothic FB Cond', sans-serif;
+color: #68b247;
+}
+.title-link a:link {
+font-family: 'Titling Gothic FB Cond', sans-serif;
+text-decoration: none; 
+}
+.vertical-align {
+position: relative;
+top: 50%;
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
