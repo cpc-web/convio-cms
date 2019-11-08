@@ -1,15 +1,17 @@
+
+
 <!-- September 18 2019 homepage update -->
 <p><link href="http://cpc.convio.net/assets/styles/css/homepage.css?v=0702180947" rel="stylesheet" type="text/css" /></p>
 <!-- Update Hero Image URL here -->
-<style><!--
+<style>
 .homepage-container .hero {
-   background: url('http://assets.centralparknyc.org/images/homepage/Fall+Guide.jpg') no-repeat right !important;
+   background: url('http://assets.centralparknyc.org/images/homepage/CPC-HomepagePromo-Desktop-11-19.jpg') no-repeat right !important;
    height: 250px !important;
 }
 
 @media screen and (max-width: 767px) {
    .homepage-container .hero {
-      background: url('http://assets.centralparknyc.org/images/homepage/Fall+Guide.jpg') no-repeat right !important;
+      background: url('http://assets.centralparknyc.org/images/homepage/CPC-HomepagePromo-MobileSmall.jpg') no-repeat right !important;
    }
 }
 
@@ -17,49 +19,142 @@
   font-size: 28px !important;
 }
 
+p {
+    margin: 0 0 10px;
+    width: 98%;
+    display: inline-block;
+}
+.hero .text-background {
+    width: 58% !important;
+}
+
+.hero .btn{
+    width: 46% !important;
+}
+
+div .small-text img {
+    position: absolute;
+    bottom: 0px;
+    left: 555px;
+}
+
+@media(max-width: 1199px) and (min-width: 992px) {
+    div .small-text img {
+    width: 31%;
+    left: 464px;
+}
+}
+
+@media(max-width: 991px) and (min-width: 768px) {
+    div .small-text img {
+        width: 27%;
+        left: 356px;
+        bottom: 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .hero-mobile {
+    position: absolute !important;
+    top: 5% !important;
+    background: none !important;
+    color: white !important;
+/*    left: 17% !important; 
+*/    width: 100%;
+}
+}
+
+
+
+@media(max-width: 663px) {
+    div .small-text img {
+        position: absolute;
+        left: 79%;
+        top: 51%;
+        width: 30%;
+}
+
+.hero-mobile {
+    position: absolute !important;
+    top: 5% !important;
+    background: none !important;
+    color: white !important;
+/*    left: 17% !important; 
+*/    width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .row01{
+        margin-top: 20px;
+    }
+}
+
 #emailHomepage { margin-right: 0; margin-left: 0;}
---></style>
+</style>
 <div class="homepage-container"><!-- ========== HERO ==========-->
 <div class="row">
-<div class="col-xs-12">
+<div class="col-xs-12" style="overflow: hidden;">
 <div class="hero"><!-- desktop hero text -->
 <div class="text-background">
+
 <div class="text vertical-align">
-<div class="large-text">Your Free Central Park Fall Guide</div>
-<div class="small-text">Featuring this season’s best destinations, events, and family-friendly ways to explore the Park.</div>
-<!-- change button classes to change color to red class="btn btn-hero-donation" --> <a /*href="https://restoration.centralparknyc.org/projects/lasker-rink-and-pool"*/ onclick="
+<div class="large-text">Keep Central Park beautiful in every season!</div>
+<div class="small-text">
+<p style="z-index: 600;">Your generous gift will be matched 2 to 1 &mdash; <span style="color: #7ac142;">tripling</span><br /> your support for New York's beloved Park! <p>
+
+
+<!-- <img alt="Match my gift!" src="https://s3.amazonaws.com/assets.centralparknyc.org/images/homepage/CPC-HomepagePromo-Desktop-3x.png" />
+ -->
+
+<img alt="Match my gift!" src="https://s3.amazonaws.com/assets.centralparknyc.org/images/homepage/CPC-HomepagePromo-Desktop-deadline-extended-logo.png" />
+ 
+</div>
+
+
+
+<!-- change button classes to change color to red class="btn btn-hero-donation" --> <a href="https://secure.centralparknyc.org/site/Donation2?df_id=7043&mfc_pref=T&7043.donation=form1&utm_medium=website_homepage_banner&utm_source=cpc-appeal&utm_campaign=dsa19w&utm_content=website_homepage_banner&s_src=dsa19w&s_subsrc=website_homepage_banner&autologin=true" onclick="
                 dataLayer.push({
                 'eventCategory' : 'Homepage',
                 'eventAction' : 'Hero',
-                'eventLabel' : 'Fall Guide 2019',
+                'eventLabel' : 'Match my Gift',
                 'eventValue' : undefined,
                 'nonInteraction': false,
                 'event' : 'GAEvent'
-                });"
-                href="/preview!www.centralparknyc.org/seasonal-guide/?s_src=201910_seasonal&s_subsrc=homepage"> <button class="btn">Get the Guide</button> </a></div>
+                });"> <button class="btn" style="text-transform: uppercase;">Match My Gift!</button> </a></div>
 </div>
+
+
+
+
+
+
+
 </div>
 <!-- mobile hero text -->
 <div class="hero-mobile hidden-lg hidden-md hidden-sm">
 <div>
-<div class="large-text">Your Free Central Park Fall Guide</div>
-<div class="small-text">Featuring this season’s best destinations, events, and family-friendly ways to explore the Park.</div>
-<a /*href="https://restoration.centralparknyc.org/projects/lasker-rink-and-pool"*/ onclick="
+<div class="large-text">Keep Central Park beautiful in every season!</div>
+<div class="small-text">Your generous gift will be matched 2 to 1 &ndash; <span style="color: #7ac142;">tripling</span><br /> your support for New York's beloved Park!<br /><br /></div>
+<a href="https://secure.centralparknyc.org/site/Donation2?df_id=7043&mfc_pref=T&7043.donation=form1&utm_medium=website_homepage_banner&utm_source=cpc-appeal&utm_campaign=dsa19w&utm_content=website_homepage_banner&s_src=dsa19w&s_subsrc=website_homepage_banner&autologin=true" onclick="
                 dataLayer.push({
                 'eventCategory' : 'Homepage',
                 'eventAction' : 'Hero',
-                'eventLabel' : 'Fall Guide 2019',
+                'eventLabel' : 'Match my Gift',
                 'eventValue' : undefined,
                 'nonInteraction': false,
                 'event' : 'GAEvent'
-                });"
-                href="/preview!www.centralparknyc.org/seasonal-guide/?s_src=201901_seasonal&s_subsrc=homepage">
-                 <button class="btn">Get your Guide</button> </a></div>
+                });"> <button class="btn" style="text-transform: uppercase;">Match My Gift!</button> </a>
+
+<img style="position: absolute; left: 79%; top: 56%; width: 30%;" alt="Match my gift!" src="http://assets.centralparknyc.org/images/homepage/CPC-HomepagePromo-MobileSmall-3x.png" />
+
+
+
+            </div>
 </div>
 </div>
 </div>
 <!-- ========== END HERO ==========--> <!-- open row01 - row01 contains boxes 01, 02, and 02 -->
-<div class="row row-new"><span class="tagline-header">A World-Class Urban Park</span> <span class="tagline-copy">The Central Park Conservancy is the not-for-profit that raises the Park's more than $85 million annual budget and is responsible for the work it takes to keep <br />Central Park beautiful.</span> <span class="tagline-link"> <a class="tagline-link-a" href="../../../preview!www.centralparknyc.org/about/about-cpc/" onclick="
+<div class="row row-new"><span class="tagline-header">A World-Class Urban Park</span> <span class="tagline-copy">The Central Park Conservancy is the not-for-profit that raises the Park's more than $85 million annual budget and is responsible for the work it takes to keep <br />Central Park beautiful.</span> <span class="tagline-link"> <a class="tagline-link-a" href="/preview!www.centralparknyc.org/about/about-cpc/" onclick="
                 dataLayer.push({
                 'eventCategory' : 'Homepage',
                 'eventAction' : 'Trust Copy',
@@ -71,43 +166,43 @@
 <div class="row-arrow"><img class="tagline-arrow" src="http://cdn.optimizely.com/img/2131741199/262e375344144557b839e6efbbacc968.png" /></div>
 <div class="row row01"><!-- open row 01 / 3 ctas --> <!-- box 01 - row 01 -->
 <div class="col-sm-12 col-md-4 row01-right-border">
-<div class="row01-box"><a href="https://restoration.centralparknyc.org/projects/lasker-rink-and-pool" onclick="
+<div class="row01-box"><a href="/preview!www.centralparknyc.org/seasonal-guide/" onclick="
                 dataLayer.push({
                 'eventCategory' : 'Homepage',
                 'eventAction' : 'Box1',
-                'eventLabel' : 'Lasker Rink and Pool',
+                'eventLabel' : 'Free Fall Guide',
                 'eventValue' : undefined,
                 'nonInteraction': false,
                 'event' : 'GAEvent'
-                });"> <img alt="Reimagining Central Park's North End" class="img-responsive" src="http://assets.centralparknyc.org/images/homepage/HMROC_homepage_500x166.jpg" /> </a>
+                });"> <img alt="Your Free Central Park Fall Guide" class="img-responsive" src="https://s3.amazonaws.com/assets.centralparknyc.org/images/homepage/Fall_guide_box1-2019.jpg" /> </a>
 <div class="row01-box-text">
-<div class="title-link"><a href="https://restoration.centralparknyc.org/projects/lasker-rink-and-pool" onclick="
+<div class="title-link"><a href="/preview!www.centralparknyc.org/seasonal-guide/" onclick="
                 dataLayer.push({
                 'eventCategory' : 'Homepage',
                 'eventAction' : 'Box1',
-                'eventLabel' : 'Lasker Rink and Pool',
+                'eventLabel' : 'Free Fall Guide',
                 'eventValue' : undefined,
                 'nonInteraction': false,
                 'event' : 'GAEvent'
-                });">Reimagining Central Park's North End</a></div>
-<div class="text-link" style="margin-bottom: 0;"><a href="https://restoration.centralparknyc.org/projects/lasker-rink-and-pool" onclick="
+                });">Your Free Central Park Fall Guide</a></div>
+<div class="text-link" style="margin-bottom: 0;"><a href="/preview!www.centralparknyc.org/seasonal-guide/" onclick="
                 dataLayer.push({
                 'eventCategory' : 'Homepage',
                 'eventAction' : 'Box1',
-                'eventLabel' : 'Lasker Rink and Pool',
+                'eventLabel' : 'Free Fall Guide',
                 'eventValue' : undefined,
                 'nonInteraction': false,
                 'event' : 'GAEvent'
-                });"> </a>Preview the drawings for the new pool and rink at the Harlem Meer, the Conservancy’s largest restoration to date.</div>
-<div class="cta-05-link"><a href="https://restoration.centralparknyc.org/projects/lasker-rink-and-pool" onclick="
+                });"> </a>Featuring this season&rsquo;s best destinations, events, and family-friendly ways to explore the Park.</div>
+<div class="cta-05-link"><a href="/preview!www.centralparknyc.org/seasonal-guide/" onclick="
                 dataLayer.push({
                 'eventCategory' : 'Homepage',
                 'eventAction' : 'Box1',
-                'eventLabel' : 'Lasker Rink and Pool',
+                'eventLabel' : 'Free Fall Guide',
                 'eventValue' : undefined,
                 'nonInteraction': false,
                 'event' : 'GAEvent'
-                });"> <span class="link">Learn More</span> <em class="fa fa-caret-right"></em> </a></div>
+                });"> <span class="link">Get the Guide</span> <em class="fa fa-caret-right"></em> </a></div>
 </div>
 </div>
 </div>
@@ -175,7 +270,7 @@
 <li><a href="http://www.facebook.com/centralparknyc" target="_blank"><em class="fa fa-social-midpage fa-facebook-square"></em>&nbsp;&nbsp;Facebook</a></li>
 <li><a href="http://www.twitter.com/centralparknyc" target="_blank"><em class="fa fa-social-midpage fa-twitter-square"></em>&nbsp;&nbsp;Twitter</a></li>
 <li><a href="http://www.instagram.com/centralparknyc" target="_blank"><em class="fa fa-social-midpage fa-instagram"></em>&nbsp;&nbsp;Instagram</a></li>
-<li><a href="../../../preview!www.centralparknyc.org/about/blog/" target="_blank"><em class="fa fa-social-midpage fa-rss-square"></em>&nbsp;&nbsp;Blog</a></li>
+<li><a href="/preview!www.centralparknyc.org/about/blog/" target="_blank"><em class="fa fa-social-midpage fa-rss-square"></em>&nbsp;&nbsp;Blog</a></li>
 </ul>
 </div>
 </div>
@@ -216,39 +311,39 @@
 </div>
 <!-- box 05 - row 03 -->
 <div class="col-sm-12 col-md-6 cta-05">
-<div class="row03-box cta-05"><a href="../../../preview!www.centralparknyc.org/about/blog/kid-friendly-adventures.html" onclick="
+<div class="row03-box cta-05"><a href="/preview!www.centralparknyc.org/about/blog/find-fall-foliage.html" onclick="
                 dataLayer.push({
                 'eventCategory' : 'Homepage',
                 'eventAction' : 'Box5',
-                'eventLabel' : 'Kid-Friendly',
+                'eventLabel' : 'Where to find Fall Foliage',
                 'eventValue' : undefined,
                 'nonInteraction': false,
                 'event' : 'GAEvent'
-                });"> <img alt="Monthly Mile" class="img-responsive" src="https://s3.amazonaws.com/assets.centralparknyc.org/images/homepage/9-2019-update/kid-friendly.jpg" /> </a>
+                });"> <img alt="Monthly Mile" class="img-responsive" src="https://s3.amazonaws.com/assets.centralparknyc.org/images/homepage/Schenck-Central-Park-Ramble-2019_11_07-DSC_4589.jpg" /> </a>
 <div class="cta-text">
-<div class="title title-link"><a href="../../../preview!www.centralparknyc.org/about/blog/kid-friendly-adventures.html" onclick="
+<div class="title title-link"><a href="/preview!www.centralparknyc.org/about/blog/find-fall-foliage.html" onclick="
                 dataLayer.push({
                 'eventCategory' : 'Homepage',
                 'eventAction' : 'Box5',
-                'eventLabel' : 'Kid-Friendly',
+                'eventLabel' : 'Where to find Fall Foliage',
                 'eventValue' : undefined,
                 'nonInteraction': false,
                 'event' : 'GAEvent'
-                });"> Kid-Friendly Adventures in Central Park </a></div>
-<div class="text text-link"><a href="../../../preview!www.centralparknyc.org/about/blog/kid-friendly-adventures.html" onclick="
+                });"> Where to Find Fall Foliage in Central Park </a></div>
+<div class="text text-link"><a href="/preview!www.centralparknyc.org/about/blog/find-fall-foliage.html" onclick="
                 dataLayer.push({
                 'eventCategory' : 'Homepage',
                 'eventAction' : 'Box5',
-                'eventLabel' : 'Kid-Friendly',
+                'eventLabel' : 'Where to find Fall Foliage',
                 'eventValue' : undefined,
                 'nonInteraction': false,
                 'event' : 'GAEvent'
-                });">It&rsquo;s back to school time, but that doesn&rsquo;t mean the summer fun has to stop &ndash; check out these kid-friendly adventures in NYC&rsquo;s backyard.</a></div>
-<div class="cta-05-link"><a href="../../../preview!www.centralparknyc.org/about/blog/kid-friendly-adventures.html" onclick="
+                });">Each fall, many of Central Park&rsquo;s roughly 18,000 trees transform into golden shades of yellow, orange, red, and more. It&rsquo;s one of the Park&rsquo;s most photogenic times of year &ndash; find out where to find the best fall foliage.</a></div>
+<div class="cta-05-link"><a href="/preview!www.centralparknyc.org/about/blog/find-fall-foliage.html" onclick="
                 dataLayer.push({
                 'eventCategory' : 'Homepage',
                 'eventAction' : 'Box5',
-                'eventLabel' : 'Kid-Friendly',
+                'eventLabel' : 'Where to find Fall Foliage',
                 'eventValue' : undefined,
                 'nonInteraction': false,
                 'event' : 'GAEvent'
